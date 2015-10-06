@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<package unique-identifier="uid">
+	<metadata>
+		<dc-metadata xmlns:dc="http://purl.org/metadata/dublin_core" xmlns:oebpackage="http://openebook.org/namespaces/oeb-package/1.0/">
+			<dc:Identifier id="uid">DBMYVDRLPO</dc:Identifier>
+			<dc:Title>Space Encyclopedia</dc:Title>
+			<dc:Creator>Mobipocket</dc:Creator>
+			<dc:Date>14/08/2001</dc:Date>
+			<dc:Copyrights></dc:Copyrights>
+			<dc:Publisher></dc:Publisher>
+			<dc:Subject></dc:Subject>
+		<dc:Language>fr</dc:Language></dc-metadata>
+		<x-metadata/>
+	</metadata>
+	
+	<manifest>
+		<item id="main" href="main.htm" media-type="text/x-oeb1-document"/>
+		<item id="mercury" href="mercury.htm" media-type="text/x-oeb1-document"/>
+		<item id="venus" href="venus.htm" media-type="text/x-oeb1-document"/>
+		<item id="earth" href="earth.htm" media-type="text/x-oeb1-document"/>
+		<item id="moon" href="moon.htm" media-type="text/x-oeb1-document"/>
+		<item id="mars" href="mars.htm" media-type="text/x-oeb1-document"/>
+		<item id="jupiter" href="jupiter.htm" media-type="text/x-oeb1-document"/>
+		<item id="saturne" href="saturn.htm" media-type="text/x-oeb1-document"/>
+		<item id="neptune" href="neptune.htm" media-type="text/x-oeb1-document"/>
+		<item id="pluto" href="pluto.htm" media-type="text/x-oeb1-document"/>
+		<item id="uranus" href="uranus.htm" media-type="text/x-oeb1-document"/>
+		<item id="index" href="index.htm" media-type="text/x-oeb1-document"/>
+
+		<item id="img1" href="mercury.jpg" media-type="image/jpg"/>
+		<item id="img2" href="venus.jpg" media-type="image/jpg"/>
+		<item id="img3" href="earth3.png" media-type="image/png"/>
+		<item id="img4" href="moon.jpg" media-type="image/jpg"/>
+		<item id="img5" href="mars.jpg" media-type="image/jpg"/>
+		<item id="img6" href="jupiter.jpg" media-type="image/jpg"/>
+		<item id="img7" href="saturn.jpg" media-type="image/jpg"/>
+		<item id="img8" href="neptune.jpg" media-type="image/jpg"/>
+		<item id="img9" href="pluto.jpg" media-type="image/jpg"/>
+		<item id="img10" href="uranus.jpg" media-type="image/jpg"/>
+	</manifest>
+	<spine>
+		<itemref idref="main"/>
+		<itemref idref="mercury"/>
+		<itemref idref="venus"/>
+		<itemref idref="earth"/>
+		<itemref idref="moon"/>
+		<itemref idref="mars"/>
+		<itemref idref="jupiter"/>
+		<itemref idref="saturne"/>
+		<itemref idref="uranus"/>
+		<itemref idref="neptune"/>
+		<itemref idref="pluto"/>
+		<itemref idref="index"/>
+	</spine>
+	<tours>
+	</tours>
+	<guide>
+	</guide>
+</package>

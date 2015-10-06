@@ -1,0 +1,1 @@
+d:\anaconda\python tab.py -utf TudienAnhVietBeta.txt

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- the command line instruction 'prcgen dictionary.opf' will produce the dictionary.prc file in the same folder-->
+<!-- the command line instruction 'mobigen dictionary.opf' will produce the dictionary.mobi file in the same folder-->
+
+<package unique-identifier="uid" xmlns:dc="tdanhviet">
+
+	<metadata>
+		<dc-metadata xmlns:dc="http://purl.org/metadata/dublin_core" xmlns:oebpackage="http://openebook.org/namespaces/oeb-package/1.0/">
+			<dc:Identifier id="uid">tdanhviet</dc:Identifier>
+			<dc:Title>Từ điển Anh-Việt β</dc:Title>
+			<dc:Creator>catusf</dc:Creator>
+			<dc:Date>10/06/2015</dc:Date>
+			<dc:Copyrights></dc:Copyrights>
+			<dc:Publisher></dc:Publisher>
+			<dc:Subject></dc:Subject>
+		<dc:Language>vi</dc:Language></dc-metadata>
+        <x-metadata>
+            <DictionaryInLanguage>en-us</DictionaryInLanguage>
+            <DictionaryOutLanguage>vi-vn</DictionaryOutLanguage>
+        </x-metadata>
+	</metadata>
+
+<!-- list of all the files needed to produce the .prc file -->
+<manifest>
+ <item id="dictionary0" href="TudienAnhVietBeta0.html" media-type="text/x-oeb1-document"/>
+</manifest>
+
+
+<!-- list of the html files in the correct order  -->
+<spine>
+	<itemref idref="dictionary0"/>
+</spine>
+
+<tours/>
+<guide> <reference type="search" title="Dictionary Search" onclick= "index_search()"/> </guide>
+</package>
