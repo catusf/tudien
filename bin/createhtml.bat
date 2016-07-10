@@ -1,1 +1,1 @@
-d:\anaconda\python tab.py -utf TudienAnhVietBeta.txt
+python tab2opf.py -utf TudienAnhVietBeta.txt
