@@ -19,11 +19,16 @@ Chạy từ dòng lệnh `cmd` trong Windows. Yêu cầu có Python 2.5 trở l�
 3. Chuyển file .opf thành từ điển dạng .mobi dùng trên Kindle.
 
 ```
-createmobi.bat
+>createmobi.bat
 ```
 
 Việc còn lại là copy file .mobi vừa được tạo ra vào máy Kindle để bắt đầu sử dụng.
 
+
+### TODO
+- Copy dữ liệu Từ điển Thiền Chửu lên repo
+- Sử dụng Action để build và release tự động từ điển
+- Khái quát hoá tool để có thể build được các file dữ liệu từ điển khác
 
 ### Chat với tác giả
 
