@@ -26,9 +26,9 @@ Việc còn lại là copy file .mobi vừa được tạo ra vào máy Kindle �
 
 
 ### TODO
-- [] Copy dữ liệu Từ điển Thiền Chửu lên repo
-- [] Sử dụng Action để build và release tự động từ điển
-- [] Khái quát hoá tool để có thể build được các file dữ liệu từ điển khác
+- [ ] Copy dữ liệu Từ điển Thiền Chửu lên repo
+- [ ] Sử dụng Action để build và release tự động từ điển
+- [ ] Khái quát hoá tool để có thể build được các file dữ liệu từ điển khác
 
 
 ### Chat với tác giả
