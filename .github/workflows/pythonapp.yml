@@ -21,7 +21,5 @@ jobs:
       with:
         python-version: 3.8
     - name: Generate HTML
-      run: |
-        cmd cd ./bin
-        cmd createhtml.bat
-        shell: cmd
+      run: createhtml.bat
+      shell: cmd
