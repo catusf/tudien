@@ -22,6 +22,6 @@ jobs:
         python-version: 3.8
     - name: Generate HTML
       run: |
-        cd ./bin
-        createhtml.bat
-        createmobi.bat
+        cmd cd ./bin
+        cmd createhtml.bat
+        shell: cmd
