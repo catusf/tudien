@@ -10,7 +10,7 @@
 		<dc:Identifier id="uid">TudienThienChuu</dc:Identifier>
 		<!-- Title of the document -->
 		<dc:Title><h2>TudienThienChuu</h2></dc:Title>
-		<dc:Language>VI</dc:Language>
+		<dc:Language>EN</dc:Language>
 	</dc-metadata>
 	<x-metadata>
 	        <output encoding="utf-8" flatten-dynamic-dir="yes"/>

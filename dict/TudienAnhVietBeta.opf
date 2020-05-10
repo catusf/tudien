@@ -10,12 +10,12 @@
 		<dc:Identifier id="uid">TudienAnhVietBeta</dc:Identifier>
 		<!-- Title of the document -->
 		<dc:Title><h2>TudienAnhVietBeta</h2></dc:Title>
-		<dc:Language>VI</dc:Language>
+		<dc:Language>EN</dc:Language>
 	</dc-metadata>
 	<x-metadata>
 	        <output encoding="utf-8" flatten-dynamic-dir="yes"/>
 		<DictionaryInLanguage>en</DictionaryInLanguage>
-		<DictionaryOutLanguage>vi</DictionaryOutLanguage>
+		<DictionaryOutLanguage>vn</DictionaryOutLanguage>
 	</x-metadata>
 </metadata>
 
