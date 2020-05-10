@@ -172,11 +172,11 @@ def readkey(r, defs):
 
     term = term.strip()
     defn = getdef(defn)
-    defn = defn.replace("\\\\","\\").\
-        replace(">", "\\>").\
-        replace("<", "\\<").\
-        replace("\\n","<br/>\n").\
-        strip()
+    # defn = defn.replace("\\\\","\\").\
+        # replace(">", "\\>").\
+        # replace("<", "\\<").\
+        # replace("\\n","<br/>\n").\
+        # strip()
 
     nkey = normalizeUnicode(term)
     key = getkey(nkey)
