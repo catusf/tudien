@@ -9,13 +9,14 @@
 	<dc-metadata>
 		<dc:Identifier id="uid">TudienAnhVietBeta</dc:Identifier>
 		<!-- Title of the document -->
-		<dc:Title><h2>TudienAnhVietBeta</h2></dc:Title>
-		<dc:Language>EN</dc:Language>
+		<dc:Title><h2>Từ điển Anh-Việt β v1.1</h2></dc:Title>
+		<dc:Creator>catusf</dc:Creator>
+		<dc:Language>vi</dc:Language>
 	</dc-metadata>
 	<x-metadata>
 	        <output encoding="utf-8" flatten-dynamic-dir="yes"/>
 		<DictionaryInLanguage>en</DictionaryInLanguage>
-		<DictionaryOutLanguage>vn</DictionaryOutLanguage>
+		<DictionaryOutLanguage>vi</DictionaryOutLanguage>
 	</x-metadata>
 </metadata>
 

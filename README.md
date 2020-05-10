@@ -24,6 +24,11 @@ Chạy từ dòng lệnh `cmd` trong Windows. Yêu cầu có Python 2.5 trở l�
 
 Việc còn lại là copy file .mobi vừa được tạo ra vào máy Kindle để bắt đầu sử dụng.
 
+### Cách tạo ra file từ điển .mobi
+
+1. Chạy CreateHTML.bat
+2. Sửa file .opf nếu cần (tham khảo các file *-org.opf)
+2. Chạy CreateMobi.bat
 
 ### TODO
 - [ ] Copy dữ liệu Từ điển Thiền Chửu lên repo
