@@ -31,9 +31,9 @@ Việc còn lại là copy file .mobi vừa được tạo ra vào máy Kindle �
 2. Chạy CreateMobi.bat
 
 ### TODO
-- [ ] Copy dữ liệu Từ điển Thiền Chửu lên repo
+- [X] Copy dữ liệu Từ điển Thiền Chửu lên repo
 - [ ] Sử dụng Action để build và release tự động từ điển
-- [ ] Khái quát hoá tool để có thể build được các file dữ liệu từ điển khác
+- [X] Khái quát hoá tool để có thể build được các file dữ liệu từ điển khác
 
 
 ### Chat với tác giả
