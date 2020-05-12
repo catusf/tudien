@@ -4,7 +4,7 @@ Mã nguồn cho từ điển dành cho máy đọc sách Kindle. Để sử dụ
 
 ### Hướng dẫn
 
-Chạy từ dòng lệnh `cmd` trong Windows. Yêu cầu có Python 2.5 trở lên.
+Chạy từ dòng lệnh `cmd` trong Windows. Yêu cầu có Python 3.0 trở lên.
 
 1. Chuyển vào thư mục `bin`
 ```
