@@ -4,7 +4,7 @@ Mã nguồn cho từ điển dành cho máy đọc sách Kindle. Để sử dụ
 
 ### Hướng dẫn cách tạo ra file từ điển .mobi
 1. Cài Python 3.x
-2. Tạo mới hay sửa file định nghĩa từ điển (như dict/TudienAnhVietBeta.txt)
+2. Tạo mới hay sửa file định nghĩa từ điển (như `../dict/TudienAnhVietBeta.txt`)
 3. Chạy dòng lệnh `createhtml.bat` để tạo ra các file `.html` (có format OPFcho ebook ebook) dùng chương trình Python `tab2opf.py`
 4. Sửa file .opf nếu cần (tham khảo các file *-org.opf)
 5. Chạy `createmobi.bat` để tạo từ điển Kindle sử dụng công cụ `mobigen.exe` của Amazon. Các từ điển nằm trong thư mục `../dict`
