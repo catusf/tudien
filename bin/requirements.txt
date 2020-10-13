@@ -6,7 +6,7 @@ Gooey==1.0.3
 numpy==1.18.2
 pandas==1.0.3
 pefile==2019.4.18
-Pillow==7.0.0
+Pillow==7.1.0
 psutil==5.7.0
 PyInstaller==3.6
 python-dateutil==2.8.1
