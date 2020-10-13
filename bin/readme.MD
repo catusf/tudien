@@ -25,4 +25,5 @@ pip install -r requirements.txt
 ### Create executable
 pyinstaller -F python_main.py 
 
-### Inorder to generate inflections (words form for plurals, verb tenses, etc.) for English, you need to run Python program create_english_inflections.py. That needs [pattern](https://pypi.org/project/Pattern/) library
+### English inflections
+In order to generate inflections (words form for plurals, verb tenses, etc.) for English, you need to run Python program create_english_inflections.py. That needs [pattern](https://pypi.org/project/Pattern/) library. The easiest way to install it is to use [Anaconda](https://www.anaconda.com/) which comes with hundreds modules.
