@@ -9,9 +9,8 @@
 	<dc-metadata>
 		<dc:Identifier id="uid">TudienThienChuu</dc:Identifier>
 		<!-- Title of the document -->
-		<dc:Title><h2>Từ điển Hán Việt Thiền Chửu v1.1</h2></dc:Title>
-		<dc:Creator>catusf</dc:Creator>
-		<dc:Language>VI</dc:Language>
+		<dc:Title><h2>TudienThienChuu</h2></dc:Title>
+		<dc:Language>EN</dc:Language>
 	</dc-metadata>
 	<x-metadata>
 	        <output encoding="utf-8" flatten-dynamic-dir="yes"/>
