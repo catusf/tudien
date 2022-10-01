@@ -24,7 +24,8 @@ with open(fileout, 'w', encoding='utf-8') as f:
             meaning = meaning.replace('\r\n', '|')
 
         if len(meaning):
-            f.write('%s\t%s\n' % (i['Word'], meaning) )
-            count = count+1
+            f.write('%s\t%s\n' % (key, meaning))
+
+            count = count + 1
 
 print(f'{count} words processed')
