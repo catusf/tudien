@@ -1,0 +1,17 @@
+diff --git a/dict/Tu-dien-Dao-Uyen/Tu-dien-Dao-Uyen.opf b/dict/Tu-dien-Dao-Uyen/Tu-dien-Dao-Uyen.opf
+index addd0be..8bdb4ad 100644
+--- a/dict/Tu-dien-Dao-Uyen/Tu-dien-Dao-Uyen.opf
++++ b/dict/Tu-dien-Dao-Uyen/Tu-dien-Dao-Uyen.opf
+@@ -9,8 +9,10 @@
+ 	<dc-metadata>
+ 		<dc:Identifier id="uid">Tu-dien-Dao-Uyen</dc:Identifier>
+ 		<!-- Title of the document -->
+-		<dc:Title><h2>Tu-dien-Dao-Uyen</h2></dc:Title>
+-		<dc:Language>EN</dc:Language>
++		<dc:Title><h2>Từ điển Đạo Uyển v1.0</h2></dc:Title>
++		<dc:Language>vi</dc:Language>
++		<dc:publisher>catus.phan@gmail.com</dc:publisher>
++		<dc:Creator>catus.phan@gmail.com</dc:Creator>
+ 	</dc-metadata>
+ 	<x-metadata>
+ 	        <output encoding="utf-8" flatten-dynamic-dir="yes"/>
