@@ -16,6 +16,22 @@ Việc còn lại là copy file .mobi vừa được tạo ra bằng dây cáp U
 - [ ] Sử dụng Action để build và release tự động từ điển
 - [X] Khái quát hoá tool để có thể build được các file dữ liệu từ điển khác
 
+### Danh sách các từ điển
+
+- Tên từ điển (Số từ)
+- Từ điển Hán Việt Thiền Chửu (9'897)
+- Từ điển Anh Việt Beta (106'059 với 28'400 dạng từ thay thế - inflection)
+- Từ điển phật học tổng hợp (49'569)
+- Từ điển Phật Quang (16'973)
+- Từ điển Phật học Việt Anh - Thiện Phúc (24'767)
+- Từ điển Phật học Anh-Hán-Việt (3'914)
+- Ngữ vựng Danh từ Thiền học (302)
+- Từ điển Đạo Uyển (3'262)
+- Từ điển Phật học Việt Anh - Đồng Loại (7'847)
+- Từ điển Phật học Việt Anh - Minh Thông (9'113)
+- Phật Quang Đại từ điển (Hán ngữ) (22'900)
+- Rộng mở tâm hồn (1'347)
+- Từ điển Phật học Tinh tuyển (2'918)
 
 ### Chat với tác giả
 
