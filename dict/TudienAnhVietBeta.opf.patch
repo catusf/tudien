@@ -1,0 +1,17 @@
+diff --git a/dict/TudienAnhVietBeta/TudienAnhVietBeta.opf b/dict/TudienAnhVietBeta/TudienAnhVietBeta.opf
+index 7a43776..c408796 100644
+--- a/dict/TudienAnhVietBeta/TudienAnhVietBeta.opf
++++ b/dict/TudienAnhVietBeta/TudienAnhVietBeta.opf
+@@ -9,8 +9,10 @@
+ 	<dc-metadata>
+ 		<dc:Identifier id="uid">TudienAnhVietBeta</dc:Identifier>
+ 		<!-- Title of the document -->
+-		<dc:Title><h2>TudienAnhVietBeta</h2></dc:Title>
+-		<dc:Language>EN</dc:Language>
++		<dc:Title><h2>Từ điển Anh-Việt β v1.2</h2></dc:Title>
++		<dc:publisher>catus.phan@gmail.com</dc:publisher>
++		<dc:Creator>catus.phan@gmail.com</dc:Creator>
++		<dc:Language>vi</dc:Language>
+ 	</dc-metadata>
+ 	<x-metadata>
+ 	        <output encoding="utf-8" flatten-dynamic-dir="yes"/>
