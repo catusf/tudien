@@ -1,3 +1,2 @@
-rem copy /y TudienAnhVietBeta-org.opf TudienAnhVietBeta.opf
-mobigen.exe -unicode -s0 ../dict/TudienThienChuu.opf
-mobigen.exe -unicode -s0 ../dict/TudienAnhVietBeta.opf
+rem Example: createmobi.bat Tu-dien-Tong-hop-Phat-hoc
+mobigen.exe -unicode -s0 ../dict/%1/%1.opf
