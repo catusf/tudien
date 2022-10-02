@@ -11,9 +11,23 @@ print(dictdata.keys())
 entries = dictdata['WordRaw']
 print('Num of entries: {}'.format(len(entries)))
 
+dict_names = {
+    1: {'Name':'Từ điển Phật Quang', 'File':'Tu-dien-Phat-Quang'},
+    2: {'Name':'Từ điển Phật học Việt Anh - Thiện Phúc', 'File':'Tu-dien-Phat-hoc-Viet-Anh-Thien-Phuc'},
+    3: {'Name':'Từ điển Phật học Anh-Hán-Việt', 'File':'Tu-dien-Phat-hoc-Anh-Han-Viet'},
+    4: {'Name':'Ngữ vựng Danh từ Thiền học', 'File':'Ngu-vung-Danh-tu-Thien-hoc'},
+    5: {'Name':'Từ điển Đạo Uyển', 'File':'Tu-dien-Dao-Uyen'},
+    6: {'Name':'Từ điển Phật học Việt Anh - Đồng Loại', 'File':'Tu-dien-Phat-hoc-Viet-Anh-Dong-Loai'},
+    7: {'Name':'Từ điển Phật học Việt Anh - Minh Thông', 'File':'Tu-dien-Phat-hoc-Viet-Anh-Minh-Thong'},
+    8: {'Name':'Phật Quang Đại từ điển (Hán ngữ)', 'File':'Phat-Quang-Dai-tu-dien-(Han-ngu)'},
+    9: {'Name':'Rộng mở tâm hồn', 'File':'Rong-mo-tam-hon'},
+    10: {'Name':'Từ điển Phật học Tinh tuyển', 'File':'Tu-dien-Phat-hoc-Tinh-tuyen'},
+}
+
 dictionaries = {}
 
-use_dicts = {3, 7, 2, 1, 9, 6, 10, 5, 4}
+use_dicts = {1, 2, 4, 5, 9, 10, } # 3, 6, 7, 8}
+
 count = 0
 with open(fileout, 'w', encoding='utf-8') as f:
     for i in entries:
@@ -28,15 +42,19 @@ with open(fileout, 'w', encoding='utf-8') as f:
         
         dk = i['Dict']
 
+        if dk not in dictionaries:
+            dictionaries[dk] = []
+        else:
+            dictionaries[dk].append(i)
+
         if len(meaning) and dk in use_dicts:
             f.write('%s\t%s\n' % (key, meaning))
-
-            if dk not in dictionaries:
-                dictionaries[dk] = []
-            else:
-                dictionaries[dk].append(i)
 
             count = count + 1
 
 print(dictionaries.keys())
+
+for key in dictionaries:
+    print('%i\t%i\t%s\n' % (len(dictionaries[key]), key, dict_names[key]['Name']))
+
 print(f'{count} words processed')
