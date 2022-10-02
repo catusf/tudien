@@ -1,8 +1,8 @@
 import os
 import json
 
-filepath = './dict/cactudienphathoc.json'
-fileout = './dict/cactudienphathoc.tab'
+filepath = './dict/TudienTonghopPhathoc.json'
+fileout = './dict/TudienTonghopPhathoc.tab'
 
 dictdata = json.load(open(filepath, 'rb'))
 
