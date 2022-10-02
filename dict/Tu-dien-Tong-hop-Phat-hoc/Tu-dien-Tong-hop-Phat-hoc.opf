@@ -9,10 +9,10 @@
 	<dc-metadata>
 		<dc:Identifier id="uid">Tu-dien-Tong-hop-Phat-hoc</dc:Identifier>
 		<!-- Title of the document -->
-		<dc:Title><h2>Từ điển Tổng hợp Phật học</h2></dc:Title>
+		<dc:Title><h2>Từ điển Tổng hợp Phật học  v1.0</h2></dc:Title>
 		<dc:Language>vi</dc:Language>
 		<dc:publisher>catus.phan@gmail.com</dc:publisher>
-		<dc:creator opf:file-as="Biên tập catus.phan@gmail.com" opf:role="aut">Biên tập catus.phan@gmail.com</dc:creator>
+		<dc:Creator>catus.phan@gmail.com</dc:Creator>
 	</dc-metadata>
 	<x-metadata>
 	        <output encoding="utf-8" flatten-dynamic-dir="yes"/>
