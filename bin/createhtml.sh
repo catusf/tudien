@@ -1,13 +1,12 @@
 #!/bin/bash
-# Example: ./bin/createhtml.sh Rong-mo-tam-hon.tab NoInflections.txt
+# Example: ./bin/createhtml.sh NoInflections.txt Rong-mo-tam-hon.tab
 # Run in root directory
 
 echo "Current directory: " + $pwd
 echo $1
 echo $2
 
-extension="${1##*.}"
-BASE="${1%.*}"
+BASE="${2%.*}"
 
 echo $BASE
 echo "./dict/$BASE.opf.patch"
@@ -15,7 +14,7 @@ echo "./dict/$BASE.opf.patch"
 cd "/workspaces/tudien/"
 
 # Generates html and opf files
-python ./bin/tab2opf.py -s vi -t vi ./dict/$1 -i ./dict/$2
+python ./bin/tab2opf.py -s vi -t vi ./dict/$2 -i ./dict/$1
 
 # Move files to final directory
 mkdir ./dict/$BASE
@@ -24,3 +23,5 @@ mv -f *.opf ./dict/$BASE/
 
 # Apply patch to fix resultant .opf file
 git apply "./dict/$BASE.opf.patch"
+
+zip -r ./output/$BASE.epub ./dict/$BASE
