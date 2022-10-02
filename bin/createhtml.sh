@@ -24,4 +24,5 @@ mv -f *.opf ./dict/$BASE/
 # Apply patch to fix resultant .opf file
 git apply "./dict/$BASE.opf.patch"
 
+rm -f ./output/kindle/$BASE.epub
 zip -r ./output/kindle/$BASE.epub ./dict/$BASE
