@@ -1,5 +1,5 @@
 #!/bin/bash
-# Example: ./bin/createhtml.sh Tu-dien-Tong-hop-Phat-hoc.tab NoInflections.txt
+# Example: ./bin/createhtml.sh Rong-mo-tam-hon.tab NoInflections.txt
 # Run in root directory
 
 echo "Current directory: " + $pwd
