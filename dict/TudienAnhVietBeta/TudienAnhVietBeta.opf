@@ -16,7 +16,7 @@
 	</dc-metadata>
 	<x-metadata>
 	        <output encoding="utf-8" flatten-dynamic-dir="yes"/>
-		<DictionaryInLanguage>en</DictionaryInLanguage>
+		<DictionaryInLanguage>vi</DictionaryInLanguage>
 		<DictionaryOutLanguage>vi</DictionaryOutLanguage>
 	</x-metadata>
 </metadata>
