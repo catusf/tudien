@@ -8,7 +8,7 @@ index 7a43776..c408796 100644
  		<!-- Title of the document -->
 -		<dc:Title><h2>TudienAnhVietBeta</h2></dc:Title>
 -		<dc:Language>EN</dc:Language>
-+		<dc:Title><h2>Từ điển Anh-Việt β v1.2</h2></dc:Title>
++		<dc:Title><h2>Từ điển Anh-Việt β v1.3</h2></dc:Title>
 +		<dc:publisher>catus.phan@gmail.com</dc:publisher>
 +		<dc:Creator>catus.phan@gmail.com</dc:Creator>
 +		<dc:Language>vi</dc:Language>
