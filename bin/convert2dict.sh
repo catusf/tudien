@@ -5,7 +5,7 @@ do
     echo $input
 
     base=$(basename -s .tab "$input")
-    outdir="./output/stardict/base/"
+    outdir="./output/stardict/"
     output="$outdir$base.ifo"
 
     echo $output
