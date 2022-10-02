@@ -26,7 +26,7 @@ dict_names = {
 
 dictionaries = {}
 
-use_dicts = {1, 2, 4, 5, 9, 10, } # 3, 6, 7, 8}
+use_dicts = {1, 2, 4, 5, 9, 10, } #3, 6, 7, 8}
 
 count = 0
 with open(fileout, 'w', encoding='utf-8') as f:
@@ -44,8 +44,8 @@ with open(fileout, 'w', encoding='utf-8') as f:
 
         if dk not in dictionaries:
             dictionaries[dk] = []
-        else:
-            dictionaries[dk].append(i)
+        
+        dictionaries[dk].append({'Word': key, 'Mean': meaning})
 
         if len(meaning) and dk in use_dicts:
             f.write('%s\t%s\n' % (key, meaning))
@@ -55,6 +55,12 @@ with open(fileout, 'w', encoding='utf-8') as f:
 print(dictionaries.keys())
 
 for key in dictionaries:
-    print('%i\t%i\t%s\n' % (len(dictionaries[key]), key, dict_names[key]['Name']))
+    print('%i\t%i\t%s' % (len(dictionaries[key]), key, dict_names[key]['Name']))
+
+    filename = f"./dict/{dict_names[key]['File']}.tab"
+
+    with open(filename, 'w', encoding='utf-8') as f:
+        for e in dictionaries[key]:
+            f.write('%s\t%s\n' % (e['Word'], e['Mean']))
 
 print(f'{count} words processed')
