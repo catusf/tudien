@@ -9,10 +9,8 @@
 	<dc-metadata>
 		<dc:Identifier id="uid">Tu-dien-Tong-hop-Phat-hoc</dc:Identifier>
 		<!-- Title of the document -->
-		<dc:Title><h2>Từ điển Tổng hợp Phật học  v1.0</h2></dc:Title>
-		<dc:Language>vi</dc:Language>
-		<dc:publisher>catus.phan@gmail.com</dc:publisher>
-		<dc:Creator>catus.phan@gmail.com</dc:Creator>
+		<dc:Title><h2>Tu-dien-Tong-hop-Phat-hoc</h2></dc:Title>
+		<dc:Language>EN</dc:Language>
 	</dc-metadata>
 	<x-metadata>
 	        <output encoding="utf-8" flatten-dynamic-dir="yes"/>
