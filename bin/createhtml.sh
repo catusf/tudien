@@ -1,5 +1,5 @@
 #!/bin/bash
-# Example: ./bin/createhtml.sh NoInflections.txt TudienAnhVietBeta.tab
+# Example: ./bin/createhtml.sh NoInflections.txt Ngu-vung-Danh-tu-Thien-hoc.tab
 # Run in root directory
 
 echo $1
@@ -23,5 +23,3 @@ mv -f *.opf ./dict/$BASE/
 # Apply patch to fix resultant .opf file
 git apply "./dict/$BASE.opf.patch"
 
-# rm -f ./output/kindle/$BASE.epub
-# zip -r ./output/kindle/$BASE.epub ./dict/$BASE
