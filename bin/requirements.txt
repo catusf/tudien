@@ -1,3 +1,5 @@
 Pillow >= 9.2.0
 numpy >= 1.19
 PyGlossary >= 3.3.0
+
+# sudo apt-get install dictzip
