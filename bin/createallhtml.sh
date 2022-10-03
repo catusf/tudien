@@ -1,7 +1,6 @@
 ./bin/createhtml.sh NoInflections.txt Ngu-vung-Danh-tu-Thien-hoc.tab
 ./bin/createhtml.sh NoInflections.txt Phat-Quang-Dai-tu-dien-(Han-ngu).tab'
 ./bin/createhtml.sh NoInflections.txt Rong-mo-tam-hon.tab
-./bin/createhtml.sh NoInflections.txt TudienAnhVietBeta.tab
 ./bin/createhtml.sh NoInflections.txt Tu-dien-Dao-Uyen.tab
 ./bin/createhtml.sh NoInflections.txt Tu-dien-Phat-hoc-Anh-Han-Viet.tab
 ./bin/createhtml.sh NoInflections.txt Tu-dien-Phat-hoc-Tinh-tuyen.tab
