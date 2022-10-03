@@ -1,6 +1,7 @@
 # TODO
 [ ] Add cover page to dictionaries
 [ ] Convert dicts to PRC for Android
+[ ] Add dictionary name to each entry
 [x] Add code to zip folders as epub files
 [X] Convert files to StarDict and other dictionary formats
 [X] Use commandline of Kindle Previewer
