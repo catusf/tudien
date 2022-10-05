@@ -19,7 +19,7 @@ dict_names = {
     5: {'Name':'Từ điển Đạo Uyển', 'File':'Tu-dien-Dao-Uyen'},
     6: {'Name':'Từ điển Phật học Việt Anh - Đồng Loại', 'File':'Tu-dien-Phat-hoc-Viet-Anh-Dong-Loai'},
     7: {'Name':'Từ điển Phật học Việt Anh - Minh Thông', 'File':'Tu-dien-Phat-hoc-Viet-Anh-Minh-Thong'},
-    8: {'Name':'Phật Quang Đại từ điển (Hán ngữ)', 'File':'Phat-Quang-Dai-tu-dien-(Han-ngu)'},
+    8: {'Name':'Phật Quang Đại từ điển Hán ngữ', 'File':'Phat-Quang-Dai-tu-dien-Han-ngu'},
     9: {'Name':'Rộng mở tâm hồn', 'File':'Rong-mo-tam-hon'},
     10: {'Name':'Từ điển Phật học Tinh tuyển', 'File':'Tu-dien-Phat-hoc-Tinh-tuyen'},
 }
