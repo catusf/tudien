@@ -1,11 +1,11 @@
 # TODO
-- [ ] Add cover page to dictionaries
-- [X] Change the title of dictionaries
-- [ ] Change action to use Wine to run mobigen
-- [ ] Config to run all release at one		
-- [X] Add To and From language
-- [x] Use a lib to create epub (pyglossary or penelope)
 - [ ] Convert dicts to PRC for Android
+- [ ] Add cover page to dictionaries
+- [ ] Change action to use Wine to run mobigen
+- [ ] Config to run all release at one (one script generates multiple outputs: DSL, StarDict, Kobo, Kindle...)
+- [X] Add To and From language
+- [X] Change the title of dictionaries
+- [x] Use a lib to create epub (pyglossary or penelope)
 - [x] Add code to zip folders as epub files
 - [X] Convert files to StarDict and other dictionary formats
 - [X] Use commandline of Kindle Previewer
