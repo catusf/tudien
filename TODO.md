@@ -1,10 +1,10 @@
 # TODO
-[ ] Add cover page to dictionaries
-[X] Change the title of dictionaries		
-[X] Add To and From language
-[ ] Use a lib to create epub (pyglossary or penelope)
-[ ] Convert dicts to PRC for Android
-[x] Add code to zip folders as epub files
-[X] Convert files to StarDict and other dictionary formats
-[X] Use commandline of Kindle Previewer
-[X] Fix security issues
+- [ ] Add cover page to dictionaries
+- [X] Change the title of dictionaries		
+- [X] Add To and From language
+- [ ] Use a lib to create epub (pyglossary or penelope)
+- [ ] Convert dicts to PRC for Android
+- [x] Add code to zip folders as epub files
+- [X] Convert files to StarDict and other dictionary formats
+- [X] Use commandline of Kindle Previewer
+- [X] Fix security issues
