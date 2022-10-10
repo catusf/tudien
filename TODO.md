@@ -1,6 +1,8 @@
 # TODO
 - [ ] Add cover page to dictionaries
-- [X] Change the title of dictionaries		
+- [X] Change the title of dictionaries
+- [ ] Change action to use Wine to run mobigen
+- [ ] Config to run all release at one		
 - [X] Add To and From language
 - [ ] Use a lib to create epub (pyglossary or penelope)
 - [ ] Convert dicts to PRC for Android
