@@ -4,7 +4,7 @@
 - [ ] Change action to use Wine to run mobigen
 - [ ] Config to run all release at one		
 - [X] Add To and From language
-- [ ] Use a lib to create epub (pyglossary or penelope)
+- [x] Use a lib to create epub (pyglossary or penelope)
 - [ ] Convert dicts to PRC for Android
 - [x] Add code to zip folders as epub files
 - [X] Convert files to StarDict and other dictionary formats
