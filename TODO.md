@@ -2,6 +2,7 @@
 - [ ] Convert dicts to PRC for Android
 - [ ] Add cover page to dictionaries
 - [ ] Change action to use Wine to run mobigen
+- [ ] Add a desc file name for each dictionary containing Name, Source and Target languages...
 - [ ] Config to run all release at one (one script generates multiple outputs: DSL, StarDict, Kobo, Kindle...)
 - [X] Add To and From language
 - [X] Change the title of dictionaries
