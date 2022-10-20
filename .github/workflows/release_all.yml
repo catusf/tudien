@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+    - uses: actions/checkout@v3
+    
     - name: Setup Wine32
       run: |
         ./bin/install_linux_packages.sh
@@ -24,8 +27,6 @@ jobs:
     #     sudo apt-get install --allow-downgrades libssl1.1:i386=1.1.1f-1ubuntu2.1
 
     #     sudo aptitude install wine32
-
-    - uses: actions/checkout@v3
 
     - name: Setup Ubuntu packages
       run: |
