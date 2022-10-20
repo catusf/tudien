@@ -12,12 +12,13 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    steps:
+
     - name: Setup Wine32
       run: |
         sudo dpkg --add-architecture i386
         sudo apt update && sudo apt install libwine wine32
 
-    steps:
     - uses: actions/checkout@v3
 
     - name: Setup Ubuntu packages
