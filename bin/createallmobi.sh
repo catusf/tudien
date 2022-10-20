@@ -12,3 +12,6 @@
 ./bin/createmobi.sh Tu-dien-Phat-hoc-Viet-Anh-Thien-Phuc
 ./bin/createmobi.sh Tu-dien-Phat-Quang
 ./bin/createmobi.sh TudienThienChuu
+
+rm -f ./output/kindle.zip
+zip -9 -j ./output/kindle.zip ./output/kindle/*.mobi
