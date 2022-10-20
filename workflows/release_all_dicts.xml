@@ -34,8 +34,9 @@ jobs:
 
     - name: Build Kindle .mobi dictionaries
       run: |
-        ./bin/createallmobi.sh
-        zip ./output/kindle.zip ./output/kindle/*.mobi
+        ./bin/createallmobi.sh &&
+        rm -f ./output/kindle.zip &&
+        zip -9 -j ./output/kindle.zip ./output/kindle/*.mobi
 
     - name: Create a new release draft
         id: create_release
