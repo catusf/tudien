@@ -1,11 +1,11 @@
 name: Release all dictionaries
 
 on:
+  workflow_dispatch:
+
   push:
     tags:
     - 'v*'
-
-env:
 
 jobs:
   build:
