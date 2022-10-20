@@ -1,0 +1,76 @@
+name: Release all dictionaries
+
+on:
+  push:
+    tags:
+    - 'v*'
+
+env:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    env:
+      MGFXC_WINE_PATH: /home/runner/.winemonogame
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Ubuntu packages
+      run: |
+        ./bin/install_linux_packages.sh
+
+    - name: Setup Python packages
+      run: |
+        pip install -r ./bin/requirements.txt
+
+    - name: Setup Wine32
+      run: |
+        sudo dpkg --add-architecture i386
+        sudo apt-get install wine32
+
+    - name: Build StarDict dictionaries
+      run: |
+        ./bin/convert2dict.sh
+
+    - name: Build Epub dictionaries
+      run: |
+        ./bin/convert2epub.sh
+
+    - name: Build Kobo dictionaries
+      run: |
+        ./bin/convert2kobo.sh
+
+    - name: Build Lingvo dictionaries
+      run: |
+        ./bin/convert2lingvo.sh
+
+    - name: Build Kindle .mobi dictionaries
+      run: |
+        ./bin/createallhtml.sh
+        ./bin/createallhtml-inflections.sh
+        ./bin/createallmobi.sh
+        rm -f ./output/kindle.zip
+        zip -9 -j ./output/kindle.zip ./output/kindle/*.mobi
+
+    - name: Create a new release draft
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+            tag_name: ${{ github.ref }}
+            release_name: Release ${{ github.ref }}
+            body: If you can read this, we have forgotten to fill in the changelog. Sorry!
+            draft: true
+
+    - name: Upload assets
+        id: upload-release-asset 
+        uses: dwenegar/upload-release-assets@v1
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+            release_id: ${{ steps.create_release.outputs.id }}
+            assets_path: ./output/*.*
