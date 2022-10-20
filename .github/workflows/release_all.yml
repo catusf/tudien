@@ -71,12 +71,3 @@ jobs:
           tag: ${{ github.ref }}
           draft: true
           name: Release ${{ github.ref }}
-
-    - name: Upload assets
-      id: upload-release-asset 
-      uses: dwenegar/upload-release-assets@v1
-      env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-            release_id: ${{ steps.create_release.outputs.id }}
-            assets_path: ./output/*
