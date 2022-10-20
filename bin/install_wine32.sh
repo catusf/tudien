@@ -21,18 +21,25 @@
 # sudo apt install -t parrot-backports wine32
 
 
-sudo dpkg --add-architecture i386
+# sudo dpkg --add-architecture i386
 
+# sudo apt update
+
+# sudo apt-add-repository -r 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+
+# wget -qO- https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
+
+# sudo apt-add-repository "deb https://dl.winehq.org/wine-builds/ubuntu/ $(lsb_release -cs) main"
+
+# sudo apt-get update
+
+# sudo apt install --install-recommends winehq-devel
+
+# wine ./bin/mobigen.exe
+
+sudo dpkg --add-architecture i386 
+sudo mkdir -pm755 /etc/apt/keyrings
+sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/bionic/winehq-bionic.sources
 sudo apt update
-
-sudo apt-add-repository -r 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
-
-wget -qO- https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
-
-sudo apt-add-repository "deb https://dl.winehq.org/wine-builds/ubuntu/ $(lsb_release -cs) main"
-
-sudo apt-get update
-
-sudo apt install --install-recommends winehq-devel
-
-wine ./bin/mobigen.exe
+sudo apt install --install-recommends winehq-stable
