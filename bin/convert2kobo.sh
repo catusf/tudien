@@ -14,3 +14,5 @@ pyglossary --read-format=Tabfile --source-lang=vi --target-lang=vi --name="Từ 
 pyglossary --read-format=Tabfile --source-lang=vi --target-lang=vi --name="Từ điển Tổng hợp Phật học" ./dict/Tu-dien-Tong-hop-Phat-hoc.tab ./output/kobo/Tu-dien-Tong-hop-Phat-hoc.kobo.zip
 pyglossary --read-format=Tabfile --source-lang=vi --target-lang=vi --name="Từ điển Đạo Uyển" ./dict/Tu-dien-Dao-Uyen.tab ./output/kobo/Tu-dien-Dao-Uyen.kobo.zip
 
+rm -f ./output/kobo.zip
+zip -9 -j ./output/kobo.zip ./output/kobo/*.*
