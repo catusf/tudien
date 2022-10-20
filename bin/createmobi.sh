@@ -2,4 +2,4 @@
 
 wine ./bin/mobigen.exe -unicode -s0 ./dict/$1/$1.opf
 
-mv ./dict/$1/$1.mobi ./output/kindle
+mv ./dict/$1/$1.mobi ./output/kindle/
