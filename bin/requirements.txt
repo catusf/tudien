@@ -1,5 +1,6 @@
-Pillow >= 9.2.0
-numpy >= 1.19
 PyGlossary >= 3.3.0
+iso_language_codes >= 1.1.0
+pattern.en >= 3.6.0
+
 
 # sudo apt-get install dictzip
