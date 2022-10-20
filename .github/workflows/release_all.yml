@@ -35,11 +35,11 @@ jobs:
       run: |
         pip install -r ./bin/requirements.txt
 
-    - name: Build Kindle .mobi dictionaries
-      run: |
-        ./bin/createallhtml.sh &&
-        ./bin/createallhtml-inflections.sh &&
-        ./bin/createallmobi.sh
+    # - name: Build Kindle .mobi dictionaries
+    #   run: |
+    #     ./bin/createallhtml.sh &&
+    #     ./bin/createallhtml-inflections.sh &&
+    #     ./bin/createallmobi.sh
         
     - name: Build StarDict dictionaries
       run: |
