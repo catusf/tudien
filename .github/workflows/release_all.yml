@@ -17,7 +17,9 @@ jobs:
     - name: Setup Wine32
       run: |
         sudo dpkg --add-architecture i386
-        sudo apt update && sudo apt install libwine wine32
+        sudo apt update 
+        sudo apt install -y --allow-downgrades libpcre2-8-0=10.34-7
+        sudo apt install libwine wine32
 
     - uses: actions/checkout@v3
 
