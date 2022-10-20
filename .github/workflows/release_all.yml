@@ -13,7 +13,7 @@ jobs:
     steps:
 
     - uses: actions/checkout@v3
-    
+
     - name: Setup Wine32
       run: |
         ./bin/install_linux_packages.sh
@@ -36,6 +36,12 @@ jobs:
       run: |
         pip install -r ./bin/requirements.txt
 
+    - name: Build Kindle .mobi dictionaries
+      run: |
+        ./bin/createallhtml.sh
+        ./bin/createallhtml-inflections.sh
+        ./bin/createallmobi.sh
+        
     - name: Build StarDict dictionaries
       run: |
         ./bin/convert2dict.sh
@@ -52,12 +58,6 @@ jobs:
       run: |
         ./bin/convert2lingvo.sh
 
-    # - name: Build Kindle .mobi dictionaries
-    #   run: |
-    #     ./bin/createallhtml.sh
-    #     ./bin/createallhtml-inflections.sh
-    #     ./bin/createallmobi.sh
-        
     - name: Create a new release draft
       id: create_release
       uses: ncipollo/release-action@v1
