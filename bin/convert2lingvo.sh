@@ -16,5 +16,5 @@ ruby ./dsl-tools/tab2dsl/tab2dsl.rb --from-lang Vietnamese --to-lang Vietnamese 
 
 mv *.dsl.dz ./output/lingvo/
 
-rm -f ./output/lingvo.zip
-zip -9 -j ./output/lingvo.zip ./output/lingvo/*.*
+rm -f ./output/all-lingvo.zip
+zip -9 -j ./output/all-lingvo.zip ./output/lingvo/*.*

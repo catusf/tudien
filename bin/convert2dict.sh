@@ -14,5 +14,5 @@ pyglossary --read-format=Tabfile --source-lang=vi --target-lang=vi --name="Từ 
 pyglossary --read-format=Tabfile --source-lang=vi --target-lang=vi --name="Từ điển Tổng hợp Phật học" ./dict/Tu-dien-Tong-hop-Phat-hoc.tab ./output/stardict/Tu-dien-Tong-hop-Phat-hoc.ifo
 pyglossary --read-format=Tabfile --source-lang=vi --target-lang=vi --name="Từ điển Đạo Uyển" ./dict/Tu-dien-Dao-Uyen.tab ./output/stardict/Tu-dien-Dao-Uyen.ifo
 
-rm -f ./output/stardict.zip
-zip -9 -j ./output/stardict.zip ./output/stardict/*.*
+rm -f ./output/all-stardict.zip
+zip -9 -j ./output/all-stardict.zip ./output/stardict/*.*

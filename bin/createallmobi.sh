@@ -13,5 +13,5 @@
 ./bin/createmobi.sh Tu-dien-Phat-Quang
 ./bin/createmobi.sh TudienThienChuu
 
-rm -f ./output/kindle.zip
-zip -9 -j ./output/kindle.zip ./output/kindle/*.mobi
+rm -f ./output/all-kindle.zip
+zip -9 -j ./output/all-kindle.zip ./output/kindle/*.mobi
