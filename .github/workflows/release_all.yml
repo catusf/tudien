@@ -54,23 +54,23 @@ jobs:
         ./bin/createallmobi.sh
         rm -f ./output/kindle.zip
         zip -9 -j ./output/kindle.zip ./output/kindle/*.mobi
-
+        
     - name: Create a new release draft
-        id: create_release
-        uses: actions/create-release@v1
-        env:
+      id: create_release
+      uses: actions/create-release@v1
+      env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
+      with:
             tag_name: ${{ github.ref }}
             release_name: Release ${{ github.ref }}
             body: If you can read this, we have forgotten to fill in the changelog. Sorry!
             draft: true
 
     - name: Upload assets
-        id: upload-release-asset 
-        uses: dwenegar/upload-release-assets@v1
-        env:
+      id: upload-release-asset 
+      uses: dwenegar/upload-release-assets@v1
+      env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
+      with:
             release_id: ${{ steps.create_release.outputs.id }}
             assets_path: ./output/*.*
