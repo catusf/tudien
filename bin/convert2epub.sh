@@ -14,5 +14,5 @@ pyglossary --read-format=Tabfile --source-lang=vi --target-lang=vi --name="Từ 
 pyglossary --read-format=Tabfile --source-lang=vi --target-lang=vi --name="Từ điển Tổng hợp Phật học" ./dict/Tu-dien-Tong-hop-Phat-hoc.tab ./output/epub/Tu-dien-Tong-hop-Phat-hoc.epub
 pyglossary --read-format=Tabfile --source-lang=vi --target-lang=vi --name="Từ điển Đạo Uyển" ./dict/Tu-dien-Dao-Uyen.tab ./output/epub/Tu-dien-Dao-Uyen.epub
 
-rm -f ./output/epub.zip
-zip -9 -j ./output/epub.zip ./output/epub/*.*
+rm -f ./output/all-epub.zip
+zip -9 -j ./output/all-epub.zip ./output/epub/*.*
