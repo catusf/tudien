@@ -16,9 +16,9 @@ jobs:
       run: |
         sudo apt install aptitude
 
-        sudo apt-get install libpcre2-8-0=10.34-7
-        sudo apt-get install libssl1.1=1.1.1f-1ubuntu2.1
-        sudo apt-get install libssl1.1:i386=1.1.1f-1ubuntu2.1
+        sudo apt-get install --allow-downgrades libpcre2-8-0=10.34-7
+        sudo apt-get install --allow-downgrades libssl1.1=1.1.1f-1ubuntu2.1
+        sudo apt-get install --allow-downgrades libssl1.1:i386=1.1.1f-1ubuntu2.1
 
         sudo aptitude install wine32
 
