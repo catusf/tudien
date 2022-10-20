@@ -6,15 +6,15 @@ sudo apt update
 
 wget -qO- https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
 
-sudo apt --yes --force-yes install software-properties-common
+sudo apt --yes install software-properties-common
 
 sudo apt-add-repository "deb https://dl.winehq.org/wine-builds/ubuntu/ $(lsb_release -cs) main"
 
 sudo apt update
 
-sudo apt --yes --force-yes install --install-recommends winehq-stable
+sudo apt --yes install --install-recommends winehq-devel
 
-sudo apt --yes --force-yes install wine32
+# sudo apt --yes install wine32
 
 wine --version
 
