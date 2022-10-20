@@ -13,7 +13,7 @@ Việc còn lại là copy file .mobi vừa được tạo ra bằng dây cáp U
 
 ### TODO
 - [X] Copy dữ liệu Từ điển Thiền Chửu lên repo
-- [ ] Sử dụng Action để build và release tự động từ điển
+- [X] Sử dụng Action để build và release tự động từ điển
 - [X] Khái quát hoá tool để có thể build được các file dữ liệu từ điển khác
 
 ### Danh sách các từ điển và số từ
@@ -36,3 +36,4 @@ Việc còn lại là copy file .mobi vừa được tạo ra bằng dây cáp U
 
 [![Join the chat at https://gitter.im/catusf/tudienanhviet](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/catusf/tudienanhviet?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
  
+[![Release all dictionaries](https://github.com/catusf/tudien/actions/workflows/release_all.yml/badge.svg)](https://github.com/catusf/tudien/actions/workflows/release_all.yml)
