@@ -1,4 +1,4 @@
-# Từ điển tiếng Việt dành cho Kindle
+# Từ điển tiếng Việt dành cho máy đọc sách Kindle, Kobo, Pocketbook v.v.
 
 Mã nguồn cho từ điển dành cho máy đọc sách Kindle. Để sử dụng download tại đây http://catusf.github.io/.
 
