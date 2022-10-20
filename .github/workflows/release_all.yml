@@ -16,7 +16,7 @@ jobs:
 
     - name: Setup Wine32
       run: |
-        ./bin/install_linux_packages.sh
+        ./bin/install_wine32.sh
         
     # - name: Setup Wine32
     #   run: |
