@@ -1,10 +1,10 @@
 # TODO
-- [ ] Convert dicts to PRC for Android
-- [ ] Add cover page to dictionaries
-- [ ] Add action to generate pre-release (including zipping all folder)
-- [ ] Add action to use Wine to run mobigen
 - [ ] Add a desc file name for each dictionary containing Name, Source and Target languages...
-- [ ] Add Action to run all release at one (one script generates multiple outputs: DSL, StarDict, Kobo, Kindle...)
+- [ ] Add cover page to dictionaries
+- [x] Convert dicts to PRC for Android
+- [x] Add action to generate pre-release (including zipping all folder)
+- [X] Add action to use Wine to run mobigen
+- [X] Add Action to run all release at one (one script generates multiple outputs: DSL, StarDict, Kobo, Kindle...)
 - [X] Add To and From language
 - [X] Change the title of dictionaries
 - [x] Use a lib to create epub (pyglossary or penelope)
