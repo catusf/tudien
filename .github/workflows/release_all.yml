@@ -13,11 +13,11 @@ jobs:
     steps:
     - name: Setup Wine32
       run: |
-        sudo dpkg --add-architecture i386
-        sudo wget -nc -O /usr/share/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
-        sudo wget -nc -P /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/focal/winehq-focal.sources
-        sudo apt update
-        sudo apt install --install-recommends winehq-stable
+        # sudo dpkg --add-architecture i386
+        # sudo wget -nc -O /usr/share/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+        # sudo wget -nc -P /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/focal/winehq-focal.sources
+        # sudo apt update
+        # sudo apt install --install-recommends winehq-stable
 
     # - name: Setup Wine32
     #   run: |
@@ -63,6 +63,13 @@ jobs:
         
     - name: Create a new release draft
       id: create_release
+
+      uses: ncipollo/release-action@v1
+        with:
+          artifacts: "./output/*.zip,./output/kindle/*.*,./output/kobo/*.*,./output/lingvo/*.*,./output/epub/*.*"
+          bodyFile: "body.md"
+          token: ${{ secrets.YOUR_GITHUB_TOKEN }}
+          
       uses: actions/create-release@v1
       env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
