@@ -13,12 +13,13 @@ jobs:
     steps:
     - name: Setup Wine32
       run: |
-        # sudo dpkg --add-architecture i386
-        # sudo wget -nc -O /usr/share/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
-        # sudo wget -nc -P /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/focal/winehq-focal.sources
-        # sudo apt update
-        # sudo apt install --install-recommends winehq-stable
-
+        sudo dpkg --add-architecture i386
+        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 86B72ED9
+        sudo add-apt-repository 'deb [arch=amd64] https://mirror.mxe.cc/repos/apt focal main'
+        sudo apt -qq update
+        sudo apt install -y --allow-downgrades libpcre2-8-0=10.34-7
+        sudo apt install -y wine32
+        
     # - name: Setup Wine32
     #   run: |
     #     sudo apt install -f aptitude
