@@ -45,7 +45,7 @@ jobs:
     - name: Setup Wine32
       run: |
         sudo dpkg --add-architecture i386
-        sudo apt update && sudo apt install wine32
+        sudo apt update && sudo apt install libwine wine32
 
     - name: Build Kindle .mobi dictionaries
       run: |
