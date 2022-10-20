@@ -63,21 +63,14 @@ jobs:
         
     - name: Create a new release draft
       id: create_release
-
       uses: ncipollo/release-action@v1
         with:
           artifacts: "./output/*.zip,./output/kindle/*.*,./output/kobo/*.*,./output/lingvo/*.*,./output/epub/*.*"
-          bodyFile: "body.md"
-          token: ${{ secrets.YOUR_GITHUB_TOKEN }}
-          
-      uses: actions/create-release@v1
-      env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-            tag_name: ${{ github.ref }}
-            release_name: Release ${{ github.ref }}
-            body: If you can read this, we have forgotten to fill in the changelog. Sorry!
-            draft: true
+          body: If you can read this, we have forgotten to fill in the changelog. Sorry!
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}
+          draft: true
+          name: Release ${{ github.ref }}
 
     - name: Upload assets
       id: upload-release-asset 
