@@ -1,7 +1,7 @@
 # Generate .mobi ebooks
 ./bin/createmobi.sh Tu-dien-Tong-hop-Phat-hoc
 ./bin/createmobi.sh Ngu-vung-Danh-tu-Thien-hoc
-./bin/createmobi.sh Phat-Quang-Dai-tu-dien-(Han-ngu)
+./bin/createmobi.sh Phat-Quang-Dai-tu-dien-Han-ngu
 ./bin/createmobi.sh Rong-mo-tam-hon
 ./bin/createmobi.sh TudienAnhVietBeta
 ./bin/createmobi.sh Tu-dien-Dao-Uyen

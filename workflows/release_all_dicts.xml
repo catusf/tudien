@@ -26,16 +26,33 @@ jobs:
       run: |
         pip install -r ./bin/requirements.txt
 
-    - name: Setup Wine
+    - name: Setup Wine32
       run: |
-        sudo apt update
-        sudo apt install wine64 p7zip-full
-        wget -qO- https://raw.githubusercontent.com/MonoGame/MonoGame/master/Tools/MonoGame.Effect.Compiler/mgfxc_wine_setup.sh | sh
+        sudo dpkg --add-architecture i386
+        sudo apt-get install wine32
+
+    - name: Build StarDict dictionaries
+      run: |
+        ./bin/convert2dict.sh
+
+    - name: Build Epub dictionaries
+      run: |
+        ./bin/convert2epub.sh
+
+    - name: Build Kobo dictionaries
+      run: |
+        ./bin/convert2kobo.sh
+
+    - name: Build Lingvo dictionaries
+      run: |
+        ./bin/convert2lingvo.sh
 
     - name: Build Kindle .mobi dictionaries
       run: |
-        ./bin/createallmobi.sh &&
-        rm -f ./output/kindle.zip &&
+        ./bin/createallhtml.sh
+        ./bin/createallhtml-inflections.sh
+        ./bin/createallmobi.sh
+        rm -f ./output/kindle.zip
         zip -9 -j ./output/kindle.zip ./output/kindle/*.mobi
 
     - name: Create a new release draft

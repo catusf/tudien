@@ -15,3 +15,6 @@ ruby ./dsl-tools/tab2dsl/tab2dsl.rb --from-lang Vietnamese --to-lang Vietnamese 
 ruby ./dsl-tools/tab2dsl/tab2dsl.rb --from-lang Vietnamese --to-lang Vietnamese --dict-name "Từ điển Đạo Uyển" ./dict/Tu-dien-Dao-Uyen.tab
 
 mv *.dsl.dz ./output/lingvo/
+
+rm -f ./output/lingvo.zip
+zip -9 -j ./output/lingvo.zip ./output/lingvo/*.*
