@@ -1,5 +1,7 @@
 # TODO
 - [ ] Add a desc file name for each dictionary containing Name, Source and Target languages...
+- [ ] Move html folders inside html
+- [ ] Move mobigen tool to sub folder
 - [ ] Add cover page to dictionaries
 - [ ] Streamline convert process to be able to add new dictionaries easiy
 - [ ] Add dictionaries from here https://akishop.com.vn/tong-hop-tu-dien-cho-kindle-nd49491.html
