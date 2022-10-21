@@ -4,9 +4,15 @@ on:
   workflow_dispatch:
 
   push:
-
+    paths-ignore:
+      - .gitignore
+      - README.md
+      - LICENSE
+    
 jobs:
   build:
+    # Only builds if commit message contains BUILD
+    if: "contains(github.event.head_commit.message, 'BUILD')"
 
     runs-on: ubuntu-18.04
 
