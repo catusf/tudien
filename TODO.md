@@ -1,6 +1,9 @@
 # TODO
 - [ ] Add a desc file name for each dictionary containing Name, Source and Target languages...
 - [ ] Add cover page to dictionaries
+- [ ] Streamline convert process to be able to convert many dictionaries
+- [ ] Add dictionaries from here https://akishop.com.vn/tong-hop-tu-dien-cho-kindle-nd49491.html
+- [ ] Using https://github.com/kevinhendricks/KindleUnpack to convert mobi files
 - [x] Convert dicts to PRC for Android
 - [x] Add action to generate pre-release (including zipping all folder)
 - [X] Add action to use Wine to run mobigen
