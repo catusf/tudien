@@ -1,3 +1,9 @@
 [submodule "dsl-tools"]
 	path = dsl-tools
 	url = https://github.com/catusf/dsl-tools.git
+[submodule "ext-stardict-vi"]
+	path = ext-stardict-vi
+	url = https://github.com/catusf/stardict-vi.git
+[submodule "ext-dictionary"]
+	path = ext-dictionary
+	url = https://github.com/catusf/dictionary.git
