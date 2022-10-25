@@ -1,0 +1,8 @@
+
+printf "Name = Từ điển %s\nDescription = %s\nSource = %s\nTarget = %s \nVersion = 1.0\nOwner/Editor = \nURL = %s" "Bách khoa toàn thư" "Bách khoa toàn thư tiếng Việt" "vi" "vi" > "Bach khoa toan thu.dfo" "https://akishop.com.vn/tong-hop-tu-dien-cho-kindle-nd49491.html"
+printf "Name = Từ điển %s\nDescription = %s\nSource = %s\nTarget = %s \nVersion = 1.0\nOwner/Editor = \nURL = %s" "Từ điển tiếng Việt" "Từ điển tiếng Việt" "vi" "vi" > "Tieng Viet - Ho Ngoc Duc.dfo" "https://akishop.com.vn/tong-hop-tu-dien-cho-kindle-nd49491.html"
+printf "Name = Từ điển %s\nDescription = %s\nSource = %s\nTarget = %s \nVersion = 1.0\nOwner/Editor = \nURL = %s" "Từ điển Hán ngữ" "Từ điển Hán ngữ" "zh" "vi" > "Tu dien Han ngu - hhh.dfo" "https://akishop.com.vn/tong-hop-tu-dien-cho-kindle-nd49491.html"
+printf "Name = Từ điển %s\nDescription = %s\nSource = %s\nTarget = %s \nVersion = 1.0\nOwner/Editor = \nURL = %s" "Từ điển Việt - Nhật" "Anh - Việt" "ja" "vi" > "Viet - Nhat NXBVHTT.dfo" "https://akishop.com.vn/tong-hop-tu-dien-cho-kindle-nd49491.html"
+printf "Name = Từ điển %s\nDescription = %s\nSource = %s\nTarget = %s \nVersion = 1.0\nOwner/Editor = \nURL = %s" "Từ điển Wikipedia tiếng Việt" "Từ điển Wikipedia tiếng Việt" "vi" "vi" > "Wikipedia.dfo" "https://akishop.com.vn/tong-hop-tu-dien-cho-kindle-nd49491.html"
+printf "Name = Từ điển %s\nDescription = %s\nSource = %s\nTarget = %s \nVersion = 1.0\nOwner/Editor = \nURL = %s" "Từ điển WordNet" "Từ điển WordNet" "en" "en" > "WordNet 2.0.dfo" "https://akishop.com.vn/tong-hop-tu-dien-cho-kindle-nd49491.html"
+ 
