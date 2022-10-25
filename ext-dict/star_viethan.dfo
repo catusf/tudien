@@ -1,0 +1,7 @@
+Name = Từ điển Việt - Hàn
+Description = Từ điển Việt - Hàn từ dự án Open Vietnamese Dictionary Project (OVDP)
+Source = vi
+Target = ko 
+Version = 1.0
+Owner/Editor = OVDP
+URL = https://github.com/catusphan/dictionary
