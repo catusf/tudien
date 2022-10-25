@@ -1,0 +1,7 @@
+Name = Từ điển Ý - Việt
+Description = Từ điển Ý - Việt từ dự án Open Vietnamese Dictionary Project (OVDP)
+Source = it
+Target = vi 
+Version = 1.0
+Owner/Editor = OVDP
+URL = https://github.com/catusphan/dictionary

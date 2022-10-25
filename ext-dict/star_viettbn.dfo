@@ -1,0 +1,7 @@
+Name = Từ điển Việt - Tây Ban Nha
+Description = Từ điển Việt - Tây Ban Nha từ dự án Open Vietnamese Dictionary Project (OVDP)
+Source = vi
+Target = es 
+Version = 1.0
+Owner/Editor = OVDP
+URL = https://github.com/catusphan/dictionary

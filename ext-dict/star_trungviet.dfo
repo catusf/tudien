@@ -1,0 +1,7 @@
+Name = Từ điển Trung - Việt
+Description = Từ điển Trung - Việt từ dự án Open Vietnamese Dictionary Project (OVDP)
+Source = zh
+Target = vi 
+Version = 1.0
+Owner/Editor = OVDP
+URL = https://github.com/catusphan/dictionary

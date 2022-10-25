@@ -1,0 +1,7 @@
+Name = Từ điển Bồ Đào Nha - Việt
+Description = Từ điển Bồ Đào Nha - Việt từ dự án Open Vietnamese Dictionary Project (OVDP)
+Source = pt
+Target = vi 
+Version = 1.0
+Owner/Editor = OVDP
+URL = https://github.com/catusphan/dictionary
