@@ -1,0 +1,19 @@
+pyglossary ./ext-stardict-vi/es-vi/star_tbnviet.ifo   ./ext-stardict-vi/es-vi/star_tbnviet.tab
+pyglossary ./ext-stardict-vi/fr-vi/star_phapviet.ifo  ./ext-stardict-vi/fr-vi/star_phapviet.tab
+pyglossary ./ext-stardict-vi/vi-en/star_vietanh.ifo   ./ext-stardict-vi/vi-en/star_vietanh.tab
+pyglossary ./ext-stardict-vi/ru-vi/star_ngaviet.ifo   ./ext-stardict-vi/ru-vi/star_ngaviet.tab
+pyglossary ./ext-stardict-vi/vi-fr/star_vietphap.ifo  ./ext-stardict-vi/vi-fr/star_vietphap.tab
+pyglossary ./ext-stardict-vi/no-vi/star_nauyviet.ifo  ./ext-stardict-vi/no-vi/star_nauyviet.tab
+pyglossary ./ext-stardict-vi/vi-de/star_vietduc.ifo   ./ext-stardict-vi/vi-de/star_vietduc.tab
+pyglossary ./ext-stardict-vi/zh-vi/star_trungviet.ifo ./ext-stardict-vi/zh-vi/star_trungviet.tab
+pyglossary ./ext-stardict-vi/pt-vi/star_bdnviet.ifo   ./ext-stardict-vi/pt-vi/star_bdnviet.tab
+pyglossary ./ext-stardict-vi/ja-vi/star_nhatviet.ifo  ./ext-stardict-vi/ja-vi/star_nhatviet.tab
+pyglossary ./ext-stardict-vi/de-vi/star_ducviet.ifo   ./ext-stardict-vi/de-vi/star_ducviet.tab
+pyglossary ./ext-stardict-vi/vi-ru/star_vietnga.ifo   ./ext-stardict-vi/vi-ru/star_vietnga.tab
+pyglossary ./ext-stardict-vi/cz-vi/star_secviet.ifo   ./ext-stardict-vi/cz-vi/star_secviet.tab
+pyglossary ./ext-stardict-vi/it-vi/star_yviet.ifo     ./ext-stardict-vi/it-vi/star_yviet.tab
+pyglossary ./ext-stardict-vi/en-vi/star_anhviet.ifo   ./ext-stardict-vi/en-vi/star_anhviet.tab
+pyglossary ./ext-stardict-vi/vi-es/star_viettbn.ifo   ./ext-stardict-vi/vi-es/star_viettbn.tab
+
+pyglossary ./ext-stardict-vi/ko-vi/star_hanviet.ifo   ./ext-stardict-vi/ko-vi/star_hanviet.tab
+pyglossary ./ext-stardict-vi/vi-ja/star_vietnhat.ifo  ./ext-stardict-vi/vi-ja/star_vietnhat.tab
