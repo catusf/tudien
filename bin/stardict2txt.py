@@ -399,8 +399,7 @@ if __name__ == '__main__':
     # idx_file = "/tmp/stardict-xhzd-2.4.2/xhzd.idx"
     # dict_file = "/tmp/stardict-xhzd-2.4.2/xhzd.dict.dz"
 
-    dict_name = 'xdict-ec-gb'
-    dict_name = '/workspaces/tudien/ext-stardict-vi/ja-vi/star_nhatviet'
+    dict_name = '/workspaces/tudien/ext-stardict-vi/fr-vi/star_phapviet'
     ifo_file = dict_name + ".ifo"
     idx_file = dict_name + ".idx"
     dict_file = dict_name + ".dict.dz"
