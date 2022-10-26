@@ -3,10 +3,10 @@
 - [ ] Move html folders inside html
 - [ ] Move mobigen tool to sub folder
 - [ ] Add cover page to dictionaries
-- [ ] Streamline convert process to be able to add new dictionaries easiy
-- [ ] Add dictionaries from here https://akishop.com.vn/tong-hop-tu-dien-cho-kindle-nd49491.html
-- [ ] Using https://github.com/kevinhendricks/KindleUnpack to convert mobi files
-- [ ] Update to an up-to-date Ubunto distro when Wine is updated
+- [ ] Streamline convert process to be able to add new dictionaries easiy: one script to convert one .tab to all targets, then the holding script scan ict folder for all .dfo file to call above converter script
+- [ ] Update to an up-to-date Ubunto distro when Wine is updated (error on Ubuntu v20 and 22)
+- [X] Add dictionaries from here https://akishop.com.vn/tong-hop-tu-dien-cho-kindle-nd49491.html
+- [X] Using https://github.com/kevinhendricks/KindleUnpack to convert mobi files
 - [x] Convert dicts to PRC for Android
 - [x] Add action to generate pre-release (including zipping all folder)
 - [X] Add action to use Wine to run mobigen
