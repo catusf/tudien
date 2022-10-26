@@ -2,21 +2,27 @@
 
 Mã nguồn cho từ điển dành cho máy đọc sách Kindle. Để sử dụng download tại đây http://catusf.github.io/.
 
-### Hướng dẫn cách tạo ra file từ điển .mobi
+## Tại sao?
+- Do tôi thấy cần có các từ điển có chất lượng để giúp việc học hỏi của bản thân và mọi người. 
+
+- Các từ điển cần: 
+
+    - Chính xác và dễ tra cứu
+    - Dùng được trên nhiều thiết bị (Kindle, Kobo, Onyx, mobile và PC apps)
+    - Có thể dễ dàng bổ sung từ điển - chỉ cần tạo 1 file văn bản phân cách bằng dấu \t (.tab) và 1 file mô tả .dfo
+
+
+## Hướng dẫn cách tạo ra file từ điển .mobi
 1. Cài Python 3.x
-2. Tạo mới hay sửa file định nghĩa từ điển (như `../dict/TudienAnhVietBeta.txt`)
+2. Tạo mới hay sửa file định nghĩa từ điển (như `../dict/TudienAnhVietBeta.tab`)
 3. Chạy dòng lệnh `createhtml.bat` để tạo ra các file `.html` (có format OPFcho ebook ebook) dùng chương trình Python `tab2opf.py`
 4. Sửa file .opf nếu cần (tham khảo các file *-org.opf)
 5. Chạy `createmobi.bat` để tạo từ điển Kindle sử dụng công cụ `mobigen.exe` của Amazon. Các từ điển nằm trong thư mục `../dict`
 
 Việc còn lại là copy file .mobi vừa được tạo ra bằng dây cáp USB vào thư mục `documents` trên Kindle để bắt đầu sử dụng.
 
-### TODO
-- [X] Copy dữ liệu Từ điển Thiền Chửu lên repo
-- [X] Sử dụng Action để build và release tự động từ điển
-- [X] Khái quát hoá tool để có thể build được các file dữ liệu từ điển khác
 
-### Danh sách các từ điển và số từ
+## Danh sách các từ điển và số từ hiện có
 
 1. Từ điển Hán Việt Thiền Chửu (9'897)
 2. Từ điển Anh Việt Beta (106'059 với 28'400 dạng từ thay thế - inflection)
