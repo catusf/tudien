@@ -3,8 +3,11 @@
 - [ ] Move html folders inside html
 - [ ] Move mobigen tool to sub folder
 - [ ] Add cover page to dictionaries
-- [ ] Streamline convert process to be able to add new dictionaries easiy: one script to convert one .tab to all targets, then the holding script scan ict folder for all .dfo file to call above converter script
-- [ ] Update to an up-to-date Ubunto distro when Wine is updated (error on Ubuntu v20 and 22)
+- [ ] Streamline convert process to be able to add new dictionaries easiy: 
+    - One script to convert one .tab to all targets, 
+    - One holding script scan ict folder for all .dfo file to call above converter script
+    - The latter script has two params: one for the input folder, one for the output
+- [ ] Update to an up-to-date Ubuntu distro when Wine is updated (error on Ubuntu v20 and 22)
 - [ ] Sync config .dotfile across environtment
 - [X] Add dictionaries from here https://akishop.com.vn/tong-hop-tu-dien-cho-kindle-nd49491.html
 - [X] Using https://github.com/kevinhendricks/KindleUnpack to convert mobi files
