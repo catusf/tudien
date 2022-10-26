@@ -3,14 +3,15 @@
 Mã nguồn cho từ điển dành cho máy đọc sách Kindle. Để sử dụng download tại đây http://catusf.github.io/.
 
 ## Tại sao?
-- Do tôi thấy cần có các từ điển có chất lượng để giúp việc học hỏi của bản thân và mọi người. 
+- Do tôi thấy cần:
+    - Có các từ điển có chất lượng để giúp việc học hỏi của bản thân và mọi người
+    - Lập trình viên bất kỳ có thể dùng dữ liệu đầu vào ở đây để tạo output khác
+    - Có thể dễ dàng bổ sung từ điển - chỉ cần tạo 1 file văn bản phân cách bằng dấu \t (.tab) và 1 file mô tả .dfo
 
 - Các từ điển cần: 
 
     - Chính xác và dễ tra cứu
     - Dùng được trên nhiều thiết bị (Kindle, Kobo, Onyx, mobile và PC apps)
-    - Có thể dễ dàng bổ sung từ điển - chỉ cần tạo 1 file văn bản phân cách bằng dấu \t (.tab) và 1 file mô tả .dfo
-
 
 ## Hướng dẫn cách tạo ra file từ điển .mobi
 1. Cài Python 3.x
