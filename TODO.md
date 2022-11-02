@@ -1,5 +1,6 @@
 # TODO
 - [ ] Add a desc file name for each dictionary containing Name, Source and Target languages...
+- [ ] Add name of separate dictionaries to TudienTonghopPhathoc
 - [ ] Move html folders inside html
 - [ ] Move mobigen tool to sub folder
 - [ ] Add cover page to dictionaries
