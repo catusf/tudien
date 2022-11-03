@@ -100,19 +100,19 @@ def main() -> None:
         out_path = os.path.join(output_folder, f'stardict/{filebase}.ifo')
         cmd_line = f"pyglossary --read-format=Tabfile --source-lang={data['Source']} --target-lang={data['Target']} --name=\"{data['Name']}\" {datafile} {out_path}"
         print(cmd_line)
-        #subprocess.run(shlex.split(cmd_line))
+        subprocess.run(shlex.split(cmd_line))
 
         # Generare Epub dictionary
         out_path = os.path.join(output_folder, f'epub/{filebase}.epub')
         cmd_line = f"pyglossary --read-format=Tabfile --source-lang={data['Source']} --target-lang={data['Target']} --name=\"{data['Name']}\" {datafile} {out_path}"
         print(cmd_line)
-        #subprocess.run(shlex.split(cmd_line))
+        subprocess.run(shlex.split(cmd_line))
 
         # Generare Kobo dictionary
         out_path = os.path.join(output_folder, f'kobo/{filebase}.kobo.zip')
         cmd_line = f"pyglossary --read-format=Tabfile --source-lang={data['Source']} --target-lang={data['Target']} --name=\"{data['Name']}\" {datafile} {out_path}"
         print(cmd_line)
-        #subprocess.run(shlex.split(cmd_line))
+        subprocess.run(shlex.split(cmd_line))
 
         # Generare Lingvo dictionary
         out_path = os.path.join(output_folder, f'lingvo/{filebase}.dsl')
@@ -129,7 +129,7 @@ def main() -> None:
         cmd_line = f"python ./bin/tab2opf.py --outdir ./ext-dict/kindle/ --title \"{data['Name']}\" --source {data['Source']} --target {data['Target']} {datafile} --inflection {inflections}"        
 
         print(cmd_line)
-        # subprocess.run(shlex.split(cmd_line))
+        subprocess.run(shlex.split(cmd_line))
         pass
 
 
