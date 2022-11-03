@@ -129,6 +129,8 @@ def parseargs():
     parser.add_argument("-m", "--module", 
                         help="Import module for mapping, getkey, getdef")
     parser.add_argument("-i", "--inflection", help="Path to inflection file")
+    parser.add_argument("-l", "--title", help="Title of dictionary")
+    parser.add_argument("-o", "--outdir", help="Output dir", default='')
     parser.add_argument("-s", "--source", default="en", help="Source language")
     parser.add_argument("-t", "--target", default="en", help="Target language")
     parser.add_argument("file", help="tab file to input")    
@@ -159,6 +161,8 @@ MODULE   = args.module
 INFLECT  = args.inflection
 INLANG   = args.source
 OUTLANG  = args.target
+TITLE  = args.title
+OUTDIR  = args.outdir
 importmod()
 
 # add a single [term, definition]
@@ -358,10 +362,10 @@ def openopf(ndicts, name):
 
 <metadata>
 	<dc-metadata>
-		<dc:Identifier id="uid">{name}</dc:Identifier>
+		<dc:Identifier id="uid">{title}</dc:Identifier>
 		<!-- Title of the document -->
-		<dc:Title><h2>{name}</h2></dc:Title>
-		<dc:Language>EN</dc:Language>
+		<dc:Title><h2>{title}</h2></dc:Title>
+		<dc:Language>{target}</dc:Language>
 	</dc-metadata>
 	<x-metadata>
 	        <output encoding="utf-8" flatten-dynamic-dir="yes"/>
@@ -372,7 +376,7 @@ def openopf(ndicts, name):
 
 <!-- list of all the files needed to produce the .prc file -->
 <manifest>
-""".format(name=name, source=INLANG, target=OUTLANG))
+""".format(title=TITLE, source=INLANG, target=OUTLANG))
 
         yield to
 
@@ -414,6 +418,13 @@ print("Reading keys")
 defns = readkeys()
 inflections = readinflections()
 name = os.path.splitext(os.path.basename(FILENAME))[0]
+print(f'Prev: {name}')
+
+if OUTDIR:
+    path, filename = os.path.split(name)
+    name = os.path.join(OUTDIR, filename)
+print(f'New : {name}')
+
 print("Writing keys")
 ndicts = writekeys(defns, name)
 keys = defns.keys()
