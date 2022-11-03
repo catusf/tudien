@@ -1,6 +1,6 @@
 Name = Từ điển Séc - Việt
 Description = Từ điển Séc - Việt từ dự án Open Vietnamese Dictionary Project (OVDP)
-Source = cz
+Source = cs
 Target = vi 
 Version = 1.0
 Owner/Editor = OVDP
