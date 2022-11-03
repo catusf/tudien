@@ -13,7 +13,7 @@ Mã nguồn cho từ điển dành cho máy đọc sách Kindle. Để sử dụ
     - Chính xác và dễ tra cứu
     - Dùng được trên nhiều thiết bị (Kindle, Kobo, Onyx, mobile và PC apps)
 
-## Hướng dẫn cách tạo ra file từ điển .mobi
+## Các bước cách tạo ra file từ điển
 1. Cài Python 3.x
 2. Tạo mới hay sửa file định nghĩa từ điển (như `../dict/TudienAnhVietBeta.tab`)
 3. Chạy dòng lệnh `createhtml.bat` để tạo ra các file `.html` (có format OPFcho ebook ebook) dùng chương trình Python `tab2opf.py`
@@ -22,7 +22,15 @@ Mã nguồn cho từ điển dành cho máy đọc sách Kindle. Để sử dụ
 
 Việc còn lại là copy file .mobi vừa được tạo ra bằng dây cáp USB vào thư mục `documents` trên Kindle để bắt đầu sử dụng.
 
-
+```mermaid
+graph LR;
+    GenMetadat(File mô tả <.dfo>) --> GenTab(File định nghĩa <.tsv>);
+    GenTab -- tool tab2opf --> HTML_File(File <.opf/html>) -- mobigen --> KindleDict(Từ điển Kindle <.mobi>);
+    GenTab -- chạy PyGlossary --> EpubDict(Từ diển <.epub>);
+    GenTab --  chạy PyGlossary --> KoboDict(Từ diển Kobo <.kobo.zip>);
+    GenTab --  chạy PyGlossary --> StarDict(Từ diển StarDict <.ifo>);
+    GenTab --  chạy DSL Tools --> DSLDict(Từ diển Lingvo <.dsl.dz>);
+```
 ## Danh sách các từ điển và số từ hiện có
 
 1. Từ điển Hán Việt Thiền Chửu (9'897)

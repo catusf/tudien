@@ -1,10 +1,13 @@
 # TODO
-- [ ] Add a desc file name for each dictionary containing Name, Source and Target languages...
 - [ ] Add name of separate dictionaries to TudienTonghopPhathoc
-- [ ] Move html folders inside html
+- [x] Move html folders inside html
+- [x] Add a desc file name for each dictionary containing Name, Source and Target languages...
+- [X] Need a script to update opf file + output folder (or update tab2opf?)
+- [X] Update DSdsl-tools to allow specifying output filename
+- [x] Move html folders inside html
 - [ ] Move mobigen tool to sub folder
 - [ ] Add cover page to dictionaries
-- [ ] Streamline convert process to be able to add new dictionaries easiy: 
+- [x] Streamline convert process to be able to add new dictionaries easiy: 
     - One script to convert one .tab to all targets, 
     - One holding script scan ict folder for all .dfo file to call above converter script
     - The latter script has two params: one for the input folder, one for the output
