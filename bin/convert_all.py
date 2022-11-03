@@ -1,3 +1,5 @@
+''' Script to build all dictionaries with all formats
+'''
 import argparse
 from fileinput import filename
 import glob
