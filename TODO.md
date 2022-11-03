@@ -1,7 +1,13 @@
 # TODO
 - [ ] Add a desc file name for each dictionary containing Name, Source and Target languages...
+<<<<<<< HEAD
 - [ ] Add name of separate dictionaries to TudienTonghopPhathoc
 - [ ] Move html folders inside html
+=======
+- [X] Need a script to update opf file + output folder (or update tab2opf?)
+- [X] Update DSdsl-tools to allow specifying output filename
+- [x] Move html folders inside html
+>>>>>>> 58c750c (Add code to build all dicts)
 - [ ] Move mobigen tool to sub folder
 - [ ] Add cover page to dictionaries
 - [ ] Streamline convert process to be able to add new dictionaries easiy: 
