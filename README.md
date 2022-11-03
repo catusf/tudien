@@ -1,6 +1,6 @@
 # Từ điển tiếng Việt dành cho máy đọc sách Kindle, Kobo, Pocketbook v.v.
 
-Mã nguồn cho từ điển dành cho máy đọc sách Kindle. Để sử dụng download tại đây http://catusf.github.io/.
+Mã nguồn cho từ điển dành cho máy đọc sách Kindle. Để sử dụng từ điển, download tại đây http://catusf.github.io/.
 
 ## Tại sao?
 - Do tôi thấy cần:
