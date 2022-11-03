@@ -365,7 +365,7 @@ def openopf(ndicts, name):
 		<dc:Identifier id="uid">{title}</dc:Identifier>
 		<!-- Title of the document -->
 		<dc:Title><h2>{title}</h2></dc:Title>
-		<dc:Language>EN</dc:Language>
+		<dc:Language>{target}</dc:Language>
 	</dc-metadata>
 	<x-metadata>
 	        <output encoding="utf-8" flatten-dynamic-dir="yes"/>
