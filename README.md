@@ -24,12 +24,12 @@ Việc còn lại là copy file .mobi vừa được tạo ra bằng dây cáp U
 
 ```mermaid
 graph LR;
-    GenMetadat(File mot tả .dfo) --> GenTab(File định nghĩa .tsv);
-    GenTab -- tool tab2opf --> HTML_File(File opf+html) -- mobigen --> KindleDict(Từ điển Kindle .mobi);
-    GenTab -- chạy PyGlossary --> EpubDict(Từ diển .epub);
-    GenTab --  chạy PyGlossary --> KoboDict(Từ diển Kobo .kobo.zip);
-    GenTab --  chạy PyGlossary --> StarDict(Từ diển StarDict .ifo);
-    GenTab --  chạy DSL Tools --> DSLDict(Từ diển Lingvo .dsl.dz);
+    GenMetadat(File mô tả <.dfo>) --> GenTab(File định nghĩa <.tsv>);
+    GenTab -- tool tab2opf --> HTML_File(File <.opf/html>) -- mobigen --> KindleDict(Từ điển Kindle <.mobi>);
+    GenTab -- chạy PyGlossary --> EpubDict(Từ diển <.epub>);
+    GenTab --  chạy PyGlossary --> KoboDict(Từ diển Kobo <.kobo.zip>);
+    GenTab --  chạy PyGlossary --> StarDict(Từ diển StarDict <.ifo>);
+    GenTab --  chạy DSL Tools --> DSLDict(Từ diển Lingvo <.dsl.dz>);
 ```
 ## Danh sách các từ điển và số từ hiện có
 
