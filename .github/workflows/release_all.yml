@@ -25,17 +25,17 @@ jobs:
         ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
         submodules: 'recursive'
 
-    - name: Test Git connection
-      run: |
-        ssh -vT git@github.com &&
-        echo "=======" &&
-        ssh -T catusf@github.com
+    # - name: Test Git connection
+    #   run: |
+    #     ssh -vT git@github.com &&
+    #     echo "=======" &&
+    #     ssh -T catusf@github.com
 
-    - name: Get submodules
-      run: |
+    # - name: Get submodules
+    #   run: |
 
-        git submodule init &&
-        git submodule update --recursive
+    #     git submodule init &&
+    #     git submodule update --recursive
 
     - name: Setup Wine32
       run: |
