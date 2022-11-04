@@ -50,6 +50,8 @@ jobs:
 
     - name: Zip all artifacts for release
       run: |
+        INPUT_DIR=./ext-dict &&
+        OUTPUT_DIR=./ext-output &&
         rm -f $OUTPUT_DIR/*.zip &&
         zip -9 -j $OUTPUT_DIR/all-stardict.zip $OUTPUT_DIR/stardict/*.* &&
         zip -9 -j $OUTPUT_DIR/all-epub.zip     $OUTPUT_DIR/epub/*.*     &&
