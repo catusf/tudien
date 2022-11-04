@@ -94,4 +94,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
           draft: true
-          name: Release ${{ github.ref }}
+          name: External Release ${{ github.ref }}
