@@ -1,5 +1,7 @@
 # TODO
 - [ ] Add name of separate dictionaries to TudienTonghopPhathoc
+- [ ] Change tab2opt to include <dc:publisher>abc</dc:publisher> <dc:Creator>xyz</dc:Creator>
+- [ ] Change tab2opt to gen opf file with html same folder
 - [x] Move html folders inside html
 - [x] Add a desc file name for each dictionary containing Name, Source and Target languages...
 - [X] Need a script to update opf file + output folder (or update tab2opf?)
