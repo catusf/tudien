@@ -9,7 +9,10 @@ on:
       - README.md
       - TODO.md
       - LICENSE
-    
+concurrency:
+  group: environment-${{ github.ref }}
+  cancel-in-progress: true
+  
 jobs:
   build:
     # Only builds if commit message contains BUILD
