@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 ''' Script to build all dictionaries with all formats
+    Usage:
+    ./bin/convert_all.py --input_folder ./dict --output_folder ./output --extension tab
 '''
+
 import argparse
 from fileinput import filename
 import glob
