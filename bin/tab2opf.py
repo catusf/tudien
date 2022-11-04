@@ -224,7 +224,7 @@ def readinflections():
         print('No inflection file.')
         return None
         
-    with open(INFLECT,'r', encoding='utf-8') as fr:
+    with open(INFLECT,'r', encoding='utf-8', errors='replace') as fr:
         inflections = {}
         for l in fr.readlines():
             [key, text] = l.strip().split('\t')
@@ -242,7 +242,7 @@ def readinflections():
 #
 def readkeys():
     if VERBOSE: print("Reading {}".format(FILENAME))
-    with open(FILENAME,'r', encoding='utf-8') as fr:
+    with open(FILENAME,'r', encoding='utf-8', errors='replace') as fr:
         defns = {}
         for r in filter(inclline, fr):
             readkey(r, defns)
