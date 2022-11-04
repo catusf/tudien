@@ -21,5 +21,5 @@ mv -f *.html ./dict/$BASE/
 mv -f *.opf ./dict/$BASE/
 
 # Apply patch to fix resultant .opf file
-git apply "./dict/$BASE.opf.patch"
+#git apply "./dict/$BASE.opf.patch"
 
