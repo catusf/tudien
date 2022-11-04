@@ -1,3 +1,6 @@
+
+import codecs
+
 def try_utf8(data):
     "Returns a Unicode object on success, or None on failure"
     try:
@@ -16,12 +19,18 @@ def try_utf8(data):
 #         print('ok')
 #         # Handle unicode data
 
+#'./ext-dict/star_hanviet.tab'
 
-import codecs
-try:
-    f = codecs.open(r'./ext-stardict-vi/ko-vi/star_hanviet.ifo', encoding='utf-8', errors='strict')
-    for line in f:
-        pass
-    print("Valid utf-8")
-except UnicodeDecodeError:
-    print("*** Invalid utf-8")        
+f = open(r'./bin/test.txt', encoding='utf-8', errors='strict')
+for i, line in enumerate(f):
+    print(f'{i}: {line}')
+print("Valid utf-8")
+
+# import codecs
+# try:
+#     f = codecs.open(r'./ext-dict/star_hanviet.tab', encoding='utf-8', errors='strict')
+#     for i, line in enumerate(f):
+#         print(f'{i}: {line}')
+#     print("Valid utf-8")
+# except UnicodeDecodeError as err:
+#     print("*** Invalid utf-8", err)        
