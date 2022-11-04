@@ -45,4 +45,4 @@ sudo apt update
 sudo apt install --install-recommends winehq-stable
 
 # Verifies that it works 
-wine ./bin/mobigen.exe
+wine ./bin/mobigen/mobigen.exe
