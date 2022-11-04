@@ -28,9 +28,11 @@ jobs:
       run: |
         ./bin/install_wine32.sh
 
+
     - name: Setup Ubuntu packages
       run: |
-        ./bin/install_linux_packages.sh
+        ./bin/install_linux_packages.sh 
+        # Call a script so that it can be used in a shell/container as well
 
     - uses: actions/setup-python@v4
       with:
