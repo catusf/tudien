@@ -127,21 +127,29 @@ def main() -> None:
 
         data = readDicInfo(filepath)
 
+        # Add quote to wrap long filename/path
+        datafile = f'\"{datafile}\"'
+        dataTarget = data['Target']
+        dataSource = data['Source']
+        dataFullSource = data['FullSource']
+        dataFullTarget = data['FullTarget']
+        dataName = f'\"{data["Name"]}\"'
+
         if not data:
             continue
 
         # Generare HTML file for Kindle dictionary
         if 'Inflections' in data:
-            inflections = {data['Inflections']}
+            inflections = f'\"{data["Inflections"]}\"'
         else:
             inflections = './ext-dict/NoInflections.txt'
 
-        cmd_line = f"python ./bin/tab2opf.py --title \"{data['Name']}\" --source {data['Source']} --target {data['Target']} {datafile} --inflection {inflections}"
+        cmd_line = f"python ./bin/tab2opf.py --title {dataName} --source {dataSource} --target {dataTarget} \"{datafile}\" --inflection {inflections}"
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
         # Generate .mobi dictionary from opf+html file
-        cmd_line = f"wine ./bin/mobigen/mobigen.exe -unicode -s0 {filebase}.opf"
+        cmd_line = f"wine ./bin/mobigen/mobigen.exe -unicode -s0 \"{filebase}.opf\""
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
@@ -150,35 +158,38 @@ def main() -> None:
         print(cmd_line)
         subprocess.call(cmd_line, shell=True)
         
-        cmd_line = f'mv {filebase}.mobi {output_folder}/kindle/'
+        cmd_line = f'mv *.mobi {output_folder}/kindle/'
         print(cmd_line)
         subprocess.call(cmd_line, shell=True)
-         
 
-        # # Generare StarDict dictionary
-        # out_path = os.path.join(output_folder, f'stardict/{filebase}.ifo')
-        # cmd_line = f"pyglossary --read-format=Tabfile --source-lang={data['Source']} --target-lang={data['Target']} --name=\"{data['Name']}\" {datafile} {out_path}"
-        # print(cmd_line)
-        # subprocess.run(shlex.split(cmd_line))
+        # Generare StarDict dictionary
+        out_path = os.path.join(output_folder, f'stardict/{filebase}.ifo')
+        out_path = f'\"{out_path}\"'
+        cmd_line = f"pyglossary --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
+        print(cmd_line)
+        subprocess.run(shlex.split(cmd_line))
 
-        # # Generare Epub dictionary
-        # out_path = os.path.join(output_folder, f'epub/{filebase}.epub')
-        # cmd_line = f"pyglossary --read-format=Tabfile --source-lang={data['Source']} --target-lang={data['Target']} --name=\"{data['Name']}\" {datafile} {out_path}"
-        # print(cmd_line)
-        # subprocess.run(shlex.split(cmd_line))
+        # Generare Epub dictionary
+        out_path = os.path.join(output_folder, f'epub/{filebase}.epub')
+        out_path = f'\"{out_path}\"'
+        cmd_line = f"pyglossary --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
+        print(cmd_line)
+        subprocess.run(shlex.split(cmd_line))
 
-        # # Generare Kobo dictionary
-        # out_path = os.path.join(output_folder, f'kobo/{filebase}.kobo.zip')
-        # cmd_line = f"pyglossary --read-format=Tabfile --source-lang={data['Source']} --target-lang={data['Target']} --name=\"{data['Name']}\" {datafile} {out_path}"
-        # print(cmd_line)
-        # subprocess.run(shlex.split(cmd_line))
+        # Generare Kobo dictionary
+        out_path = os.path.join(output_folder, f'kobo/{filebase}.kobo.zip')
+        out_path = f'\"{out_path}\"'
+        cmd_line = f"pyglossary --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
+        print(cmd_line)
+        subprocess.run(shlex.split(cmd_line))
 
-        # # Generare Lingvo dictionary
-        # out_path = os.path.join(output_folder, f'lingvo/{filebase}.dsl')
-        # cmd_line = f"ruby ./dsl-tools/tab2dsl/tab2dsl.rb --from-lang {data['FullSource']} --to-lang {data['FullTarget']} --dict-name \"{data['Name']}\" --output {out_path} {datafile}"
-        # print(cmd_line)
-        # subprocess.run(shlex.split(cmd_line))
-        # pass
+        # Generare Lingvo dictionary
+        out_path = os.path.join(output_folder, f'lingvo/{filebase}.dsl')
+        out_path = f'\"{out_path}\"'
+        cmd_line = f"ruby ./dsl-tools/tab2dsl/tab2dsl.rb --from-lang {dataFullSource} --to-lang {dataFullTarget} --dict-name {dataName} --output {out_path} {datafile}"
+        print(cmd_line)
+        subprocess.run(shlex.split(cmd_line))
+        pass
 
 
 if __name__ == "__main__":

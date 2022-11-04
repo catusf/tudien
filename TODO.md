@@ -1,32 +1,29 @@
 # TODO
-- [ ] Add name of separate dictionaries to TudienTonghopPhathoc
+- [ ] Change tab2opt to gen opf file with html same folder => no need to move files
 - [ ] Change tab2opt to include <dc:publisher>abc</dc:publisher> <dc:Creator>xyz</dc:Creator>
-- [ ] Change tab2opt to gen opf file with html same folder
 - [ ] Handle error code from script and exit (subprocess.call/run)
-- [ ] Investigate UTF-8 error in star_hanviet.tab (disabled 'strict' in tab2opf for now)
-- [x] Move html folders inside html
-- [x] Add a desc file name for each dictionary containing Name, Source and Target languages...
-- [X] Need a script to update opf file + output folder (or update tab2opf?)
-- [X] Update DSdsl-tools to allow specifying output filename
-- [x] Move html folders inside html
-- [ ] Move mobigen tool to sub folder
 - [ ] Add cover page to dictionaries
-- [x] Streamline convert process to be able to add new dictionaries easiy: 
-    - One script to convert one .tab to all targets, 
-    - One holding script scan ict folder for all .dfo file to call above converter script
-    - The latter script has two params: one for the input folder, one for the output
-- [ ] Update to an up-to-date Ubuntu distro when Wine is updated (error on Ubuntu v20 and 22)
+- [ ] Add name of separate dictionaries to TudienTonghopPhathoc
+- [ ] Investigate UTF-8 error in star_hanviet.tab (disabled 'strict' in tab2opf for now)
 - [ ] Sync config .dotfile across environtment
-- [X] Add dictionaries from here https://akishop.com.vn/tong-hop-tu-dien-cho-kindle-nd49491.html
-- [X] Using https://github.com/kevinhendricks/KindleUnpack to convert mobi files
-- [x] Convert dicts to PRC for Android
-- [x] Add action to generate pre-release (including zipping all folder)
-- [X] Add action to use Wine to run mobigen
+- [ ] Update to an up-to-date Ubuntu distro when Wine is updated (error on Ubuntu v20 and 22)
+- [X] Move mobigen tool to sub folder
 - [X] Add Action to run all release at one (one script generates multiple outputs: DSL, StarDict, Kobo, Kindle...)
 - [X] Add To and From language
+- [X] Add action to use Wine to run mobigen
+- [X] Add dictionaries from here 
 - [X] Change the title of dictionaries
-- [x] Use a lib to create epub (pyglossary or penelope)
-- [x] Add code to zip folders as epub files
 - [X] Convert files to StarDict and other dictionary formats
-- [X] Use commandline of Kindle Previewer
 - [X] Fix security issues
+- [X] Need a script to update opf file + output folder (or update tab2opf?)
+- [X] Update DSdsl-tools to allow specifying output filename
+- [X] Use commandline of Kindle Previewer
+- [X] Using https://github.com/kevinhendricks/KindleUnpack to convert mobi files
+- [x] Add a desc file name for each dictionary containing Name, Source and Target languages...
+- [x] Add action to generate pre-release (including zipping all folder)
+- [x] Add code to zip folders as epub files
+- [x] Convert dicts to PRC for Android
+- [x] Move html folders inside html
+- [x] Move html folders inside html
+- [x] Streamline convert process to be able to add new dictionaries easiy: 
+- [x] Use a lib to create epub (pyglossary or penelope)
