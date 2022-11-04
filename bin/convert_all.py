@@ -77,11 +77,38 @@ def main() -> None:
     metadata = args.metadata
 
     if input_folder:
-        glob1 = input_folder + f'/*.{metadata}'
         metafilelist = sorted(glob.glob(input_folder + f'/*.{metadata}'), reverse=True)
         datafilelist = sorted(glob.glob(input_folder + f'/*.{extension}'), reverse=True)
+        meta_dict = {}
+        data_dict = {}
+        print(f'Len of metafilelist: {len(metafilelist)}')
+        print(f'Len of datafilelist: {len(datafilelist)}')
 
-        ## Need to verify two list ate of the same file
+        # Keep only pairs of metadata and dict data files
+        for filepath in metafilelist:
+            folder, filename = os.path.split(filepath)
+            filebase, fileext = os.path.splitext(filename)
+
+            meta_dict[filebase] = filepath
+
+        for filepath in datafilelist:
+            folder, filename = os.path.split(filepath)
+            filebase, fileext = os.path.splitext(filename)
+
+            data_dict[filebase] = filepath
+
+        common_keys = meta_dict.keys() & data_dict.keys()
+        
+        metafilelist.clear()
+        datafilelist.clear()
+
+        for key in common_keys:
+            metafilelist.append(meta_dict[key])
+            datafilelist.append(data_dict[key])
+
+        print(f'Len of checked datafilelist: {len(datafilelist)}')
+        
+    # Need to consider the case with bz2 compressed files
 
     subprocess.run(shlex.split(f'mkdir -p {output_folder}/stardict'))
     subprocess.run(shlex.split(f'mkdir -p {output_folder}/epub'))
