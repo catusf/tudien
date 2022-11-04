@@ -24,7 +24,13 @@ jobs:
         fetch-depth: 0
         ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
         submodule: 'true'
-        
+
+    - name: Test Git connection
+      run: |
+        ssh -vT git@github.com &&
+        echo "=======" &&
+        ssh -T catusf@github.com
+
     - name: Get submodules
       run: |
 
