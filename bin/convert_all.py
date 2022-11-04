@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 ''' Script to build all dictionaries with all formats
     Usage:
-    ./bin/convert_all.py --input_folder ./dict --output_folder ./output --extension tab
+    ./bin/convert_all.py --input_folder=./ext-dict --output_folder=./ext-output --extension=tab
 '''
 
 import argparse
@@ -100,7 +100,9 @@ def main() -> None:
 
             data_dict[filebase] = filepath
 
-        common_keys = meta_dict.keys() & data_dict.keys()
+        common_keys = sorted(list(meta_dict.keys() & data_dict.keys()))
+
+        print(common_keys)
         
         metafilelist.clear()
         datafilelist.clear()
@@ -144,7 +146,7 @@ def main() -> None:
         else:
             inflections = './ext-dict/NoInflections.txt'
 
-        cmd_line = f"python ./bin/tab2opf.py --title {dataName} --source {dataSource} --target {dataTarget} \"{datafile}\" --inflection {inflections}"
+        cmd_line = f"python ./bin/tab2opf.py --title {dataName} --source {dataSource} --target {dataTarget} {datafile} --inflection {inflections}"
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
@@ -154,7 +156,7 @@ def main() -> None:
         subprocess.run(shlex.split(cmd_line))
 
         # Move input file to final destinations. Using subprocess.call
-        cmd_line = f'mv *.html *.opf {input_folder}/kindle/'
+        cmd_line = f'rm *.html *.opf'
         print(cmd_line)
         subprocess.call(cmd_line, shell=True)
         
