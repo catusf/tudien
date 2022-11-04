@@ -1,17 +1,30 @@
-# Generate .mobi ebooks
-./bin/createmobi.sh Tu-dien-Tong-hop-Phat-hoc
-./bin/createmobi.sh Ngu-vung-Danh-tu-Thien-hoc
-./bin/createmobi.sh Phat-Quang-Dai-tu-dien-Han-ngu
-./bin/createmobi.sh Rong-mo-tam-hon
-./bin/createmobi.sh TudienAnhVietBeta
-./bin/createmobi.sh Tu-dien-Dao-Uyen
-./bin/createmobi.sh Tu-dien-Phat-hoc-Anh-Han-Viet
-./bin/createmobi.sh Tu-dien-Phat-hoc-Tinh-tuyen
-./bin/createmobi.sh Tu-dien-Phat-hoc-Viet-Anh-Dong-Loai
-./bin/createmobi.sh Tu-dien-Phat-hoc-Viet-Anh-Minh-Thong
-./bin/createmobi.sh Tu-dien-Phat-hoc-Viet-Anh-Thien-Phuc
-./bin/createmobi.sh Tu-dien-Phat-Quang
-./bin/createmobi.sh TudienThienChuu
+#!/bin/bash
 
-rm -f ./output/all-kindle.zip
-zip -9 -j ./output/all-kindle.zip ./output/kindle/*.mobi
+# Generate .mobi ebooks
+input_dir=$1
+output_dir=$2
+kindle_dir=kindle
+output_kindle_dir=$output_dir/$kindle_dir
+
+for fullpath in "*.opf"
+do
+  echo "Input $fullpath"
+  filename="${fullpath##*/}"                      # Strip longest match of */ from start
+  dir="${fullpath:0:${#fullpath} - ${#filename}}" # Substring from 0 thru pos of filename
+  base="${filename%.[^.]*}"                       # Strip shortest match of . plus at least one non-dot char from end
+  ext="${filename:${#base} + 1}" 
+  
+  echo "dir $dir"
+  echo "base $base"
+  echo "filename $filename"
+
+  wine ./bin/mobigen/mobigen.exe -unicode -s0 $fullpath
+
+  outfilename="$dir$base.mobi"
+  echo "outfilename: + $outfilename"
+  mv $outfilename $output_kindle_dir
+done
+
+#zip -9 -j $output_dir/all-kindle.zip $output_kindle_dir/*.mobi
+
+
