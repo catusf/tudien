@@ -7,12 +7,13 @@ on:
     paths-ignore:
       - .gitignore
       - README.md
+      - TODO.md
       - LICENSE
     
 jobs:
   build:
     # Only builds if commit message contains BUILD
-    if: "contains(github.event.head_commit.message, 'BUILD')"
+    #if: "contains(github.event.head_commit.message, 'BUILD')"
 
     runs-on: ubuntu-18.04
 
@@ -21,9 +22,12 @@ jobs:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
+        ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        submodule: true
         
     - name: Get submodules
       run: |
+
         git submodule init &&
         git submodule update
 
