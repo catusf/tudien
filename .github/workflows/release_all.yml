@@ -38,7 +38,7 @@ jobs:
         
     - name: Setup Python packages
       run: |
-        pip install -r ./bin/requirements.txt
+        pip install -r ./requirements.txt
 
     - name: Build Kindle .mobi dictionaries
       run: |
