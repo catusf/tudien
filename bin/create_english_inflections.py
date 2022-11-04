@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # from nltk.corpus import words
 from pattern.en import lexeme #conjugate, lemma, 
 from pattern.en import pluralize
