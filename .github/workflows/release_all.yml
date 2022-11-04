@@ -23,13 +23,13 @@ jobs:
       with:
         fetch-depth: 0
         ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        submodule: true
+        submodule: 'true'
         
     - name: Get submodules
       run: |
 
         git submodule init &&
-        git submodule update
+        git submodule update --recursive
 
     - name: Setup Wine32
       run: |
