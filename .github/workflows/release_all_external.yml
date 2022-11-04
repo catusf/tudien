@@ -44,8 +44,8 @@ jobs:
 
     - name: Build all dictionaries
       run: |
-        INPUT_DIR=./dict &&
-        OUTPUT_DIR=./output &&
+        INPUT_DIR=./ext-dict &&
+        OUTPUT_DIR=./ext-output &&
         python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab
 
     - name: Zip all artifacts for release
