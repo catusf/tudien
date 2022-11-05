@@ -4,8 +4,9 @@
 - [ ] Handle error code from script and exit (subprocess.call/run)
 - [ ] Add cover page to dictionaries
 - [ ] Add name of separate dictionaries to TudienTonghopPhathoc
-- [ ] Investigate UTF-8 error in star_hanviet.tab (disabled 'strict' in tab2opf for now)
+- [ ] Investigate UTF-8 error in star_hanviet.tab and Wikipedia (disabled 'strict' in tab2opf for now)
 - [ ] Sync config .dotfile across environtment
+- [ ] Add code to check and generate statistics for tab files (use Power BI) first to investigate
 - [ ] Update to an up-to-date Ubuntu distro when Wine is updated (error on Ubuntu v20 and 22)
 - [X] Move mobigen tool to sub folder
 - [X] Add Action to run all release at one (one script generates multiple outputs: DSL, StarDict, Kobo, Kindle...)
