@@ -82,21 +82,26 @@ def main() -> None:
     if input_folder:
         metafilelist = sorted(glob.glob(input_folder + f'/*.{metadata}'), reverse=True)
         datafilelist = sorted(glob.glob(input_folder + f'/*.{extension}'), reverse=True)
+        zippdatafilelist = sorted(glob.glob(input_folder + f'/*.bz2'), reverse=True)
+
         meta_dict = {}
         data_dict = {}
         print(f'Len of metafilelist: {len(metafilelist)}')
         print(f'Len of datafilelist: {len(datafilelist)}')
+        print(f'Len of compressed datafilelist: {len(zippdatafilelist)}')
 
         # Keep only pairs of metadata and dict data files
         for filepath in metafilelist:
             folder, filename = os.path.split(filepath)
-            filebase, fileext = os.path.splitext(filename)
+            filebase = filename.split('.')[0]
 
             meta_dict[filebase] = filepath
+        
+        bothdatalist = datafilelist+zippdatafilelist
 
-        for filepath in datafilelist:
+        for filepath in bothdatalist:
             folder, filename = os.path.split(filepath)
-            filebase, fileext = os.path.splitext(filename)
+            filebase = filename.split('.')[0]
 
             data_dict[filebase] = filepath
 
@@ -109,7 +114,18 @@ def main() -> None:
 
         for key in common_keys:
             metafilelist.append(meta_dict[key])
-            datafilelist.append(data_dict[key])
+
+            datafile = data_dict[key]
+
+            # If datafile is a .bz2
+            if datafile.find('.bz2') >= 0:
+                
+                cmd_line = f'bzip2 -kd \"{datafile}\"'
+                print(cmd_line)
+                subprocess.call(cmd_line, shell=True)
+
+            datafilelist.append(datafile.replace('.bz2', ''))
+
 
         print(f'Len of checked datafilelist: {len(datafilelist)}')
         
