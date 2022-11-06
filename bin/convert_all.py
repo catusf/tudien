@@ -146,12 +146,12 @@ def main() -> None:
         data = readDicInfo(filepath)
 
         # Add quote to wrap long filename/path
-        datafile = f'\"{datafile}\"'
+        datafile = datafile.replace(' ', '\\ ') 
         dataTarget = data['Target']
         dataSource = data['Source']
         dataFullSource = data['FullSource']
         dataFullTarget = data['FullTarget']
-        dataName = f'\"{data["Name"]}\"'
+        dataName = data["Name"].replace(' ', '\\ ')
 
         if not data:
             continue
