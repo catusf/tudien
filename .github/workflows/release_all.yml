@@ -10,9 +10,9 @@ on:
       - TODO.md
       - LICENSE
       
-concurrency:
-  group: environment-${{ github.ref }}
-  cancel-in-progress: false
+#concurrency:
+#  group: environment-${{ github.ref }}
+#  cancel-in-progress: false
   
 jobs:
   build:
