@@ -1,4 +1,5 @@
 # TODO
+- [ ] Check format of Prodict and others
 - [ ] Fix dict contents (hanviet, nauyviet, wikipedia
 - [ ] Fix spaces in dictionary
 - [ ] Change tab2opt to gen opf file with html same folder => no need to move files
