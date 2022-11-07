@@ -147,7 +147,7 @@ def main() -> None:
         data = readDicInfo(filepath)
 
         # Add quote to wrap long filename/path
-        datafile = datafile.replace(' ', '\\ ') 
+        datafile = datafile.replace(' ', '\\ ')
         dataTarget = data['Target']
         dataSource = data['Source']
         dataFullSource = data['FullSource']
@@ -165,22 +165,22 @@ def main() -> None:
 
         cmd_line = f"python ./bin/tab2opf.py --title {dataName} --source {dataSource} --target {dataTarget} {datafile} --inflection {inflections}"
         print(cmd_line)
-        # subprocess.run(shlex.split(cmd_line))
+        subprocess.run(shlex.split(cmd_line))
 
         # Generate .mobi dictionary from opf+html file
         out_path = f'{filebase}.opf'.replace(' ', '\\ ')
         cmd_line = f"wine ./bin/mobigen/mobigen.exe -unicode -s0 {out_path}"
         print(cmd_line)
-        # subprocess.run(shlex.split(cmd_line))
+        subprocess.run(shlex.split(cmd_line))
 
         # Move input file to final destinations. Using subprocess.call
         cmd_line = f'rm *.html *.opf'
         print(cmd_line)
-        # subprocess.call(cmd_line, shell=True)
+        subprocess.call(cmd_line, shell=True)
         
         cmd_line = f'mv *.mobi {output_folder}/kindle/'
         print(cmd_line)
-        # subprocess.call(cmd_line, shell=True)
+        subprocess.call(cmd_line, shell=True)
 
         # Generare StarDict dictionary
         out_path = os.path.join(output_folder, f'stardict/{filebase}.ifo').replace(' ', '\\ ')
@@ -199,21 +199,20 @@ def main() -> None:
         out_path = os.path.join(output_folder, f'epub/{filebase}.epub').replace(' ', '\\ ')
         cmd_line = f"pyglossary --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
         print(cmd_line)
-        # subprocess.run(shlex.split(cmd_line))
+        subprocess.run(shlex.split(cmd_line))
 
         # Generare Kobo dictionary
         out_path = os.path.join(output_folder, f'kobo/{filebase}.kobo.zip').replace(' ', '\\ ')
         cmd_line = f"pyglossary --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
         print(cmd_line)
-        # subprocess.run(shlex.split(cmd_line))
+        subprocess.run(shlex.split(cmd_line))
 
         # Generare Lingvo dictionary
         out_path = os.path.join(output_folder, f'lingvo/{filebase}.dsl').replace(' ', '\\ ') 
         cmd_line = f"ruby ./dsl-tools/tab2dsl/tab2dsl.rb --from-lang {dataFullSource} --to-lang {dataFullTarget} --dict-name {dataName} --output {out_path} {datafile}"
         print(cmd_line)
-        # subprocess.run(shlex.split(cmd_line))
+        subprocess.run(shlex.split(cmd_line))
         pass
-
 
 if __name__ == "__main__":
     main()
