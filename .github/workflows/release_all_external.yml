@@ -11,8 +11,8 @@ on:
       - LICENSE
 
 env:
-  INPUT_DIR=./ext-dict
-  OUTPUT_DIR=./ext-output
+  INPUT_DIR: ./ext-dict
+  OUTPUT_DIR: ./ext-output
 
 #concurrency:
 #  group: environment-${{ github.ref }}
