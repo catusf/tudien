@@ -9,7 +9,11 @@ on:
       - README.md
       - TODO.md
       - LICENSE
-      
+
+env:
+  INPUT_DIR=./dict
+  OUTPUT_DIR=./output
+
 #concurrency:
 #  group: environment-${{ github.ref }}
 #  cancel-in-progress: false
@@ -32,7 +36,6 @@ jobs:
       run: |
         ./bin/install_wine32.sh
 
-
     - name: Setup Ubuntu packages
       run: |
         ./bin/install_linux_packages.sh 
@@ -48,48 +51,21 @@ jobs:
 
     - name: Build all dictionaries
       run: |
-        INPUT_DIR=./dict &&
-        OUTPUT_DIR=./output &&
         python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab
 
     - name: Zip all artifacts for release
       run: |
-        INPUT_DIR=./dict &&
-        OUTPUT_DIR=./output &&
-        rm -f $OUTPUT_DIR/*.zip &&
         zip -9 -j $OUTPUT_DIR/all-stardict.zip $OUTPUT_DIR/stardict/*.* &&
         zip -9 -j $OUTPUT_DIR/all-epub.zip     $OUTPUT_DIR/epub/*.*     &&
         zip -9 -j $OUTPUT_DIR/all-kobo.zip     $OUTPUT_DIR/kobo/*.*     &&
         zip -9 -j $OUTPUT_DIR/all-lingvo.zip   $OUTPUT_DIR/lingvo/*.*   &&
         zip -9 -j $OUTPUT_DIR/all-kindle.zip   $OUTPUT_DIR/kindle/*.*
 
-    # - name: Build Kindle .mobi dictionaries
-    #   run: |
-    #     ./bin/createallhtml.sh &&
-    #     ./bin/createallhtml-inflections.sh &&
-    #     ./bin/createallmobi.sh
-        
-    # - name: Build StarDict dictionaries
-    #   run: |
-    #     ./bin/convert2dict.sh
-
-    # - name: Build Epub dictionaries
-    #   run: |
-    #     ./bin/convert2epub.sh
-
-    # - name: Build Kobo dictionaries
-    #   run: |
-    #     ./bin/convert2kobo.sh
-
-    # - name: Build Lingvo dictionaries
-    #   run: |
-    #     ./bin/convert2lingvo.sh
-
     - name: Create a new release draft
       id: create_release
       uses: ncipollo/release-action@v1
       with:
-          artifacts: "./output/*.zip,./output/kindle/*.mobi,./output/kobo/*.zip,./output/lingvo/*.dz,./output/epub/*.epub"
+          artifacts: "$OUTPUT_DIR/*.zip,$OUTPUT_DIR/kindle/*.mobi,$OUTPUT_DIR/kobo/*.zip,$OUTPUT_DIR/lingvo/*.dz,$OUTPUT_DIR/epub/*.epub"
           body: If you can read this, we have forgotten to fill in the changelog. Sorry!
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
