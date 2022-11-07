@@ -74,8 +74,8 @@ def main() -> None:
 
     args, array = parser.parse_known_args()
 
-    input_folder = args.input_folder
-    output_folder = args.output_folder
+    input_folder = args.input_folder.replace(' ', '\\ ') 
+    output_folder = args.output_folder.replace(' ', '\\ ') 
     extension = args.extension
     metadata = args.metadata
 
@@ -130,14 +130,15 @@ def main() -> None:
         print(f'Len of checked datafilelist: {len(datafilelist)}')
         
     # Need to consider the case with bz2 compressed files
+    subprocess.call(f'mkdir -p {input_folder}/kindle', shell=True)
 
-    subprocess.run(shlex.split(f'mkdir -p {output_folder}/stardict'))
-    subprocess.run(shlex.split(f'mkdir -p {output_folder}/epub'))
-    subprocess.run(shlex.split(f'mkdir -p {output_folder}/kobo'))
-    subprocess.run(shlex.split(f'mkdir -p {output_folder}/lingvo'))
-    subprocess.run(shlex.split(f'mkdir -p {output_folder}/kindle'))
+    subprocess.call(f'rm -r {output_folder}/*', shell=True)
 
-    subprocess.run(shlex.split(f'mkdir -p {input_folder}/kindle'))
+    subprocess.call(f'mkdir -p {output_folder}/stardict', shell=True)
+    subprocess.call(f'mkdir -p {output_folder}/epub', shell=True)
+    subprocess.call(f'mkdir -p {output_folder}/kobo', shell=True)
+    subprocess.call(f'mkdir -p {output_folder}/lingvo', shell=True)
+    subprocess.call(f'mkdir -p {output_folder}/kindle', shell=True)
 
     for filepath, datafile in zip(metafilelist, datafilelist):
         folder, filename = os.path.split(filepath)
@@ -164,22 +165,22 @@ def main() -> None:
 
         cmd_line = f"python ./bin/tab2opf.py --title {dataName} --source {dataSource} --target {dataTarget} {datafile} --inflection {inflections}"
         print(cmd_line)
-        subprocess.run(shlex.split(cmd_line))
+        # subprocess.run(shlex.split(cmd_line))
 
         # Generate .mobi dictionary from opf+html file
         out_path = f'{filebase}.opf'.replace(' ', '\\ ')
         cmd_line = f"wine ./bin/mobigen/mobigen.exe -unicode -s0 {out_path}"
         print(cmd_line)
-        subprocess.run(shlex.split(cmd_line))
+        # subprocess.run(shlex.split(cmd_line))
 
         # Move input file to final destinations. Using subprocess.call
         cmd_line = f'rm *.html *.opf'
         print(cmd_line)
-        subprocess.call(cmd_line, shell=True)
+        # subprocess.call(cmd_line, shell=True)
         
         cmd_line = f'mv *.mobi {output_folder}/kindle/'
         print(cmd_line)
-        subprocess.call(cmd_line, shell=True)
+        # subprocess.call(cmd_line, shell=True)
 
         # Generare StarDict dictionary
         out_path = os.path.join(output_folder, f'stardict/{filebase}.ifo').replace(' ', '\\ ')
@@ -189,7 +190,7 @@ def main() -> None:
         
         # Compress to make one zip file for one startdict
         out_path = os.path.join(output_folder, f'stardict/{filebase}.*')
-        zip_path = os.path.join(output_folder, f'{filebase}.zip')
+        zip_path = os.path.join(output_folder, f'{filebase}_stardict.zip')
         cmd_line = f"zip -j {zip_path} {out_path}"
         print(cmd_line)
         subprocess.call(cmd_line, shell=True)
@@ -198,19 +199,19 @@ def main() -> None:
         out_path = os.path.join(output_folder, f'epub/{filebase}.epub').replace(' ', '\\ ')
         cmd_line = f"pyglossary --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
         print(cmd_line)
-        subprocess.run(shlex.split(cmd_line))
+        # subprocess.run(shlex.split(cmd_line))
 
         # Generare Kobo dictionary
         out_path = os.path.join(output_folder, f'kobo/{filebase}.kobo.zip').replace(' ', '\\ ')
         cmd_line = f"pyglossary --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
         print(cmd_line)
-        subprocess.run(shlex.split(cmd_line))
+        # subprocess.run(shlex.split(cmd_line))
 
         # Generare Lingvo dictionary
         out_path = os.path.join(output_folder, f'lingvo/{filebase}.dsl').replace(' ', '\\ ') 
         cmd_line = f"ruby ./dsl-tools/tab2dsl/tab2dsl.rb --from-lang {dataFullSource} --to-lang {dataFullTarget} --dict-name {dataName} --output {out_path} {datafile}"
         print(cmd_line)
-        subprocess.run(shlex.split(cmd_line))
+        # subprocess.run(shlex.split(cmd_line))
         pass
 
 
