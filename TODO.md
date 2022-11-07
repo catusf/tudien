@@ -1,7 +1,7 @@
 # TODO
 - [ ] Check format of Prodict and others
-- [ ] Fix dict contents (hanviet, nauyviet, wikipedia
-- [ ] Fix spaces in dictionary
+- [ ] Fix dict contents (hanviet, nauyviet, wikipedia, Bach khoa tu dien)
+- [X] Fix spaces in dictionary
 - [ ] Change tab2opt to gen opf file with html same folder => no need to move files
 - [ ] Change tab2opt to include <dc:publisher>abc</dc:publisher> <dc:Creator>xyz</dc:Creator>
 - [ ] Handle error code from script and exit (subprocess.call/run)
