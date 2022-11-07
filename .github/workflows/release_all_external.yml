@@ -30,7 +30,7 @@ jobs:
     - name: Step 2
       run: |
         echo $INPUT_DIR
-        exit(1)
+        exit 1
 
     - uses: actions/checkout@v3
       with:
