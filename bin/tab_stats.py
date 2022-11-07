@@ -46,46 +46,65 @@ def main() -> None:
     else:
         ouputpath = pathlib.Path(ouputfile)
 
-    with open(inputpath, encoding='utf-8', errors='replace') as infile:
+    try:
+        infile =  open(inputpath, encoding='utf-8', errors='strict')
+
         lines = infile.readlines()
-        text = '\n'.join(lines).replace('\\n', '\n')
+    except UnicodeDecodeError as err:
+        print(f'Error reading file: {err}')
 
-        print('# Character frequency')
-        counterchar = collections.Counter(text)
+        try:
+            print('Write file to compare')
+            infile = open(inputpath, encoding='utf-8', errors='replace')
+            lines = infile.readlines()
+            infile.close()
 
-        print(counterchar.most_common(COUNT))
-        print(counterchar.most_common()[:-COUNT-1:-1])
+            outfile = open(str(inputpath) + '.txt', 'w', encoding='utf-8')
+            outfile.writelines(lines)
+            outfile.close()
 
-        print('# Word frequency')
-        words  = [word.strip(string.punctuation + '\n') for word in text.split()]
-        
-        counterword = collections.Counter(words)
+        except IOError as err1:
+            print(f'Error reading file: {err1}')
+            exit(1)
 
-        print(counterword.most_common(COUNT))
-        print(counterword.most_common()[:-COUNT-1:-1])
+    text = '\n'.join(lines).replace('\\n', '\n')
 
-        print(f'Number of line: {len(lines)}')
-        for i, line in enumerate(lines):
-            items = line.split('\t')
-            no_items = len(items)
+    print('# Character frequency')
+    counterchar = collections.Counter(text)
 
-            if no_items != 2:
-                print(f'### Error on line {i}: Wrong number of items ({len(items)})')
-                for i in items:
-                    print(f'{len(i)}: {i}')
+    print(counterchar.most_common(COUNT))
+    print(counterchar.most_common()[:-COUNT-1:-1])
 
-            if no_items == 0:
-                print(f'### Error on line {i}: No items')
-            elif no_items > 0:
-                head = items[0]
-                if not head.strip():
-                    print(f'### Error on line {i}: Empty headword')
-            elif no_items > 1:
-                define = items[1]
-                if not define.strip():
-                    print(f'### Error on line {i}: Empty definition')
+    # print('# Word frequency')
+    # words  = [word.strip(string.punctuation + '\n') for word in text.split()]
+    
+    # counterword = collections.Counter(words)
 
-        # with open(ouputpath, encoding='utf0-8') as outfile:
+    # print(counterword.most_common(COUNT))
+    # print(counterword.most_common()[:-COUNT-1:-1])
+
+    print(f'Number of line: {len(lines)}')
+    for i, line in enumerate(lines):
+        items = line.split('\t')
+        no_items = len(items)
+
+        if no_items != 2:
+            print(f'### Error on line {i}: Wrong number of items ({len(items)})')
+            for i in items:
+                print(f'{len(i)}: {i}')
+
+        if no_items == 0:
+            print(f'### Error on line {i}: No items')
+        elif no_items > 0:
+            head = items[0]
+            if not head.strip():
+                print(f'### Error on line {i}: Empty headword')
+        elif no_items > 1:
+            define = items[1]
+            if not define.strip():
+                print(f'### Error on line {i}: Empty definition')
+
+    # with open(ouputpath, encoding='utf0-8') as outfile:
 
 if __name__ == "__main__":
     main()
