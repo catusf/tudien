@@ -11,7 +11,7 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args": ["--input", "ext-dict/star_anhviet.tab"],
+            "args": ["--input", "ext-stardict-vi/ko-vi/star_hanviet.tab"],
         }
     ]
 }
