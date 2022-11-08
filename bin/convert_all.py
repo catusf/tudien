@@ -66,9 +66,9 @@ def readDicInfo(filepath):
 
 def main() -> None:
     parser = argparse.ArgumentParser(description='Convert all dictionaries in a folder',
-        usage='Usage: python convert_all.py --input-folder ./mydictdata --output-folder ./myoutputdict --extension tsv')
-    parser.add_argument('-i', '--input_folder', help='Input folder containing .tsv and .dfo files')
-    parser.add_argument('-o', '--output_folder', help='Output folder containing dictionary files')
+        usage='Usage: python convert_all.py --input-folder=./mydictdata --output-folder=./myoutputdict --extension=tsv')
+    parser.add_argument('-i', '--input_folder', required=True, help='Input folder containing .tsv and .dfo files')
+    parser.add_argument('-o', '--output_folder', required=True, help='Output folder containing dictionary files')
     parser.add_argument('-e', '--extension', default='tsv', help='Filename extention for input dictionary files. Default is .tsv')
     parser.add_argument('-m', '--metadata', default='dfo', help='Filename extention for input metadata for dictionary. Default is .dfo')
 
