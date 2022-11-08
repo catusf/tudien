@@ -74,8 +74,8 @@ def main() -> None:
 
     args, array = parser.parse_known_args()
 
-    input_folder = args.input_folder.replace(' ', '\\ ') 
-    output_folder = args.output_folder.replace(' ', '\\ ') 
+    input_folder = args.input_folder.replace(' ', '\\ ')
+    output_folder = args.output_folder.replace(' ', '\\ ')
     extension = args.extension
     metadata = args.metadata
 
