@@ -5,3 +5,8 @@ sudo apt install ruby-full &&
 sudo gem install bundler debug 
 sudo gem install io-console -v 0.5.9
 #sudo timedatectl set-timezone Asia/Ho_Chi_Minh
+
+sudo mv /etc/localtime /etc/localtime-backup
+sudo ln -s /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
+
+git config --global log.date local
