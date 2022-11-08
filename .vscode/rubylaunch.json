@@ -16,7 +16,7 @@
             "./ext-output/lingvo/Wikipedia.dsl",
             "./ext-dict/Wikipedia.tab"],
             
-            "askParameters": true
+            "askParameters": false
         },
         {
             "type": "rdbg",

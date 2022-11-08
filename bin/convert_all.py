@@ -177,7 +177,7 @@ def main() -> None:
         cmd_line = f'rm *.html *.opf'
         print(cmd_line)
         subprocess.call(cmd_line, shell=True)
-        
+
         cmd_line = f'mv *.mobi {output_folder}/kindle/'
         print(cmd_line)
         subprocess.call(cmd_line, shell=True)
@@ -187,7 +187,7 @@ def main() -> None:
         cmd_line = f"pyglossary --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
-        
+
         # Compress to make one zip file for one startdict
         out_path = os.path.join(output_folder, f'stardict/{filebase}.*')
         zip_path = os.path.join(output_folder, f'{filebase}_stardict.zip')
