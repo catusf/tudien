@@ -5,23 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "rdbg",
-            "name": "Debug current file with rdbg",
+            "name": "Python: Current File",
+            "type": "python",
             "request": "launch",
-            "script": "${file}",
-            "args":  ["--from-lang",
-            "Vietnamese",
-            "--to-lang Vietnamese",
-            "--output", 
-            "./ext-output/lingvo/Bach_khoa_toan_thu.dsl",
-            "./ext-dict/Bach_khoa_toan_thu.tab"],
-            
-            "askParameters": false
-        },
-        {
-            "type": "rdbg",
-            "name": "Attach with rdbg",
-            "request": "attach"
+            "program": "./bin/convert_all.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": ["--input_folder", "./ext-dict", "--output_folder", "./ext-output", "--extension", "tab"]
         }
     ]
 }
