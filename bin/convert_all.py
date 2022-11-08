@@ -190,7 +190,7 @@ def main() -> None:
 
         # Compress to make one zip file for one startdict
         out_path = os.path.join(output_folder, f'stardict/{filebase}.*')
-        zip_path = os.path.join(output_folder, f'{filebase}_stardict.zip')
+        zip_path = os.path.join(output_folder, f'{filebase}.stardict.zip')
         cmd_line = f"zip -j {zip_path} {out_path}"
         print(cmd_line)
         subprocess.call(cmd_line, shell=True)
