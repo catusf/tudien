@@ -13,10 +13,10 @@
             "Vietnamese",
             "--to-lang Vietnamese",
             "--output", 
-            "./ext-output/lingvo/Bach_khoa_toan_thu.dsl",
-            "./ext-dict/Bach_khoa_toan_thu.tab"],
+            "./ext-output/lingvo/Wikipedia.dsl",
+            "./ext-dict/Wikipedia.tab"],
             
-            "askParameters": false
+            "askParameters": true
         },
         {
             "type": "rdbg",
