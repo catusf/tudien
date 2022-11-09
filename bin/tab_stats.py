@@ -28,16 +28,34 @@ def frequency(l):
     return (sorted(minl),sorted(maxl))
 
 COUNT = 10
+DEF_LEN_DIV = 100
+MAX_LINE = 1000 # Run multitple round to avoid loading a huge file
 
+def list_words(text):
+    return [word.strip(string.punctuation + '\n') for word in text.split()]
+
+def writeStats(file, contents):
+    print(str(contents))
+    file.write(f'{str(contents)}\n')
+    
 def main() -> None:
     parser = argparse.ArgumentParser(description='Convert all dictionaries in a folder',
         usage='Usage: python tab_stats.py --input data.tab --output data.stats')
-    parser.add_argument('-i', '--input', help='Input folder containing .tsv and .dfo files')
+        
+    parser.add_argument('-i', '--input', required=True, help='Input folder containing .tsv and .dfo files')
     parser.add_argument('-o', '--output', help='Output folder containing dictionary files')
-
+ 
     args, array = parser.parse_known_args()
     inputfile = args.input
     ouputfile = args.output
+    
+    mainCharCounter = collections.Counter()
+    mainWordCounter = collections.Counter()
+    mainHeadwordCounter = collections.Counter()
+    mainDefinitionCounter = collections.Counter()
+
+# Stats về chiều dài headword, definition
+# Tách lượt để thống kê không thì hết bộ nhớ
 
     inputpath = pathlib.Path(inputfile)
 
@@ -49,62 +67,89 @@ def main() -> None:
     try:
         infile =  open(inputpath, encoding='utf-8', errors='strict')
 
-        lines = infile.readlines()
-    except UnicodeDecodeError as err:
+        outfile = open(ouputpath, 'w', encoding='utf-8')
+        
+        line = infile.readline()
+        
+        line_count = 1
+        issue_count = 0
+        lines = []
+        text = ''
+        words = []
+
+        writeStats(outfile, '# File Checks')
+        
+        while line:
+            # print(f'Line {line_count}')
+
+#            lines.append(line)
+
+            mainCharCounter = mainCharCounter + collections.Counter(line)
+            #mainWordCounter = mainWordCounter + collections.Counter(list_words(line))
+
+            items = line.strip().split('\t')
+            no_items = len(items)
+
+            if no_items != 2:
+                writeStats(outfile, f'### Error on line {line_count}: Wrong number of items ({no_items})> {line.strip()}')
+                issue_count += 1
+
+            else:
+                mainHeadwordCounter.update([len(items[0])])
+                mainDefinitionCounter.update([len(items[1])//DEF_LEN_DIV*DEF_LEN_DIV])
+                pass
+
+            line_count += 1
+            line = infile.readline()
+
+            if not line or ((line_count % MAX_LINE) == 0): # Every MAX_LINE lines, accomulate stats
+                print(f'Line {line_count}')
+                # mainCharCounter = mainCharCounter + collections.Counter(text)
+                # mainWordCounter = mainWordCounter + collections.Counter(words)
+                # text = ''
+                # lines = []
+                # words = []
+                outfile.flush()
+
+        writeStats(outfile, '# Line stats')
+        writeStats(outfile, f'## Line count: {line_count}')
+        writeStats(outfile, f'## Issue count: {issue_count}')
+
+        writeStats(outfile, '# Character frequency')
+        writeStats(outfile, str(mainCharCounter.most_common(COUNT)))
+        writeStats(outfile, str(mainCharCounter.most_common()[:-COUNT-1:-1]))
+
+        # writeStats(outfile, '# Word frequency')
+        # writeStats(outfile, str(mainWordCounter.most_common(COUNT)))
+        # writeStats(outfile, str(mainWordCounter.most_common()[:-COUNT-1:-1]))
+
+        writeStats(outfile, '# Headword len frequency')
+        writeStats(outfile, str(mainHeadwordCounter.most_common(COUNT)))
+        writeStats(outfile, str(mainHeadwordCounter.most_common()[:-COUNT-1:-1]))
+
+        writeStats(outfile, '# Definition len frequency')
+        writeStats(outfile, str(mainDefinitionCounter.most_common(COUNT)))
+        writeStats(outfile, str(mainDefinitionCounter.most_common()[:-COUNT-1:-1]))
+
+    except IOError as err:
         print(f'Error reading file: {err}')
 
-        try:
-            print('Write file to compare')
-            infile = open(inputpath, encoding='utf-8', errors='replace')
-            lines = infile.readlines()
-            infile.close()
+    except UnicodeDecodeError as err:
+        print(f'Error decoding file: {err}')
 
-            outfile = open(str(inputpath) + '.txt', 'w', encoding='utf-8')
-            outfile.writelines(lines)
-            outfile.close()
+        # try:
+            # print('Write file to compare')
+            # infile = open(inputpath, encoding='utf-8', errors='replace')
+            # lines = infile.readlines()
+            # infile.close()
 
-        except IOError as err1:
-            print(f'Error reading file: {err1}')
-            exit(1)
+            # outfile = open(str(inputpath) + '.txt', 'w', encoding='utf-8')
+            # outfile.writelines(lines)
+            # outfile.close()
 
-    text = '\n'.join(lines).replace('\\n', '\n')
-
-    print('# Character frequency')
-    counterchar = collections.Counter(text)
-
-    print(counterchar.most_common(COUNT))
-    print(counterchar.most_common()[:-COUNT-1:-1])
-
-    # print('# Word frequency')
-    # words  = [word.strip(string.punctuation + '\n') for word in text.split()]
-    
-    # counterword = collections.Counter(words)
-
-    # print(counterword.most_common(COUNT))
-    # print(counterword.most_common()[:-COUNT-1:-1])
-
-    print(f'Number of line: {len(lines)}')
-    for i, line in enumerate(lines):
-        items = line.split('\t')
-        no_items = len(items)
-
-        if no_items != 2:
-            print(f'### Error on line {i}: Wrong number of items ({len(items)})')
-            for i in items:
-                print(f'{len(i)}: {i}')
-
-        if no_items == 0:
-            print(f'### Error on line {i}: No items')
-        elif no_items > 0:
-            head = items[0]
-            if not head.strip():
-                print(f'### Error on line {i}: Empty headword')
-        elif no_items > 1:
-            define = items[1]
-            if not define.strip():
-                print(f'### Error on line {i}: Empty definition')
-
-    # with open(ouputpath, encoding='utf0-8') as outfile:
-
+        # except IOError as err1:
+            # print(f'Error reading file: {err1}')
+            # exit(1)
+            
 if __name__ == "__main__":
     main()

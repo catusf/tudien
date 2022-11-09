@@ -8,10 +8,11 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "./bin/convert_all.py",
+            "program": "./bin/tab_stats.py",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args": ["--input_folder", "./ext-dict", "--output_folder", "./ext-output", "--extension", "tab"]
+            "args": ["--input", "./ext-dict/star_nauyviet.tab"],
         }
     ]
 }
+
