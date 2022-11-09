@@ -3,7 +3,7 @@
 sudo apt update &&
 sudo apt-get install dictzip systemd &&
 sudo apt install ruby-full &&
-sudo gem install bundler debug  &&
+sudo gem install bundler &&
 #sudo gem install io-console -v 0.5.9 &&
 
 sudo mv /etc/localtime /etc/localtime-backup &&
