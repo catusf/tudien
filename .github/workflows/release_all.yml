@@ -32,14 +32,15 @@ jobs:
         fetch-depth: 1
         submodules: 'recursive'
 
-    - name: Setup Wine32
-      run: |
-        ./bin/install_wine32.sh
-
     - name: Setup Ubuntu packages
       run: |
-        ./bin/install_linux_packages.sh 
         # Call a script so that it can be used in a shell/container as well
+        ./bin/install_linux_packages.sh 
+
+    - name: Setup Wine32
+      run: |
+        # Call a script so that it can be used in a shell/container as well
+        ./bin/install_wine32.sh
 
     - uses: actions/setup-python@v4
       with:
