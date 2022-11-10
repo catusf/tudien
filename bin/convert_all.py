@@ -148,6 +148,10 @@ def main() -> None:
 
         # Add quote to wrap long filename/path
         datafile = datafile.replace(' ', '\\ ')
+        dataCreator = data['Owner/Editor'].replace(' ', '\\ ')
+        if not dataCreator:
+            dataCreator = 'Panthera Tigris'.replace(' ', '\\ ')
+            
         dataTarget = data['Target']
         dataSource = data['Source']
         dataFullSource = data['FullSource']
@@ -165,7 +169,7 @@ def main() -> None:
         else:
             inflections = './ext-dict/NoInflections.txt'
 
-        cmd_line = f"python ./bin/tab2opf.py --title={dataName} --source={dataSource} --target={dataTarget} --inflection={inflections} --outdir {htmlOutDir} {datafile}"
+        cmd_line = f"python ./bin/tab2opf.py --title={dataName} --source={dataSource} --target={dataTarget} --inflection={inflections} --outdir={htmlOutDir} --creator={dataCreator} --publisher={dataCreator} {datafile}"
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
