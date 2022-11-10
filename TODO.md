@@ -1,16 +1,16 @@
 # TODO
+- [ ] Add cover page to dictionaries
 - [ ] Check format of Prodict and others
-- [ ] Copy back star_hanviet.tab to dict files in ext-stardict-vi 
+- [ ] Copy back star_hanviet.tab and star_vietnhat.tab to dict files in ext-stardict-vi 
 - [x] Fix dict contents (hanviet, nauyviet, wikipedia, Bach khoa tu dien)
 - [X] Fix spaces in dictionary
-- [ ] Change tab2opt to gen opf file with html same folder => no need to move files
-- [ ] Change tab2opt to include <dc:publisher>abc</dc:publisher> <dc:Creator>xyz</dc:Creator>
+- [x] Change tab2opt to gen opf file with html same folder => no need to move files
+- [x] Change tab2opt to include <dc:publisher>abc</dc:publisher> <dc:Creator>xyz</dc:Creator>
 - [ ] Handle error code from script and exit (subprocess.call/run)
-- [ ] Add cover page to dictionaries
 - [ ] Add name of separate dictionaries to TudienTonghopPhathoc
 - [X] Investigate UTF-8 error in star_hanviet.tab and Wikipedia (disabled 'strict' in tab2opf for now) => line with different number of values (correct is 2)
 - [ ] Sync config .dotfile across environtment
-- [ ] Add code to check and generate statistics for tab files (use Power BI) first to investigate
+- [x] Add code to check and generate statistics for tab files (use Power BI) first to investigate
 - [ ] Update to an up-to-date Ubuntu distro when Wine is updated (error on Ubuntu v20 and 22)
 - [X] Move mobigen tool to sub folder
 - [X] Add Action to run all release at one (one script generates multiple outputs: DSL, StarDict, Kobo, Kindle...)
