@@ -133,7 +133,9 @@ def parseargs():
     parser.add_argument("-o", "--outdir", help="Output dir", default='')
     parser.add_argument("-s", "--source", default="en", help="Source language")
     parser.add_argument("-t", "--target", default="en", help="Target language")
-    parser.add_argument("file", help="tab file to input")    
+    parser.add_argument("-c", "--creator", default="en", help="Creator of this dictionary")
+    parser.add_argument("-p", "--publisher", default="en", help="Publisher of this dictionary")
+    parser.add_argument("file", help="tab file to input")   
     return parser.parse_args()
 
 def loadmember(mod, attr, dfault):
@@ -163,6 +165,9 @@ INLANG   = args.source
 OUTLANG  = args.target
 TITLE  = args.title
 OUTDIR  = args.outdir
+CREATOR = args.creator
+PUBLISHER = args.publisher
+
 importmod()
 
 # add a single [term, definition]
@@ -366,9 +371,11 @@ def openopf(ndicts, name):
 		<!-- Title of the document -->
 		<dc:Title><h2>{title}</h2></dc:Title>
 		<dc:Language>{target}</dc:Language>
+		<dc:Creator>{creator}</dc:Creator>
+		<dc:Publisher>{publisher}</dc:Publisher>
 	</dc-metadata>
 	<x-metadata>
-	        <output encoding="utf-8" flatten-dynamic-dir="yes"/>
+	    <output encoding="utf-8" flatten-dynamic-dir="yes"/>
 		<DictionaryInLanguage>{source}</DictionaryInLanguage>
 		<DictionaryOutLanguage>{target}</DictionaryOutLanguage>
 	</x-metadata>
@@ -376,7 +383,7 @@ def openopf(ndicts, name):
 
 <!-- list of all the files needed to produce the .prc file -->
 <manifest>
-""".format(title=TITLE, source=INLANG, target=OUTLANG))
+""".format(title=TITLE, source=INLANG, target=OUTLANG, creator=CREATOR, publisher=PUBLISHER))
 
         yield to
 
