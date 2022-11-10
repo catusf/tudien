@@ -153,6 +153,8 @@ def main() -> None:
         dataFullSource = data['FullSource']
         dataFullTarget = data['FullTarget']
         dataName = data["Name"].replace(' ', '\\ ')
+        htmlDir = f'kindle'
+        htmlOutDir = f'{input_folder}/{htmlDir}'
 
         if not data:
             continue
@@ -163,22 +165,22 @@ def main() -> None:
         else:
             inflections = './ext-dict/NoInflections.txt'
 
-        cmd_line = f"python ./bin/tab2opf.py --title {dataName} --source {dataSource} --target {dataTarget} {datafile} --inflection {inflections}"
+        cmd_line = f"python ./bin/tab2opf.py --title={dataName} --source={dataSource} --target={dataTarget} --inflection={inflections} --outdir {htmlOutDir} {datafile}"
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
         # Generate .mobi dictionary from opf+html file
-        out_path = f'{filebase}.opf'.replace(' ', '\\ ')
+        out_path = f'{htmlOutDir}/{filebase}.opf'.replace(' ', '\\ ')
         cmd_line = f"wine ./bin/mobigen/mobigen.exe -unicode -s0 {out_path}"
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
         # Move input file to final destinations. Using subprocess.call
-        cmd_line = f'rm *.html *.opf'
-        print(cmd_line)
-        subprocess.call(cmd_line, shell=True)
+        # cmd_line = f'rm *.html *.opf'
+        # print(cmd_line)
+        # subprocess.call(cmd_line, shell=True)
 
-        cmd_line = f'mv *.mobi {output_folder}/kindle/'
+        cmd_line = f'mv {htmlOutDir}/*.mobi {output_folder}/kindle/'
         print(cmd_line)
         subprocess.call(cmd_line, shell=True)
 
