@@ -389,11 +389,15 @@ def openopf(ndicts, name):
 
 # Write the opf that describes all the key files
 def writeopf(ndicts, name):
+    # As name is full path, need to extract just the tail of the path
+
+    dir, filename = os.path.split(name)
+
     with openopf(ndicts, name) as to:
         for i in range(ndicts):
             to.write(
-"""     <item id="dictionary{ndict}" href="{name}{ndict}.html" media-type="text/x-oeb1-document"/>
-""".format(ndict=i, name=name))
+"""     <item id="dictionary{ndict}" href="{filename}{ndict}.html" media-type="text/x-oeb1-document"/>
+""".format(ndict=i, filename=filename, name=name))
 
         to.write("""
 </manifest>
