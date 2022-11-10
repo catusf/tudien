@@ -315,6 +315,7 @@ class DictFileReader(object):
                     #meaning_bytes = meaning_bytes.replace(b'\n', b'')  # remove
                     f.write(meaning_bytes)
                 f.write(b'\n')
+        print(f'Number of words written: {len(self._dict_index._word_idx)}')
 
     def get_dict_by_index(self, index):
         """Get the word's dictionary data by it's index infomation.
@@ -385,7 +386,11 @@ class DictFileReader(object):
 
 
 if __name__ == '__main__':
-    print('Python %s on %s' % (sys.version, sys.platform))
+    if len(sys.argv) < 1:
+        print("usage: stardict2txt pathbase")
+        print("Note that the pathbase doesn't include file extension.")
+        exit(1)
+
     # download stardict dictionary from: http://kdr2.com/resource/stardict.html
     # ifo_file = "/tmp/stardict-HanYuChengYuCiDian-new_colors-2.4.2/HanYuChengYuCiDian-new_colors.ifo"
     # idx_file = "/tmp/stardict-HanYuChengYuCiDian-new_colors-2.4.2/HanYuChengYuCiDian-new_colors.idx"
@@ -399,12 +404,13 @@ if __name__ == '__main__':
     # idx_file = "/tmp/stardict-xhzd-2.4.2/xhzd.idx"
     # dict_file = "/tmp/stardict-xhzd-2.4.2/xhzd.dict.dz"
 
-    dict_name = '/workspaces/tudien/ext-stardict-vi/fr-vi/star_phapviet'
+    dict_name = sys.argv[1] # '/workspaces/tudien/ext-stardict-vi/fr-vi/star_phapviet'
     ifo_file = dict_name + ".ifo"
     idx_file = dict_name + ".idx"
     dict_file = dict_name + ".dict.dz"
     text_file = dict_name + ".tab"
 
+    print(f'Start conversion: {ifo_file}')
     # info read test done
     info = IfoFileReader(ifo_file)
     # info.dump()
@@ -416,3 +422,5 @@ if __name__ == '__main__':
     # dict test
     dict_reader = DictFileReader(dict_file, info, index, True)
     dict_reader.dump(text_file)
+
+    print('Done.')
