@@ -8,10 +8,10 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "./bin/convert_all.py",
+            "program": "./bin/stardict2txt.py",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args": ["./ext-stardict-vi/vi-ja/star_vietnhat"]
+            "args": ["--cleanup", "./ext-stardict-vi/vi-en/star_vietanh"]
         }
     ]
 }
