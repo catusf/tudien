@@ -1,12 +1,14 @@
 # TODO
 - [ ] Add cover page to dictionaries
+- [ ] Add a function that convert all format from a specific params
+- [ ] Remove html code in NauyViet dict
 - [ ] Check format of Prodict and others
 - [ ] Copy back star_hanviet.tab and star_vietnhat.tab to dict files in ext-stardict-vi 
 - [x] Fix dict contents (hanviet, nauyviet, wikipedia, Bach khoa tu dien)
 - [X] Fix spaces in dictionary
 - [x] Change tab2opt to gen opf file with html same folder => no need to move files
 - [x] Change tab2opt to include <dc:publisher>abc</dc:publisher> <dc:Creator>xyz</dc:Creator>
-- [ ] Handle error code from script and exit (subprocess.call/run)
+- [ ] Handle error code from script and exit (subprocess.call/run) so error stop remaining steps
 - [ ] Add name of separate dictionaries to TudienTonghopPhathoc
 - [X] Investigate UTF-8 error in star_hanviet.tab and Wikipedia (disabled 'strict' in tab2opf for now) => line with different number of values (correct is 2)
 - [ ] Sync config .dotfile across environtment
