@@ -1,9 +1,11 @@
-#!/usr/bin/python2
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 import struct
 import sys
 import gzip
+import argparse
 
+CLEANUP = False
 
 class IfoFileException(Exception):
     """Exception while parsing the .ifo file.
@@ -306,15 +308,26 @@ class DictFileReader(object):
                 # print(self.get_dict_by_word(w))
                 # print('--------------------------------')
                 #print(repr(w))
-                out_encoding = 'utf-8'  # force/assume encoding to UTF8, no config
+                #out_encoding = 'utf-8'  # force/assume encoding to UTF8, no config
+
+                if w.find(b'00-database') >= 0: # Skips line with StarDict metadata
+                    continue
+                
                 f.write(w)
                 f.write(b'\t')
-                for m in meaning_lst:
+                for i, m in enumerate(meaning_lst):
                     meaning_bytes = b" ".join(m.values())
-                    meaning_bytes = meaning_bytes.replace(b'\n', b'\\n')  # replace
+
+                    if CLEANUP: # Skip first meaning if CLEAN is needed
+                        meaning_bytes = meaning_bytes[meaning_bytes.find(b'\n')+1:]
+
+                    meaning_bytes = meaning_bytes.replace(b'\n', b' ')  # replace
                     #meaning_bytes = meaning_bytes.replace(b'\n', b'')  # remove
+
                     f.write(meaning_bytes)
+
                 f.write(b'\n')
+
         print(f'Number of words written: {len(self._dict_index._word_idx)}')
 
     def get_dict_by_index(self, index):
@@ -391,20 +404,17 @@ if __name__ == '__main__':
         print("Note that the pathbase doesn't include file extension.")
         exit(1)
 
-    # download stardict dictionary from: http://kdr2.com/resource/stardict.html
-    # ifo_file = "/tmp/stardict-HanYuChengYuCiDian-new_colors-2.4.2/HanYuChengYuCiDian-new_colors.ifo"
-    # idx_file = "/tmp/stardict-HanYuChengYuCiDian-new_colors-2.4.2/HanYuChengYuCiDian-new_colors.idx"
-    # dict_file = "/tmp/stardict-HanYuChengYuCiDian-new_colors-2.4.2/HanYuChengYuCiDian-new_colors.dict.dz"
+    parser = argparse.ArgumentParser(description='Convert StarDict dictionary to tab seperated file',
+        usage='Usage: python stardict2txt --input basename')
+        
+    parser.add_argument('-c', '--cleanup', action=argparse.BooleanOptionalAction)
+    parser.add_argument('basename', help='Basename of StarDict dictionary files')
 
-    # ifo_file = "/tmp/stardict-xiandaihanyucidian_fix-2.4.2/xiandaihanyucidian_fix.ifo"
-    # idx_file = "/tmp/stardict-xiandaihanyucidian_fix-2.4.2/xiandaihanyucidian_fix.idx"
-    # dict_file = "/tmp/stardict-xiandaihanyucidian_fix-2.4.2/xiandaihanyucidian_fix.dict.dz"
+    args, array = parser.parse_known_args()
+    cleanup =args.cleanup
+    CLEANUP = cleanup
 
-    # ifo_file = "/tmp/stardict-xhzd-2.4.2/xhzd.ifo"
-    # idx_file = "/tmp/stardict-xhzd-2.4.2/xhzd.idx"
-    # dict_file = "/tmp/stardict-xhzd-2.4.2/xhzd.dict.dz"
-
-    dict_name = sys.argv[1] # '/workspaces/tudien/ext-stardict-vi/fr-vi/star_phapviet'
+    dict_name = args.basename
     ifo_file = dict_name + ".ifo"
     idx_file = dict_name + ".idx"
     dict_file = dict_name + ".dict.dz"
