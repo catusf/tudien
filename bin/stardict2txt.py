@@ -319,8 +319,10 @@ class DictFileReader(object):
                     meaning_bytes = b" ".join(m.values())
 
                     if CLEANUP: # Skip first meaning if CLEAN is needed
-                        meaning_bytes = meaning_bytes[meaning_bytes.find(b'\n')+1:]
+                        if meaning_bytes.find(b'@') == 0: # Start with @ means a repetition
+                            meaning_bytes = meaning_bytes[meaning_bytes.find(b'\n')+1:]
 
+                    meaning_bytes = meaning_bytes.replace(b'\r', b' ')  # replace
                     meaning_bytes = meaning_bytes.replace(b'\n', b' ')  # replace
                     #meaning_bytes = meaning_bytes.replace(b'\n', b'')  # remove
 

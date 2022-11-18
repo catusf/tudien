@@ -63,6 +63,7 @@ def readDicInfo(filepath):
 
     return valuemap
 
+DEBUG_FLAG = False
 
 def main() -> None:
     parser = argparse.ArgumentParser(description='Convert all dictionaries in a folder',
@@ -122,7 +123,9 @@ def main() -> None:
                 
                 cmd_line = f'bzip2 -kd \"{datafile}\"'
                 print(cmd_line)
-                subprocess.call(cmd_line, shell=True)
+
+                if not DEBUG_FLAG:
+                    subprocess.call(cmd_line, shell=True)
 
             datafilelist.append(datafile.replace('.bz2', ''))
 
@@ -178,6 +181,9 @@ def main() -> None:
         cmd_line = f"wine ./bin/mobigen/mobigen.exe -unicode -s0 {out_path}"
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
+
+        if DEBUG_FLAG:
+            continue
 
         # Move input file to final destinations. Using subprocess.call
         # cmd_line = f'rm *.html *.opf'
