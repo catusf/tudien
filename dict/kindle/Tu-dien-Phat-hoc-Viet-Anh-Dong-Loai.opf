@@ -11,9 +11,11 @@
 		<!-- Title of the document -->
 		<dc:Title><h2>Từ điển Phật học Việt Anh - Đồng Loại</h2></dc:Title>
 		<dc:Language>en</dc:Language>
+		<dc:Creator>Panthera Tigris</dc:Creator>
+		<dc:Publisher>Panthera Tigris</dc:Publisher>
 	</dc-metadata>
 	<x-metadata>
-	        <output encoding="utf-8" flatten-dynamic-dir="yes"/>
+	    <output encoding="utf-8" flatten-dynamic-dir="yes"/>
 		<DictionaryInLanguage>vi</DictionaryInLanguage>
 		<DictionaryOutLanguage>en</DictionaryOutLanguage>
 	</x-metadata>

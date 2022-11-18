@@ -11,9 +11,11 @@
 		<!-- Title of the document -->
 		<dc:Title><h2>Phật quang Đại từ điển Hán ngữ</h2></dc:Title>
 		<dc:Language>zh</dc:Language>
+		<dc:Creator>Panthera Tigris</dc:Creator>
+		<dc:Publisher>Panthera Tigris</dc:Publisher>
 	</dc-metadata>
 	<x-metadata>
-	        <output encoding="utf-8" flatten-dynamic-dir="yes"/>
+	    <output encoding="utf-8" flatten-dynamic-dir="yes"/>
 		<DictionaryInLanguage>zh</DictionaryInLanguage>
 		<DictionaryOutLanguage>zh</DictionaryOutLanguage>
 	</x-metadata>

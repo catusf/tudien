@@ -11,9 +11,11 @@
 		<!-- Title of the document -->
 		<dc:Title><h2>Từ điển Anh-Việt β v1.3</h2></dc:Title>
 		<dc:Language>vi</dc:Language>
+		<dc:Creator>Panthera Tigris</dc:Creator>
+		<dc:Publisher>Panthera Tigris</dc:Publisher>
 	</dc-metadata>
 	<x-metadata>
-	        <output encoding="utf-8" flatten-dynamic-dir="yes"/>
+	    <output encoding="utf-8" flatten-dynamic-dir="yes"/>
 		<DictionaryInLanguage>en</DictionaryInLanguage>
 		<DictionaryOutLanguage>vi</DictionaryOutLanguage>
 	</x-metadata>
