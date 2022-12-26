@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt update &&
+sudo apt-get update &&
 sudo apt-get install dictzip systemd &&
 sudo apt install ruby-full &&
 sudo gem install bundler &&
