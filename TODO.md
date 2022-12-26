@@ -1,36 +1,37 @@
 # TODO
 - [ ] Add cover page to dictionaries
-- [X] Add dictd format
-- [ ] Add a function that convert all format from a specific params
-- [ ] Remove html code in NauyViet dict
-- [ ] Check format of Prodict and others
-- [ ] Copy back star_hanviet.tab and star_vietnhat.tab to dict files in ext-stardict-vi 
-- [x] Fix dict contents (hanviet, nauyviet, wikipedia, Bach khoa tu dien)
-- [X] Fix spaces in dictionary
-- [x] Change tab2opt to gen opf file with html same folder => no need to move files
-- [x] Change tab2opt to include <dc:publisher>abc</dc:publisher> <dc:Creator>xyz</dc:Creator>
-- [ ] Handle error code from script and exit (subprocess.call/run) so error stop remaining steps
 - [ ] Add name of separate dictionaries to TudienTonghopPhathoc
-- [X] Investigate UTF-8 error in star_hanviet.tab and Wikipedia (disabled 'strict' in tab2opf for now) => line with different number of values (correct is 2)
+- [ ] Check format of Prodict and others
+- [ ] Check issue with Wikipedia invalid lines
+- [ ] Copy back star_hanviet.tab and star_vietnhat.tab to dict files in ext-stardict-vi 
+- [ ] Handle error code from script and exit (subprocess.call/run) so error stop remaining steps
+- [ ] Remove html code in NauyViet dict
 - [ ] Sync config .dotfile across environtment
-- [x] Add code to check and generate statistics for tab files (use Power BI) first to investigate
 - [ ] Update to an up-to-date Ubuntu distro when Wine is updated (error on Ubuntu v20 and 22)
-- [X] Move mobigen tool to sub folder
 - [X] Add Action to run all release at one (one script generates multiple outputs: DSL, StarDict, Kobo, Kindle...)
 - [X] Add To and From language
+- [X] Add a function that convert all format from a specific params
 - [X] Add action to use Wine to run mobigen
+- [X] Add dictd format
 - [X] Add dictionaries from here 
 - [X] Change the title of dictionaries
 - [X] Convert files to StarDict and other dictionary formats
 - [X] Fix security issues
+- [X] Fix spaces in dictionary
+- [X] Investigate UTF-8 error in star_hanviet.tab and Wikipedia (disabled 'strict' in tab2opf for now) => line with different number of values (correct is 2)
+- [X] Move mobigen tool to sub folder
 - [X] Need a script to update opf file + output folder (or update tab2opf?)
 - [X] Update DSdsl-tools to allow specifying output filename
 - [X] Use commandline of Kindle Previewer
 - [X] Using https://github.com/kevinhendricks/KindleUnpack to convert mobi files
 - [x] Add a desc file name for each dictionary containing Name, Source and Target languages...
 - [x] Add action to generate pre-release (including zipping all folder)
+- [x] Add code to check and generate statistics for tab files (use Power BI) first to investigate
 - [x] Add code to zip folders as epub files
+- [x] Change tab2opt to gen opf file with html same folder => no need to move files
+- [x] Change tab2opt to include <dc:publisher>abc</dc:publisher> <dc:Creator>xyz</dc:Creator>
 - [x] Convert dicts to PRC for Android
+- [x] Fix dict contents (hanviet, nauyviet, wikipedia, Bach khoa tu dien)
 - [x] Move html folders inside html
 - [x] Move html folders inside html
 - [x] Streamline convert process to be able to add new dictionaries easiy: 
