@@ -1,6 +1,6 @@
 # TODO
 - [ ] Add cover page to dictionaries
-- [ ] Thêm dictd format
+- [X] Add dictd format
 - [ ] Add a function that convert all format from a specific params
 - [ ] Remove html code in NauyViet dict
 - [ ] Check format of Prodict and others
