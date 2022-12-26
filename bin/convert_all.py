@@ -137,11 +137,10 @@ def main() -> None:
 
     subprocess.call(f'rm -r {output_folder}/*', shell=True)
 
-    subprocess.call(f'mkdir -p {output_folder}/stardict', shell=True)
-    subprocess.call(f'mkdir -p {output_folder}/epub', shell=True)
-    subprocess.call(f'mkdir -p {output_folder}/kobo', shell=True)
-    subprocess.call(f'mkdir -p {output_folder}/lingvo', shell=True)
-    subprocess.call(f'mkdir -p {output_folder}/kindle', shell=True)
+    dirs = ['stardict', 'epub', 'kobo', 'lingvo', 'kindle', 'dictd']
+
+    for dir in dirs:
+        subprocess.call(f'mkdir -p {output_folder}/{dir}', shell=True)
 
     for filepath, datafile in zip(metafilelist, datafilelist):
         folder, filename = os.path.split(filepath)
@@ -196,7 +195,7 @@ def main() -> None:
 
         # Generare StarDict dictionary
         out_path = os.path.join(output_folder, f'stardict/{filebase}.ifo').replace(' ', '\\ ')
-        cmd_line = f"pyglossary --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
+        cmd_line = f"pyglossary --no-progress-bar --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
@@ -207,15 +206,21 @@ def main() -> None:
         print(cmd_line)
         subprocess.call(cmd_line, shell=True)
 
+        # Generare dictd dictionary
+        out_path = os.path.join(output_folder, f'dictd/{filebase}.index').replace(' ', '\\ ')
+        cmd_line = f"pyglossary --no-progress-bar --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
+        print(cmd_line)
+        subprocess.run(shlex.split(cmd_line))
+
         # Generare Epub dictionary
         out_path = os.path.join(output_folder, f'epub/{filebase}.epub').replace(' ', '\\ ')
-        cmd_line = f"pyglossary --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
+        cmd_line = f"pyglossary --no-progress-bar --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
         # Generare Kobo dictionary
         out_path = os.path.join(output_folder, f'kobo/{filebase}.kobo.zip').replace(' ', '\\ ')
-        cmd_line = f"pyglossary --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
+        cmd_line = f"pyglossary --no-progress-bar --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
