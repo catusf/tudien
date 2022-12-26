@@ -61,7 +61,7 @@ jobs:
         zip -9 -j $OUTPUT_DIR/all-kobo.zip     $OUTPUT_DIR/kobo/*.*     &&
         zip -9 -j $OUTPUT_DIR/all-lingvo.zip   $OUTPUT_DIR/lingvo/*.*   &&
         zip -9 -j $OUTPUT_DIR/all-kindle.zip   $OUTPUT_DIR/kindle/*.*   &&
-        ls -R $OUTPUT_DIR
+        ls -R -l $OUTPUT_DIR
 
     - name: Create a new release draft
       id: create_release
