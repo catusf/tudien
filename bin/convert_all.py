@@ -212,6 +212,13 @@ def main() -> None:
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
+        # Compress to make one zip file for one dictd
+        out_path = os.path.join(output_folder, f'dictd/{filebase}.*')
+        zip_path = os.path.join(output_folder, f'{filebase}.dictd.zip')
+        cmd_line = f"zip -j {zip_path} {out_path}"
+        print(cmd_line)
+        subprocess.call(cmd_line, shell=True)
+
         # Generare Epub dictionary
         out_path = os.path.join(output_folder, f'epub/{filebase}.epub').replace(' ', '\\ ')
         cmd_line = f"pyglossary --no-progress-bar --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
