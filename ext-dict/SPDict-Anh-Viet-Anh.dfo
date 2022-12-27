@@ -1,0 +1,7 @@
+Name = Từ điển Anh-Việt-Anh
+Description = Từ điển Anh-Việt-Anh từ SPDict
+Source = en
+Target = vi 
+Version = 1.0
+Owner/Editor = SPDict
+URL = https://github.com/catusphan/dictionary
