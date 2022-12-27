@@ -156,23 +156,15 @@ FILE_DATA = {
     "SPDict-Anh-Viet.rawml":
     {
         'encoding':'utf-8', 
-        'pattern': r'<i>(.+?)</i><br>(.+?)<br><mbp:pagebreak/></idx:entry>', 
-        'remove' : r'<[(/i|b|u)\s]*>',
-        'replace' : [('<br>', ' ')],
+        'pattern': r'<i>(.+?)</i>(.+?)<mbp:pagebreak/>', 
+        'remove' : r'<[(/i|b|u|br)\s]*>',
+        'replace' : [('<font color="#FF0000"> ', ' ')],
         'skips': 0,
     },
 
-    "SPDict-Anh-Viet-Anh.rawml":
-    {
-        'encoding':'utf-8', 
-        'pattern': r'<i>(.+?) \[ .. \]</i>(.+?)<mbp:pagebreak/>', 
-        'remove' : r'<[(/i|b|u)\s]*>',
-        'replace' : [('<br>', ' ')],
-        'skips': 0,
-    },
 }
   
-file = r"SPDict-Viet-Anh.rawml"
+file = r"SPDict-Anh-Viet.rawml"
 
 filepath = folder + file
 
@@ -183,7 +175,7 @@ skips = FILE_DATA[file]['skips']
 
 DEBUG = False
 
-word_mark = '</idx:entry>'
+word_mark = '<idx:orth'
 
 with open(filepath, encoding=file_encoding) as f:
     html = f.read()
@@ -200,14 +192,12 @@ with open(filepath, encoding=file_encoding) as f:
     pattern = re.compile(FILE_DATA[file]['pattern'])
 
     with open(filepath.replace('.rawml', '.tab'), 'w',  encoding='utf-8') as out:
-        count = 0
+        count = 1
         print('Start matching...')
 
         print(f'Head word marks: {html.count(word_mark)}')
 
         for match in pattern.finditer(html):
-
-            count += 1
 
             if count <= skips:
                 continue
@@ -249,7 +239,14 @@ with open(filepath, encoding=file_encoding) as f:
             if DEBUG:
                 print(f'{headword}\t{definition}\n\n')
 
+            if not headword or not definition:
+                print(f'Warning: something is empty |{headword}|\t|{definition}|')
+                continue
+
+            count += 1
+
             out.writelines(f'{headword}\t{definition}\n')
+
     print(f'No. of items: {count}')
 
 print(f'Done')
