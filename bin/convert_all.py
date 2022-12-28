@@ -167,7 +167,7 @@ def main() -> None:
 
         # Generare HTML file for Kindle dictionary
         if 'Inflections' in data:
-            inflections = f'\"{data["Inflections"]}\"'
+            inflections = f'\"./bin/{data["Inflections"]}\"'
         else:
             inflections = './ext-dict/NoInflections.txt'
 
