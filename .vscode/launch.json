@@ -8,11 +8,10 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "./bin/extract-definition.py",
+            "program": "./bin/convert_all.py",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args": []
+            "args": ["--input_folder", "./dict", "--output_folder", "./output", "--extension", "tab"]
         }
     ]
 }
-
