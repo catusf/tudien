@@ -4,5 +4,5 @@ Source = vi
 Target = vi
 Version = 1.0
 Owner/Editor = 
-URL = 
-Inflections = https://github.com/catusphan/dictionary
+URL = https://github.com/catusphan/dictionary
+Inflections = 
