@@ -50,7 +50,7 @@ jobs:
             git branch --show-current
             git add .
             git status
-            git commit -m "Create inflections"
+            git commit -m "[AUTO] Create inflections"
             git fetch
             git push origin --force
         fi

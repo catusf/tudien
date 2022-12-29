@@ -86,12 +86,13 @@ for lang in language_files:
 
                 inflections += len(items)
 
-                if inflections > 100:
-                    break
+                # if inflections > 100:
+                #     break
 
                 print(
                     f"{i}/{num_words} (#infl: {inflections}) {w}\t{'|'.join(items)}")
-                if l:
+
+                if items:
                     o.write(f"{w}\t{'|'.join(items)}\n")
 
-        print(f'===== Number of inflections: {inflections} ======')
+        print(f'===== Number of inflections: {inflections}, avg {1.0*inflections/num_words} ======')
