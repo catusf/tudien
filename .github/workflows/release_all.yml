@@ -9,7 +9,7 @@ on:
       - README.md
       - TODO.md
       - LICENSE
-      - ./bin/create_inflections.py
+      - /bin/create_inflections.py
 
 env:
   INPUT_DIR: ./dict
