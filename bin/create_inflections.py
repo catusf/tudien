@@ -43,8 +43,8 @@ def split_inflection_words(results):
 
 
 language_files = {
-    'ita': 'star_yviet.tab',
-    # 'ces': 'star_secviet.tab',
+    # 'ita': 'star_yviet.tab',
+    'ces': 'star_secviet.tab',
     # 'spa': 'star_tbnviet.tab',
     # 'rus': 'star_ngaviet.tab',
     # 'nno': 'star_nauyviet.tab',
