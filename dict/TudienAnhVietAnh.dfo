@@ -1,7 +1,8 @@
-Name = Từ điển Anh-Việt-Anh
-Description = Từ điển hai chiều Anh-Việt-Anh
+Name = Từ điển Anh-Việt-Anh v1.0
+Description = Từ điển Anh-Việt-Anh với các dạng từ tiếng Anh
 Source = en
-Target = vi 
+Target = vi
 Version = 1.0
 Owner/Editor = 
 URL = 
+Inflections = https://github.com/catusphan/dictionary

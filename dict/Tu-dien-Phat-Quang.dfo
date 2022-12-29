@@ -1,7 +1,8 @@
-Name = Từ điển Phật Quang
+Name = Từ điển Phật Quang v1.0
 Description = Từ điển Phật Quang
 Source = vi
-Target = vi 
+Target = vi
 Version = 1.0
 Owner/Editor = 
 URL = 
+Inflections = https://github.com/catusphan/dictionary

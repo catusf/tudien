@@ -1,7 +1,8 @@
-Name = Từ điển Việt - Nhật
-Description = Từ điển Việt - Nhật từ dự án Open Vietnamese Dictionary Project (OVDP)
+Name = Từ điển Việt - Nhật v1.0
+Description = Việt - Nhật
 Source = vi
-Target = ja 
+Target = ja
 Version = 1.0
 Owner/Editor = OVDP
 URL = https://github.com/catusphan/dictionary
+Inflections = 

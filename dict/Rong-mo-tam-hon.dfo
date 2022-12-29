@@ -1,7 +1,8 @@
-Name = Rộng mở tâm hồn
+Name = Rộng mở tâm hồn v1.0
 Description = Rộng mở tâm hồn
 Source = vi
-Target = vi 
+Target = vi
 Version = 1.0
 Owner/Editor = 
-URL = 
+URL = https://github.com/catusphan/dictionary
+Inflections = 

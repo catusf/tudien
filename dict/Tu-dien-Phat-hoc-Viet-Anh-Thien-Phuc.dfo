@@ -1,7 +1,8 @@
-Name = Từ điển Phật học Việt Anh - Thiện Phúc
+Name = Từ điển Phật học Việt Anh - Thiện Phúc v1.0
 Description = Từ điển Phật học Việt Anh - Thiện Phúc
 Source = vi
-Target = en 
+Target = en
 Version = 1.0
 Owner/Editor = 
 URL = 
+Inflections = https://github.com/catusphan/dictionary

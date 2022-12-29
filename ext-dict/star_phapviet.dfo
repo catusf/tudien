@@ -1,7 +1,8 @@
-Name = Từ điển Pháp - Việt
-Description = Từ điển Pháp - Việt từ dự án Open Vietnamese Dictionary Project (OVDP)
+Name = Từ điển Pháp - Việt v1.0
+Description = Pháp - Việt
 Source = fr
-Target = vi 
+Target = vi
 Version = 1.0
 Owner/Editor = OVDP
 URL = https://github.com/catusphan/dictionary
+Inflections = 

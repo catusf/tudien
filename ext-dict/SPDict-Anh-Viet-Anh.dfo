@@ -1,7 +1,8 @@
-Name = Từ điển Anh-Việt-Anh
-Description = Từ điển Anh-Việt-Anh từ SPDict
+Name = Từ diển Anh-Việt-Anh SPDict v1.0
+Description = Từ diển Anh-Việt-Anh SPDict với các dạng từ tiếng Anh
 Source = en
-Target = vi 
+Target = vi
 Version = 1.0
 Owner/Editor = SPDict
 URL = https://github.com/catusphan/dictionary
+Inflections = english_inflections.txt

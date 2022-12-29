@@ -1,7 +1,8 @@
-Name = Từ điển Việt - Nhật
+Name = Từ điển Việt - Nhật v1.0
 Description = Anh - Việt
 Source = ja
-Target = vi 
+Target = vi
 Version = 1.0
 Owner/Editor = 
-URL = 
+URL = https://github.com/catusphan/dictionary
+Inflections = 

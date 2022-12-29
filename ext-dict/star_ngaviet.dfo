@@ -1,7 +1,8 @@
-Name = Từ điển Nga - Việt
-Description = Từ điển Nga - Việt từ dự án Open Vietnamese Dictionary Project (OVDP)
+Name = Từ điển Nga - Việt v1.0
+Description = Nga - Việt
 Source = ru
-Target = vi 
+Target = vi
 Version = 1.0
 Owner/Editor = OVDP
 URL = https://github.com/catusphan/dictionary
+Inflections = 
