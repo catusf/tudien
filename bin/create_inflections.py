@@ -51,7 +51,7 @@ language_files = {
 print(f'Getting inflections for {len(language_files)} languages')
 
 for lang in language_files:
-    print(f'Getting inflections for {lang}')
+    print(f'----- Getting inflections for {lang} -----')
     unimorph.download_unimorph(lang)
     unimorph.load_dataset(lang)
 
@@ -69,16 +69,22 @@ for lang in language_files:
             items = l.split('\t')
             if items[0].isalpha():
                 words.append(items[0])
+        num_words = len(words)
+        print(f'Number of words: {num_words}')
+        inflections = 0
 
         with open(outfilepath, 'w', encoding='utf-8') as o:
-            for w in words:
+            for i, w in enumerate(words):
                 results = unimorph.inflect_word(w, lang=lang)
-                l = split_inflection_words(results)
+                items = split_inflection_words(results)
+
+                inflections += len(items)
 
                 if l:
-                    o.write(f"{w}\t{'|'.join(l)}\n")
-                    print(f"{w}\t{'|'.join(l)}")
+                    o.write(f"{w}\t{'|'.join(items)}\n")
+                    print(f"{i}/{num_words}   {w}\t{'|'.join(items)}")
 
+        print(f'===== Number of inflections: {len(inflections)} ======')
 
 
 
