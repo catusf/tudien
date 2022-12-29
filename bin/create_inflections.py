@@ -44,11 +44,11 @@ def split_inflection_words(results):
 
 language_files = {
     # 'ita': 'star_yviet.tab',
-    'ces': 'star_secviet.tab',
+    # 'ces': 'star_secviet.tab',
     # 'spa': 'star_tbnviet.tab',
     # 'rus': 'star_ngaviet.tab',
     # 'nno': 'star_nauyviet.tab',
-    # 'por': 'star_bdnviet.tab',
+    'por': 'star_bdnviet.tab',
     # 'deu': 'star_ducviet.tab',
     # 'fra': 'star_phapviet.tab',
     # 'eng': 'star_anhviet.tab',
@@ -86,9 +86,12 @@ for lang in language_files:
 
                 inflections += len(items)
 
+                # if inflections > 100:
+                #     break
+
                 print(
                     f"{i}/{num_words} (#infl: {inflections}) {w}\t{'|'.join(items)}")
                 if l:
                     o.write(f"{w}\t{'|'.join(items)}\n")
 
-        print(f'===== Number of inflections: {len(inflections)} ======')
+        print(f'===== Number of inflections: {inflections} ======')
