@@ -41,13 +41,10 @@ def readDicInfo(filepath):
                 continue
          
             key, value = line.split('=')
-            key = key.strip()
+            key = 
             value = value.strip()
 
-            if not key or not value:
-                continue
-
-            valuemap[key] = value
+            valuemap[key.strip()] = value.strip()
 
         valuemap['FullSource'] = language_name(valuemap['Source'])
         valuemap['FullTarget'] = language_name(valuemap['Target'])
@@ -171,7 +168,7 @@ def main() -> None:
             continue
 
         # Generare HTML file for Kindle dictionary
-        if 'Inflections' in data:
+        if 'Inflections' in data and data['Inflections']:
             inflections = f'\"./bin/{data["Inflections"]}\"'
         else:
             inflections = './ext-dict/NoInflections.txt'
