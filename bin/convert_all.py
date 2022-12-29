@@ -41,8 +41,13 @@ def readDicInfo(filepath):
                 continue
          
             key, value = line.split('=')
+            key = key.strip()
+            value = value.strip()
 
-            valuemap[key.strip()] = value.strip()
+            if not key or not value:
+                continue
+
+            valuemap[key] = value
 
         valuemap['FullSource'] = language_name(valuemap['Source'])
         valuemap['FullTarget'] = language_name(valuemap['Target'])
