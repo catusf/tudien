@@ -1,6 +1,6 @@
 # TODO
 - [ ] Add cover page to dictionaries
-- [ ] Check if dictionaries have inflections
+- [X] Check if dictionaries have inflections
 - [ ] Add inflections files for different languages https://stackoverflow.com/questions/51097463/snowball-stemmer-poor-french-stemming
 - [ ] Add inflections for comparatives
 - [ ] Add name of separate dictionaries to TudienTonghopPhathoc

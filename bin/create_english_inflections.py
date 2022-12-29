@@ -35,7 +35,7 @@ def getInflections(key):
 
     return inflections
     
-keyfile = open("english_inflections.txt", "w", encoding='utf-8')
+keyfile = open("english_inflections.tab", "w", encoding='utf-8')
 
 try:
     print(lexeme('be'))

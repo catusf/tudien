@@ -1,8 +1,8 @@
 Name = Từ điển Đức - Việt v1.0
-Description = Đức - Việt
+Description = Từ điển Đức - Việt với các dạng từ
 Source = de
 Target = vi
 Version = 1.0
 Owner/Editor = OVDP
 URL = https://github.com/catusphan/dictionary
-Inflections = 
+Inflections = inflection-deu.tab
