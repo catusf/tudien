@@ -45,8 +45,8 @@ language_files = {
     # 'spa': 'star_tbnviet.tab',
     # 'rus': 'star_ngaviet.tab',
     # 'nno': 'star_nauyviet.tab',
-    'por': 'star_bdnviet.tab',
-    # 'deu': 'star_ducviet.tab',
+    # 'por': 'star_bdnviet.tab',
+    'deu': 'star_ducviet.tab',
     # 'fra': 'star_phapviet.tab',
     # 'eng': 'star_anhviet.tab',
 }
