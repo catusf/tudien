@@ -1,7 +1,8 @@
-Name = Từ điển Đức - Việt
-Description = Từ điển Đức - Việt từ dự án Open Vietnamese Dictionary Project (OVDP)
+Name = Từ điển Đức - Việt v1.0
+Description = Đức - Việt
 Source = de
-Target = vi 
+Target = vi
 Version = 1.0
 Owner/Editor = OVDP
 URL = https://github.com/catusphan/dictionary
+Inflections = 

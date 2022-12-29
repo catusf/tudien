@@ -1,7 +1,8 @@
-Name = Từ điển Việt - Anh
-Description = Từ điển Việt - Anh từ dự án Open Vietnamese Dictionary Project (OVDP)
+Name = Từ điển Việt - Anh v1.0
+Description = Việt - Anh
 Source = vi
-Target = en 
+Target = en
 Version = 1.0
 Owner/Editor = OVDP
 URL = https://github.com/catusphan/dictionary
+Inflections = 

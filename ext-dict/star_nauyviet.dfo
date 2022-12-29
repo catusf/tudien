@@ -1,7 +1,8 @@
-Name = Từ điển Na Uy - Việt
-Description = Từ điển Na Uy - Việt từ dự án Open Vietnamese Dictionary Project (OVDP)
+Name = Từ điển Na Uy - Việt v1.0
+Description = Na Uy - Việt
 Source = no
-Target = vi 
+Target = vi
 Version = 1.0
 Owner/Editor = OVDP
 URL = https://github.com/catusphan/dictionary
+Inflections = 

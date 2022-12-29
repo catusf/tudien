@@ -1,7 +1,8 @@
-Name = Từ điển Prodict Anh-Việt Kỹ thuật & Kinh doanh
-Description = Từ điển Prodict Anh-Việt Kỹ thuật & Kinh doanh
+Name = Từ điển Anh-Việt Kỹ thuật & Kinh doanh Prodict v1.0
+Description = Từ điểnt Anh-Việt Kỹ thuật & Kinh doanh Prodict
 Source = en
-Target = en 
+Target = en
 Version = 1.0
-Owner/Editor = 
-URL = 
+Owner/Editor = Prodict
+URL = https://github.com/catusphan/dictionary
+Inflections = english_inflections.txt

@@ -1,7 +1,8 @@
-Name = Từ điển Phật học Việt Anh - Minh Thông
+Name = Từ điển Phật học Việt Anh - Minh Thông v1.0
 Description = Từ điển Phật học Việt Anh - Minh Thông
 Source = vi
-Target = en 
+Target = en
 Version = 1.0
 Owner/Editor = 
 URL = 
+Inflections = https://github.com/catusphan/dictionary
