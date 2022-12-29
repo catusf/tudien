@@ -41,8 +41,6 @@ def readDicInfo(filepath):
                 continue
          
             key, value = line.split('=')
-            key = 
-            value = value.strip()
 
             valuemap[key.strip()] = value.strip()
 
