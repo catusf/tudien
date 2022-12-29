@@ -77,22 +77,24 @@ for lang in language_files:
                 words.append(items[0])
         num_words = len(words)
         print(f'Number of words: {num_words}')
-        inflections = 0
+        num_inflections = 0
 
         with open(outfilepath, 'w', encoding='utf-8') as o:
+            num_actual_words = 0
             for i, w in enumerate(words):
                 results = unimorph.inflect_word(w, lang=lang)
                 items = split_inflection_words(results)
 
-                inflections += len(items)
+                num_inflections += len(items)
 
-                # if inflections > 100:
+                # if num_inflections > 100:
                 #     break
 
                 print(
-                    f"{i}/{num_words} (#infl: {inflections}) {w}\t{'|'.join(items)}")
+                    f"{i}/{num_words} (#infl: {num_inflections}) {w}\t{'|'.join(items)}")
 
                 if items:
                     o.write(f"{w}\t{'|'.join(items)}\n")
+                    num_actual_words += 1
 
-        print(f'===== Number of inflections: {inflections}, avg {1.0*inflections/num_words} ======')
+        print(f'===== Number of inflections: {num_inflections}, avg {1.0*num_inflections/num_words} actual avg {1.0*num_inflections/num_actual_words}  ======')
