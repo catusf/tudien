@@ -2,6 +2,9 @@ import os
 import unimorph
 
 def split_inflections(results):
+    if not results.strip():
+        return []
+
     lines = results.strip().split('\n')
     items = []
     for l in lines:
@@ -10,7 +13,7 @@ def split_inflections(results):
     return items
 
 def split_inflection_words(results):
-    if not results:
+    if not results.strip():
         return []
 
     items = split_inflections(results)
@@ -18,10 +21,10 @@ def split_inflection_words(results):
     skips = set(['uncountable', 'countable', items[0][0]])
 
     for i in items:
-        if len(i) > 1 and not i[1] in skips and i[1].isalpha():
+        if len(i) > 1 and i[1].isalpha() and not i[1] in skips:
             words.add(i[1])
 
-    return list(words)
+    return words
 
 # lang = 'deu'
 
@@ -39,13 +42,13 @@ def split_inflection_words(results):
 language_files = {
     'ita': 'star_yviet.tab',
     'ces': 'star_secviet.tab',
-    'spa': 'star_tbnviet.tab',
-    'rus': 'star_ngaviet.tab',
-    'nno': 'star_nauyviet.tab',
-    'por': 'star_bdnviet.tab',
-    'deu': 'star_ducviet.tab',
-    'fra': 'star_phapviet.tab',
-    'eng': 'star_anhviet.tab',
+    # 'spa': 'star_tbnviet.tab',
+    # 'rus': 'star_ngaviet.tab',
+    # 'nno': 'star_nauyviet.tab',
+    # 'por': 'star_bdnviet.tab',
+    # 'deu': 'star_ducviet.tab',
+    # 'fra': 'star_phapviet.tab',
+    # 'eng': 'star_anhviet.tab',
 }
 
 print(f'Getting inflections for {len(language_files)} languages')
@@ -80,7 +83,7 @@ for lang in language_files:
 
                 inflections += len(items)
 
-                print(f"{i}/{num_words}   {w}\t{'|'.join(items)}")
+                print(f"{i}/{num_words} (#infl: {inflections}) {w}\t{'|'.join(items)}")
                 if l:
                     o.write(f"{w}\t{'|'.join(items)}\n")
 
