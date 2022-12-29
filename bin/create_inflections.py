@@ -50,8 +50,8 @@ language_files = {
     # 'nno': 'star_nauyviet.tab',
     # 'por': 'star_bdnviet.tab',
     # 'deu': 'star_ducviet.tab',
-    'fra': 'star_phapviet.tab',
-    # 'eng': 'star_anhviet.tab',
+    # 'fra': 'star_phapviet.tab',
+    'eng': 'star_anhviet.tab',
 }
 
 print(f'Getting inflections for {len(language_files)} languages')
