@@ -80,9 +80,9 @@ for lang in language_files:
 
                 inflections += len(items)
 
+                print(f"{i}/{num_words}   {w}\t{'|'.join(items)}")
                 if l:
                     o.write(f"{w}\t{'|'.join(items)}\n")
-                    print(f"{i}/{num_words}   {w}\t{'|'.join(items)}")
 
         print(f'===== Number of inflections: {len(inflections)} ======')
 

@@ -1,0 +1,54 @@
+name: Create inflections for all dictionaries
+
+on:
+  workflow_dispatch:
+
+  push:
+    paths-ignore:
+      - .gitignore
+      - README.md
+      - TODO.md
+      - LICENSE
+
+jobs:
+  build:
+    # Only builds if commit message contains BUILD
+    #if: "contains(github.event.head_commit.message, 'BUILD')"
+
+    runs-on: ubuntu-18.04
+
+    steps:
+
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 1
+        submodules: 'recursive'
+
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10' 
+        
+    - name: Setup Python packages
+      run: |
+        pip install -r ./bin/requirements-inflections.txt
+
+    - name: Create all inflections
+      run: |
+        python ./bin/create_inflections.py
+
+        if [[ -z $(git status -s) ]]
+        then
+            echo "Nothing to commit."
+        else
+            echo "---------------------------------"
+            ls
+            echo "---------------------------------"
+            git config user.name "catus felis"
+            git config user.email catusf@users.noreply.github.com
+            git branch --show-current
+            git add site
+            git status
+            git commit -m "Create inflections"
+            git fetch
+            git push origin --force
+        fi
