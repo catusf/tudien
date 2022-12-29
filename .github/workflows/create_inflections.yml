@@ -36,6 +36,8 @@ jobs:
       run: |
         python ./bin/create_inflections.py
 
+    - name: Upload files to repos
+      run: |
         if [[ -z $(git status -s) ]]
         then
             echo "Nothing to commit."
@@ -46,7 +48,7 @@ jobs:
             git config user.name "catus felis"
             git config user.email catusf@users.noreply.github.com
             git branch --show-current
-            git add site
+            git add .
             git status
             git commit -m "Create inflections"
             git fetch
