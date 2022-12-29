@@ -40,9 +40,9 @@ def split_inflection_words(results):
 #     print(f'Word: {w}: {split_inflection_words(l)}')
 
 language_files = {
-    'ita': 'star_yviet.tab',
-    'ces': 'star_secviet.tab',
-    # 'spa': 'star_tbnviet.tab',
+    # 'ita': 'star_yviet.tab',
+    # 'ces': 'star_secviet.tab',
+    'spa': 'star_tbnviet.tab',
     # 'rus': 'star_ngaviet.tab',
     # 'nno': 'star_nauyviet.tab',
     # 'por': 'star_bdnviet.tab',
