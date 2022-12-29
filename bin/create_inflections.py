@@ -1,6 +1,7 @@
 import os
 import unimorph
 
+
 def split_inflections(results):
     if not results.strip():
         return []
@@ -11,6 +12,7 @@ def split_inflections(results):
         items.append(l.split('\t'))
 
     return items
+
 
 def split_inflection_words(results):
     if not results.strip():
@@ -38,6 +40,7 @@ def split_inflection_words(results):
 #     l = unimorph.inflect_word(w, lang=lang)
 
 #     print(f'Word: {w}: {split_inflection_words(l)}')
+
 
 language_files = {
     # 'ita': 'star_yviet.tab',
@@ -83,12 +86,9 @@ for lang in language_files:
 
                 inflections += len(items)
 
-                print(f"{i}/{num_words} (#infl: {inflections}) {w}\t{'|'.join(items)}")
+                print(
+                    f"{i}/{num_words} (#infl: {inflections}) {w}\t{'|'.join(items)}")
                 if l:
                     o.write(f"{w}\t{'|'.join(items)}\n")
 
         print(f'===== Number of inflections: {len(inflections)} ======')
-
-
-
-
