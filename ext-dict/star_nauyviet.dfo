@@ -1,8 +1,8 @@
 Name = Từ điển Na Uy - Việt v1.0
-Description = Na Uy - Việt
+Description = Từ điển Na Uy - Việt với các dạng từ
 Source = no
 Target = vi
 Version = 1.0
 Owner/Editor = OVDP
 URL = https://github.com/catusphan/dictionary
-Inflections = 
+Inflections = inflection-nno.tab

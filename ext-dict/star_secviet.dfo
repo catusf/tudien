@@ -1,8 +1,8 @@
 Name = Từ điển Séc - Việt v1.0
-Description = Séc - Việt
+Description = Từ điển Séc - Việt với các dạng từ
 Source = cs
 Target = vi
 Version = 1.0
 Owner/Editor = OVDP
 URL = https://github.com/catusphan/dictionary
-Inflections = 
+Inflections = inflection-ces.tab

@@ -1,8 +1,8 @@
 Name = Từ điển Pháp - Việt v1.0
-Description = Pháp - Việt
+Description = Từ điển Pháp - Việt với các dạng từ
 Source = fr
 Target = vi
 Version = 1.0
 Owner/Editor = OVDP
 URL = https://github.com/catusphan/dictionary
-Inflections = 
+Inflections = inflection-fra.tab

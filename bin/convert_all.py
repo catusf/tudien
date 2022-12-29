@@ -165,11 +165,14 @@ def main() -> None:
         if not data:
             continue
 
+        INFLECTION_DIR = './bin/inflections'
+        INFLECTION_NONE = 'inflections-none.tab'
+
         # Generare HTML file for Kindle dictionary
         if 'Inflections' in data and data['Inflections']:
-            inflections = f'\"./bin/{data["Inflections"]}\"'
+            inflections = f'\"{INFLECTION_DIR}/{data["Inflections"]}\"'
         else:
-            inflections = './ext-dict/NoInflections.txt'
+            inflections = f'{INFLECTION_DIR}/{INFLECTION_NONE}'
 
         cmd_line = f"python ./bin/tab2opf.py --title={dataName} --source={dataSource} --target={dataTarget} --inflection={inflections} --outdir={htmlOutDir} --creator={dataCreator} --publisher={dataCreator} {datafile}"
         print(cmd_line)

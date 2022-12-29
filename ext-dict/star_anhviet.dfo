@@ -1,8 +1,8 @@
 Name = Từ điển Anh - Việt v1.0
-Description = Anh - Việt
+Description = Từ điển Anh - Việt với các dạng từ
 Source = en
 Target = vi
 Version = 1.0
 Owner/Editor = OVDP
 URL = https://github.com/catusphan/dictionary
-Inflections = 
+Inflections = inflection-eng.tab

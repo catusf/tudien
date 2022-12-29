@@ -1,8 +1,8 @@
 Name = Từ điển Nga - Việt v1.0
-Description = Nga - Việt
+Description = Từ điển Nga - Việt với các dạng từ
 Source = ru
 Target = vi
 Version = 1.0
 Owner/Editor = OVDP
 URL = https://github.com/catusphan/dictionary
-Inflections = 
+Inflections = inflection-rus.tab
