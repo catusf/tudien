@@ -75,7 +75,7 @@ for lang in language_files:
             items = l.split('\t')
             if items[0].isalpha():
                 words.append(items[0])
-        start = 29446-1
+        start = 29446+27933-1-1
         num_words = len(words) - start
         print(f'Number of words: {num_words}')
         num_inflections = 0
@@ -93,10 +93,10 @@ for lang in language_files:
                 #     break
 
                 print(
-                    f"{i}/{num_words} (#infl: {num_inflections}) {w}\t{'|'.join(items)}")
+                    f"{i+1}/{num_words} (#infl: {num_inflections}) {w}\t{'|'.join(items)}")
 
                 if items:
                     o.write(f"{w}\t{'|'.join(items)}\n")
                     num_actual_words += 1
 
-        print(f'===== Number of inflections: {num_inflections}, avg {1.0*num_inflections/num_words} actual avg {1.0*num_inflections/num_actual_words}  ======')
+        print(f'===== # Words: {len(words)} # inflections: {num_inflections}, avg {1.0*num_inflections/num_words} actual avg {1.0*num_inflections/num_actual_words}  ======')
