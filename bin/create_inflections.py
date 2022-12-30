@@ -87,8 +87,8 @@ for lang in language_files:
 
                 num_inflections += len(items)
 
-                # if num_inflections > 100:
-                #     break
+                if num_inflections > 100:
+                    break
 
                 print(
                     f"{i}/{num_words} (#infl: {num_inflections}) {w}\t{'|'.join(items)}")
