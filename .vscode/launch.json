@@ -8,10 +8,10 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "./bin/create_inflections.py",
+            "program": "./bin/verify_tab_file.py",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args": []
+            "args": ["--input", "./ext-dict/Bach_khoa_toan_thu.tab"]
         }
     ]
 }
