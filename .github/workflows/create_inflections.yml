@@ -20,9 +20,10 @@ jobs:
     steps:
 
     - uses: actions/checkout@v3
-      with:
-        fetch-depth: 1
-        submodules: 'recursive'
+
+    - name: Fetch full Git history (not shallow)
+      run: |
+        git fetch --unshallow
 
     - uses: actions/setup-python@v4
       with:
