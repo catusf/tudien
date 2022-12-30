@@ -6,8 +6,7 @@ on:
   push:
     paths-ignore:
       - .gitignore
-      - README.md
-      - TODO.md
+      - *.md
       - LICENSE
       - bin/create_inflections.py      
 
