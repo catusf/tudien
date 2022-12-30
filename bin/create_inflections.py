@@ -49,9 +49,9 @@ language_files = {
     # 'rus': 'star_ngaviet.tab',
     # 'nno': 'star_nauyviet.tab',
     # 'por': 'star_bdnviet.tab',
-    'deu': 'star_ducviet.tab',
+    # 'deu': 'star_ducviet.tab',
     # 'fra': 'star_phapviet.tab',
-    # 'eng': 'star_anhviet.tab',
+    'eng': 'star_anhviet.tab',
 }
 
 print(f'Getting inflections for {len(language_files)} languages')
@@ -75,13 +75,15 @@ for lang in language_files:
             items = l.split('\t')
             if items[0].isalpha():
                 words.append(items[0])
-        num_words = len(words)
+        start = 29446-1
+        num_words = len(words) - start
         print(f'Number of words: {num_words}')
         num_inflections = 0
 
         with open(outfilepath, 'w', encoding='utf-8') as o:
             num_actual_words = 0
-            for i, w in enumerate(words):
+
+            for i, w in enumerate(words[54231:]):
                 results = unimorph.inflect_word(w, lang=lang)
                 items = split_inflection_words(results)
 
