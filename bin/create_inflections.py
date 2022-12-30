@@ -75,7 +75,7 @@ for lang in language_files:
             items = l.split('\t')
             if items[0].isalpha():
                 words.append(items[0])
-        start = 29446+27933-1-1
+        start = 82163+2
         num_words = len(words) - start
         print(f'Number of words: {num_words}')
         num_inflections = 0
@@ -83,7 +83,7 @@ for lang in language_files:
         with open(outfilepath, 'w', encoding='utf-8') as o:
             num_actual_words = 0
 
-            for i, w in enumerate(words[54231:]):
+            for i, w in enumerate(words[start:]):
                 results = unimorph.inflect_word(w, lang=lang)
                 items = split_inflection_words(results)
 
