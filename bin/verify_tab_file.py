@@ -5,6 +5,7 @@ Verify tab file
 """
 
 import argparse
+import os
 
 def main() -> None:
     parser = argparse.ArgumentParser(description='Check a tab file for errors',
@@ -33,12 +34,13 @@ def main() -> None:
 
     skipped = 0
 
-    with open(inputfile, 'r', encoding='utf-8') as infile: #, errors='replace'
+    with open(inputfile, 'r', encoding='utf-8', errors='replace') as infile: #, errors='replace'
         count = 0
+        count_issues = 0
 
         while True:
             count += 1
-            print(f'Reading line {count}')
+            # print(f'Reading line {count}')
             line = infile.readline().strip()
 
             if not line:
@@ -46,10 +48,17 @@ def main() -> None:
 
             tabs = line.count('\t')
 
-            if tabs > 1:
+            if tabs == 0:
                 skipped += 1
                 print(f'Line {count} has {tabs} tabs')
                 issfile.write(f'{line}\n')
+                count_issues += 1
+
+            elif tabs > 1:
+                skipped += 1
+                print(f'Line {count} has {tabs} tabs')
+                issfile.write(f'{line}\n')
+                count_issues += 1
             else:
                 items = line.split('\t')
 
@@ -60,11 +69,13 @@ def main() -> None:
                     print(f'Line {count} has empty headword')
                     skipped += 1
                     issfile.write(f'{headword}\t{definition}\n')
+                    count_issues += 1
                     continue
 
                 if not definition:
                     print(f'Line {count} has empty definition')
                     issfile.write(f'{headword}\t{definition}\n')
+                    count_issues += 1
                     
                     skipped += 1
                     continue
@@ -72,6 +83,9 @@ def main() -> None:
                 outfile.write(f'{headword}\t{definition}\n')
                 # print(f'{headword}\t{definition}')
                 outfile.flush()
+
+        if not count_issues:# Nothing was written
+            os.remove(issuefile)
 
         print(f'Original lines: {count}, skipped: {skipped}')
         
