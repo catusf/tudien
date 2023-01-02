@@ -75,7 +75,7 @@ for lang in language_files:
             items = l.split('\t')
             if items[0].isalpha():
                 words.append(items[0])
-        start = 31127 #82163+2
+        start = 20000 #82163+2
         num_words = len(words) - start
         print(f'Number of words: {num_words}')
         num_inflections = 0
