@@ -142,9 +142,13 @@ def main() -> None:
     for dir in dirs:
         subprocess.call(f'mkdir -p {output_folder}/{dir}', shell=True)
 
+    # use_only_these = {'star_vietnhat', 'star_viettbn'}
     for filepath, datafile in zip(metafilelist, datafilelist):
         folder, filename = os.path.split(filepath)
         filebase, fileext = os.path.splitext(filename)
+
+        # if filebase not in use_only_these:
+        #     continue
 
         data = readDicInfo(filepath)
 
