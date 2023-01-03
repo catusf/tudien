@@ -55,11 +55,12 @@ jobs:
 
     - name: Zip all artifacts for release
       run: |
-        zip -9 -j $OUTPUT_DIR/all-stardict.zip $OUTPUT_DIR/stardict/*.* &&
-        zip -9 -j $OUTPUT_DIR/all-epub.zip     $OUTPUT_DIR/epub/*.*     &&
-        zip -9 -j $OUTPUT_DIR/all-kobo.zip     $OUTPUT_DIR/kobo/*.*     &&
-        zip -9 -j $OUTPUT_DIR/all-lingvo.zip   $OUTPUT_DIR/lingvo/*.*   &&
-        zip -9 -j $OUTPUT_DIR/all-kindle.zip   $OUTPUT_DIR/kindle/*.*   &&
+        zip -9 -j $OUTPUT_DIR/all-stardict.zip $OUTPUT_DIR/stardict/*.*      &&
+        zip -9 -j $OUTPUT_DIR/all-epub.zip     $OUTPUT_DIR/epub/*.*          &&
+        zip -9 -j $OUTPUT_DIR/all-kobo.zip     $OUTPUT_DIR/kobo/*.*          &&
+        zip -9 -j $OUTPUT_DIR/all-lingvo.zip   $OUTPUT_DIR/lingvo/*.*        &&
+        zip -9 -j $OUTPUT_DIR/all-kindle.zip   $OUTPUT_DIR/kindle/*.*        &&
+        zip -9 -j $OUTPUT_DIR/all-dictd.zip    $OUTPUT_DIR/dictd/*.*         &&
         ls -R -l $OUTPUT_DIR
 
     - name: Create a new release draft
