@@ -148,7 +148,7 @@ def main() -> None:
         filebase, fileext = os.path.splitext(filename)
 
         # if filebase not in use_only_these:
-        #     continue
+        #     continueIX 
 
         data = readDicInfo(filepath)
 
