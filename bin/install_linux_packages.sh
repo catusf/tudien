@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt-get update &&
-sudo apt-get install dictzip systemd &&
+sudo apt-get install dictzip systemd markdown &&
 sudo apt install ruby-full &&
 ruby -v &&
 #sudo gem install bundler &&

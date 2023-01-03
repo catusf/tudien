@@ -3,8 +3,8 @@
 import os
 import json
 
-filepath = './dict/TudienTonghopPhathoc.json'
-fileout = './dict/TudienTonghopPhathoc.tab'
+filepath = './dict/Tu-dien-Tong-hop-Phat-hoc.json'
+fileout = './dict/Tu-dien-Tong-hop-Phat-hoc.tab.new'
 
 dictdata = json.load(open(filepath, 'rb'))
 
@@ -50,7 +50,7 @@ with open(fileout, 'w', encoding='utf-8') as f:
         dictionaries[dk].append({'Word': key, 'Mean': meaning})
 
         if len(meaning) and dk in use_dicts:
-            f.write('%s\t%s\n' % (key, meaning))
+            f.write(f"{key}\t{meaning} [{dict_names[dk]['Name']}]\n")
 
             count = count + 1
 
@@ -61,8 +61,8 @@ for key in dictionaries:
 
     filename = f"./dict/{dict_names[key]['File']}.tab"
 
-    with open(filename, 'w', encoding='utf-8') as f:
+    with open(filename, 'w', encoding='utf-8') as file:
         for e in dictionaries[key]:
-            f.write('%s\t%s\n' % (e['Word'], e['Mean']))
+            file.write(f"{e['Word']}\t{e['Mean']}\n")
 
 print(f'{count} words processed')
