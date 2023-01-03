@@ -1,16 +1,16 @@
 # TODO
 - [ ] Add cover page to dictionaries
+- [ ] Add name of separate dictionaries to TudienTonghopPhathoc
+- [ ] Sync config .dotfile across environtment
+- [ ] Update to an up-to-date Ubuntu distro when Wine is updated (error on Ubuntu v20 and 22)
+- [ ] Copy back star_hanviet.tab and star_vietnhat.tab to dict files in ext-stardict-vi 
+- [ ] Handle error code from script and exit (subprocess.call/run) so error stop remaining steps
 - [X] Check if dictionaries have inflections
 - [X] Add inflections files for different languages https://stackoverflow.com/questions/51097463/snowball-stemmer-poor-french-stemming
 - [x] Add inflections for comparatives
-- [ ] Add name of separate dictionaries to TudienTonghopPhathoc
 - [X] Check format of Prodict and others
 - [X] Check issue with Wikipedia invalid lines (zero more more than one tab char)
-- [ ] Copy back star_hanviet.tab and star_vietnhat.tab to dict files in ext-stardict-vi 
-- [ ] Handle error code from script and exit (subprocess.call/run) so error stop remaining steps
-- [ ] Remove html code in NauyViet dict
-- [ ] Sync config .dotfile across environtment
-- [ ] Update to an up-to-date Ubuntu distro when Wine is updated (error on Ubuntu v20 and 22)
+- [X] Remove html code in NauyViet dict
 - [X] Add Action to run all release at one (one script generates multiple outputs: DSL, StarDict, Kobo, Kindle...)
 - [X] Add To and From language
 - [X] Add a function that convert all format from a specific params
