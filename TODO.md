@@ -2,10 +2,10 @@
 - [ ] Add cover page to dictionaries
 - [X] Check if dictionaries have inflections
 - [X] Add inflections files for different languages https://stackoverflow.com/questions/51097463/snowball-stemmer-poor-french-stemming
-- [ ] Add inflections for comparatives
+- [x] Add inflections for comparatives
 - [ ] Add name of separate dictionaries to TudienTonghopPhathoc
-- [ ] Check format of Prodict and others
-- [ ] Check issue with Wikipedia invalid lines (zero more more than one tab char)
+- [X] Check format of Prodict and others
+- [X] Check issue with Wikipedia invalid lines (zero more more than one tab char)
 - [ ] Copy back star_hanviet.tab and star_vietnhat.tab to dict files in ext-stardict-vi 
 - [ ] Handle error code from script and exit (subprocess.call/run) so error stop remaining steps
 - [ ] Remove html code in NauyViet dict
