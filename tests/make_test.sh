@@ -1,0 +1,1 @@
+pandoc -s -o ./tests/tests-inflection.docx ./tests/tests-inflection.md

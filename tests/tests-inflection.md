@@ -2,7 +2,9 @@
 
 ## English
 think	thinks - thought - thinking
+
 thought	think - thoughts - thinks - thinking
+
 love	loves - loved - loving
 
 ## French
