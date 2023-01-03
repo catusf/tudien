@@ -8,10 +8,10 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "./bin/fix_duplicated_headwords.py",
+            "program": "./bin/convert_all.py",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args": ["-i","./ext-dict/nv20k.tab.cleaned3"]
+            "args": ["--input_folder", "./ext-dict", "--output_folder", "./ext-output", "--extension", "tab"]
         }
     ]
 }
