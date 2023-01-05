@@ -7,3 +7,6 @@
 [submodule "ext-dictionary"]
 	path = ext-dictionary
 	url = git@github.com:catusf/dictionary.git
+[submodule "pyglossary"]
+	path = pyglossary
+	url = git@github.com:catusf/pyglossary.git
