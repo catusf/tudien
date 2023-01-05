@@ -1,0 +1,8 @@
+Name = Từ điển Hàn - Việt - Hàn v1.0
+Description = Từ điển Hàn - Việt - Hàn
+Source = ko
+Target = vi
+Version = 1.0
+Owner/Editor = OVDP
+URL = https://github.com/catusphan/dictionary
+Inflections = 
