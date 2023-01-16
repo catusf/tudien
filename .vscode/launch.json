@@ -8,7 +8,7 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "./bin/compare_headwords.py",
+            "program": "./bin/merge_inflection_lists.py",
             "console": "integratedTerminal",
             "justMyCode": true,
             "args": []
