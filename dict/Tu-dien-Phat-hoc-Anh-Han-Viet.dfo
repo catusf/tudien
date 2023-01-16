@@ -5,4 +5,4 @@ Target = vi
 Version = 1.0
 Owner/Editor = 
 URL = https://github.com/catusphan/dictionary
-Inflections = english_inflections.tab
+Inflections = inflection-eng.tab
