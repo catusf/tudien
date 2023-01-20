@@ -3,15 +3,15 @@
 Mã nguồn cho từ điển dành cho máy đọc sách Kindle. Để sử dụng từ điển, download tại đây http://catusf.github.io/.
 
 ## Tại sao?
-- Do tôi thấy cần:
-    - Có các từ điển có chất lượng để giúp việc học hỏi của bản thân và mọi người
-    - Lập trình viên bất kỳ có thể dùng dữ liệu đầu vào ở đây để tạo output khác
-    - Có thể dễ dàng bổ sung từ điển - chỉ cần tạo 1 file văn bản phân cách bằng dấu \t (.tab) và 1 file mô tả .dfo
+Do tôi thấy cần:
+- Có các từ điển có chất lượng để giúp việc học hỏi của bản thân và mọi người
+- Lập trình viên bất kỳ có thể dùng dữ liệu đầu vào ở đây để tạo output khác
+- Có thể dễ dàng bổ sung từ điển - chỉ cần tạo 1 file văn bản phân cách bằng dấu \t (.tab) và 1 file mô tả .dfo
 
-- Các từ điển cần: 
+Các từ điển cần: 
 
-    - Chính xác và dễ tra cứu
-    - Dùng được trên nhiều thiết bị (Kindle, Kobo, Onyx, mobile và PC apps)
+- Chính xác và dễ tra cứu
+- Dùng được trên nhiều thiết bị (Kindle, Kobo, Onyx, mobile và PC apps)
 
 ## Các bước cách tạo ra file từ điển
 1. Cài Python 3.x
@@ -29,8 +29,10 @@ graph LR;
     GenTab -- chạy PyGlossary --> EpubDict(Từ diển <.epub>);
     GenTab --  chạy PyGlossary --> KoboDict(Từ diển Kobo <.kobo.zip>);
     GenTab --  chạy PyGlossary --> StarDict(Từ diển StarDict <.ifo>);
+    GenTab --  chạy PyGlossary --> dictd(Từ diển dictd <.index>);
     GenTab --  chạy DSL Tools --> DSLDict(Từ diển Lingvo <.dsl.dz>);
 ```
+
 ## Danh sách các từ điển và số từ hiện có
 
 1. Từ điển Hán Việt Thiền Chửu (9'897)
