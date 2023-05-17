@@ -11,18 +11,24 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 RUN pwd && ls -l
 
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
-COPY requirements.txt /tmp/pip-tmp/
 
-RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
-   && rm -rf /tmp/pip-tmp
+COPY ./ /src/
 
+#COPY requirements.txt /tmp/pip-tmp/
+
+#RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
+#   && rm -rf /tmp/pip-tmp
+
+RUN pip3 --disable-pip-version-check --no-cache-dir install -r /src/requirements.txt
 
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive
 
-RUN bash /workspaces/tudien/bin/install_linux_packages.sh 
+RUN bash /src/bin/install_linux_packages.sh 
 
-RUN bash /workspaces/tudien/bin/install_wine32.sh
+RUN bash /src/bin/install_wine32.sh
+
+#RUN rm -rf /src
 
 # [Optional] Uncomment this line to install global node packages.
 # RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
