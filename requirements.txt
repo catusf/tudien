@@ -4,3 +4,4 @@ pattern >= 3.6.0
 marisa-trie >= 0.7.7
 lxml >= 4.9.1
 beautifulsoup4 >= 4.11.1
+pinyin >= 0.4.0
