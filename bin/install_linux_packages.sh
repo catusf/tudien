@@ -2,7 +2,7 @@
 
 sudo apt-get update &&
 sudo apt-get install -y dictzip systemd pandoc &&
-sudo apt install ruby-full &&
+sudo apt install -y ruby-full &&
 ruby -v &&
 #sudo gem install bundler &&
 sudo gem install bundler -v 2.3.26 &&
