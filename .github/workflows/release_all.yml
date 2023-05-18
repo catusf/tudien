@@ -30,7 +30,6 @@ jobs:
       with:
         fetch-depth: 1
         submodules: 'recursive'
-        token: ${{ github.TUDIEN_ACCESS_TOKEN }}
 
     - name: Setup Ubuntu packages
       run: |
