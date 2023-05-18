@@ -2,6 +2,25 @@
 
 Mã nguồn cho từ điển dành cho máy đọc sách Kindle. Để sử dụng từ điển, download tại đây http://catusf.github.io/.
 
+## Ghi chú
+
+### SSH Private Key
+
+- Khi tạo khởi động CodeSpace để dev, thực hiện lệnh sau để đồng bộ SSH Private Key từ CodeSpace secret vào SSH Agent
+
+```
+eval $(ssh-agent -s) 
+ssh-add <(echo "$SSH_PRIVATE_TUDIEN_CODESPACE") 
+```
+
+### Submodules
+
+- Sau đó sync submodule về bằng lệnh
+
+```
+git submodule update --init --recursive
+```e
+
 ## Tại sao?
 Do tôi thấy cần:
 - Có các từ điển có chất lượng để giúp việc học hỏi của bản thân và mọi người
