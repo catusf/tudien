@@ -16,5 +16,5 @@ sudo apt-get install -yqq --allow-downgrades libc6:i386 libgcc-s1:i386 libstdc++
 
 
 # Verifies that it works 
-wine ./bin/mobigen/mobigen.exe -h
+wine ./bin/mobigen/mobigen.exe
 
