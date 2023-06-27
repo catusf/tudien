@@ -19,7 +19,7 @@ ssh-add <(echo "$SSH_PRIVATE_TUDIEN_CODESPACE")
 
 ```
 git submodule update --init --recursive
-```e
+```
 
 ## Tại sao?
 Do tôi thấy cần:
