@@ -200,11 +200,11 @@ def main() -> None:
         print(cmd_line)
         subprocess.call(cmd_line, shell=True)
 
-        pyglossary = './pyglossary/pyglossary.pyw'
+        pyglossary = './pyglossary/main.py'
 
         # Generare StarDict dictionary
         out_path = os.path.join(output_folder, f'stardict/{filebase}.ifo').replace(' ', '\\ ')
-        cmd_line = f"{pyglossary} --no-progress-bar --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
+        cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
@@ -217,7 +217,7 @@ def main() -> None:
 
         # Generare dictd dictionary
         out_path = os.path.join(output_folder, f'dictd/{filebase}.index').replace(' ', '\\ ')
-        cmd_line = f"{pyglossary} --no-progress-bar --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
+        cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
@@ -230,13 +230,13 @@ def main() -> None:
 
         # Generare Epub dictionary
         out_path = os.path.join(output_folder, f'epub/{filebase}.epub').replace(' ', '\\ ')
-        cmd_line = f"{pyglossary} --no-progress-bar --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
+        cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
         # Generare Kobo dictionary
         out_path = os.path.join(output_folder, f'kobo/{filebase}.kobo.zip').replace(' ', '\\ ')
-        cmd_line = f"{pyglossary} --no-progress-bar --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
+        cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
