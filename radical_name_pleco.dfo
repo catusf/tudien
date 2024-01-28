@@ -1,0 +1,8 @@
+Name = Từ điển tra cứu các bộ tiếng Trung v1.0
+Description = Từ điển Tra cứu 214 bộ Kangxi tiếng Trung
+Source = zh
+Target = en
+Version = 1.0
+Owner/Editor = 
+URL = https://github.com/catusphan/dictionary
+Inflections = 
