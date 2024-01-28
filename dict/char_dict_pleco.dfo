@@ -1,0 +1,8 @@
+Name = Từ điển bộ từ tiếng Trung v1.0
+Description = Từ điển phân tích các chữ cái tiếng Trung thành các bộ
+Source = zh
+Target = en
+Version = 1.0
+Owner/Editor = 
+URL = https://github.com/catusphan/dictionary
+Inflections = 
