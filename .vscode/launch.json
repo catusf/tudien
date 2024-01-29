@@ -8,11 +8,17 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "./bin/merge_inflection_lists.py",
+            "program": "./bin/convert_all.py",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args": []
+            "args": [
+                "--input_folder=./dict",
+                "--output_folder=./output",
+                "--extension=tab"
+            ]
         }
     ]
 }
+
+python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab
 

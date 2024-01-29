@@ -1,0 +1,2 @@
+tvb_pleco.tab filter=lfs diff=lfs merge=lfs -text
+char_dict_pleco.tab filter=lfs diff=lfs merge=lfs -text
