@@ -60,12 +60,11 @@
 	// "postCreateCommand": "pip3 install --user -r requirements.txt",
 	"postCreateCommand": [
 		"./bin/install_linux_packages.sh",
-		"install_wine32.sh ",
+		"./bin/install_wine32.sh",
+		"./bin/install_utilities.sh",
 		"pip3 install --user -r requirements.txt",
 		"eval $(ssh-agent -s)",
-		"ssh-add <(echo '$SSH_PRIVATE_TUDIEN_CODESPACE')",
-		"git submodule update --init --recursive",
-		"git config pull.rebase true"
+		"ssh-add <(echo '$SSH_PRIVATE_TUDIEN_CODESPACE')"
 	],
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode"
