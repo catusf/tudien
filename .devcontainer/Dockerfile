@@ -26,7 +26,9 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive
 
 RUN bash /src/bin/install_linux_packages.sh 
 
-# RUN bash /src/bin/install_wine32.sh
+RUN bash /src/bin/install_wine32.sh
+
+RUN pip3 install --user -r /src/requirements.txt
 
 #RUN rm -rf /src
 

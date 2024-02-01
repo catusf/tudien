@@ -59,10 +59,7 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "pip3 install --user -r requirements.txt",
 	"postCreateCommand": [
-		"./bin/install_linux_packages.sh",
-		"./bin/install_wine32.sh",
 		"./bin/install_utilities.sh",
-		"pip3 install --user -r requirements.txt",
 		"eval $(ssh-agent -s)",
 		"ssh-add <(echo '$SSH_PRIVATE_TUDIEN_CODESPACE')"
 	],
