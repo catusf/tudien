@@ -41,6 +41,11 @@ jobs:
         # Call a script so that it can be used in a shell/container as well
         ./bin/install_wine32.sh
 
+    - name: Setup Utilities
+      run: |
+        # Call a script so that it can be used in a shell/container as well
+        ./bin/install_utilities.sh
+
     - uses: actions/setup-python@v4
       with:
         python-version: '3.10' 
