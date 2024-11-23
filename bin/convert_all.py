@@ -203,7 +203,7 @@ def main() -> None:
 
         # Generare Yomitan dictionary
         out_path = os.path.join(output_folder, f'yomitan/{filebase}.zip').replace(' ', '\\ ')
-        cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --write-format=Yomitan --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
+        cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
