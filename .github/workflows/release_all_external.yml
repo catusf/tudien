@@ -66,6 +66,7 @@ jobs:
         zip -9 -j $OUTPUT_DIR/all-lingvo.zip   $OUTPUT_DIR/lingvo/*.*        &&
         zip -9 -j $OUTPUT_DIR/all-kindle.zip   $OUTPUT_DIR/kindle/*.*        &&
         zip -9 -j $OUTPUT_DIR/all-dictd.zip    $OUTPUT_DIR/dictd/*.*         &&
+        zip -9 -j $OUTPUT_DIR/all-yomitan.zip  $OUTPUT_DIR/yomitan/*.*  &&
         ls -R -l $OUTPUT_DIR
 
     - name: Create a new release draft
