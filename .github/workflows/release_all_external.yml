@@ -56,7 +56,7 @@ jobs:
 
     - name: Copy internal dictionaries
       run: |
-        cp dict/*.* $INPUT_DIR/*.* &&
+        cp dict/*.* $INPUT_DIR/ &&
         ls $INPUT_DIR
 
     - name: Build all dictionaries
