@@ -66,11 +66,10 @@ def readDicInfo(filepath):
 DEBUG_FLAG = False
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description='Convert all dictionaries in a folder',
-        usage='Usage: python convert_all.py --input-folder=./mydictdata --output-folder=./myoutputdict --extension=tsv')
+    parser = argparse.ArgumentParser(description='Convert all dictionaries in a folder')
     parser.add_argument('-i', '--input_folder', required=True, help='Input folder containing .tsv and .dfo files')
     parser.add_argument('-o', '--output_folder', required=True, help='Output folder containing dictionary files')
-    parser.add_argument('-e', '--extension', default='tsv', help='Filename extention for input dictionary files. Default is .tsv')
+    parser.add_argument('-e', '--extension', default='tab', help='Filename extention for input dictionary files. Default is .tab')
     parser.add_argument('-m', '--metadata', default='dfo', help='Filename extention for input metadata for dictionary. Default is .dfo')
 
     args, array = parser.parse_known_args()
@@ -137,7 +136,7 @@ def main() -> None:
 
     subprocess.call(f'rm -r {output_folder}/*', shell=True)
 
-    dirs = ['stardict', 'epub', 'kobo', 'lingvo', 'kindle', 'dictd']
+    dirs = ['stardict', 'epub', 'kobo', 'lingvo', 'kindle', 'dictd', 'yomitan']
 
     for dir in dirs:
         subprocess.call(f'mkdir -p {output_folder}/{dir}', shell=True)
@@ -201,6 +200,12 @@ def main() -> None:
         subprocess.call(cmd_line, shell=True)
 
         pyglossary = './pyglossary/main.py'
+
+        # Generare Yomitan dictionary
+        out_path = os.path.join(output_folder, f'yomitan/{filebase}.zip').replace(' ', '\\ ')
+        cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --write-format=Yomitan --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
+        print(cmd_line)
+        subprocess.run(shlex.split(cmd_line))
 
         # Generare StarDict dictionary
         out_path = os.path.join(output_folder, f'stardict/{filebase}.ifo').replace(' ', '\\ ')

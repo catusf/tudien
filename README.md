@@ -15,7 +15,7 @@ ssh-add <(echo "$SSH_PRIVATE_TUDIEN_CODESPACE")
 
 ### Submodules
 
-- Sau đó sync submodule về bằng lệnh
+- Sync submodule về bằng lệnh
 
 ```
 git submodule update --init --recursive
@@ -34,10 +34,10 @@ Các từ điển cần:
 
 ## Các bước cách tạo ra file từ điển
 1. Cài Python 3.x
-2. Tạo mới hay sửa file định nghĩa từ điển (như `../dict/TudienAnhVietBeta.tab`)
-3. Chạy dòng lệnh `createhtml.bat` để tạo ra các file `.html` (có format OPFcho ebook ebook) dùng chương trình Python `tab2opf.py`
-4. Sửa file .opf nếu cần (tham khảo các file *-org.opf)
-5. Chạy `createmobi.bat` để tạo từ điển Kindle sử dụng công cụ `mobigen.exe` của Amazon. Các từ điển nằm trong thư mục `../dict`
+2. Cài các package cần thiết `pip install -r requirements.txt`
+3. Tạo mới hay sửa file định nghĩa từ điển (như `./dict/TudienCuatoi.tab`)
+4. Tạo một file mô tả từ điển (như `./dict/TudienCuatoi.dfo`)
+5. Chạy dòng lệnh `python ./bin/convert_all.py` để tạo từ điển. Kết quả sẽ có trong thư mục `output`
 
 Việc còn lại là copy file .mobi vừa được tạo ra bằng dây cáp USB vào thư mục `documents` trên Kindle để bắt đầu sử dụng.
 
@@ -45,11 +45,12 @@ Việc còn lại là copy file .mobi vừa được tạo ra bằng dây cáp U
 graph LR;
     GenMetadat(File mô tả <.dfo>) --> GenTab(File định nghĩa <.tsv>);
     GenTab -- tool tab2opf --> HTML_File(File <.opf/html>) -- mobigen --> KindleDict(Từ điển Kindle <.mobi>);
-    GenTab -- chạy PyGlossary --> EpubDict(Từ diển <.epub>);
-    GenTab --  chạy PyGlossary --> KoboDict(Từ diển Kobo <.kobo.zip>);
-    GenTab --  chạy PyGlossary --> StarDict(Từ diển StarDict <.ifo>);
-    GenTab --  chạy PyGlossary --> dictd(Từ diển dictd <.index>);
-    GenTab --  chạy DSL Tools --> DSLDict(Từ diển Lingvo <.dsl.dz>);
+    GenTab -- chạy PyGlossary --> EpubDict (Từ điển <.epub>);
+    GenTab --  chạy PyGlossary --> KoboDict (Từ điển Kobo <.kobo.zip>);
+    GenTab --  chạy PyGlossary --> StarDict (Từ điển StarDict <.ifo>);
+    GenTab --  chạy PyGlossary --> dictd (Từ điển dictd <.index>);
+    GenTab --  chạy PyGlossary --> Yomitan (Từ điển dictd <.zip>);
+    GenTab --  chạy DSL Tools --> DSLDict (Từ điển Lingvo <.dsl.dz>);
 ```
 
 ## Danh sách các từ điển và số từ hiện có
