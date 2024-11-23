@@ -1,4 +1,4 @@
-name: Release all EXTERNAL dictionaries
+name: Release all INTERNAL & EXTERNAL dictionaries
 
 on:
   workflow_dispatch:
@@ -53,6 +53,11 @@ jobs:
     - name: Setup Python packages
       run: |
         pip install -r ./requirements.txt
+
+    - name: Copy internal dictionaries
+      run: |
+        cp dict/*.* $INPUT_DIR/*.* &&
+        ls $INPUT_DIR
 
     - name: Build all dictionaries
       run: |
