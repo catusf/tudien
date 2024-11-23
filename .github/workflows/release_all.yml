@@ -73,7 +73,7 @@ jobs:
       id: create_release
       uses: ncipollo/release-action@v1
       with:
-          artifacts: "./output/*.zip,./output/kindle/*.mobi,./output/kobo/*.zip,./output/lingvo/*.dz,./output/epub/*.epub"
+          artifacts: "./output/*.zip,./output/kindle/*.mobi,./output/kobo/*.zip,./output/lingvo/*.dz,./output/epub/*.epub,./output/yomitan/*.zip"
           body: If you can read this, we have forgotten to fill in the changelog. Sorry!
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
