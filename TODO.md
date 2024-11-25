@@ -1,5 +1,7 @@
 # TODO
 - [ ] Add Pinyin to Thienchuu
+- [ ] Add output for Apple Dictionary Source
+- [ ] Add output for MDict (.MDX)
 - [ ] Add cover page to dictionaries
 - [ ] Add name of separate dictionaries to TudienTonghopPhathoc
 - [ ] Sync config .dotfile across environtment
