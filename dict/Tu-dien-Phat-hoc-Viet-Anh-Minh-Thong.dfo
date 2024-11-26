@@ -5,4 +5,4 @@ Target = en
 Version = 1.0
 Owner/Editor = 
 URL = https://github.com/catusphan/dictionary
-Inflections = 
+Inflections = inflections-none10.tab
