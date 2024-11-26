@@ -357,7 +357,7 @@ def writekeys(defns, name):
 def openopf(ndicts, name):
     fname = "%s.opf" % name
     if VERBOSE: print("Opf: {}".format(fname))
-    with open(fname, 'w') as to:
+    with open(fname, 'w', encoding='utf-8') as to:
         to.write("""<?xml version="1.0"?><!DOCTYPE package SYSTEM "oeb1.ent">
 
 <!-- the command line instruction 'prcgen dictionary.opf' will produce the dictionary.prc file in the same folder-->
