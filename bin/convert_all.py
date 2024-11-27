@@ -124,7 +124,7 @@ def process_dictionary(data_tuple):
     inflections = data["inflections"]
     data_creator = data["data_creator"]
     
-    cmd_line = f"python ./bin/tab2opf.py --title={data_name} --source={data_source} --target={data_target} " \
+    cmd_line = f"python bin/tab2opf.py --title={data_name} --source={data_source} --target={data_target} " \
                f"--inflection={inflections} --outdir={html} --creator={data_creator} --publisher={data_creator} {datafile}"
     # cmd_line = cmd_line.replace("\\", "/")
     print(cmd_line)
@@ -302,18 +302,20 @@ def main() -> None:
         pass
     # Prepare output directories
     shutil.rmtree(output_folder, ignore_errors = True)
-    os.makedirs(output_folder, exist_ok=True)
-    dirs = ['stardict', 'epub', 'kobo', 'lingvo', 'kindle', 'dictd', 'yomitan']
+    # os.makedirs(output_folder, exist_ok=True)
+    # os.makedirs(os.path.join(input_folder, "kindle"), exist_ok=True)
+
+    dirs = [output_folder, os.path.join(input_folder, "kindle"), 'stardict', 'epub', 'kobo', 'lingvo', 'kindle', 'dictd', 'yomitan']
     for dir in dirs:
         os.makedirs(os.path.join(output_folder, dir), exist_ok=True)
     
     # Use multiprocessing to process dictionaries
     # with Pool(cpu_count()) as pool:
-    print(args_list[:3])
+    # print(args_list[:3])
 
     # process_dictionary(args_list[0])
     with Pool(cpu_count()) as pool:
-        pool.map(process_dictionary, args_list[:4])
+        pool.map(process_dictionary, args_list[:1])
     #     # pool.map(lambda Dict: process_dictionary(**Dict), args_list)
 
 if __name__ == "__main__":
