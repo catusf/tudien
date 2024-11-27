@@ -107,6 +107,33 @@ def read_dic_info(filepath):
     return valuemap
 
 
+def execute_shell(cmd_line, message="", printout=True):
+    """
+    Executes a shell command and handles any errors that occur during execution.
+
+    Parameters:
+    cmd_line (str): The command line string to be executed.
+    message (str): An optional message to include in error output if the command fails.
+    printout (bool): If True, prints the command line before execution.
+
+    Returns:
+    bool: True if the command executes successfully, False if an error occurs.
+    """
+    try:
+        if printout:
+            print(cmd_line)
+
+        subprocess.run(shlex.split(cmd_line), check=True)
+
+        return True
+    except subprocess.CalledProcessError as e:
+        if message:
+            print(f"Error {message}: {e}")
+        else:
+            print(f"Error executing shell: {e}")
+
+        return False
+
 def process_dictionary(data_tuple):
     ''' Process a dictionary by converting it to multiple formats (e.g., Kindle, StarDict, etc.) '''
     data = data_tuple[0]
@@ -126,72 +153,61 @@ def process_dictionary(data_tuple):
     
     cmd_line = f"python bin/tab2opf.py --title={data_name} --source={data_source} --target={data_target} " \
                f"--inflection={inflections} --outdir={html} --creator={data_creator} --publisher={data_creator} {datafile}"
-    # cmd_line = cmd_line.replace("\\", "/")
-    try:
-        print(cmd_line)
-        subprocess.run(shlex.split(cmd_line), check=True)
-    except subprocess.CalledProcessError as e:
-        print(f"Error generating HTML for Kindle dictionary: {e}")
+    
+    execute_shell(cmd_line=cmd_line, message="building HTML with tab2opf.py")
 
     # Generate .mobi dictionary from opf+html file
     out_path = os.path.join(html, f'{os.path.splitext(os.path.basename(filepath))[0]}.opf')
     
-    if RUN_ON_WINDOWS:
-        cmd_line = f"./bin/mobigen/mobigen.exe -unicode -s0 {shlex.quote(out_path)}"
-    else:
-        cmd_line = f"wine ./bin/mobigen/mobigen.exe -unicode -s0 {shlex.quote(out_path)}"
+    cmd_line = f"./bin/mobigen/mobigen.exe -unicode -s0 {shlex.quote(out_path)}" if RUN_ON_WINDOWS \
+        else f"wine ./bin/mobigen/mobigen.exe -unicode -s0 {shlex.quote(out_path)}"
 
-    # cmd_line = cmd_line.replace("\\", "/")
-    try:
-        print(cmd_line)
-        subprocess.run(shlex.split(cmd_line), check=True)
-    except subprocess.CalledProcessError as e:
-        print(f"Error generating .mobi dictionary: {e}")
+    execute_shell(cmd_line=cmd_line, message="generating .mobil with mobigen.exe")
 
     # Move generated .mobi file to final destination
-    if RUN_ON_WINDOWS:
-        cmd_line = f'mv {html}/*.mobi {output_folder}/kindle/'
-    else:
-        cmd_line = f'mv {html}/*.mobi {output_folder}/kindle/'
+    cmd_line = f'mv {html}/*.mobi {output_folder}/kindle/' if RUN_ON_WINDOWS \
+        else f'mv {html}/*.mobi {output_folder}/kindle/'
 
-    try:
-        print(cmd_line)
-        subprocess.run(cmd_line, shell=True, check=True)
-    except subprocess.CalledProcessError as e:
-        print(f"Error moving .mobi file: {e}")
+    execute_shell(cmd_line=cmd_line, message="moving .mobi file")
 
     # Generate other dictionary formats using PyGlossary
     pyglossary = 'pyglossary'
     formats = [
-        ('Yomichan', 'yomitan', 'yomitan.zip'),
-        ('Stardict', 'stardict', 'ifo'),
-        ('DictOrg', 'dictd', 'index'),
-        ('Epub2', 'epub', 'epub'),
-        ('Kobo', 'kobo', 'kobo.zip'),
+        ('Yomichan', 'yomitan', 'yomitan.zip', False),
+        ('Epub2', 'epub', 'epub', False),
+        ('Kobo', 'kobo', 'kobo.zip', False),
+        ('Stardict', 'stardict', 'ifo', True),
+        ('DictOrg', 'dictd', 'index', True),
     ]
-    for write_format, folder, extension in formats:
-        out_path = os.path.join(output_folder, folder, f'{os.path.splitext(os.path.basename(filepath))[0]}.{extension}')
+    for write_format, folder, extension, needzip in formats:
+        folder, filename = os.path.split(filepath)
+        filebase, fileext = os.path.splitext(filename)
+        
+        out_path = os.path.join(output_folder, folder, f'{filebase}.{extension}')
         cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --write-format={write_format} " \
                    f"--source-lang={data_source} --target-lang={data_target} --name={data_name} {datafile} {shlex.quote(out_path)}"
         
-        try:
-            print(cmd_line)
-            subprocess.run(shlex.split(cmd_line), check=True)
-        except subprocess.CalledProcessError as e:
-            print(f"Error generating {write_format} dictionary: {e}")
+        execute_shell(cmd_line=cmd_line, message=f"generating {write_format}")
+
+        if needzip:
+            out_path = os.path.join(output_folder, f'{folder}/{filebase}.*')
+            zip_path = os.path.join(output_folder, f'{filebase}.{folder}.zip')
+            cmd_line = f"zip -j {zip_path} {out_path}"
+
+            execute_shell(cmd_line=cmd_line, message=f"creating zip file for {write_format}")
 
     # Generate Lingvo dictionary
     out_path = os.path.join(output_folder, 'lingvo', f'{os.path.splitext(os.path.basename(filepath))[0]}.dsl')
     cmd_line = f"ruby ./dsl-tools/tab2dsl/tab2dsl.rb --from-lang {shlex.quote(data_full_source)} --to-lang {shlex.quote(data_full_target)} " \
                f"--dict-name {data_name} --output {shlex.quote(out_path)} {datafile}"
     
-    try:
-        print(cmd_line)
-        subprocess.run(shlex.split(cmd_line), check=True)
-    except subprocess.CalledProcessError as e:
-        print(f"Error generating Lingvo dictionary: {e}")
+    execute_shell(cmd_line=cmd_line, message=f"generating Lingvo")
 
 DEBUG_FLAG = False
+CPU_MAX = 1
+CPU_USED = min(CPU_MAX, cpu_count())
+
+DICT_MAX = 2
 
 def main() -> None:
     parser = argparse.ArgumentParser(description='Convert all dictionaries in a folder')
@@ -324,8 +340,8 @@ def main() -> None:
     # print(args_list[:3])
 
     # process_dictionary(args_list[0])
-    with Pool(cpu_count()) as pool: # cpu_count()
-        pool.map(process_dictionary, args_list)
+    with Pool(CPU_USED) as pool: # cpu_count()
+        pool.map(process_dictionary, args_list[:DICT_MAX])
     #     # pool.map(lambda Dict: process_dictionary(**Dict), args_list)
 
     dirs = ['stardict', 'epub', 'kobo', 'lingvo', 'kindle', 'dictd', 'yomitan']
@@ -333,15 +349,11 @@ def main() -> None:
     for dir in dirs:
         cmd_line = f"zip -9 -j {output_folder}/all-{dir}.zip {output_folder}/{dir}/*.*"
 
-        try:
-            print(cmd_line)
-            subprocess.run(cmd_line, shell=True, check=True)
-        except subprocess.CalledProcessError as e:
-            print(f"Error moving .mobi file: {e}")
+        execute_shell(cmd_line=cmd_line, message=f"generating zip for all autput formats")
 
 if __name__ == "__main__":
     timer = Timer()
     timer.start()
     main()
     timer.stop()
-    timer.display_elapsed("2 cores")
+    timer.display_elapsed(f"Building {DICT_MAX} dictionaries using {CPU_MAX} CPUs")

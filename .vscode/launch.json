@@ -1,23 +1,21 @@
 {
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
     "configurations": [
         {
-            "name": "Docker: Python - General",
-            "type": "docker",
+            "name": "Python: Current File",
+            "type": "python",
             "request": "launch",
-            "preLaunchTask": "docker-run: debug",
-            "python": {
-                "pathMappings": [
-                    {
-                        "localRoot": "${workspaceFolder}",
-                        "remoteRoot": "/app"
-                    }
-                ],
-                "projectType": "general",
-                "args": [
-                    "--input_folder=dict",
-                    "--output_folder=output"
-                ]
-            }
+            "program": "./bin/convert_all.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "--input_folder=./dict",
+                "--output_folder=./output",
+                "--extension=tab"
+            ]
         }
     ]
 }
