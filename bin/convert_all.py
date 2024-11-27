@@ -150,9 +150,9 @@ def process_dictionary(data_tuple):
 
     # Move generated .mobi file to final destination
     if RUN_ON_WINDOWS:
-        cmd_line = f'move {shlex.quote(html)}/*.mobi {shlex.quote(os.path.join(output_folder, "kindle"))}/'
+        cmd_line = f'mv {html}/*.mobi {output_folder}/kindle/'
     else:
-        cmd_line = f'mv {shlex.quote(html)}/*.mobi {shlex.quote(os.path.join(output_folder, "kindle"))}/'
+        cmd_line = f'mv {html}/*.mobi {output_folder}/kindle/'
     try:
         subprocess.run(cmd_line, shell=True, check=True)
     except subprocess.CalledProcessError as e:
@@ -322,7 +322,7 @@ def main() -> None:
 
     # process_dictionary(args_list[0])
     with Pool(cpu_count()) as pool:
-        pool.map(process_dictionary, args_list)
+        pool.map(process_dictionary, args_list[:4])
     #     # pool.map(lambda Dict: process_dictionary(**Dict), args_list)
 
 if __name__ == "__main__":
