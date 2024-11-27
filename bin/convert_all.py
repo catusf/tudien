@@ -323,7 +323,7 @@ def main() -> None:
     # print(args_list[:3])
 
     # process_dictionary(args_list[0])
-    with Pool(cpu_count()) as pool:
+    with Pool(1) as pool:
         pool.map(process_dictionary, args_list[:4])
     #     # pool.map(lambda Dict: process_dictionary(**Dict), args_list)
 
