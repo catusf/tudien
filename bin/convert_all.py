@@ -301,9 +301,16 @@ def main() -> None:
         args_list.append((item, 1))
         pass
     # Prepare output directories
-    shutil.rmtree(output_folder, ignore_errors = True)
-    # os.makedirs(output_folder, exist_ok=True)
-    # os.makedirs(os.path.join(input_folder, "kindle"), exist_ok=True)
+    # Need to consider the case with bz2 compressed files
+    subprocess.call(f'mkdir -p {input_folder}/kindle', shell=True)
+
+    subprocess.call(f'rm -r {output_folder}/*', shell=True)
+
+    dirs = ['stardict', 'epub', 'kobo', 'lingvo', 'kindle', 'dictd', 'yomitan']
+
+    for dir in dirs:
+        subprocess.call(f'mkdir -p {output_folder}/{dir}', shell=True)
+
 
     dirs = [output_folder, os.path.join(input_folder, "kindle"), 'stardict', 'epub', 'kobo', 'lingvo', 'kindle', 'dictd', 'yomitan']
     for dir in dirs:
@@ -315,7 +322,7 @@ def main() -> None:
 
     # process_dictionary(args_list[0])
     with Pool(cpu_count()) as pool:
-        pool.map(process_dictionary, args_list[:1])
+        pool.map(process_dictionary, args_list)
     #     # pool.map(lambda Dict: process_dictionary(**Dict), args_list)
 
 if __name__ == "__main__":
