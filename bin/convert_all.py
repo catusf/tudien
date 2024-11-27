@@ -324,8 +324,8 @@ def main() -> None:
     # print(args_list[:3])
 
     # process_dictionary(args_list[0])
-    with Pool(2) as pool:
-        pool.map(process_dictionary, args_list[:4])
+    with Pool(cpu_count()) as pool: # cpu_count()
+        pool.map(process_dictionary, args_list)
     #     # pool.map(lambda Dict: process_dictionary(**Dict), args_list)
 
     dirs = ['stardict', 'epub', 'kobo', 'lingvo', 'kindle', 'dictd', 'yomitan']
