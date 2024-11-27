@@ -127,8 +127,8 @@ def process_dictionary(data_tuple):
     cmd_line = f"python bin/tab2opf.py --title={data_name} --source={data_source} --target={data_target} " \
                f"--inflection={inflections} --outdir={html} --creator={data_creator} --publisher={data_creator} {datafile}"
     # cmd_line = cmd_line.replace("\\", "/")
-    print(cmd_line)
     try:
+        print(cmd_line)
         subprocess.run(shlex.split(cmd_line), check=True)
     except subprocess.CalledProcessError as e:
         print(f"Error generating HTML for Kindle dictionary: {e}")
@@ -142,8 +142,8 @@ def process_dictionary(data_tuple):
         cmd_line = f"wine ./bin/mobigen/mobigen.exe -unicode -s0 {shlex.quote(out_path)}"
 
     # cmd_line = cmd_line.replace("\\", "/")
-    print(cmd_line)
     try:
+        print(cmd_line)
         subprocess.run(shlex.split(cmd_line), check=True)
     except subprocess.CalledProcessError as e:
         print(f"Error generating .mobi dictionary: {e}")
@@ -154,6 +154,7 @@ def process_dictionary(data_tuple):
     else:
         cmd_line = f'mv {html}/*.mobi {output_folder}/kindle/'
     try:
+        print(cmd_line)
         subprocess.run(cmd_line, shell=True, check=True)
     except subprocess.CalledProcessError as e:
         print(f"Error moving .mobi file: {e}")
@@ -171,8 +172,9 @@ def process_dictionary(data_tuple):
         out_path = os.path.join(output_folder, folder, f'{os.path.splitext(os.path.basename(filepath))[0]}.{extension}')
         cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --write-format={write_format} " \
                    f"--source-lang={data_source} --target-lang={data_target} --name={data_name} {datafile} {shlex.quote(out_path)}"
-        print(cmd_line)
+        
         try:
+            print(cmd_line)
             subprocess.run(shlex.split(cmd_line), check=True)
         except subprocess.CalledProcessError as e:
             print(f"Error generating {write_format} dictionary: {e}")
@@ -181,8 +183,9 @@ def process_dictionary(data_tuple):
     out_path = os.path.join(output_folder, 'lingvo', f'{os.path.splitext(os.path.basename(filepath))[0]}.dsl')
     cmd_line = f"ruby ./dsl-tools/tab2dsl/tab2dsl.rb --from-lang {shlex.quote(data_full_source)} --to-lang {shlex.quote(data_full_target)} " \
                f"--dict-name {data_name} --output {shlex.quote(out_path)} {datafile}"
-    print(cmd_line)
+    
     try:
+        print(cmd_line)
         subprocess.run(shlex.split(cmd_line), check=True)
     except subprocess.CalledProcessError as e:
         print(f"Error generating Lingvo dictionary: {e}")
@@ -311,8 +314,7 @@ def main() -> None:
     for dir in dirs:
         subprocess.call(f'mkdir -p {output_folder}/{dir}', shell=True)
 
-
-    dirs = [output_folder, os.path.join(input_folder, "kindle"), 'stardict', 'epub', 'kobo', 'lingvo', 'kindle', 'dictd', 'yomitan']
+    dirs = ['stardict', 'epub', 'kobo', 'lingvo', 'kindle', 'dictd', 'yomitan']
     for dir in dirs:
         os.makedirs(os.path.join(output_folder, dir), exist_ok=True)
     
