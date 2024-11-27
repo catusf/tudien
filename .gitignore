@@ -9,6 +9,7 @@ __pycache__/
 .Python
 output/
 env/
+dict/kindle
 build/
 develop-eggs/
 dist/
