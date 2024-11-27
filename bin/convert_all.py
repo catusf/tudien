@@ -56,7 +56,7 @@ class Timer:
     def display_elapsed(self, label=""):
         """Display the elapsed time."""
         elapsed = self.elapsed_time()
-        print(f"Label: {label}\nElapsed time: {elapsed['minutes']}:{elapsed['seconds']}.{elapsed['milliseconds']}s")
+        print(f"Label: {label}\n\tElapsed time: {elapsed['minutes']}:{elapsed['seconds']}.{elapsed['milliseconds']}s")
 
 
 INFLECTION_DIR = './bin/inflections'
@@ -153,6 +153,7 @@ def process_dictionary(data_tuple):
         cmd_line = f'mv {html}/*.mobi {output_folder}/kindle/'
     else:
         cmd_line = f'mv {html}/*.mobi {output_folder}/kindle/'
+
     try:
         print(cmd_line)
         subprocess.run(cmd_line, shell=True, check=True)
@@ -323,9 +324,20 @@ def main() -> None:
     # print(args_list[:3])
 
     # process_dictionary(args_list[0])
-    with Pool(1) as pool:
+    with Pool(2) as pool:
         pool.map(process_dictionary, args_list[:4])
     #     # pool.map(lambda Dict: process_dictionary(**Dict), args_list)
+
+    dirs = ['stardict', 'epub', 'kobo', 'lingvo', 'kindle', 'dictd', 'yomitan']
+
+    for dir in dirs:
+        cmd_line = f"zip -9 -j {output_folder}/all-{dir}.zip {output_folder}/{dir}/*.*"
+
+        try:
+            print(cmd_line)
+            subprocess.run(cmd_line, shell=True, check=True)
+        except subprocess.CalledProcessError as e:
+            print(f"Error moving .mobi file: {e}")
 
 if __name__ == "__main__":
     timer = Timer()
