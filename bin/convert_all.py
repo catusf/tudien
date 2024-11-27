@@ -12,6 +12,51 @@ import shlex
 import shutil
 from iso_language_codes import language_name
 from multiprocessing import Pool, cpu_count
+import time
+
+class Timer:
+    """
+    A Timer class to measure elapsed time with start, stop, and display functionalities.
+    """
+    def __init__(self):
+        self.start_time = None
+        self.end_time = None
+
+    def start(self):
+        """Start the timer."""
+        self.start_time = time.time()
+        self.end_time = None
+        print("Timer started.")
+
+    def stop(self):
+        """Stop the timer."""
+        if self.start_time is None:
+            raise ValueError("Timer has not been started.")
+        self.end_time = time.time()
+        print("Timer stopped.")
+
+    def elapsed_time(self):
+        """Calculate and return the elapsed time in minutes, seconds, and milliseconds."""
+        if self.start_time is None:
+            raise ValueError("Timer has not been started.")
+        if self.end_time is None:
+            raise ValueError("Timer has not been stopped.")
+
+        elapsed_time = self.end_time - self.start_time
+        minutes = int(elapsed_time // 60)
+        seconds = int(elapsed_time % 60)
+        milliseconds = int((elapsed_time * 1000) % 1000)
+
+        return {
+            'minutes': minutes,
+            'seconds': seconds,
+            'milliseconds': milliseconds
+        }
+
+    def display_elapsed(self, label=""):
+        """Display the elapsed time."""
+        elapsed = self.elapsed_time()
+        print(f"Label: {label}\nElapsed time: {elapsed['minutes']}:{elapsed['seconds']}.{elapsed['milliseconds']}s")
 
 
 INFLECTION_DIR = './bin/inflections'
@@ -266,10 +311,14 @@ def main() -> None:
     # with Pool(cpu_count()) as pool:
     print(args_list[:3])
 
-    process_dictionary(args_list[0])
-    # with Pool(1) as pool:
-    #     pool.map(process_dictionary, args_list[:3])
+    # process_dictionary(args_list[0])
+    with Pool(cpu_count()) as pool:
+        pool.map(process_dictionary, args_list[:4])
     #     # pool.map(lambda Dict: process_dictionary(**Dict), args_list)
 
 if __name__ == "__main__":
+    timer = Timer()
+    timer.start()
     main()
+    timer.stop()
+    timer.display_elapsed("2 cores")
