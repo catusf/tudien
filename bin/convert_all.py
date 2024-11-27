@@ -204,10 +204,10 @@ def process_dictionary(data_tuple):
     execute_shell(cmd_line=cmd_line, message=f"generating Lingvo")
 
 DEBUG_FLAG = False
-CPU_MAX = 1
+CPU_MAX = 100
 CPU_USED = min(CPU_MAX, cpu_count())
 
-DICT_MAX = 2
+DICT_MAX = 100
 
 def main() -> None:
     parser = argparse.ArgumentParser(description='Convert all dictionaries in a folder')
