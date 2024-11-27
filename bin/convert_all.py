@@ -204,7 +204,7 @@ def process_dictionary(data_tuple):
     execute_shell(cmd_line=cmd_line, message=f"generating Lingvo")
 
 DEBUG_FLAG = False
-CPU_MAX = 100
+CPU_MAX = 4
 CPU_USED = min(CPU_MAX, cpu_count())
 
 DICT_MAX = 100
