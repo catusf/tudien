@@ -17,7 +17,7 @@ from multiprocessing import Pool, cpu_count
 INFLECTION_DIR = './bin/inflections'
 INFLECTION_NONE = 'inflections-none.tab'
 
-RUN_ON_WINDOWS = True
+RUN_ON_WINDOWS = False
 
 def read_dic_info(filepath):
     ''' Read metadata of dictionary with the following format
@@ -71,18 +71,17 @@ def process_dictionary(data_tuple):
     output_folder = data["output_folder"]
     # input_folder = data["input_folder"]
     data_source = data["data_source"]
-    data_target = ["data_target"]
-    data_name = ["data_name"]
-    data_full_source = ["data_full_source"]
-    data_full_target = ["data_full_target"]
-    html_out_dir = data["html_out_dir"],
+    data_target = data["data_target"]
+    data_name = data["data_name"]
+    data_full_source = data["data_full_source"]
+    data_full_target = data["data_full_target"]
+    html = data["html_out_dir"]
     inflections = data["inflections"]
     data_creator = data["data_creator"]
     
-    html = data["html_out_dir"]
     cmd_line = f"python ./bin/tab2opf.py --title={data_name} --source={data_source} --target={data_target} " \
                f"--inflection={inflections} --outdir={html} --creator={data_creator} --publisher={data_creator} {datafile}"
-    cmd_line = cmd_line.replace("\\", "/")
+    # cmd_line = cmd_line.replace("\\", "/")
     print(cmd_line)
     try:
         subprocess.run(shlex.split(cmd_line), check=True)
@@ -90,14 +89,14 @@ def process_dictionary(data_tuple):
         print(f"Error generating HTML for Kindle dictionary: {e}")
 
     # Generate .mobi dictionary from opf+html file
-    out_path = os.path.join(html_out_dir, f'{os.path.splitext(os.path.basename(filepath))[0]}.opf')
+    out_path = os.path.join(html, f'{os.path.splitext(os.path.basename(filepath))[0]}.opf')
     
     if RUN_ON_WINDOWS:
         cmd_line = f"./bin/mobigen/mobigen.exe -unicode -s0 {shlex.quote(out_path)}"
     else:
         cmd_line = f"wine ./bin/mobigen/mobigen.exe -unicode -s0 {shlex.quote(out_path)}"
 
-    cmd_line = cmd_line.replace("\\", "/")
+    # cmd_line = cmd_line.replace("\\", "/")
     print(cmd_line)
     try:
         subprocess.run(shlex.split(cmd_line), check=True)
@@ -106,9 +105,9 @@ def process_dictionary(data_tuple):
 
     # Move generated .mobi file to final destination
     if RUN_ON_WINDOWS:
-        cmd_line = f'move {shlex.quote(html_out_dir)}/*.mobi {shlex.quote(os.path.join(output_folder, "kindle"))}/'
+        cmd_line = f'move {shlex.quote(html)}/*.mobi {shlex.quote(os.path.join(output_folder, "kindle"))}/'
     else:
-        cmd_line = f'mv {shlex.quote(html_out_dir)}/*.mobi {shlex.quote(os.path.join(output_folder, "kindle"))}/'
+        cmd_line = f'mv {shlex.quote(html)}/*.mobi {shlex.quote(os.path.join(output_folder, "kindle"))}/'
     try:
         subprocess.run(cmd_line, shell=True, check=True)
     except subprocess.CalledProcessError as e:
