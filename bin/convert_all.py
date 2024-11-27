@@ -123,8 +123,8 @@ def execute_shell(cmd_line, message="", printout=True):
         if printout:
             print(cmd_line)
 
-        subprocess.run(shlex.split(cmd_line), check=True)
-
+        # subprocess.run(shlex.split(cmd_line), check=True)
+        subprocess.call(cmd_line, shell=True)
         return True
     except subprocess.CalledProcessError as e:
         if message:
@@ -180,7 +180,7 @@ def process_dictionary(data_tuple):
         ('DictOrg', 'dictd', 'index', True),
     ]
     for write_format, folder, extension, needzip in formats:
-        folder, filename = os.path.split(filepath)
+        filefolder, filename = os.path.split(filepath)
         filebase, fileext = os.path.splitext(filename)
         
         out_path = os.path.join(output_folder, folder, f'{filebase}.{extension}')
