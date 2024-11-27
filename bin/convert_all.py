@@ -117,9 +117,9 @@ def process_dictionary(data_tuple):
     pyglossary = 'pyglossary'
     formats = [
         ('Yomichan', 'yomitan', 'yomitan.zip'),
-        ('StarDict', 'stardict', 'ifo'),
-        ('Dictd', 'dictd', 'index'),
-        ('Epub', 'epub', 'epub'),
+        ('Stardict', 'stardict', 'ifo'),
+        ('DictOrg', 'dictd', 'index'),
+        ('Epub2', 'epub', 'epub'),
         ('Kobo', 'kobo', 'kobo.zip'),
     ]
     for write_format, folder, extension in formats:
