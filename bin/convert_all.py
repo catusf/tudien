@@ -5,221 +5,77 @@
 '''
 
 import argparse
+from fileinput import filename
 import glob
+import os.path
 import os
 import subprocess
-import shlex
-import shutil
 from iso_language_codes import language_name
-from multiprocessing import Pool, cpu_count
-import time
+import shlex
 
-class Timer:
-    """
-    A Timer class to measure elapsed time with start, stop, and display functionalities.
-    """
-    def __init__(self):
-        self.start_time = None
-        self.end_time = None
-
-    def start(self):
-        """Start the timer."""
-        self.start_time = time.time()
-        self.end_time = None
-        print("Timer started.")
-
-    def stop(self):
-        """Stop the timer."""
-        if self.start_time is None:
-            raise ValueError("Timer has not been started.")
-        self.end_time = time.time()
-        print("Timer stopped.")
-
-    def elapsed_time(self):
-        """Calculate and return the elapsed time in minutes, seconds, and milliseconds."""
-        if self.start_time is None:
-            raise ValueError("Timer has not been started.")
-        if self.end_time is None:
-            raise ValueError("Timer has not been stopped.")
-
-        elapsed_time = self.end_time - self.start_time
-        minutes = int(elapsed_time // 60)
-        seconds = int(elapsed_time % 60)
-        milliseconds = int((elapsed_time * 1000) % 1000)
-
-        return {
-            'minutes': minutes,
-            'seconds': seconds,
-            'milliseconds': milliseconds
-        }
-
-    def display_elapsed(self, label=""):
-        """Display the elapsed time."""
-        elapsed = self.elapsed_time()
-        print(f"Label: {label}\n\tElapsed time: {elapsed['minutes']}:{elapsed['seconds']}.{elapsed['milliseconds']}s")
-
-
-INFLECTION_DIR = './bin/inflections'
-INFLECTION_NONE = 'inflections-none.tab'
-
-RUN_ON_WINDOWS = False
-
-def read_dic_info(filepath):
+def readDicInfo(filepath):
     ''' Read metadata of dictionary with the following format
 
-        Name = Dictionary of xyz
-        Description = Description of this dictionary
-        Source = en
-        Target = vi
-        Inflections = "NoInflections.txt"
-        Version = 1.1
+            Name = Dictionary of xyz
+            Description = Description of this dictionary
+            Source = en
+            Target = vi
+            Inflections = "NoInflections.txt"
+            Version = 1.1
 
         Target and Source are the ISO 2-character codes of the language.
-        Name, Source, and Target are mandatory fields.
+        Name, Source and Target are mandatory fields.
     '''
 
     valuemap = {}
-    
+
     try:
-        with open(filepath, encoding='utf-8') as file:
-            lines = file.readlines()
-            for line in lines:
-                line = line.strip()
-                if not line:
-                    continue
-                key, value = line.split('=', 1)  # Limit split to 1 to avoid issues with '=' in value
-                valuemap[key.strip()] = value.strip()
+        file = open(filepath, encoding='utf-8')
+
+        lines = file.readlines()
+
+        for line in lines:
+            line = line.strip()
+
+            if not line:
+                continue
+         
+            key, value = line.split('=')
+
+            valuemap[key.strip()] = value.strip()
 
         valuemap['FullSource'] = language_name(valuemap['Source'])
         valuemap['FullTarget'] = language_name(valuemap['Target'])
 
-        # Check mandatory fields
-        keys = ['Name', 'Source', 'Target']
-        for k in keys:
-            if k not in valuemap:
-                print(f'Missing key: \"{k}\"')
-                return None
+        keys = ['Name', 'Source', 'Target'] # Mandatory keys
 
+        for i, k in enumerate(keys):
+            if not k in valuemap:
+                print(f'Missing key: "{keys[i]}"')
+
+                return None
+            
     except IOError as err:
-        print(f"Error reading file {filepath}: {err}")
+        print(err)
         return None
+
+#    print(valuemap)
 
     return valuemap
 
-
-def execute_shell(cmd_line, message="", printout=True):
-    """
-    Executes a shell command and handles any errors that occur during execution.
-
-    Parameters:
-    cmd_line (str): The command line string to be executed.
-    message (str): An optional message to include in error output if the command fails.
-    printout (bool): If True, prints the command line before execution.
-
-    Returns:
-    bool: True if the command executes successfully, False if an error occurs.
-    """
-    try:
-        if printout:
-            print(cmd_line)
-
-        # subprocess.run(shlex.split(cmd_line), check=True)
-        subprocess.call(cmd_line, shell=True)
-        return True
-    except subprocess.CalledProcessError as e:
-        if message:
-            print(f"Error {message}: {e}")
-        else:
-            print(f"Error executing shell: {e}")
-
-        return False
-
-def process_dictionary(data_tuple):
-    ''' Process a dictionary by converting it to multiple formats (e.g., Kindle, StarDict, etc.) '''
-    data = data_tuple[0]
-    # Access data directly from the dictionary passed by pool.map
-    filepath = data["filepath"]
-    datafile = data["datafile"]
-    output_folder = data["output_folder"]
-    # input_folder = data["input_folder"]
-    data_source = data["data_source"]
-    data_target = data["data_target"]
-    data_name = data["data_name"]
-    data_full_source = data["data_full_source"]
-    data_full_target = data["data_full_target"]
-    html = data["html_out_dir"]
-    inflections = data["inflections"]
-    data_creator = data["data_creator"]
-    
-    cmd_line = f"python bin/tab2opf.py --title={data_name} --source={data_source} --target={data_target} " \
-               f"--inflection={inflections} --outdir={html} --creator={data_creator} --publisher={data_creator} {datafile}"
-    
-    execute_shell(cmd_line=cmd_line, message="building HTML with tab2opf.py")
-
-    # Generate .mobi dictionary from opf+html file
-    out_path = os.path.join(html, f'{os.path.splitext(os.path.basename(filepath))[0]}.opf')
-    
-    cmd_line = f"./bin/mobigen/mobigen.exe -unicode -s0 {shlex.quote(out_path)}" if RUN_ON_WINDOWS \
-        else f"wine ./bin/mobigen/mobigen.exe -unicode -s0 {shlex.quote(out_path)}"
-
-    execute_shell(cmd_line=cmd_line, message="generating .mobil with mobigen.exe")
-
-    # Move generated .mobi file to final destination
-    cmd_line = f'mv {html}/*.mobi {output_folder}/kindle/' if RUN_ON_WINDOWS \
-        else f'mv {html}/*.mobi {output_folder}/kindle/'
-
-    execute_shell(cmd_line=cmd_line, message="moving .mobi file")
-
-    # Generate other dictionary formats using PyGlossary
-    pyglossary = 'pyglossary'
-    formats = [
-        ('Yomichan', 'yomitan', 'yomitan.zip', False),
-        ('Epub2', 'epub', 'epub', False),
-        ('Kobo', 'kobo', 'kobo.zip', False),
-        ('Stardict', 'stardict', 'ifo', True),
-        ('DictOrg', 'dictd', 'index', True),
-    ]
-    for write_format, folder, extension, needzip in formats:
-        filefolder, filename = os.path.split(filepath)
-        filebase, fileext = os.path.splitext(filename)
-        
-        out_path = os.path.join(output_folder, folder, f'{filebase}.{extension}')
-        cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --write-format={write_format} " \
-                   f"--source-lang={data_source} --target-lang={data_target} --name={data_name} {datafile} {shlex.quote(out_path)}"
-        
-        execute_shell(cmd_line=cmd_line, message=f"generating {write_format}")
-
-        if needzip:
-            out_path = os.path.join(output_folder, f'{folder}/{filebase}.*')
-            zip_path = os.path.join(output_folder, f'{filebase}.{folder}.zip')
-            cmd_line = f"zip -j {zip_path} {out_path}"
-
-            execute_shell(cmd_line=cmd_line, message=f"creating zip file for {write_format}")
-
-    # Generate Lingvo dictionary
-    out_path = os.path.join(output_folder, 'lingvo', f'{os.path.splitext(os.path.basename(filepath))[0]}.dsl')
-    cmd_line = f"ruby ./dsl-tools/tab2dsl/tab2dsl.rb --from-lang {shlex.quote(data_full_source)} --to-lang {shlex.quote(data_full_target)} " \
-               f"--dict-name {data_name} --output {shlex.quote(out_path)} {datafile}"
-    
-    execute_shell(cmd_line=cmd_line, message=f"generating Lingvo")
-
 DEBUG_FLAG = False
-CPU_MAX = 4
-CPU_USED = min(CPU_MAX, cpu_count())
-
-DICT_MAX = 100
 
 def main() -> None:
     parser = argparse.ArgumentParser(description='Convert all dictionaries in a folder')
     parser.add_argument('-i', '--input_folder', required=True, help='Input folder containing .tsv and .dfo files')
     parser.add_argument('-o', '--output_folder', required=True, help='Output folder containing dictionary files')
-    parser.add_argument('-e', '--extension', default='tab', help='Filename extension for input dictionary files. Default is .tab')
-    parser.add_argument('-m', '--metadata', default='dfo', help='Filename extension for input metadata for dictionary. Default is .dfo')
+    parser.add_argument('-e', '--extension', default='tab', help='Filename extention for input dictionary files. Default is .tab')
+    parser.add_argument('-m', '--metadata', default='dfo', help='Filename extention for input metadata for dictionary. Default is .dfo')
 
-    args = parser.parse_args()
+    args, array = parser.parse_known_args()
 
-    input_folder = args.input_folder
-    output_folder = args.output_folder
+    input_folder = args.input_folder.replace(' ', '\\ ')
+    output_folder = args.output_folder.replace(' ', '\\ ')
     extension = args.extension
     metadata = args.metadata
 
@@ -274,9 +130,18 @@ def main() -> None:
 
 
         print(f'Len of checked datafilelist: {len(datafilelist)}')
-    
-    args_list = []
+        
+    # Need to consider the case with bz2 compressed files
+    subprocess.call(f'mkdir -p {input_folder}/kindle', shell=True)
 
+    subprocess.call(f'rm -r {output_folder}/*', shell=True)
+
+    dirs = ['stardict', 'epub', 'kobo', 'lingvo', 'kindle', 'dictd', 'yomitan']
+
+    for dir in dirs:
+        subprocess.call(f'mkdir -p {output_folder}/{dir}', shell=True)
+
+    # use_only_these = {'Tu-dien-ThienChuu-TranVanChanh'}
     for filepath, datafile in zip(metafilelist, datafilelist):
         folder, filename = os.path.split(filepath)
         filebase, fileext = os.path.splitext(filename)
@@ -284,7 +149,7 @@ def main() -> None:
         # if filebase not in use_only_these:
         #     continue
 
-        data = read_dic_info(filepath)
+        data = readDicInfo(filepath)
 
         # Add quote to wrap long filename/path
         datafile = datafile.replace(' ', '\\ ')
@@ -292,6 +157,14 @@ def main() -> None:
         if not dataCreator:
             dataCreator = 'Panthera Tigris'.replace(' ', '\\ ')
             
+        dataTarget = data['Target']
+        dataSource = data['Source']
+        dataFullSource = data['FullSource']
+        dataFullTarget = data['FullTarget']
+        dataName = data["Name"].replace(' ', '\\ ')
+        htmlDir = f'kindle'
+        htmlOutDir = f'{input_folder}/{htmlDir}'
+
         if not data:
             continue
 
@@ -329,7 +202,7 @@ def main() -> None:
         pyglossary = 'pyglossary'
 
         # Generare Yomitan dictionary
-        out_path = os.path.join(output_folder, f'yomitan/{filebase}.zip').replace(' ', '\\ ')
+        out_path = os.path.join(output_folder, f'yomitan/{filebase}.yomitan.zip').replace(' ', '\\ ')
         cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --write-format=Yomichan --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
@@ -377,42 +250,7 @@ def main() -> None:
         cmd_line = f"ruby ./dsl-tools/tab2dsl/tab2dsl.rb --from-lang {dataFullSource} --to-lang {dataFullTarget} --dict-name {dataName} --output {out_path} {datafile}"
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
-
         pass
-    # Prepare output directories
-    # Need to consider the case with bz2 compressed files
-    subprocess.call(f'mkdir -p {input_folder}/kindle', shell=True)
-
-    subprocess.call(f'rm -r {output_folder}/*', shell=True)
-
-    dirs = ['stardict', 'epub', 'kobo', 'lingvo', 'kindle', 'dictd', 'yomitan']
-
-    for dir in dirs:
-        subprocess.call(f'mkdir -p {output_folder}/{dir}', shell=True)
-
-    dirs = ['stardict', 'epub', 'kobo', 'lingvo', 'kindle', 'dictd', 'yomitan']
-    for dir in dirs:
-        os.makedirs(os.path.join(output_folder, dir), exist_ok=True)
-    
-    # Use multiprocessing to process dictionaries
-    # with Pool(cpu_count()) as pool:
-    # print(args_list[:3])
-
-    # process_dictionary(args_list[0])
-    with Pool(CPU_USED) as pool: # cpu_count()
-        pool.map(process_dictionary, args_list[:DICT_MAX])
-    #     # pool.map(lambda Dict: process_dictionary(**Dict), args_list)
-
-    dirs = ['stardict', 'epub', 'kobo', 'lingvo', 'kindle', 'dictd', 'yomitan']
-
-    for dir in dirs:
-        cmd_line = f"zip -9 -j {output_folder}/all-{dir}.zip {output_folder}/{dir}/*.*"
-
-        execute_shell(cmd_line=cmd_line, message=f"generating zip for all autput formats")
 
 if __name__ == "__main__":
-    timer = Timer()
-    timer.start()
     main()
-    timer.stop()
-    timer.display_elapsed(f"Building {DICT_MAX} dictionaries using {CPU_MAX} CPUs")
