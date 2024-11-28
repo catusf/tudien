@@ -1,0 +1,1 @@
+ python bin/convert_all.py -i dict -o output
