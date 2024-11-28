@@ -65,13 +65,20 @@ jobs:
 
     - name: Zip all artifacts for release
       run: |
+        zip -9 -j $OUTPUT_DIR/all-stardict.zip $OUTPUT_DIR/stardict/*.*      &&
+        zip -9 -j $OUTPUT_DIR/all-epub.zip     $OUTPUT_DIR/epub/*.*          &&
+        zip -9 -j $OUTPUT_DIR/all-kobo.zip     $OUTPUT_DIR/kobo/*.*          &&
+        zip -9 -j $OUTPUT_DIR/all-lingvo.zip   $OUTPUT_DIR/lingvo/*.*        &&
+        zip -9 -j $OUTPUT_DIR/all-kindle.zip   $OUTPUT_DIR/kindle/*.*        &&
+        zip -9 -j $OUTPUT_DIR/all-dictd.zip    $OUTPUT_DIR/dictd/*.*         &&
+        zip -9 -j $OUTPUT_DIR/all-yomitan.zip  $OUTPUT_DIR/yomitan/*.*  &&
         ls -R -l $OUTPUT_DIR
 
     - name: Create a new release draft
       id: create_release
       uses: ncipollo/release-action@v1
       with:
-          artifacts: "./${OUTPUT_DIR}/*.zip"
+          artifacts: "./ext-output/*.zip,./ext-output/kindle/*.mobi,./ext-output/kobo/*.zip,./ext-output/lingvo/*.dz,./ext-output/epub/*.epub,./output/yomitan/*.zip"
           body: If you can read this, we have forgotten to fill in the changelog. Sorry!
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
