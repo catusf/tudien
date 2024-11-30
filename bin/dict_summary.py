@@ -149,6 +149,10 @@ def main():
     # Generate the markdown table from the JSON data
     markdown_table = generate_markdown_table(data)
 
+    count_info = f"\n\nCó tổng cộng **{len(data)}** file từ điển.\nTổng số file download **{len(data)*(len(extensions)+1)}**"
+
+    markdown_table += count_info
+
     # Save the markdown table to a .md file
     with open(os.path.join(args.dict_dir, "dict_summary.md"), 'w', encoding='utf-8') as file:
         file.write(markdown_table)
