@@ -1,6 +1,21 @@
 import os
 import json
 
+# Language code to Vietnamese name mapping
+language_names = {
+    'vi': 'Tiếng Việt',
+    'en': 'Tiếng Anh',
+    'fr': 'Tiếng Pháp',
+    'de': 'Tiếng Đức',
+    'es': 'Tiếng Tây Ban Nha',
+    'it': 'Tiếng Ý',
+    'ja': 'Tiếng Nhật',
+    'ko': 'Tiếng Hàn',
+    'zh': 'Tiếng Trung',
+    'ru': 'Tiếng Nga'
+    # Add other languages as needed
+}
+
 def parse_dfo_file(dfo_path):
     """Parse the .dfo file and return its metadata as a dictionary."""
     metadata = {
@@ -83,13 +98,17 @@ def generate_summary(folder_path):
             # Get the additional downloadable files
             download_urls = get_downloadable_files(filebase, TAG_DOWNLOAD, folder_path)
 
+            # Get full language names in Vietnamese
+            source_full_name = language_names.get(metadata['Source'], f"Unknown ({metadata['Source']})")
+            target_full_name = language_names.get(metadata['Target'], f"Unknown ({metadata['Target']})")
+
             # Append the data to the list
             data.append({
-                "Filebase": filebase,
+                "Number": len(data) + 1,  # Add numbering
                 "Name": metadata['Name'],
                 "Description": metadata['Description'],
-                "Source": metadata['Source'],
-                "Target": metadata['Target'],
+                "Source": f"{source_full_name} ({metadata['Source']})",  # Full language name in Vietnamese
+                "Target": f"{target_full_name} ({metadata['Target']})",  # Full language name in Vietnamese
                 "Owner/Editor": metadata['Owner/Editor'],
                 "URL": metadata['URL'],
                 "Version": metadata['Version'],
@@ -106,12 +125,12 @@ def generate_summary(folder_path):
 
 def generate_markdown_table(data):
     """Generate a markdown table from the data."""
-    markdown = ["| Filebase | Name | Description | Source | Target | Owner/Editor | URL | Version | Definitions | " + " | ".join(extensions)]
+    markdown = ["| Number | Name | Description | Source | Target | Owner/Editor | URL | Version | Definitions | " + " | ".join(extensions)]
     markdown.append("| --- | --- | --- | --- | --- | --- | --- | --- | --- |" + " --- |" * len(extensions))
 
     for entry in data:
         download_links = " | ".join([f"[Download]({url})" for url in entry['Download']])
-        markdown.append(f"| {entry['Filebase']} | {entry['Name']} | {entry['Description']} | {entry['Source']} | {entry['Target']} | {entry['Owner/Editor']} | {entry['URL']} | {entry['Version']} | {entry['Definitions']} | {download_links} |")
+        markdown.append(f"| {entry['Number']} | {entry['Name']} | {entry['Description']} | {entry['Source']} | {entry['Target']} | {entry['Owner/Editor']} | {entry['URL']} | {entry['Version']} | {entry['Definitions']} | {download_links} |")
     
     return "\n".join(markdown)
 

@@ -1,10 +1,10 @@
 [
     {
-        "Filebase": "TrungViet-small",
+        "Number": 1,
         "Name": "Từ điển Trung-Việt β (đại) v1.0",
         "Description": "Từ điển Trung-Việt β (cỡ đại)",
-        "Source": "zh",
-        "Target": "vi",
+        "Source": "Tiếng Trung (zh)",
+        "Target": "Tiếng Việt (vi)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -20,11 +20,11 @@
         ]
     },
     {
-        "Filebase": "Tu-dien-Tong-hop-Phat-hoc",
+        "Number": 2,
         "Name": "Từ điển tổng hợp Phật học v1.0",
         "Description": "Từ điển tổng hợp Phật học",
-        "Source": "vi",
-        "Target": "vi",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Việt (vi)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -40,11 +40,11 @@
         ]
     },
     {
-        "Filebase": "radical_lookup_pleco",
+        "Number": 3,
         "Name": "Từ điển tra cứu từ tiếng Trung theo bộ v1.0",
         "Description": "Từ điển Tra cứu các từ tiếng Trung theo tên các bộ cấu thành",
-        "Source": "zh",
-        "Target": "en",
+        "Source": "Tiếng Trung (zh)",
+        "Target": "Tiếng Anh (en)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -60,11 +60,11 @@
         ]
     },
     {
-        "Filebase": "radical_name_pleco",
+        "Number": 4,
         "Name": "Từ điển tra cứu các bộ tiếng Trung v1.0",
         "Description": "Từ điển Tra cứu 214 bộ Kangxi tiếng Trung",
-        "Source": "zh",
-        "Target": "en",
+        "Source": "Tiếng Trung (zh)",
+        "Target": "Tiếng Anh (en)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -80,11 +80,11 @@
         ]
     },
     {
-        "Filebase": "tvb_pleco",
+        "Number": 5,
         "Name": "Từ Trung-Việt Beta v1.0",
         "Description": "Từ Trung-Việt Beta",
-        "Source": "zh",
-        "Target": "en",
+        "Source": "Tiếng Trung (zh)",
+        "Target": "Tiếng Anh (en)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -100,11 +100,11 @@
         ]
     },
     {
-        "Filebase": "TudienAnhVietAnh",
+        "Number": 6,
         "Name": "Từ điển Anh-Việt-Anh v1.1",
         "Description": "Từ điển Anh-Việt-Anh với các dạng từ tiếng Anh",
-        "Source": "en",
-        "Target": "vi",
+        "Source": "Tiếng Anh (en)",
+        "Target": "Tiếng Việt (vi)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.1",
@@ -120,11 +120,11 @@
         ]
     },
     {
-        "Filebase": "Tu-dien-Phat-hoc-Anh-Han-Viet",
+        "Number": 7,
         "Name": "Từ điển Phật học Anh-Hán-Việt v1.1",
         "Description": "Từ điển Phật học Anh-Hán-Việt",
-        "Source": "en",
-        "Target": "vi",
+        "Source": "Tiếng Anh (en)",
+        "Target": "Tiếng Việt (vi)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.1",
@@ -140,11 +140,11 @@
         ]
     },
     {
-        "Filebase": "Char-Component-Dict",
+        "Number": 8,
         "Name": "Cấu thành từ tiếng Trung v1.0",
         "Description": "Từ điển phân tích các chữ cái tiếng Trung thành các cấu thành",
-        "Source": "zh",
-        "Target": "en",
+        "Source": "Tiếng Trung (zh)",
+        "Target": "Tiếng Anh (en)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -160,11 +160,11 @@
         ]
     },
     {
-        "Filebase": "TrungViet-big",
+        "Number": 9,
         "Name": "Từ điển Trung-Việt β (nhỏ) v1.0",
         "Description": "Từ điển Trung-Việt β (cỡ nhỏ)",
-        "Source": "zh",
-        "Target": "vi",
+        "Source": "Tiếng Trung (zh)",
+        "Target": "Tiếng Việt (vi)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -180,11 +180,11 @@
         ]
     },
     {
-        "Filebase": "ChineseThesaurus-small",
+        "Number": 10,
         "Name": "Chinese Thesaurus (small) v1.0",
         "Description": "Chinese Thesaurus (small size)",
-        "Source": "zh",
-        "Target": "en",
+        "Source": "Tiếng Trung (zh)",
+        "Target": "Tiếng Anh (en)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -200,11 +200,11 @@
         ]
     },
     {
-        "Filebase": "ChineseThesaurus-mid",
+        "Number": 11,
         "Name": "Chinese Thesaurus (mid) v1.0",
         "Description": "Chinese Thesaurus (mid size)",
-        "Source": "zh",
-        "Target": "en",
+        "Source": "Tiếng Trung (zh)",
+        "Target": "Tiếng Anh (en)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -220,11 +220,11 @@
         ]
     },
     {
-        "Filebase": "Tu-dien-Phat-hoc-Viet-Anh-Minh-Thong",
+        "Number": 12,
         "Name": "Từ điển Phật học Việt Anh - Minh Thông v1.0",
         "Description": "Từ điển Phật học Việt Anh - Minh Thông",
-        "Source": "vi",
-        "Target": "en",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Anh (en)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -240,11 +240,11 @@
         ]
     },
     {
-        "Filebase": "HanziHeroPleco",
+        "Number": 13,
         "Name": "Chinese Character Stories v1.0",
         "Description": "Chinese Character Stories based on the components",
-        "Source": "zh",
-        "Target": "en",
+        "Source": "Tiếng Trung (zh)",
+        "Target": "Tiếng Anh (en)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -260,11 +260,11 @@
         ]
     },
     {
-        "Filebase": "CCCE-Thin",
+        "Number": 14,
         "Name": "CCCE Dictionary (thin) v1.0",
         "Description": "CCCE Dictionary (thin)",
-        "Source": "zh",
-        "Target": "en",
+        "Source": "Tiếng Trung (zh)",
+        "Target": "Tiếng Anh (en)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -280,11 +280,11 @@
         ]
     },
     {
-        "Filebase": "Rong-mo-tam-hon",
+        "Number": 15,
         "Name": "Rộng mở tâm hồn v1.0",
         "Description": "Rộng mở tâm hồn",
-        "Source": "vi",
-        "Target": "vi",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Việt (vi)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -300,11 +300,11 @@
         ]
     },
     {
-        "Filebase": "ChineseThesaurus-big",
+        "Number": 16,
         "Name": "Chinese Thesaurus (big) v1.0",
         "Description": "Chinese Thesaurus (big size)",
-        "Source": "zh",
-        "Target": "en",
+        "Source": "Tiếng Trung (zh)",
+        "Target": "Tiếng Anh (en)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -320,11 +320,11 @@
         ]
     },
     {
-        "Filebase": "Phat-Quang-Dai-tu-dien-Han-ngu",
+        "Number": 17,
         "Name": "Phật quang Đại từ điển Hán ngữ v1.0",
         "Description": "Phật quang Đại từ điển Hán ngữ",
-        "Source": "zh",
-        "Target": "zh",
+        "Source": "Tiếng Trung (zh)",
+        "Target": "Tiếng Trung (zh)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -340,11 +340,11 @@
         ]
     },
     {
-        "Filebase": "Tu-dien-ThienChuu-TranVanChanh",
+        "Number": 18,
         "Name": "Từ điển từ Hán Việt Thiền Chửu + Trần Văn Chánh v1.0",
         "Description": "TTừ điển từ Hán Việt Thiền Chửu + Trần Văn Chánh",
-        "Source": "zh",
-        "Target": "vi",
+        "Source": "Tiếng Trung (zh)",
+        "Target": "Tiếng Việt (vi)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -360,11 +360,11 @@
         ]
     },
     {
-        "Filebase": "Tu-dien-Phat-hoc-Viet-Anh-Thien-Phuc",
+        "Number": 19,
         "Name": "Từ điển Phật học Việt Anh - Thiện Phúc v1.0",
         "Description": "Từ điển Phật học Việt Anh - Thiện Phúc",
-        "Source": "vi",
-        "Target": "en",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Anh (en)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -380,11 +380,11 @@
         ]
     },
     {
-        "Filebase": "Tu-dien-Phat-Quang",
+        "Number": 20,
         "Name": "Từ điển Phật Quang v1.0",
         "Description": "Từ điển Phật Quang",
-        "Source": "vi",
-        "Target": "vi",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Việt (vi)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -400,11 +400,11 @@
         ]
     },
     {
-        "Filebase": "TrungViet-mid",
+        "Number": 21,
         "Name": "Từ điển Trung-Việt β (trung) v1.0",
         "Description": "Từ điển Trung-Việt β (cỡ trung)",
-        "Source": "zh",
-        "Target": "vi",
+        "Source": "Tiếng Trung (zh)",
+        "Target": "Tiếng Việt (vi)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -420,11 +420,11 @@
         ]
     },
     {
-        "Filebase": "Tu-dien-Phat-hoc-Viet-Anh-Dong-Loai",
+        "Number": 22,
         "Name": "Từ điển Phật học Việt Anh - Đồng Loại v1.0",
         "Description": "Từ điển Phật học Việt Anh - Đồng Loại",
-        "Source": "vi",
-        "Target": "en",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Anh (en)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -440,11 +440,11 @@
         ]
     },
     {
-        "Filebase": "Tu-dien-Dao-Uyen",
+        "Number": 23,
         "Name": "Từ điển Đạo Uyển v1.0",
         "Description": "Từ điển Đạo Uyển",
-        "Source": "vi",
-        "Target": "vi",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Việt (vi)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -460,11 +460,11 @@
         ]
     },
     {
-        "Filebase": "TudienAnhVietBeta",
+        "Number": 24,
         "Name": "Từ điển Anh-Việt β v1.4",
         "Description": "Từ điển Anh-Việt β với các dạng từ tiếng Anh",
-        "Source": "en",
-        "Target": "vi",
+        "Source": "Tiếng Anh (en)",
+        "Target": "Tiếng Việt (vi)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.4",
@@ -480,11 +480,11 @@
         ]
     },
     {
-        "Filebase": "Tu-dien-Phat-hoc-Tinh-tuyen",
+        "Number": 25,
         "Name": "Từ điển Phật học Tinh tuyển v1.0",
         "Description": "Từ điển Phật học Tinh tuyển",
-        "Source": "vi",
-        "Target": "vi",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Việt (vi)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -500,11 +500,11 @@
         ]
     },
     {
-        "Filebase": "Ngu-vung-Danh-tu-Thien-hoc",
+        "Number": 26,
         "Name": "Ngữ vựng danh từ thiền học v1.0",
         "Description": "Ngữ vựng danh từ thiền học",
-        "Source": "vi",
-        "Target": "vi",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Việt (vi)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
@@ -520,11 +520,11 @@
         ]
     },
     {
-        "Filebase": "TudienThienChuu",
+        "Number": 27,
         "Name": "Từ điển từ Hán Việt Thiền Chửu v1.0",
         "Description": "Từ điển từ Hán Việt Thiền Chửu",
-        "Source": "vi",
-        "Target": "vi",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Việt (vi)",
         "Owner/Editor": "",
         "URL": "https://github.com/catusphan/dictionary",
         "Version": "1.0",
