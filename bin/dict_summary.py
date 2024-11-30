@@ -149,7 +149,9 @@ def main():
     # Generate the markdown table from the JSON data
     markdown_table = generate_markdown_table(data)
 
-    count_info = f"\n\nCó tổng cộng **{len(data)}** file từ điển.\nTổng số file download **{len(data)*(len(extensions)+1)}**"
+    count_info = f"\n\nCó tổng cộng **{len(data)}** file từ điển.\nTổng số file download **{len(data)*(len(extensions)+1)}**\n\n"
+
+    print(count_info)
 
     markdown_table += count_info
 
