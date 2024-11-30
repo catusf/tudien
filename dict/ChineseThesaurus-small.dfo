@@ -1,0 +1,8 @@
+Name = Chinese Thesaurus (small) v1.0
+Description = Chinese Thesaurus (small size)
+Source = zh
+Target = en
+Version = 1.0
+Owner/Editor = 
+URL = https://github.com/catusphan/dictionary
+Inflections = 

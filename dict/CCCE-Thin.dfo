@@ -1,0 +1,8 @@
+Name = CCCE Dictionary (thin) v1.0
+Description = CCCE Dictionary (thin)
+Source = zh
+Target = en
+Version = 1.0
+Owner/Editor = 
+URL = https://github.com/catusphan/dictionary
+Inflections = 

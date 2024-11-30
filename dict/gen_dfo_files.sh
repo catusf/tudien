@@ -18,3 +18,12 @@ print_to_file "TudienThienChuu.dfo" "Từ điển từ Hán Việt Thiền Chử
 
 print_to_file "TudienAnhVietAnh.dfo" "Từ điển Anh-Việt-Anh" "Từ điển Anh-Việt-Anh với các dạng từ tiếng Anh" "en" "vi" "1.1" "" "https://github.com/catusphan/dictionary" "inflection-eng.tab"
 print_to_file "TudienAnhVietBeta.dfo" "Từ điển Anh-Việt β" "Từ điển Anh-Việt β với các dạng từ tiếng Anh" "en" "vi" "1.4" "" "https://github.com/catusphan/dictionary" "inflection-eng.tab"
+
+print_to_file "TrungViet-big.dfo" "Từ điển Trung-Việt β (nhỏ)" "Từ điển Trung-Việt β (cỡ nhỏ)" "zh" "vi" "1.0" "" "https://github.com/catusphan/dictionary" ""
+print_to_file "TrungViet-mid.dfo" "Từ điển Trung-Việt β (trung)" "Từ điển Trung-Việt β (cỡ trung)" "zh" "vi" "1.0" "" "https://github.com/catusphan/dictionary" ""
+print_to_file "TrungViet-small.dfo" "Từ điển Trung-Việt β (đại)" "Từ điển Trung-Việt β (cỡ đại)" "zh" "vi" "1.0" "" "https://github.com/catusphan/dictionary" ""
+print_to_file "CCCE-Thin.dfo" "CCCE Dictionary (thin)" "CCCE Dictionary (thin)" "zh" "en" "1.0" "" "https://github.com/catusphan/dictionary" ""
+print_to_file "ChineseThesaurus-big.dfo" "Chinese Thesaurus (big)" "Chinese Thesaurus (big size)" "zh" "en" "1.0" "" "https://github.com/catusphan/dictionary" ""
+print_to_file "ChineseThesaurus-mid.dfo" "Chinese Thesaurus (mid)" "Chinese Thesaurus (mid size)" "zh" "en" "1.0" "" "https://github.com/catusphan/dictionary" ""
+print_to_file "ChineseThesaurus-small.dfo" "Chinese Thesaurus (small)" "Chinese Thesaurus (small size)" "zh" "en" "1.0" "" "https://github.com/catusphan/dictionary" ""
+print_to_file "HanziHeroPleco.dfo" "Chinese Character Stories" "Chinese Character Stories based on the components" "zh" "en" "1.0" "" "https://github.com/catusphan/dictionary" ""
