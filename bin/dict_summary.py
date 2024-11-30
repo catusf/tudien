@@ -64,6 +64,10 @@ extensions = [
     'dictd.zip', 'dsl.dz', 'epub', 'kobo.zip', 'mobi', 'stardict.zip', 'yomitan.zip'
 ]
 
+extension_names = [
+    'DICT', 'Lingvo DSL', 'EPUB', 'Kobo', 'Kindle', 'StarDict', 'Yomitan/Yomichan'
+]
+
 def get_downloadable_files(filebase, tag_download, folder_path):
     """Return the downloadable file links based on the filebase name."""
     download_links = []
@@ -117,6 +121,8 @@ def generate_summary(folder_path):
                 "Download": download_urls
             })
 
+    data.sort(key=lambda x: x['Source'])
+
     # Save the list of dictionaries as a JSON file
     with open(os.path.join(folder_path, "dict_summary.json"), 'w', encoding='utf-8') as json_file:
         json.dump(data, json_file, ensure_ascii=False, indent=4)
@@ -126,12 +132,12 @@ def generate_summary(folder_path):
 
 def generate_markdown_table(data):
     """Generate a markdown table from the data."""
-    markdown = ["| Number | Name | Description | Source | Target | Owner/Editor | URL | Version | Definitions | " + " | ".join(extensions)]
+    markdown = ["| STT | Tên từ điển | Mô tả | Ngôn ngữ gốc | Ngôn ngữ đích | Tác giả/Biên tập | Nguồn | Phiên bản | Số mục từ | " + " | ".join(extension_names)]
     markdown.append("| --- | --- | --- | --- | --- | --- | --- | --- | --- |" + " --- |" * len(extensions))
 
     for entry in data:
         download_links = " | ".join([f"[Download]({url})" for url in entry['Download']])
-        markdown.append(f"| {entry['Number']} | {entry['Name']} | {entry['Description']} | {entry['Source']} | {entry['Target']} | {entry['Owner/Editor']} | {entry['URL']} | {entry['Version']} | {entry['Definitions']} | {download_links} |")
+        markdown.append(f"| {entry['Number']} | {entry['Name']} | {entry['Description']} | {entry['Source']} | {entry['Target']} | {entry['Owner/Editor']} | [Reference]({entry['URL']}) | {entry['Version']} | {entry['Definitions']} | {download_links} |")
     
     return "\n".join(markdown)
 
