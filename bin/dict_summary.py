@@ -1,5 +1,6 @@
 import os
 import json
+import argparse
 
 # Language code to Vietnamese name mapping
 language_names = {
@@ -134,17 +135,25 @@ def generate_markdown_table(data):
     
     return "\n".join(markdown)
 
-# Specify the folder path where the .dfo and .tab files are located
-folder_path = "dict"  # Change this to the correct path
+def main():
+    """Main function to parse arguments and run the processes."""
+    # Parse command-line arguments
+    parser = argparse.ArgumentParser(description="Generate a dictionary summary.")
+    parser.add_argument('dict_dir', type=str, nargs='?', default='dict', 
+                        help="The directory containing the dictionary files (default is 'dict').")
+    args = parser.parse_args()
 
-# Generate the summary data and save it as a JSON file
-data = generate_summary(folder_path)
+    # Generate the summary data and save it as a JSON file
+    data = generate_summary(args.dict_dir)
 
-# Generate the markdown table from the JSON data
-markdown_table = generate_markdown_table(data)
+    # Generate the markdown table from the JSON data
+    markdown_table = generate_markdown_table(data)
 
-# Save the markdown table to a .md file
-with open(os.path.join(folder_path, "dict_summary.md"), 'w', encoding='utf-8') as file:
-    file.write(markdown_table)
+    # Save the markdown table to a .md file
+    with open(os.path.join(args.dict_dir, "dict_summary.md"), 'w', encoding='utf-8') as file:
+        file.write(markdown_table)
 
-print("Summary markdown file 'summary.md' has been generated.")
+    print("Summary markdown file 'dict_summary.md' has been generated.")
+
+if __name__ == "__main__":
+    main()

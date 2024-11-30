@@ -61,7 +61,8 @@ jobs:
 
     - name: Build all dictionaries
       run: |
-        python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab
+        python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab &&
+        python bin/gen_summary.py $INPUT_DIR
 
     - name: Zip all artifacts for release
       run: |
@@ -78,7 +79,7 @@ jobs:
       id: create_release
       uses: ncipollo/release-action@v1
       with:
-          artifacts: "./ext-output/*.zip,./ext-output/kindle/*.mobi,./ext-output/kobo/*.zip,./ext-output/lingvo/*.dz,./ext-output/epub/*.epub,./ext-output/yomitan/*.zip"
+          artifacts: "./dict/dict_summary.md,./ext-output/*.zip,./ext-output/kindle/*.mobi,./ext-output/kobo/*.zip,./ext-output/lingvo/*.dz,./ext-output/epub/*.epub,./ext-output/yomitan/*.zip"
           body: If you can read this, we have forgotten to fill in the changelog. Sorry!
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
