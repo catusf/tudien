@@ -1,0 +1,542 @@
+[
+    {
+        "Filebase": "TrungViet-small",
+        "Name": "Từ điển Trung-Việt β (đại) v1.0",
+        "Description": "Từ điển Trung-Việt β (cỡ đại)",
+        "Source": "zh",
+        "Target": "vi",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 78157,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-small.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-small.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-small.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-small.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-small.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-small.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-small.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "Tu-dien-Tong-hop-Phat-hoc",
+        "Name": "Từ điển tổng hợp Phật học v1.0",
+        "Description": "Từ điển tổng hợp Phật học",
+        "Source": "vi",
+        "Target": "vi",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 49569,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Tong-hop-Phat-hoc.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Tong-hop-Phat-hoc.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Tong-hop-Phat-hoc.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Tong-hop-Phat-hoc.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Tong-hop-Phat-hoc.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Tong-hop-Phat-hoc.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Tong-hop-Phat-hoc.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "radical_lookup_pleco",
+        "Name": "Từ điển tra cứu từ tiếng Trung theo bộ v1.0",
+        "Description": "Từ điển Tra cứu các từ tiếng Trung theo tên các bộ cấu thành",
+        "Source": "zh",
+        "Target": "en",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 265984,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/radical_lookup_pleco.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/radical_lookup_pleco.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/radical_lookup_pleco.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/radical_lookup_pleco.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/radical_lookup_pleco.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/radical_lookup_pleco.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/radical_lookup_pleco.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "radical_name_pleco",
+        "Name": "Từ điển tra cứu các bộ tiếng Trung v1.0",
+        "Description": "Từ điển Tra cứu 214 bộ Kangxi tiếng Trung",
+        "Source": "zh",
+        "Target": "en",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 789,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/radical_name_pleco.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/radical_name_pleco.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/radical_name_pleco.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/radical_name_pleco.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/radical_name_pleco.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/radical_name_pleco.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/radical_name_pleco.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "tvb_pleco",
+        "Name": "Từ Trung-Việt Beta v1.0",
+        "Description": "Từ Trung-Việt Beta",
+        "Source": "zh",
+        "Target": "en",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 78157,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/tvb_pleco.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/tvb_pleco.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/tvb_pleco.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/tvb_pleco.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/tvb_pleco.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/tvb_pleco.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/tvb_pleco.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "TudienAnhVietAnh",
+        "Name": "Từ điển Anh-Việt-Anh v1.1",
+        "Description": "Từ điển Anh-Việt-Anh với các dạng từ tiếng Anh",
+        "Source": "en",
+        "Target": "vi",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.1",
+        "Definitions": 148214,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietAnh.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietAnh.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietAnh.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietAnh.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietAnh.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietAnh.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietAnh.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "Tu-dien-Phat-hoc-Anh-Han-Viet",
+        "Name": "Từ điển Phật học Anh-Hán-Việt v1.1",
+        "Description": "Từ điển Phật học Anh-Hán-Việt",
+        "Source": "en",
+        "Target": "vi",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.1",
+        "Definitions": 3914,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Anh-Han-Viet.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Anh-Han-Viet.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Anh-Han-Viet.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Anh-Han-Viet.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Anh-Han-Viet.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Anh-Han-Viet.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Anh-Han-Viet.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "Char-Component-Dict",
+        "Name": "Cấu thành từ tiếng Trung v1.0",
+        "Description": "Từ điển phân tích các chữ cái tiếng Trung thành các cấu thành",
+        "Source": "zh",
+        "Target": "en",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 9145,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Char-Component-Dict.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Char-Component-Dict.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Char-Component-Dict.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Char-Component-Dict.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Char-Component-Dict.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Char-Component-Dict.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Char-Component-Dict.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "TrungViet-big",
+        "Name": "Từ điển Trung-Việt β (nhỏ) v1.0",
+        "Description": "Từ điển Trung-Việt β (cỡ nhỏ)",
+        "Source": "zh",
+        "Target": "vi",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 78157,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-big.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-big.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-big.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-big.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-big.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-big.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-big.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "ChineseThesaurus-small",
+        "Name": "Chinese Thesaurus (small) v1.0",
+        "Description": "Chinese Thesaurus (small size)",
+        "Source": "zh",
+        "Target": "en",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 50129,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-small.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-small.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-small.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-small.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-small.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-small.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-small.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "ChineseThesaurus-mid",
+        "Name": "Chinese Thesaurus (mid) v1.0",
+        "Description": "Chinese Thesaurus (mid size)",
+        "Source": "zh",
+        "Target": "en",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 50129,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-mid.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-mid.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-mid.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-mid.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-mid.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-mid.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-mid.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "Tu-dien-Phat-hoc-Viet-Anh-Minh-Thong",
+        "Name": "Từ điển Phật học Việt Anh - Minh Thông v1.0",
+        "Description": "Từ điển Phật học Việt Anh - Minh Thông",
+        "Source": "vi",
+        "Target": "en",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 9113,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Minh-Thong.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Minh-Thong.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Minh-Thong.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Minh-Thong.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Minh-Thong.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Minh-Thong.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Minh-Thong.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "HanziHeroPleco",
+        "Name": "Chinese Character Stories v1.0",
+        "Description": "Chinese Character Stories based on the components",
+        "Source": "zh",
+        "Target": "en",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 3300,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/HanziHeroPleco.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/HanziHeroPleco.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/HanziHeroPleco.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/HanziHeroPleco.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/HanziHeroPleco.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/HanziHeroPleco.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/HanziHeroPleco.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "CCCE-Thin",
+        "Name": "CCCE Dictionary (thin) v1.0",
+        "Description": "CCCE Dictionary (thin)",
+        "Source": "zh",
+        "Target": "en",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 107334,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/CCCE-Thin.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/CCCE-Thin.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/CCCE-Thin.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/CCCE-Thin.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/CCCE-Thin.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/CCCE-Thin.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/CCCE-Thin.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "Rong-mo-tam-hon",
+        "Name": "Rộng mở tâm hồn v1.0",
+        "Description": "Rộng mở tâm hồn",
+        "Source": "vi",
+        "Target": "vi",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 1347,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Rong-mo-tam-hon.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Rong-mo-tam-hon.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Rong-mo-tam-hon.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Rong-mo-tam-hon.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Rong-mo-tam-hon.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Rong-mo-tam-hon.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Rong-mo-tam-hon.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "ChineseThesaurus-big",
+        "Name": "Chinese Thesaurus (big) v1.0",
+        "Description": "Chinese Thesaurus (big size)",
+        "Source": "zh",
+        "Target": "en",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 50129,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-big.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-big.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-big.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-big.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-big.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-big.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-big.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "Phat-Quang-Dai-tu-dien-Han-ngu",
+        "Name": "Phật quang Đại từ điển Hán ngữ v1.0",
+        "Description": "Phật quang Đại từ điển Hán ngữ",
+        "Source": "zh",
+        "Target": "zh",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 22899,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Phat-Quang-Dai-tu-dien-Han-ngu.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Phat-Quang-Dai-tu-dien-Han-ngu.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Phat-Quang-Dai-tu-dien-Han-ngu.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Phat-Quang-Dai-tu-dien-Han-ngu.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Phat-Quang-Dai-tu-dien-Han-ngu.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Phat-Quang-Dai-tu-dien-Han-ngu.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Phat-Quang-Dai-tu-dien-Han-ngu.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "Tu-dien-ThienChuu-TranVanChanh",
+        "Name": "Từ điển từ Hán Việt Thiền Chửu + Trần Văn Chánh v1.0",
+        "Description": "TTừ điển từ Hán Việt Thiền Chửu + Trần Văn Chánh",
+        "Source": "zh",
+        "Target": "vi",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 22030,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-ThienChuu-TranVanChanh.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-ThienChuu-TranVanChanh.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-ThienChuu-TranVanChanh.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-ThienChuu-TranVanChanh.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-ThienChuu-TranVanChanh.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-ThienChuu-TranVanChanh.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-ThienChuu-TranVanChanh.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "Tu-dien-Phat-hoc-Viet-Anh-Thien-Phuc",
+        "Name": "Từ điển Phật học Việt Anh - Thiện Phúc v1.0",
+        "Description": "Từ điển Phật học Việt Anh - Thiện Phúc",
+        "Source": "vi",
+        "Target": "en",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 24767,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Thien-Phuc.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Thien-Phuc.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Thien-Phuc.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Thien-Phuc.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Thien-Phuc.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Thien-Phuc.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Thien-Phuc.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "Tu-dien-Phat-Quang",
+        "Name": "Từ điển Phật Quang v1.0",
+        "Description": "Từ điển Phật Quang",
+        "Source": "vi",
+        "Target": "vi",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 16973,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-Quang.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-Quang.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-Quang.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-Quang.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-Quang.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-Quang.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-Quang.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "TrungViet-mid",
+        "Name": "Từ điển Trung-Việt β (trung) v1.0",
+        "Description": "Từ điển Trung-Việt β (cỡ trung)",
+        "Source": "zh",
+        "Target": "vi",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 78157,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-mid.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-mid.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-mid.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-mid.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-mid.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-mid.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-mid.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "Tu-dien-Phat-hoc-Viet-Anh-Dong-Loai",
+        "Name": "Từ điển Phật học Việt Anh - Đồng Loại v1.0",
+        "Description": "Từ điển Phật học Việt Anh - Đồng Loại",
+        "Source": "vi",
+        "Target": "en",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 7847,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Dong-Loai.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Dong-Loai.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Dong-Loai.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Dong-Loai.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Dong-Loai.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Dong-Loai.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Dong-Loai.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "Tu-dien-Dao-Uyen",
+        "Name": "Từ điển Đạo Uyển v1.0",
+        "Description": "Từ điển Đạo Uyển",
+        "Source": "vi",
+        "Target": "vi",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 3262,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Dao-Uyen.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Dao-Uyen.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Dao-Uyen.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Dao-Uyen.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Dao-Uyen.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Dao-Uyen.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Dao-Uyen.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "TudienAnhVietBeta",
+        "Name": "Từ điển Anh-Việt β v1.4",
+        "Description": "Từ điển Anh-Việt β với các dạng từ tiếng Anh",
+        "Source": "en",
+        "Target": "vi",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.4",
+        "Definitions": 106059,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietBeta.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietBeta.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietBeta.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietBeta.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietBeta.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietBeta.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietBeta.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "Tu-dien-Phat-hoc-Tinh-tuyen",
+        "Name": "Từ điển Phật học Tinh tuyển v1.0",
+        "Description": "Từ điển Phật học Tinh tuyển",
+        "Source": "vi",
+        "Target": "vi",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 2918,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Tinh-tuyen.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Tinh-tuyen.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Tinh-tuyen.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Tinh-tuyen.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Tinh-tuyen.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Tinh-tuyen.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Tinh-tuyen.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "Ngu-vung-Danh-tu-Thien-hoc",
+        "Name": "Ngữ vựng danh từ thiền học v1.0",
+        "Description": "Ngữ vựng danh từ thiền học",
+        "Source": "vi",
+        "Target": "vi",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 302,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Ngu-vung-Danh-tu-Thien-hoc.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Ngu-vung-Danh-tu-Thien-hoc.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Ngu-vung-Danh-tu-Thien-hoc.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Ngu-vung-Danh-tu-Thien-hoc.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Ngu-vung-Danh-tu-Thien-hoc.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Ngu-vung-Danh-tu-Thien-hoc.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/Ngu-vung-Danh-tu-Thien-hoc.yomitan.zip"
+        ]
+    },
+    {
+        "Filebase": "TudienThienChuu",
+        "Name": "Từ điển từ Hán Việt Thiền Chửu v1.0",
+        "Description": "Từ điển từ Hán Việt Thiền Chửu",
+        "Source": "vi",
+        "Target": "vi",
+        "Owner/Editor": "",
+        "URL": "https://github.com/catusphan/dictionary",
+        "Version": "1.0",
+        "Definitions": 9898,
+        "Download": [
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienThienChuu.dictd.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienThienChuu.dsl.dz",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienThienChuu.epub",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienThienChuu.kobo.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienThienChuu.mobi",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienThienChuu.stardict.zip",
+            "https://github.com/catusf/tudien/releases/tag/v3.0/TudienThienChuu.yomitan.zip"
+        ]
+    }
+]
