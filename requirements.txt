@@ -1,6 +1,6 @@
 #PyGlossary >= 4.2.0
 iso_language_codes >= 1.1.0
-pattern >= 3.6.0
+# pattern >= 3.6.0
 marisa-trie >= 0.7.7
 lxml >= 4.9.1
 beautifulsoup4 >= 4.11.1
