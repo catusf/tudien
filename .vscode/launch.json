@@ -15,7 +15,7 @@
                 "--input_folder=./dict",
                 "--output_folder=./output",
                 "--extension=tab",
-                "--filter=CCCE"
+                "--filter=Hero,ThienChuu"
             ]
         }
     ]

@@ -188,25 +188,33 @@ def main() -> None:
             if datafile.find('.bz2') >= 0:
                 
                 cmd_line = f'bzip2 -kd \"{datafile}\"'
-                print(cmd_line)
+                # print(cmd_line)
 
                 if not DEBUG_FLAG:
-                    subprocess.call(cmd_line, shell=True)
+                    # subprocess.call(cmd_line, shell=True)
+                    execute_shell(cmd_line=cmd_line, message=f"bunzip data file")
 
             datafilelist.append(datafile.replace('.bz2', ''))
 
 
         print(f'Len of checked datafilelist: {len(datafilelist)}')
         
-    # Need to consider the case with bz2 compressed files
-    subprocess.call(f'mkdir -p {input_folder}/kindle', shell=True)
-
-    subprocess.call(f'rm -r {output_folder}/*', shell=True)
-
     dirs = ['stardict', 'epub', 'kobo', 'lingvo', 'kindle', 'dictd', 'yomitan']
 
+    cmd_line=f'rm -r {output_folder}/*'
+    execute_shell(cmd_line=cmd_line, message="Remove existing file in {output_folder}")
+
+    cmd_line=f'rm -r {input_folder}/kindle/*'
+    execute_shell(cmd_line=cmd_line, message="Remove existing file in kindle {input_folder}/kindle")
+
     for dir in dirs:
-        subprocess.call(f'mkdir -p {output_folder}/{dir}', shell=True)
+        cmd_line = f'mkdir -p {output_folder}/{dir}'
+        execute_shell(cmd_line=cmd_line, message='Creating directory')
+        # subprocess.call(f'mkdir -p {output_folder}/{dir}', shell=True)
+
+    cmd_line = f'mkdir -p {input_folder}/kindle'
+    execute_shell(cmd_line=cmd_line, message='Creating directory')
+    # subprocess.call(f'rm -r {output_folder}/*', shell=True)
 
     # use_only_these = {'Tu-dien-ThienChuu-TranVanChanh'}
     for filepath, datafile in zip(metafilelist, datafilelist):
@@ -262,93 +270,64 @@ def main() -> None:
         # print(cmd_line)
         # subprocess.call(cmd_line, shell=True)
 
-        cmd_line = f'mv {htmlOutDir}/*.mobi {output_folder}/kindle/'
+        cmd_line = f'mv {htmlOutDir}/*.mobi {output_folder}/'
         print(cmd_line)
         subprocess.call(cmd_line, shell=True)
 
+        # Generate other dictionary formats using PyGlossary
+        pyglossary = 'pyglossary'
+        formats = [
+            # DictType, foldername, file ending, need zip
+            ('Yomichan', 'yomitan', 'yomitan.zip', False),
+            ('Epub2', 'epub', 'epub', False),
+            ('Kobo', 'kobo', 'kobo.zip', False),
+            ('Stardict', 'stardict', 'ifo', True),
+            ('DictOrg', 'dictd', 'index', True),
+        ]
 
-    # Generate other dictionary formats using PyGlossary
-    pyglossary = 'pyglossary'
-    formats = [
-        ('Yomichan', 'yomitan', 'yomitan.zip', False),
-        ('Epub2', 'epub', 'epub', False),
-        ('Kobo', 'kobo', 'kobo.zip', False),
-        ('Stardict', 'stardict', 'ifo', True),
-        ('DictOrg', 'dictd', 'index', True),
+        for write_format, folder, extension, needzip in formats:
+            _, filename = os.path.split(filepath)
+            filebase, _ = os.path.splitext(filename)
+            
+            out_path = os.path.join(output_folder, folder, f'{filebase}.{extension}')
+            cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --write-format={write_format} " \
+                    f"--source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {shlex.quote(out_path)}"
+            
+            execute_shell(cmd_line=cmd_line, message=f"generating {write_format}")
+
+            if needzip:
+                out_path = os.path.join(output_folder, f'{folder}/{filebase}.*')
+                zip_path = os.path.join(output_folder, f'{filebase}.{folder}.zip')
+                cmd_line = f"zip -j {zip_path} {out_path}"
+
+                execute_shell(cmd_line=cmd_line, message=f"creating zip file for {write_format} in {output_folder}")
+            else:
+                cmd_line = f"mv {out_path} {output_folder}"
+                execute_shell(cmd_line=cmd_line, message=f"moving output {out_path} to output folder {output_folder}")
+
+        # Generare Lingvo dictionary
+        out_path = os.path.join(output_folder, f'lingvo/{filebase}.dsl').replace(' ', '\\ ') 
+        cmd_line = f"ruby ./dsl-tools/tab2dsl/tab2dsl.rb --from-lang {dataFullSource} --to-lang {dataFullTarget} --dict-name {dataName} --output {out_path} {datafile}"
+        execute_shell(cmd_line=cmd_line, message=f"generating DSL/Longvo")
+
+        cmd_line = f"mv {out_path}.dz {output_folder}"
+        execute_shell(cmd_line=cmd_line, message=f"moving output {out_path} to output folder {output_folder}")
+        pass
+
+    dir_formats = [
+        ('stardict',  '*.stardict.zip'), 
+        ('epub',      '*.epub'),
+        ('kobo',      '*.kobo.zip'),
+        ('lingvo',    '*.dsl.dz'),
+        ('kindle',    '*.mobi'),
+        ('dictd',     '*.dictd.zip'),
+        ('yomitan',   '*.yomitan.zip'),
     ]
 
-    for write_format, folder, extension, needzip in formats:
-        _, filename = os.path.split(filepath)
-        filebase, _ = os.path.splitext(filename)
-        
-        out_path = os.path.join(output_folder, folder, f'{filebase}.{extension}')
-        cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --write-format={write_format} " \
-                   f"--source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {shlex.quote(out_path)}"
-        
-        execute_shell(cmd_line=cmd_line, message=f"generating {write_format}")
+    for dir, format in dir_formats:
+        cmd_line = f"zip -9 -j output/all-{dir}.zip output/{format}"
+        execute_shell(cmd_line=cmd_line, message=f"Zipping all {dir}-format dicts in {output_folder}")
 
-        if needzip:
-            out_path = os.path.join(output_folder, f'{folder}/{filebase}.*')
-            zip_path = os.path.join(output_folder, f'{filebase}.{folder}.zip')
-            cmd_line = f"zip -j {zip_path} {out_path}"
-
-            execute_shell(cmd_line=cmd_line, message=f"creating zip file for {write_format}")
-
-    # Generare Lingvo dictionary
-    out_path = os.path.join(output_folder, f'lingvo/{filebase}.dsl').replace(' ', '\\ ') 
-    cmd_line = f"ruby ./dsl-tools/tab2dsl/tab2dsl.rb --from-lang {dataFullSource} --to-lang {dataFullTarget} --dict-name {dataName} --output {out_path} {datafile}"
-    print(cmd_line)
-    subprocess.run(shlex.split(cmd_line))
-    pass
-
-
-"""
-        pyglossary = 'pyglossary'
-
-        # Generare Yomitan dictionary
-        out_path = os.path.join(output_folder, f'yomitan/{filebase}.yomitan.zip').replace(' ', '\\ ')
-        cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --write-format=Yomichan --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
-        print(cmd_line)
-        subprocess.run(shlex.split(cmd_line))
-
-        # Generare StarDict dictionary
-        out_path = os.path.join(output_folder, f'stardict/{filebase}.ifo').replace(' ', '\\ ')
-        cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
-        print(cmd_line)
-        subprocess.run(shlex.split(cmd_line))
-
-        # Compress to make one zip file for one startdict
-        out_path = os.path.join(output_folder, f'stardict/{filebase}.*')
-        zip_path = os.path.join(output_folder, f'{filebase}.stardict.zip')
-        cmd_line = f"zip -j {zip_path} {out_path}"
-        print(cmd_line)
-        subprocess.call(cmd_line, shell=True)
-
-        # Generare dictd dictionary
-        out_path = os.path.join(output_folder, f'dictd/{filebase}.index').replace(' ', '\\ ')
-        cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
-        print(cmd_line)
-        subprocess.run(shlex.split(cmd_line))
-
-        # Compress to make one zip file for one dictd
-        out_path = os.path.join(output_folder, f'dictd/{filebase}.*')
-        zip_path = os.path.join(output_folder, f'{filebase}.dictd.zip')
-        cmd_line = f"zip -j {zip_path} {out_path}"
-        print(cmd_line)
-        subprocess.call(cmd_line, shell=True)
-
-        # Generare Epub dictionary
-        out_path = os.path.join(output_folder, f'epub/{filebase}.epub').replace(' ', '\\ ')
-        cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
-        print(cmd_line)
-        subprocess.run(shlex.split(cmd_line))
-
-        # Generare Kobo dictionary
-        out_path = os.path.join(output_folder, f'kobo/{filebase}.kobo.zip').replace(' ', '\\ ')
-        cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
-        print(cmd_line)
-        subprocess.run(shlex.split(cmd_line))
-"""
 
 if __name__ == "__main__":
     main()
