@@ -17,7 +17,7 @@ env:
 
 concurrency:
   group: ${{ github.workflow }}
-  cancel-in-progress: false
+  cancel-in-progress: true
   
 jobs:
   build:
@@ -64,7 +64,7 @@ jobs:
       run: |
         python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab
 
-    - name: Zip all artifacts for release
+    - name: Report the results
       run: |
         ls -R -l $OUTPUT_DIR &&
         python ./bin/dict_summary.py --dict-dir=$INPUT_DIR --output-dir=$OUTPUT_DIR
@@ -78,7 +78,7 @@ jobs:
       id: create_release
       uses: ncipollo/release-action@v1
       with:
-          artifacts: "ext-output/*.*"
+          artifacts: "${{ env.OUTPUT_DIR }}/*.*,${{ env.INPUT_DIR }}/dict_summary.json"
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
           draft: true
