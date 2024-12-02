@@ -167,8 +167,9 @@ def main() -> None:
         datafilelist.clear()
 
         for key in common_keys:
+            include_dict = False
+            
             if dict_filters:
-                include_dict = False
                 for filter in dict_filters:
                     if filter in key:
                         include_dict = True
