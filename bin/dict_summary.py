@@ -178,14 +178,14 @@ def generate_summary_data(dict_dir, output_dir):
     files_status += f"- There are **{len(data)}** dict files.\n\n"
     files_status += f"- Total NEEDED files: **{len(needed_files)}**\n\n"
     files_status += f"- Total EXISTING files: **{len(existing_files)}** "
-    files_status += f"- or **{existing_dicts}** dictionaries. "
+    files_status += f"- or **{existing_dicts:.1f}** dictionaries. "
     if len(existing_files) % files_per_format != 0:
         files_status += "ABNORMAL NUMBER of files. Some dict has **missing format(s)**. Check missing files list for details.\n\n"
     else:
         files_status += "The number of files looks NORMAL.\n\n"
 
     files_status += f"- Total MISSING files: {len(missing_files)}** "
-    files_status += f"(or **{missing_dicts}** dictionaries which is {'CORRECT' if mismatched_dicts == 0 else 'IN-CORRECT'})\n\n"
+    files_status += f"(or **{missing_dicts:.1f}** dictionaries which is {'CORRECT' if mismatched_dicts == 0 else 'IN-CORRECT'})\n\n"
 
     files_status_details = "# Errors\n"
 
