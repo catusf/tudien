@@ -61,8 +61,8 @@ jobs:
     - name: Zip all artifacts for release
       run: |
         ls -R -l $OUTPUT_DIR &&
-        python ./bin/dict_summary.py --dict_dir=$INPUT_DIR --output_dir=$OUTPUT_DIR
-
+        # python ./bin/dict_summary.py --dict_dir=$INPUT_DIR --output_dir=$OUTPUT_DIR
+        python ./bin/dict_summary.py --dict-dir=$INPUT_DIR --output-dir=$OUTPUT_DIR
     - name: Get Current Timestamp
       id: timestamp
       run: echo "TIMESTAMP=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV

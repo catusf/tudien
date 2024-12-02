@@ -195,9 +195,9 @@ def main():
     """Main function to parse arguments and run the processes."""
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description="Generate a dictionary summary.")
-    parser.add_argument('dict_dir', type=str, nargs='?', default='dict', 
+    parser.add_argument('--dict-dir', type=str, default='dict', 
                         help="The directory containing the dictionary files (default is 'dict').")
-    parser.add_argument('output_dir', type=str, nargs='?', default='output', 
+    parser.add_argument('--output-dir', type=str, default='output', 
                         help="The directory containing the output files (default is 'output').")
     args = parser.parse_args()
 
