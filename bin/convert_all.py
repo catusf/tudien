@@ -63,8 +63,60 @@ def readDicInfo(filepath):
 
     return valuemap
 
+
+def execute_shell(cmd_line, message="", printout=True):
+    """
+    Executes a shell command and handles any errors that occur during execution.
+
+    Parameters:
+    cmd_line (str): The command line string to be executed.
+    message (str): An optional message to include in error output if the command fails.
+    printout (bool): If True, prints the command line before execution.
+
+    Returns:
+    bool: True if the command executes successfully, False if an error occurs.
+    """
+    try:
+        if printout:
+            print(cmd_line)
+
+        # subprocess.run(shlex.split(cmd_line), check=True)
+        subprocess.call(cmd_line, shell=True)
+        return True
+    except subprocess.CalledProcessError as e:
+        if message:
+            print(f"Error {message}: {e}")
+        else:
+            print(f"Error executing shell: {e}")
+
+        return False
+    
 DEBUG_FLAG = False
 
+import re
+
+def escape_forbidden_chars(text, forbidden_chars=r" (){}[]$*?^|<>\\"):
+    """
+    Escapes forbidden characters in a given text.
+
+    Args:
+        text (str): The input string to process.
+        forbidden_chars (str): A string containing characters to escape (default: common special chars).
+    
+    Returns:
+        str: The text with forbidden characters escaped.
+    """
+    # Create a regex pattern to match any of the forbidden characters
+    pattern = f"[{re.escape(forbidden_chars)}]"
+    
+    # Escape each match by prefixing it with a backslash
+    escaped_text = re.sub(pattern, r"\\\g<0>", text)
+    
+    return escaped_text
+
+# Example usage
+
+    
 def main() -> None:
     parser = argparse.ArgumentParser(description='Convert all dictionaries in a folder')
     parser.add_argument('-i', '--input_folder', required=True, help='Input folder containing .tsv and .dfo files')
@@ -75,8 +127,8 @@ def main() -> None:
 
     args, array = parser.parse_known_args()
 
-    input_folder = args.input_folder.replace(' ', '\\ ')
-    output_folder = args.output_folder.replace(' ', '\\ ')
+    input_folder = escape_forbidden_chars(args.input_folder)
+    output_folder = escape_forbidden_chars(args.output_folder)
     extension = args.extension
     metadata = args.metadata
     dict_filters = args.filter.split(",") if args.filter is not None else []
@@ -176,7 +228,7 @@ def main() -> None:
         dataSource = data['Source']
         dataFullSource = data['FullSource']
         dataFullTarget = data['FullTarget']
-        dataName = data["Name"].replace(' ', '\\ ')
+        dataName = escape_forbidden_chars(data["Name"])
         htmlDir = f'kindle'
         htmlOutDir = f'{input_folder}/{htmlDir}'
 
@@ -214,6 +266,43 @@ def main() -> None:
         print(cmd_line)
         subprocess.call(cmd_line, shell=True)
 
+
+    # Generate other dictionary formats using PyGlossary
+    pyglossary = 'pyglossary'
+    formats = [
+        ('Yomichan', 'yomitan', 'yomitan.zip', False),
+        ('Epub2', 'epub', 'epub', False),
+        ('Kobo', 'kobo', 'kobo.zip', False),
+        ('Stardict', 'stardict', 'ifo', True),
+        ('DictOrg', 'dictd', 'index', True),
+    ]
+
+    for write_format, folder, extension, needzip in formats:
+        _, filename = os.path.split(filepath)
+        filebase, _ = os.path.splitext(filename)
+        
+        out_path = os.path.join(output_folder, folder, f'{filebase}.{extension}')
+        cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --write-format={write_format} " \
+                   f"--source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {shlex.quote(out_path)}"
+        
+        execute_shell(cmd_line=cmd_line, message=f"generating {write_format}")
+
+        if needzip:
+            out_path = os.path.join(output_folder, f'{folder}/{filebase}.*')
+            zip_path = os.path.join(output_folder, f'{filebase}.{folder}.zip')
+            cmd_line = f"zip -j {zip_path} {out_path}"
+
+            execute_shell(cmd_line=cmd_line, message=f"creating zip file for {write_format}")
+
+    # Generare Lingvo dictionary
+    out_path = os.path.join(output_folder, f'lingvo/{filebase}.dsl').replace(' ', '\\ ') 
+    cmd_line = f"ruby ./dsl-tools/tab2dsl/tab2dsl.rb --from-lang {dataFullSource} --to-lang {dataFullTarget} --dict-name {dataName} --output {out_path} {datafile}"
+    print(cmd_line)
+    subprocess.run(shlex.split(cmd_line))
+    pass
+
+
+"""
         pyglossary = 'pyglossary'
 
         # Generare Yomitan dictionary
@@ -259,13 +348,7 @@ def main() -> None:
         cmd_line = f"{pyglossary} --ui=none --read-format=Tabfile --source-lang={dataSource} --target-lang={dataTarget} --name={dataName} {datafile} {out_path}"
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
-
-        # Generare Lingvo dictionary
-        out_path = os.path.join(output_folder, f'lingvo/{filebase}.dsl').replace(' ', '\\ ') 
-        cmd_line = f"ruby ./dsl-tools/tab2dsl/tab2dsl.rb --from-lang {dataFullSource} --to-lang {dataFullTarget} --dict-name {dataName} --output {out_path} {datafile}"
-        print(cmd_line)
-        subprocess.run(shlex.split(cmd_line))
-        pass
+"""
 
 if __name__ == "__main__":
     main()
