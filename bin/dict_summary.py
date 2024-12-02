@@ -4,6 +4,14 @@ import argparse
 import glob
 import subprocess
 
+# Change this to match the release tag
+TAG_DOWNLOAD = "v4.0"
+
+RELEASE_TEXT = """# Danh sách các file từ điển
+
+Dưới dây là danh sách các từ điển và các liên kết để download cho từng loại từ điển (máy đọc sách/app tương ứng).
+
+"""
 # Language code to Vietnamese name mapping
 language_names = {
     'vi': 'Tiếng Việt',
@@ -95,8 +103,6 @@ def get_downloadable_files(filebase, tag_download, folder_path):
         download_links.append(download_url)
     
     return download_links
-
-TAG_DOWNLOAD = "v3.0"
 
 def generate_summary_data(dict_dir, output_dir):
     """Generate a list of dictionaries containing metadata for each .dfo file."""
@@ -199,7 +205,8 @@ def generate_summary_data(dict_dir, output_dir):
 
 def generate_markdown_table(data, files_status):
     """Generate a markdown table from the data."""
-    markdown = ["| STT | Tên từ điển | Mô tả | Ngôn ngữ gốc | Ngôn ngữ đích | Tác giả/Biên tập | Nguồn | Phiên bản | Số mục từ | " + " | ".join([file['name'] for file in file_info])]
+    markdown = RELEASE_TEXT
+    markdown.extend(["| STT | Tên từ điển | Mô tả | Ngôn ngữ gốc | Ngôn ngữ đích | Tác giả/Biên tập | Nguồn | Phiên bản | Số mục từ | " + " | ".join([file['name'] for file in file_info])])
     markdown.append("| --- | --- | --- | --- | --- | --- | --- | --- | --- |" + " --- |" * len(file_info))
 
     for entry in data:
