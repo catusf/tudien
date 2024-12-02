@@ -13,6 +13,7 @@ on:
 env:
   INPUT_DIR: dict
   OUTPUT_DIR: output
+  REPORT_FILE: "$(INPUT_DIR)/dict_summary.md"
 
 concurrency:
   group: ${{ github.workflow }}
@@ -65,7 +66,9 @@ jobs:
         python ./bin/dict_summary.py --dict-dir=$INPUT_DIR --output-dir=$OUTPUT_DIR
     - name: Get Current Timestamp
       id: timestamp
-      run: echo "TIMESTAMP=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+      run: |
+        echo "TIMESTAMP=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV &&
+        echo "FILES_REPORT=$(cat "$REPORT_FILE")" >> $GITHUB_ENV 
 
     - name: Create a new release draft
       id: create_release
@@ -77,3 +80,4 @@ jobs:
           tag: ${{ github.ref }}
           draft: true
           name: "Release samples at ${{ github.ref }} - ${{ env.TIMESTAMP }}"
+          body: ${{ env.FILES_REPORT }}"
