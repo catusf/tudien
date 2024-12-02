@@ -75,7 +75,6 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
           artifacts: "output/*.*,dict/dict_summary.md"
-          body: If you can read this, we have forgotten to fill in the changelog. Sorry!
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
           draft: true
