@@ -78,7 +78,7 @@ jobs:
       id: create_release
       uses: ncipollo/release-action@v1
       with:
-          artifacts: "ext-output/*.*,ext-dict/dict_summary.md"
+          artifacts: "ext-output/*.*"
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
           draft: true

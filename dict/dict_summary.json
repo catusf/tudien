@@ -1,6 +1,5 @@
 [
     {
-        "Number": 4,
         "Name": "Từ điển Anh-Việt-Anh v1.1",
         "Description": "Từ điển Anh-Việt-Anh với các dạng từ tiếng Anh",
         "Source": "Tiếng Anh (en)",
@@ -17,10 +16,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietAnh.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietAnh.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietAnh.yomitan.zip"
-        ]
+        ],
+        "Number": 1
     },
     {
-        "Number": 5,
         "Name": "Từ điển Phật học Anh-Hán-Việt v1.1",
         "Description": "Từ điển Phật học Anh-Hán-Việt",
         "Source": "Tiếng Anh (en)",
@@ -37,10 +36,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Anh-Han-Viet.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Anh-Han-Viet.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Anh-Han-Viet.yomitan.zip"
-        ]
+        ],
+        "Number": 2
     },
     {
-        "Number": 22,
         "Name": "Từ điển Anh-Việt β v1.4",
         "Description": "Từ điển Anh-Việt β với các dạng từ tiếng Anh",
         "Source": "Tiếng Anh (en)",
@@ -57,10 +56,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietBeta.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietBeta.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/TudienAnhVietBeta.yomitan.zip"
-        ]
+        ],
+        "Number": 3
     },
     {
-        "Number": 1,
         "Name": "Từ điển Trung-Việt β (đại) v1.0",
         "Description": "Từ điển Trung-Việt β (cỡ đại)",
         "Source": "Tiếng Trung (zh)",
@@ -77,10 +76,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-small.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-small.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-small.yomitan.zip"
-        ]
+        ],
+        "Number": 4
     },
     {
-        "Number": 3,
         "Name": "Từ điển tra cứu các bộ tiếng Trung v1.0",
         "Description": "Từ điển Tra cứu 214 bộ Kangxi tiếng Trung",
         "Source": "Tiếng Trung (zh)",
@@ -97,10 +96,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/radical_name_pleco.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/radical_name_pleco.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/radical_name_pleco.yomitan.zip"
-        ]
+        ],
+        "Number": 5
     },
     {
-        "Number": 6,
         "Name": "Cấu thành từ tiếng Trung v1.0",
         "Description": "Từ điển phân tích các chữ cái tiếng Trung thành các cấu thành",
         "Source": "Tiếng Trung (zh)",
@@ -117,10 +116,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/Char-Component-Dict.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Char-Component-Dict.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Char-Component-Dict.yomitan.zip"
-        ]
+        ],
+        "Number": 6
     },
     {
-        "Number": 7,
         "Name": "Từ điển Trung-Việt β (nhỏ) v1.0",
         "Description": "Từ điển Trung-Việt β (cỡ nhỏ)",
         "Source": "Tiếng Trung (zh)",
@@ -137,10 +136,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-big.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-big.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-big.yomitan.zip"
-        ]
+        ],
+        "Number": 7
     },
     {
-        "Number": 8,
         "Name": "Chinese Thesaurus (small) v1.0",
         "Description": "Chinese Thesaurus (small size)",
         "Source": "Tiếng Trung (zh)",
@@ -157,10 +156,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-small.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-small.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-small.yomitan.zip"
-        ]
+        ],
+        "Number": 8
     },
     {
-        "Number": 9,
         "Name": "Chinese Thesaurus (mid) v1.0",
         "Description": "Chinese Thesaurus (mid size)",
         "Source": "Tiếng Trung (zh)",
@@ -177,10 +176,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-mid.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-mid.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-mid.yomitan.zip"
-        ]
+        ],
+        "Number": 9
     },
     {
-        "Number": 11,
         "Name": "Chinese Character Stories v1.0",
         "Description": "Chinese Character Stories based on the components",
         "Source": "Tiếng Trung (zh)",
@@ -197,10 +196,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/HanziHeroPleco.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/HanziHeroPleco.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/HanziHeroPleco.yomitan.zip"
-        ]
+        ],
+        "Number": 10
     },
     {
-        "Number": 12,
         "Name": "CCCE Dictionary (thin) v1.0",
         "Description": "CCCE Dictionary (thin)",
         "Source": "Tiếng Trung (zh)",
@@ -217,10 +216,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/CCCE-Thin.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/CCCE-Thin.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/CCCE-Thin.yomitan.zip"
-        ]
+        ],
+        "Number": 11
     },
     {
-        "Number": 14,
         "Name": "Chinese Thesaurus (big) v1.0",
         "Description": "Chinese Thesaurus (big size)",
         "Source": "Tiếng Trung (zh)",
@@ -237,10 +236,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-big.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-big.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/ChineseThesaurus-big.yomitan.zip"
-        ]
+        ],
+        "Number": 12
     },
     {
-        "Number": 15,
         "Name": "Phật quang Đại từ điển Hán ngữ v1.0",
         "Description": "Phật quang Đại từ điển Hán ngữ",
         "Source": "Tiếng Trung (zh)",
@@ -257,10 +256,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/Phat-Quang-Dai-tu-dien-Han-ngu.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Phat-Quang-Dai-tu-dien-Han-ngu.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Phat-Quang-Dai-tu-dien-Han-ngu.yomitan.zip"
-        ]
+        ],
+        "Number": 13
     },
     {
-        "Number": 16,
         "Name": "Từ điển từ Hán Việt Thiền Chửu + Trần Văn Chánh v1.0",
         "Description": "TTừ điển từ Hán Việt Thiền Chửu + Trần Văn Chánh",
         "Source": "Tiếng Trung (zh)",
@@ -277,10 +276,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-ThienChuu-TranVanChanh.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-ThienChuu-TranVanChanh.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-ThienChuu-TranVanChanh.yomitan.zip"
-        ]
+        ],
+        "Number": 14
     },
     {
-        "Number": 19,
         "Name": "Từ điển Trung-Việt β (trung) v1.0",
         "Description": "Từ điển Trung-Việt β (cỡ trung)",
         "Source": "Tiếng Trung (zh)",
@@ -297,10 +296,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-mid.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-mid.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/TrungViet-mid.yomitan.zip"
-        ]
+        ],
+        "Number": 15
     },
     {
-        "Number": 2,
         "Name": "Từ điển tổng hợp Phật học v1.0",
         "Description": "Từ điển tổng hợp Phật học",
         "Source": "Tiếng Việt (vi)",
@@ -317,10 +316,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Tong-hop-Phat-hoc.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Tong-hop-Phat-hoc.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Tong-hop-Phat-hoc.yomitan.zip"
-        ]
+        ],
+        "Number": 16
     },
     {
-        "Number": 10,
         "Name": "Từ điển Phật học Việt Anh - Minh Thông v1.0",
         "Description": "Từ điển Phật học Việt Anh - Minh Thông",
         "Source": "Tiếng Việt (vi)",
@@ -337,10 +336,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Minh-Thong.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Minh-Thong.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Minh-Thong.yomitan.zip"
-        ]
+        ],
+        "Number": 17
     },
     {
-        "Number": 13,
         "Name": "Rộng mở tâm hồn v1.0",
         "Description": "Rộng mở tâm hồn",
         "Source": "Tiếng Việt (vi)",
@@ -357,10 +356,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/Rong-mo-tam-hon.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Rong-mo-tam-hon.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Rong-mo-tam-hon.yomitan.zip"
-        ]
+        ],
+        "Number": 18
     },
     {
-        "Number": 17,
         "Name": "Từ điển Phật học Việt Anh - Thiện Phúc v1.0",
         "Description": "Từ điển Phật học Việt Anh - Thiện Phúc",
         "Source": "Tiếng Việt (vi)",
@@ -377,10 +376,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Thien-Phuc.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Thien-Phuc.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Thien-Phuc.yomitan.zip"
-        ]
+        ],
+        "Number": 19
     },
     {
-        "Number": 18,
         "Name": "Từ điển Phật Quang v1.0",
         "Description": "Từ điển Phật Quang",
         "Source": "Tiếng Việt (vi)",
@@ -397,10 +396,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-Quang.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-Quang.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-Quang.yomitan.zip"
-        ]
+        ],
+        "Number": 20
     },
     {
-        "Number": 20,
         "Name": "Từ điển Phật học Việt Anh - Đồng Loại v1.0",
         "Description": "Từ điển Phật học Việt Anh - Đồng Loại",
         "Source": "Tiếng Việt (vi)",
@@ -417,10 +416,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Dong-Loai.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Dong-Loai.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Viet-Anh-Dong-Loai.yomitan.zip"
-        ]
+        ],
+        "Number": 21
     },
     {
-        "Number": 21,
         "Name": "Từ điển Đạo Uyển v1.0",
         "Description": "Từ điển Đạo Uyển",
         "Source": "Tiếng Việt (vi)",
@@ -437,10 +436,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Dao-Uyen.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Dao-Uyen.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Dao-Uyen.yomitan.zip"
-        ]
+        ],
+        "Number": 22
     },
     {
-        "Number": 23,
         "Name": "Từ điển Phật học Tinh tuyển v1.0",
         "Description": "Từ điển Phật học Tinh tuyển",
         "Source": "Tiếng Việt (vi)",
@@ -457,10 +456,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Tinh-tuyen.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Tinh-tuyen.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Tu-dien-Phat-hoc-Tinh-tuyen.yomitan.zip"
-        ]
+        ],
+        "Number": 23
     },
     {
-        "Number": 24,
         "Name": "Ngữ vựng danh từ thiền học v1.0",
         "Description": "Ngữ vựng danh từ thiền học",
         "Source": "Tiếng Việt (vi)",
@@ -477,10 +476,10 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/Ngu-vung-Danh-tu-Thien-hoc.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Ngu-vung-Danh-tu-Thien-hoc.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/Ngu-vung-Danh-tu-Thien-hoc.yomitan.zip"
-        ]
+        ],
+        "Number": 24
     },
     {
-        "Number": 25,
         "Name": "Từ điển từ Hán Việt Thiền Chửu v1.0",
         "Description": "Từ điển từ Hán Việt Thiền Chửu",
         "Source": "Tiếng Việt (vi)",
@@ -497,6 +496,7 @@
             "https://github.com/catusf/tudien/releases/tag/v3.0/TudienThienChuu.mobi",
             "https://github.com/catusf/tudien/releases/tag/v3.0/TudienThienChuu.stardict.zip",
             "https://github.com/catusf/tudien/releases/tag/v3.0/TudienThienChuu.yomitan.zip"
-        ]
+        ],
+        "Number": 25
     }
 ]

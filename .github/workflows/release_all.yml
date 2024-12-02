@@ -72,7 +72,7 @@ jobs:
       id: create_release
       uses: ncipollo/release-action@v1
       with:
-          artifacts: "output/*.*,dict/dict_summary.md"
+          artifacts: "output/*.*"
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
           draft: true
