@@ -83,4 +83,4 @@ jobs:
           tag: ${{ github.ref }}
           draft: true
           name: "Release ALL dictionaries at ${{ github.ref }} - ${{ env.TIMESTAMP }}"
-          bodyFile: dict/dict_summary.md
+          bodyFile: ext-dict/dict_summary.md
