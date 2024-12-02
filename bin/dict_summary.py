@@ -204,7 +204,7 @@ def generate_markdown_table(data, files_status):
 
     for entry in data:
         download_links = " | ".join([f"[Download]({url})" for url in entry['Download']])
-        markdown.append(f"| {entry['Number']} | {entry['Name']} | {entry['Description']} | {entry['Source']} | {entry['Target']} | {entry['Owner/Editor']} | [Reference]({entry['URL']}) | {entry['Version']} | {entry['Definitions']} | {download_links} |")
+        markdown.append(f"| {entry['Number']} | {entry['Name']} | {entry['Description']} | {entry['Source']} | {entry['Target']} | {entry['Owner/Editor']} | [Reference]({entry['URL']}) | {entry['Version']} | {entry['Definitions']:.} | {download_links} |")
     
     markdown.append(files_status)
 
