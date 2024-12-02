@@ -169,9 +169,9 @@ def generate_summary_data(dict_dir, output_dir):
     files_status += f"- Total MISSING files: {len(missing_files)}** "
     files_status += f"(or **{missing_dicts}** dictionaries which is {'CORRECT' if mismatched_dicts==0 else 'IN-CORRECT'})\n\n"
 
-    files_status += "# Errors\n"
+    files_status_details = "# Errors\n"
 
-    files_status_details = f"## Missing files list\n\n"
+    files_status_details += f"## Missing files list\n\n"
     for item in missing_files:
         files_status_details += f'\t{item}\n'
 
