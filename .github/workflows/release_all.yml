@@ -11,7 +11,7 @@ on:
       - bin/create_inflections.py
 
 env:
-  INPUT_DIR: dict
+  INPUT_DIR: ext-dict
   OUTPUT_DIR: output
 
 concurrency:
