@@ -206,8 +206,8 @@ def generate_summary_data(dict_dir, output_dir):
 
 def generate_markdown_table(data, files_status):
     """Generate a markdown table from the data."""
-    markdown = RELEASE_TEXT
-    markdown.extend(["| STT | Tên từ điển | Mô tả | Ngôn ngữ gốc | Ngôn ngữ đích | Tác giả/Biên tập | Nguồn | Phiên bản | Số mục từ | " + " | ".join([file['name'] for file in file_info])])
+    markdown = [RELEASE_TEXT]
+    markdown.append("| STT | Tên từ điển | Mô tả | Ngôn ngữ gốc | Ngôn ngữ đích | Tác giả/Biên tập | Nguồn | Phiên bản | Số mục từ | " + " | ".join([file['name'] for file in file_info]))
     markdown.append("| --- | --- | --- | --- | --- | --- | --- | --- | --- |" + " --- |" * len(file_info))
 
     for entry in data:
