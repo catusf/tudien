@@ -56,7 +56,7 @@ jobs:
 
     - name: Build all dictionaries
       run: |
-        python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab --filter=ThienChuu
+        python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab --filter=Hero
         
     - name: Zip all artifacts for release
       run: |
