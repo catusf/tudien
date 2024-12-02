@@ -150,29 +150,33 @@ def generate_summary_data(dict_dir, output_dir):
     files_status = "# Status report\n\n"
     files_status += "## Counts\n\n"
     files_per_format = len(extensions)
+    existing_dicts = (len(existing_files) - files_per_format)/ files_per_format
+    missing_dicts = len(missing_files)/files_per_format
+    mismatched_dicts = num_dict_found - (existing_dicts + missing_dicts)
+
     assert(num_dict_found == len(data))
     assert(files_per_format * (num_dict_found + 1) == len(needed_files))
 
     files_status += f"- There are **{len(data)}** dict files.\n\n"
     files_status += f"- Total NEEDED files: **{len(needed_files)}**\n\n"
     files_status += f"- Total EXISTING files: **{len(existing_files)}** "
-    files_status += f"- or **{(len(existing_files) - files_per_format)/ files_per_format}** dictionaries. "
+    files_status += f"- or **{existing_dicts}** dictionaries. "
     if len(existing_files) % files_per_format != 0:
         files_status += "ABNORMAL NUMBER of files. Some dict has **missing format(s)**. Check missing files list for details.\n\n"
     else:
         files_status += "The number of files looks NORMAL.\n\n"
 
     files_status += f"- Total MISSING files: {len(missing_files)}** "
-    files_status += f"(or **{len(missing_files)/files_per_format}** dictionaries)\n\n"
+    files_status += f"(or **{missing_dicts}** dictionaries which is {'CORRECT' if mismatched_dicts==0 else 'IN-CORRECT'})\n\n"
 
     files_status += "# Errors\n"
 
-    files_status += f"## Missing files list\n\n"
+    files_status_details = f"## Missing files list\n\n"
     for item in missing_files:
-        files_status += f'\t{item}\n'
+        files_status_details += f'\t{item}\n'
 
     print(files_status)
-    return data, files_status
+    return data, files_status + files_status_details
 
 def generate_markdown_table(data, files_status):
     """Generate a markdown table from the data."""
