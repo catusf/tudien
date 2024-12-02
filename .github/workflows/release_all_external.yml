@@ -9,6 +9,7 @@ on:
       - '*.md'
       - LICENSE
       - bin/create_inflections.py      
+      - .github/workflows/release_all.yml   
 
 env:
   INPUT_DIR: ./ext-dict

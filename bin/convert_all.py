@@ -71,6 +71,7 @@ def main() -> None:
     parser.add_argument('-o', '--output_folder', required=True, help='Output folder containing dictionary files')
     parser.add_argument('-e', '--extension', default='tab', help='Filename extention for input dictionary files. Default is .tab')
     parser.add_argument('-m', '--metadata', default='dfo', help='Filename extention for input metadata for dictionary. Default is .dfo')
+    parser.add_argument('-f', '--filter', help='Filter only dictionary entries with matching keys (seperated by comma)')
 
     args, array = parser.parse_known_args()
 
@@ -78,6 +79,7 @@ def main() -> None:
     output_folder = args.output_folder.replace(' ', '\\ ')
     extension = args.extension
     metadata = args.metadata
+    dict_filters = args.filter.split(",") if args.filter is not None else []
 
     if input_folder:
         metafilelist = sorted(glob.glob(input_folder + f'/*.{metadata}'), reverse=True)
@@ -113,6 +115,19 @@ def main() -> None:
         datafilelist.clear()
 
         for key in common_keys:
+            if dict_filters:
+                include_dict = False
+                for filter in dict_filters:
+                    if filter in key:
+                        include_dict = True
+
+                        break
+            
+            if include_dict:
+                print(f"Including this dictionary: {key}")
+            else:
+                continue
+
             metafilelist.append(meta_dict[key])
 
             datafile = data_dict[key]
@@ -143,7 +158,7 @@ def main() -> None:
 
     # use_only_these = {'Tu-dien-ThienChuu-TranVanChanh'}
     for filepath, datafile in zip(metafilelist, datafilelist):
-        folder, filename = os.path.split(filepath)
+        _, filename = os.path.split(filepath)
         filebase, fileext = os.path.splitext(filename)
 
         # if filebase not in use_only_these:
