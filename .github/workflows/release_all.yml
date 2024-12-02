@@ -31,10 +31,6 @@ jobs:
         fetch-depth: 1
         submodules: 'recursive'
 
-    - name: Generates reports on dictionary files
-      run: |
-        python bin/gen_summary.py $INPUT_DIR
-
     - name: Setup Ubuntu packages
       run: |
         # Call a script so that it can be used in a shell/container as well
@@ -65,7 +61,7 @@ jobs:
     - name: Zip all artifacts for release
       run: |
         ls -R -l $OUTPUT_DIR &&
-        python ./bin/dict_summary.py
+        python ./bin/dict_summary.py --dict_dir=$INPUT_DIR --output_dir=$OUTPUT_DIR
 
     - name: Get Current Timestamp
       id: timestamp
