@@ -58,7 +58,7 @@ jobs:
       run: |
         python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab --filter=Hero
         
-    - name: Zip all artifacts for release
+    - name: Report the results
       run: |
         ls -R -l $OUTPUT_DIR &&
         python ./bin/dict_summary.py --dict-dir=$INPUT_DIR --output-dir=$OUTPUT_DIR
@@ -77,4 +77,4 @@ jobs:
           tag: ${{ github.ref }}
           draft: true
           name: "Release samples at ${{ github.ref }} - ${{ env.TIMESTAMP }}"
-          bodyFile: dict/dict_summary.md
+          bodyFile: ${{ env.INPUT_DIR }}/dict_summary.md
