@@ -24,7 +24,7 @@ def main():
     """Main function to parse arguments and run the processes."""
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description="Decompress .bz2 files and generate a report.")
-    parser.add_argument('dict_dir', type=str, nargs='?', default='dict', 
+    parser.add_argument('--dict_dir', type=str, nargs='?', default='dict', 
                         help="The directory containing the .bz2 files (default is 'dict').")
     args = parser.parse_args()
 

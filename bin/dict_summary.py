@@ -2,6 +2,7 @@ import os
 import json
 import argparse
 import glob
+import subprocess
 
 # Language code to Vietnamese name mapping
 language_names = {
@@ -61,25 +62,36 @@ def count_lines_in_tab(tab_path):
         print(f"Error: {tab_path} not found.")
         return 0
 
-extensions = [
-    'dictd.zip', 'dsl.dz', 'epub', 'kobo.zip', 'mobi', 'stardict.zip', 'yomitan.zip'
+# Merged list of dictionaries containing extensions, folders, and names
+file_info = [
+    {"extension": 'dictd.zip', 'folder': 'dictd', 'name': 'DICT'},
+    {"extension": 'dsl.dz', 'folder': 'lingvo', 'name': 'Lingvo DSL'},
+    {"extension": 'epub', 'folder': 'epub', 'name': 'EPUB'},
+    {"extension": 'kobo.zip', 'folder': 'kobo', 'name': 'Kobo'},
+    {"extension": 'mobi', 'folder': 'kindle', 'name': 'Kindle'},
+    {"extension": 'stardict.zip', 'folder': 'stardict', 'name': 'StarDict'},
+    {"extension": 'yomitan.zip', 'folder': 'yomitan', 'name': 'Yomitan/Yomichan'}
 ]
 
-folders = [
-    'dictd', 'lingvo', 'epub', 'kobo', 'kindle', 'stardict', 'yomitan'
-]
-
-extension_names = [
-    'DICT', 'Lingvo DSL', 'EPUB', 'Kobo', 'Kindle', 'StarDict', 'Yomitan/Yomichan'
-]
+def decompress_files(dict_dir):
+    """Decompress all .bz2 files in the given directory."""
+    for file_name in os.listdir(dict_dir):
+        if file_name.endswith('.bz2'):
+            file_path = os.path.join(dict_dir, file_name)
+            print(f"Decompressing {file_path}...")
+            
+            # Run bzip2 command to decompress
+            subprocess.run(['bzip2', '-dkf', file_path], check=True)
+            
+            print("done.")
 
 def get_downloadable_files(filebase, tag_download, folder_path):
     """Return the downloadable file links based on the filebase name."""
     download_links = []
 
-    for ext in extensions:
+    for file in file_info:
         # Generate the URL for the downloadable file
-        download_url = f"https://github.com/catusf/tudien/releases/tag/{tag_download}/{filebase}.{ext}"
+        download_url = f"https://github.com/catusf/tudien/releases/tag/{tag_download}/{filebase}.{file['extension']}"
         download_links.append(download_url)
     
     return download_links
@@ -109,8 +121,8 @@ def generate_summary_data(dict_dir, output_dir):
         # Get the additional downloadable files
         download_urls = get_downloadable_files(filebase, TAG_DOWNLOAD, dict_dir)
 
-        for extension in extensions:
-            needed_files.append(os.path.join(output_dir, filebase + "." + extension))
+        for file in file_info:
+            needed_files.append(os.path.join(output_dir, filebase + "." + file['extension']))
 
         # Get full language names in Vietnamese
         source_full_name = language_names.get(metadata['Source'], f"Unknown ({metadata['Source']})")
@@ -118,7 +130,6 @@ def generate_summary_data(dict_dir, output_dir):
 
         # Append the data to the list
         data.append({
-            # "Number": len(data) + 1,  # Add numbering
             "Name": metadata['Name'],
             "Description": metadata['Description'],
             "Source": f"{source_full_name} ({metadata['Source']})",  # Full language name in Vietnamese
@@ -132,8 +143,8 @@ def generate_summary_data(dict_dir, output_dir):
 
         num_dict_found += 1
     
-    for folder in folders:
-        needed_files.append(os.path.join(output_dir, f"all-{folder}.zip"))
+    for file in file_info:
+        needed_files.append(os.path.join(output_dir, f"all-{file['folder']}.zip"))
 
     data.sort(key=lambda x: x['Source'])
 
@@ -152,9 +163,13 @@ def generate_summary_data(dict_dir, output_dir):
 
     files_status = "# Status report\n\n"
     files_status += "## Counts\n\n"
-    files_per_format = len(extensions)
-    existing_dicts = (len(existing_files) - files_per_format)/ files_per_format
-    missing_dicts = len(missing_files)/files_per_format
+    files_per_format = len(file_info)
+    existing_dicts = (len(existing_files) - files_per_format) / files_per_format
+    missing_dicts = len(missing_files) / files_per_format
+    if existing_dicts < 0:
+        existing_dicts = 0
+        missing_dicts -= 1
+
     mismatched_dicts = num_dict_found - (existing_dicts + missing_dicts)
 
     assert(num_dict_found == len(data))
@@ -170,7 +185,7 @@ def generate_summary_data(dict_dir, output_dir):
         files_status += "The number of files looks NORMAL.\n\n"
 
     files_status += f"- Total MISSING files: {len(missing_files)}** "
-    files_status += f"(or **{missing_dicts}** dictionaries which is {'CORRECT' if mismatched_dicts==0 else 'IN-CORRECT'})\n\n"
+    files_status += f"(or **{missing_dicts}** dictionaries which is {'CORRECT' if mismatched_dicts == 0 else 'IN-CORRECT'})\n\n"
 
     files_status_details = "# Errors\n"
 
@@ -183,8 +198,8 @@ def generate_summary_data(dict_dir, output_dir):
 
 def generate_markdown_table(data, files_status):
     """Generate a markdown table from the data."""
-    markdown = ["| STT | Tên từ điển | Mô tả | Ngôn ngữ gốc | Ngôn ngữ đích | Tác giả/Biên tập | Nguồn | Phiên bản | Số mục từ | " + " | ".join(extension_names)]
-    markdown.append("| --- | --- | --- | --- | --- | --- | --- | --- | --- |" + " --- |" * len(extensions))
+    markdown = ["| STT | Tên từ điển | Mô tả | Ngôn ngữ gốc | Ngôn ngữ đích | Tác giả/Biên tập | Nguồn | Phiên bản | Số mục từ | " + " | ".join([file['name'] for file in file_info])]
+    markdown.append("| --- | --- | --- | --- | --- | --- | --- | --- | --- |" + " --- |" * len(file_info))
 
     for entry in data:
         download_links = " | ".join([f"[Download]({url})" for url in entry['Download']])
@@ -201,11 +216,16 @@ def main():
     parser.add_argument('--dict-dir', type=str, default='dict', 
                         help="The directory containing the dictionary files (default is 'dict').")
     parser.add_argument('--output-dir', type=str, default='output', 
-                        help="The directory containing the output files (default is 'output').")
+                        help="The output directory (default is 'output').")
     args = parser.parse_args()
 
-    # Generate the summary data and save it as a JSON file
-    data, files_status = generate_summary_data(args.dict_dir, args.output_dir)
+    dict_dir = args.dict_dir
+    output_dir = args.output_dir
+
+    decompress_files(dict_dir)
+
+    # Step 1: Generate summary data
+    data, files_status = generate_summary_data(dict_dir, output_dir)
 
     # Generate the markdown table from the JSON data
     markdown_table = generate_markdown_table(data, files_status)
