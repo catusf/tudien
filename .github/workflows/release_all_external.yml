@@ -16,7 +16,7 @@ env:
   OUTPUT_DIR: ext-output
 
 concurrency:
-  group: ${{ github.ref }}
+  group: ${{ github.workflow }}
   cancel-in-progress: false
   
 jobs:
