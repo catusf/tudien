@@ -33,9 +33,9 @@
 
 - Total NEEDED files: **182**
 
-- Total EXISTING files: **28** - or **3.0** dictionaries
+- Total EXISTING files: **28** - or **3.0** dictionaries. The number of files looks NORMAL.
 
-- Total MISSING files: 154** (or **22.0** dictionaries)
+- Total MISSING files: 154** (or **22.0** dictionaries which is CORRECT)
 
 # Errors
 ## Missing files list

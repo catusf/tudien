@@ -176,10 +176,9 @@ def main() -> None:
 
                         break
             
-            if include_dict:
-                print(f"Including this dictionary: {key}")
-            else:
-                continue
+                if not include_dict:
+                    print(f"Excluding this dictionary: {key}")
+                    continue
 
             metafilelist.append(meta_dict[key])
 
