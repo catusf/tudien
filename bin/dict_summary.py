@@ -192,7 +192,8 @@ def generate_summary_data(dict_dir, output_dir):
     files_status_details += f"## Missing files list\n\n"
     for item in missing_files:
         files_status_details += f'\t{item}\n'
-
+        
+    print(files_status_details)
     print(files_status)
     return data, files_status + files_status_details
 
@@ -229,7 +230,6 @@ def main():
 
     # Generate the markdown table from the JSON data
     markdown_table = generate_markdown_table(data, files_status)
-
 
     # Save the markdown table to a .md file
     with open(os.path.join(args.dict_dir, "dict_summary.md"), 'w', encoding='utf-8') as file:
