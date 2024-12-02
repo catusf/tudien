@@ -118,7 +118,7 @@ def generate_summary_data(dict_dir, output_dir):
 
         # Append the data to the list
         data.append({
-            "Number": len(data) + 1,  # Add numbering
+            # "Number": len(data) + 1,  # Add numbering
             "Name": metadata['Name'],
             "Description": metadata['Description'],
             "Source": f"{source_full_name} ({metadata['Source']})",  # Full language name in Vietnamese
@@ -137,6 +137,9 @@ def generate_summary_data(dict_dir, output_dir):
 
     data.sort(key=lambda x: x['Source'])
 
+    for index, item in enumerate(data): 
+        data[index]["Number"] = index + 1
+        
     # Save the list of dictionaries as a JSON file
     with open(os.path.join(dict_dir, "dict_summary.json"), 'w', encoding='utf-8') as json_file:
         json.dump(data, json_file, ensure_ascii=False, indent=4)
