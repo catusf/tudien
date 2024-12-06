@@ -9,14 +9,15 @@ on:
       - '*.md'
       - LICENSE
       - bin/create_inflections.py      
+      - .github/workflows/release_all.yml   
 
 env:
-  INPUT_DIR: ./ext-dict
-  OUTPUT_DIR: ./ext-output
+  INPUT_DIR: ext-dict
+  OUTPUT_DIR: ext-output
 
 concurrency:
-  group: environment-${{ github.ref }}
-  cancel-in-progress: false
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
   
 jobs:
   build:
@@ -30,10 +31,6 @@ jobs:
       with:
         fetch-depth: 1
         submodules: 'recursive'
-
-    - name: Generates reports on dictionary files
-      run: |
-        python bin/gen_summary.py $INPUT_DIR
 
     - name: Setup Ubuntu packages
       run: |
@@ -67,24 +64,23 @@ jobs:
       run: |
         python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab
 
-    - name: Zip all artifacts for release
+    - name: Report the results
       run: |
-        zip -9 -j $OUTPUT_DIR/all-stardict.zip $OUTPUT_DIR/stardict/*.*      &&
-        zip -9 -j $OUTPUT_DIR/all-epub.zip     $OUTPUT_DIR/epub/*.*          &&
-        zip -9 -j $OUTPUT_DIR/all-kobo.zip     $OUTPUT_DIR/kobo/*.*          &&
-        zip -9 -j $OUTPUT_DIR/all-lingvo.zip   $OUTPUT_DIR/lingvo/*.*        &&
-        zip -9 -j $OUTPUT_DIR/all-kindle.zip   $OUTPUT_DIR/kindle/*.*        &&
-        zip -9 -j $OUTPUT_DIR/all-dictd.zip    $OUTPUT_DIR/dictd/*.*         &&
-        zip -9 -j $OUTPUT_DIR/all-yomitan.zip  $OUTPUT_DIR/yomitan/*.*  &&
-        ls -R -l $OUTPUT_DIR
+        ls -R -l $OUTPUT_DIR &&
+        python ./bin/dict_summary.py --dict-dir=$INPUT_DIR --output-dir=$OUTPUT_DIR
+
+    - name: Get Current Timestamp
+      id: timestamp
+      run: |
+        echo "TIMESTAMP=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
     - name: Create a new release draft
       id: create_release
       uses: ncipollo/release-action@v1
       with:
-          artifacts: "./ext-dict/dict_summary.md,./ext-output/*.zip,./ext-output/kindle/*.mobi,./ext-output/kobo/*.zip,./ext-output/lingvo/*.dz,./ext-output/epub/*.epub,./ext-output/yomitan/*.zip"
-          body: If you can read this, we have forgotten to fill in the changelog. Sorry!
+          artifacts: "${{ env.OUTPUT_DIR }}/*.*,${{ env.INPUT_DIR }}/dict_summary.json"
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
           draft: true
-          name: External Release ${{ github.ref }}
+          name: "Release ALL dictionaries at ${{ github.ref }} - ${{ env.TIMESTAMP }}"
+          bodyFile: ${{ env.INPUT_DIR }}/dict_summary.md

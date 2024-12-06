@@ -5,14 +5,24 @@
     "version": "0.2.0",
     "configurations": [
         {
+<<<<<<< HEAD
             "name": "Python Debugger: Current File with Arguments",
+=======
+            "name": "Python: Current File",
+>>>>>>> 376004ac6181baa40ae9042204a57630f6e2a9ba
             "type": "debugpy",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
             "args": [
+<<<<<<< HEAD
                 "--extensions=mobi,epub",
                 "--read-only=no"
+=======
+                "--input_folder=./dict",
+                "--output_folder=./output",
+                "--extension=tab",
+>>>>>>> 376004ac6181baa40ae9042204a57630f6e2a9ba
             ]
         }
     ]

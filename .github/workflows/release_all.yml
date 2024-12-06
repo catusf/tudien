@@ -1,4 +1,4 @@
-name: Release all dictionaries
+name: Release sample dictionaries
 
 on:
   workflow_dispatch:
@@ -11,13 +11,13 @@ on:
       - bin/create_inflections.py
 
 env:
-  INPUT_DIR: ./dict
-  OUTPUT_DIR: ./output
+  INPUT_DIR: dict
+  OUTPUT_DIR: output
 
-concurrency: 
+concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: true
-
+  
 jobs:
   build:
     if: "!contains(github.event.head_commit.message, 'AUTO')"
@@ -30,10 +30,6 @@ jobs:
       with:
         fetch-depth: 1
         submodules: 'recursive'
-
-    - name: Generates reports on dictionary files
-      run: |
-        python bin/gen_summary.py $INPUT_DIR
 
     - name: Setup Ubuntu packages
       run: |
@@ -60,26 +56,25 @@ jobs:
 
     - name: Build all dictionaries
       run: |
-        python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab
+        python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab --filter=Hero
         
-    - name: Zip all artifacts for release
+    - name: Report the results
       run: |
-        zip -9 -j $OUTPUT_DIR/all-stardict.zip $OUTPUT_DIR/stardict/*.* &&
-        zip -9 -j $OUTPUT_DIR/all-epub.zip     $OUTPUT_DIR/epub/*.*     &&
-        zip -9 -j $OUTPUT_DIR/all-kobo.zip     $OUTPUT_DIR/kobo/*.*     &&
-        zip -9 -j $OUTPUT_DIR/all-lingvo.zip   $OUTPUT_DIR/lingvo/*.*   &&
-        zip -9 -j $OUTPUT_DIR/all-kindle.zip   $OUTPUT_DIR/kindle/*.*   &&
-        zip -9 -j $OUTPUT_DIR/all-dictd.zip    $OUTPUT_DIR/dictd/*.*    &&
-        zip -9 -j $OUTPUT_DIR/all-yomitan.zip  $OUTPUT_DIR/yomitan/*.*  &&
-        ls -R -l $OUTPUT_DIR
+        ls -R -l $OUTPUT_DIR &&
+        python ./bin/dict_summary.py --dict-dir=$INPUT_DIR --output-dir=$OUTPUT_DIR
+
+    - name: Get Current Timestamp
+      id: timestamp
+      run: |
+        echo "TIMESTAMP=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
     - name: Create a new release draft
       id: create_release
       uses: ncipollo/release-action@v1
       with:
-          artifacts: "./dict/dict_summary.md,./output/*.zip,./output/kindle/*.mobi,./output/kobo/*.zip,./output/lingvo/*.dz,./output/epub/*.epub,./output/yomitan/*.zip"
-          body: If you can read this, we have forgotten to fill in the changelog. Sorry!
+          artifacts: "${{ env.OUTPUT_DIR }}/*.*,${{ env.INPUT_DIR }}/dict_summary.json"
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
           draft: true
-          name: Release ${{ github.ref }}
+          name: "Release samples at ${{ github.ref }} - ${{ env.TIMESTAMP }}"
+          bodyFile: ${{ env.INPUT_DIR }}/dict_summary.md
