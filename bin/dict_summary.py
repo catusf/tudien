@@ -1,6 +1,7 @@
 import os
 import json
 import argparse
+import langcodes
 
 DOWNLOAD_TAG = "v4.0" # Set the GitHub tag version that asscociates with the release
 
@@ -119,8 +120,10 @@ def generate_summary(dict_dir):
             download_urls = get_downloadable_files(filebase, DOWNLOAD_TAG, dict_dir)
 
             # Get full language names in Vietnamese
-            source_full_name = language_names.get(metadata['Source'], f"Unknown ({metadata['Source']})")
-            target_full_name = language_names.get(metadata['Target'], f"Unknown ({metadata['Target']})")
+            source_full_name = langcodes.Language.get(metadata['Source']).display_name('vi')
+            # language_names.get(metadata['Source'], f"Unknown ({metadata['Source']})")
+            target_full_name = langcodes.Language.get(metadata['Target']).display_name('vi')
+            #language_names.get(metadata['Target'], f"Unknown ({metadata['Target']})")
 
             # Append the data to the list
             data.append({

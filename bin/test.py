@@ -1,10 +1,8 @@
-from multiprocessing import Pool
-data = [
- {"name": "Delphi"}, {"name": "Orion"}, {"name": "Asher"}, {"name": "Baccus"}
-]
-def fun(object):
- print(object)
+import langcodes
 
-with Pool(4) as pool:
-    pool.map(fun,data)
-#Prints: """
+language_names = {
+    lang_code: langcodes.Language.get(lang_code).display_name('vi')
+    for lang_code in ['vi', 'en', 'fr', 'de', 'es', 'it', 'ja', 'ko', 'zh', 'ru']
+}
+
+print(language_names)

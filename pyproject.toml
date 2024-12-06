@@ -1,0 +1,16 @@
+[project]
+name = "tudien"
+version = "0.1.0"
+description = "Tudien project "
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.11.1",
+    "iso-language-codes>=1.1.0",
+    "langcodes>=3.5.0",
+    "lxml>=4.9.1",
+    "marisa-trie>=0.7.7",
+    "pinyin>=0.4.0",
+    "pyglossary>=4.6.1",
+    "ruff>=0.8.2",
+]
