@@ -2,6 +2,8 @@ import os
 import json
 import argparse
 
+DOWNLOAD_TAG = "v4.0" # Set the GitHub tag version that asscociates with the release
+
 # Language code to Vietnamese name mapping
 language_names = {
     'vi': 'Tiếng Việt',
@@ -60,32 +62,49 @@ def count_lines_in_tab(tab_path):
         print(f"Error: {tab_path} not found.")
         return 0
 
-extensions = [
-    'dictd.zip', 'dsl.dz', 'epub', 'kobo.zip', 'mobi', 'stardict.zip', 'yomitan.zip'
-]
+SUPPORTED_EXTENSIONS = {
+    'dictd.zip': "DictD", 
+    'dsl.dz': "Lingvo (DSL)", 
+    'epub': "EPUB", 
+    'kobo.zip': "Kobo", 
+    'mobi': "Kindle (.mobi)", 
+    'stardict.zip': "StartDict", 
+    'yomitan.zip': "Yomitan",
+}
 
-def get_downloadable_files(filebase, tag_download, folder_path):
+COLUMNS = {
+    "name": "Name", 
+    "desc": "Description", 
+    "source": "Source", 
+    "target":"Target", 
+    "owner": "Owner", 
+    "url":"URL", 
+    "version": "Version", 
+    "definition": "Definitions", 
+}
+
+def get_downloadable_files(filebase, tag_download, dict_dir):
     """Return the downloadable file links based on the filebase name."""
-    download_links = []
+    download_links = {}
 
-    for ext in extensions:
+    for ext in SUPPORTED_EXTENSIONS:
         # Generate the URL for the downloadable file
         download_url = f"https://github.com/catusf/tudien/releases/tag/{tag_download}/{filebase}.{ext}"
-        download_links.append(download_url)
+        download_links[ext] = download_url
     
     return download_links
 
-TAG_DOWNLOAD = "v3.0"
-
-def generate_summary(folder_path):
+def generate_summary(dict_dir):
     """Generate a list of dictionaries containing metadata for each .dfo file."""
+    print(f"Generating summary data for {dict_dir}")
+    
     data = []
 
-    for filename in os.listdir(folder_path):
+    for filename in os.listdir(dict_dir):
         if filename.endswith(".dfo"):
             filebase = filename[:-4]
-            dfo_path = os.path.join(folder_path, filename)
-            tab_path = os.path.join(folder_path, filebase + ".tab")
+            dfo_path = os.path.join(dict_dir, filename)
+            tab_path = os.path.join(dict_dir, filebase + ".tab")
 
             # Parse the .dfo file
             metadata = parse_dfo_file(dfo_path)
@@ -94,10 +113,10 @@ def generate_summary(folder_path):
             num_definitions = count_lines_in_tab(tab_path)
 
             # Generate the download URL for the main file
-            main_download_url = f"https://github.com/catusf/tudien/releases/tag/{TAG_DOWNLOAD}/all-kindle.zip"
+            # main_download_url = f"https://github.com/catusf/tudien/releases/tag/{TAG_DOWNLOAD}/all-kindle.zip"
 
             # Get the additional downloadable files
-            download_urls = get_downloadable_files(filebase, TAG_DOWNLOAD, folder_path)
+            download_urls = get_downloadable_files(filebase, DOWNLOAD_TAG, dict_dir)
 
             # Get full language names in Vietnamese
             source_full_name = language_names.get(metadata['Source'], f"Unknown ({metadata['Source']})")
@@ -111,27 +130,83 @@ def generate_summary(folder_path):
                 "Source": f"{source_full_name} ({metadata['Source']})",  # Full language name in Vietnamese
                 "Target": f"{target_full_name} ({metadata['Target']})",  # Full language name in Vietnamese
                 "Owner/Editor": metadata['Owner/Editor'],
-                "URL": metadata['URL'],
                 "Version": metadata['Version'],
                 "Definitions": num_definitions,
                 "Download": download_urls
             })
 
     # Save the list of dictionaries as a JSON file
-    with open(os.path.join(folder_path, "dict_summary.json"), 'w', encoding='utf-8') as json_file:
+    with open(os.path.join(dict_dir, "dict_summary.json"), 'w', encoding='utf-8') as json_file:
         json.dump(data, json_file, ensure_ascii=False, indent=4)
 
     print("JSON file 'dict_summary.json' has been generated.")
     return data
 
-def generate_markdown_table(data):
+def generate_markdown_table(data, extensions, columns):
     """Generate a markdown table from the data."""
-    markdown = ["| Number | Name | Description | Source | Target | Owner/Editor | URL | Version | Definitions | " + " | ".join(extensions)]
-    markdown.append("| --- | --- | --- | --- | --- | --- | --- | --- | --- |" + " --- |" * len(extensions))
+    print(f"Generating report for {len(data)} dictionaries for {extensions}")
+    
+    types = [SUPPORTED_EXTENSIONS[ext] for ext in extensions]
+    header = "| Number | Name | " # " Description | Source | Target | Owner/Editor | Definitions | " + " | ".join(types)]
+    seperator = "| --- | --- | " #" --- | --- | --- | --- | --- |" + " --- |" * len(extensions)]
+
+    if "desc" in columns:
+        header += "Description |"
+        seperator += " --- |"
+    
+    if "source" in columns:
+        header += "Source |"
+        seperator += " --- |"
+    
+    if "target" in columns:
+        header += "Target |"
+        seperator += " --- |"
+    
+    if "owner" in columns:
+        header += "Owner/Editor |"
+        seperator += " --- |"
+
+    if "version" in columns:
+        header += "Version |"
+        seperator += " --- |"
+
+    if "definition" in columns:
+        header += "Definitions |"
+        seperator += " --- |"
+    
+    header += " | ".join(types) + " |"
+    seperator += " --- |" * len(extensions)
+
+    markdown = [header, seperator]
 
     for entry in data:
-        download_links = " | ".join([f"[Download]({url})" for url in entry['Download']])
-        markdown.append(f"| {entry['Number']} | {entry['Name']} | {entry['Description']} | {entry['Source']} | {entry['Target']} | {entry['Owner/Editor']} | {entry['URL']} | {entry['Version']} | {entry['Definitions']} | {download_links} |")
+        download_links = " | ".join([f"[Download]({entry['Download'][ext]})" for ext in extensions])
+        
+        line = f"| {entry['Number']} | {entry['Name']} | "
+
+        if "desc" in columns:
+            line += f"{entry['Description']} |"
+        
+        if "source" in columns:
+            line += f"{entry['Source']} |"
+
+        if "target" in columns:
+            line += f"{entry['Target']} |"
+
+        if "owner" in columns:
+            line += f"{entry['Owner/Editor']} |"
+
+        if "version" in columns:
+            line += f"{entry['Version']} |"
+
+        if "definition" in columns:
+            line += f"{entry['Definitions']:,} |"
+        
+        line += f" {download_links} |"
+
+        #f"| {entry['Number']} | {entry['Name']} | {entry['Description']} | {entry['Source']} | {entry['Target']} | {entry['Owner/Editor']} | {entry['Definitions']:,} | {download_links} |")
+
+        markdown.append(line)
     
     return "\n".join(markdown)
 
@@ -139,18 +214,39 @@ def main():
     """Main function to parse arguments and run the processes."""
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description="Generate a dictionary summary.")
-    parser.add_argument('dict_dir', type=str, nargs='?', default='dict', 
+    parser.add_argument('--dict_dir', type=str, nargs='?', default='dict', 
                         help="The directory containing the dictionary files (default is 'dict').")
+    parser.add_argument('--outfile', type=str, nargs='?', default='dict_summary.md', 
+                        help="The output report file name (default is 'dict_summary.md').")
+    parser.add_argument('--extensions', type=str, nargs='?', default=None, 
+                        help="The extensions that need included in the report. None means all.")
+    parser.add_argument('--columns', type=str, nargs='?', default=None, 
+                        help="The columns that will be kept (Other than the download links).")
+    parser.add_argument("--read-only", choices=["yes", "no"], default="yes", required=False, help="Read data or create it.")
+
     args = parser.parse_args()
 
     # Generate the summary data and save it as a JSON file
-    data = generate_summary(args.dict_dir)
+    ext_str = args.extensions
+    col_str = args.columns
+    read_only = args.read_only
+    dict_dir = args.dict_dir
+    outfile = args.outfile
+
+    extensions = list(SUPPORTED_EXTENSIONS.keys()) if not ext_str else [item.strip() for item in ext_str.split(",")]
+    columns = list(COLUMNS.keys()) if not col_str else [item.strip() for item in col_str.split(",")]
+    
+    if read_only == "no":
+        data = generate_summary(dict_dir)
+    else:
+        with open(os.path.join(dict_dir, "dict_summary.json"), 'r', encoding='utf-8') as json_file:
+            data = json.load(json_file)
 
     # Generate the markdown table from the JSON data
-    markdown_table = generate_markdown_table(data)
+    markdown_table = generate_markdown_table(data, extensions, columns)
 
     # Save the markdown table to a .md file
-    with open(os.path.join(args.dict_dir, "dict_summary.md"), 'w', encoding='utf-8') as file:
+    with open(os.path.join(args.dict_dir, outfile), 'w', encoding='utf-8') as file:
         file.write(markdown_table)
 
     print("Summary markdown file 'dict_summary.md' has been generated.")

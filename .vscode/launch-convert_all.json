@@ -11,8 +11,11 @@
             "program": "./bin/convert_all.py",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args": ["--input_folder", "./dict", "--output_folder", "./output", "--extension", "tab"]
+            "args": [
+                "--input_folder=./dict",
+                "--output_folder=./output",
+                "--extension=tab"
+            ]
         }
     ]
 }
-

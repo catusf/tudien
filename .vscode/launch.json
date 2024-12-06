@@ -5,16 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Current File",
-            "type": "python",
+            "name": "Python Debugger: Current File with Arguments",
+            "type": "debugpy",
             "request": "launch",
-            "program": "./bin/convert_all.py",
+            "program": "${file}",
             "console": "integratedTerminal",
-            "justMyCode": true,
             "args": [
-                "--input_folder=./dict",
-                "--output_folder=./output",
-                "--extension=tab"
+                "--extensions=mobi,epub",
+                "--read-only=no"
             ]
         }
     ]
