@@ -246,10 +246,10 @@ def main():
     markdown_table = generate_markdown_table(data, extensions, columns)
 
     # Save the markdown table to a .md file
-    with open(os.path.join(args.dict_dir, outfile), 'w', encoding='utf-8') as file:
+    with open(os.path.join(dict_dir, outfile), 'w', encoding='utf-8') as file:
         file.write(markdown_table)
 
-    print("Summary markdown file 'dict_summary.md' has been generated.")
+    print(f"Summary markdown file '{outfile}' has been generated.")
 
 if __name__ == "__main__":
     main()
