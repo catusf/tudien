@@ -62,7 +62,7 @@ jobs:
 
     - name: Build all dictionaries
       run: |
-        python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab
+        python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab --filter=Hero
 
     - name: Report the results
       run: |

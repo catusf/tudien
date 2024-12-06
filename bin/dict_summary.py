@@ -1,6 +1,7 @@
 import os
 import json
 import argparse
+from languagecodes import languag
 
 DOWNLOAD_TAG = "v4.0" # Set the GitHub tag version that asscociates with the release
 
@@ -136,10 +137,12 @@ def generate_summary(dict_dir):
             })
 
     # Save the list of dictionaries as a JSON file
-    with open(os.path.join(dict_dir, "dict_summary.json"), 'w', encoding='utf-8') as json_file:
+    json_path = os.path.join(dict_dir, "dict_summary.json")
+    with open(json_path, 'w', encoding='utf-8') as json_file:
         json.dump(data, json_file, ensure_ascii=False, indent=4)
 
-    print("JSON file 'dict_summary.json' has been generated.")
+        print(f"Data file writtend to '{json_path}'.")
+
     return data
 
 def generate_markdown_table(data, extensions, columns):
@@ -239,15 +242,18 @@ def main():
     if read_only == "no":
         data = generate_summary(dict_dir)
     else:
-        with open(os.path.join(dict_dir, "dict_summary.json"), 'r', encoding='utf-8') as json_file:
+        json_path = os.path.join(dict_dir, "dict_summary.json")
+        with open(json_path, 'r', encoding='utf-8') as json_file:
             data = json.load(json_file)
 
     # Generate the markdown table from the JSON data
     markdown_table = generate_markdown_table(data, extensions, columns)
 
     # Save the markdown table to a .md file
-    with open(os.path.join(dict_dir, outfile), 'w', encoding='utf-8') as file:
+    markdown_file = os.path.join(dict_dir, outfile)
+    with open(markdown_file, 'w', encoding='utf-8') as file:
         file.write(markdown_table)
+        print(f"Data file written to: {markdown_file}")
 
     print(f"Summary markdown file '{outfile}' has been generated.")
 
