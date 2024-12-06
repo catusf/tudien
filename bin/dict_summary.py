@@ -1,7 +1,6 @@
 import os
 import json
 import argparse
-from languagecodes import languag
 
 DOWNLOAD_TAG = "v4.0" # Set the GitHub tag version that asscociates with the release
 
