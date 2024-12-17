@@ -7,6 +7,7 @@ Verify tab file
 import argparse
 import os
 
+
 def main() -> None:
     parser = argparse.ArgumentParser(description='Check a tab file for errors',
         usage='Usage: python verify_tab_file.py --input data.tab --output data.stats')

@@ -133,12 +133,14 @@ def generate_summary(dict_dir):
         }
       )
 
-  # Save the list of dictionaries as a JSON file
-  with open(os.path.join(dict_dir, "dict_summary.json"), "w", encoding="utf-8") as json_file:
-    json.dump(data, json_file, ensure_ascii=False, indent=4)
+    # Save the list of dictionaries as a JSON file
+    json_path = os.path.join(dict_dir, "dict_summary.json")
+    with open(json_path, 'w', encoding='utf-8') as json_file:
+        json.dump(data, json_file, ensure_ascii=False, indent=4)
 
-  print("JSON file 'dict_summary.json' has been generated.")
-  return data
+        print(f"Data file writtend to '{json_path}'.")
+
+    return data
 
 
 def generate_markdown_table(data, extensions, columns):
@@ -209,42 +211,45 @@ def generate_markdown_table(data, extensions, columns):
 
 
 def main():
-  """Main function to parse arguments and run the processes."""  # noqa: D202
+    """Main function to parse arguments and run the processes."""  # noqa: D202, D401
 
-  # Parse command-line arguments
-  parser = argparse.ArgumentParser(description="Generate a dictionary summary.")
-  parser.add_argument("--dict_dir", type=str, nargs="?", default="dict", help="The directory containing the dictionary files (default is 'dict').")
-  parser.add_argument("--outfile", type=str, nargs="?", default="dict_summary.md", help="The output report file name (default is 'dict_summary.md').")
-  parser.add_argument("--extensions", type=str, nargs="?", default=None, help="The extensions that need included in the report. None means all.")
-  parser.add_argument("--columns", type=str, nargs="?", default=None, help="The columns that will be kept (Other than the download links).")
-  parser.add_argument("--read-only", choices=["yes", "no"], default="yes", required=False, help="Read data or create it.")
+    # Parse command-line arguments
+    parser = argparse.ArgumentParser(description="Generate a dictionary summary.")
+    parser.add_argument("--dict_dir", type=str, nargs="?", default="dict", help="The directory containing the dictionary files (default is 'dict').")
+    parser.add_argument("--outfile", type=str, nargs="?", default="dict_summary.md", help="The output report file name (default is 'dict_summary.md').")
+    parser.add_argument("--extensions", type=str, nargs="?", default=None, help="The extensions that need included in the report. None means all.")
+    parser.add_argument("--columns", type=str, nargs="?", default=None, help="The columns that will be kept (Other than the download links).")
+    parser.add_argument("--read-only", choices=["yes", "no"], default="yes", required=False, help="Read data or create it.")
 
-  args = parser.parse_args()
+    args = parser.parse_args()
 
-  # Generate the summary data and save it as a JSON file
-  ext_str = args.extensions
-  col_str = args.columns
-  read_only = args.read_only
-  dict_dir = args.dict_dir
-  outfile = args.outfile
+    # Generate the summary data and save it as a JSON file
+    ext_str = args.extensions
+    col_str = args.columns
+    read_only = args.read_only
+    dict_dir = args.dict_dir
+    outfile = args.outfile
 
-  extensions = list(SUPPORTED_EXTENSIONS.keys()) if not ext_str else [item.strip() for item in ext_str.split(",")]
-  columns = list(COLUMNS.keys()) if not col_str else [item.strip() for item in col_str.split(",")]
+    extensions = list(SUPPORTED_EXTENSIONS.keys()) if not ext_str else [item.strip() for item in ext_str.split(",")]
+    columns = list(COLUMNS.keys()) if not col_str else [item.strip() for item in col_str.split(",")]
+    
+    if read_only == "no":
+        data = generate_summary(dict_dir)
+    else:
+        json_path = os.path.join(dict_dir, "dict_summary.json")
+        with open(json_path, 'r', encoding='utf-8') as json_file:
+            data = json.load(json_file)
 
-  if read_only == "no":
-    data = generate_summary(dict_dir)
-  else:
-    with open(os.path.join(dict_dir, "dict_summary.json"), "r", encoding="utf-8") as json_file:
-      data = json.load(json_file)
+    # Generate the markdown table from the JSON data
+    markdown_table = generate_markdown_table(data, extensions, columns)
 
-  # Generate the markdown table from the JSON data
-  markdown_table = generate_markdown_table(data, extensions, columns)
+    # Save the markdown table to a .md file
+    markdown_file = os.path.join(dict_dir, outfile)
+    with open(markdown_file, 'w', encoding='utf-8') as file:
+        file.write(markdown_table)
+        print(f"Data file written to: {markdown_file}")
 
-  # Save the markdown table to a .md file
-  with open(os.path.join(dict_dir, outfile), "w", encoding="utf-8") as file:
-    file.write(markdown_table)
-
-  print(f"Summary markdown file '{outfile}' has been generated.")
+    print(f"Summary markdown file '{outfile}' has been generated.")
 
 
 if __name__ == "__main__":
