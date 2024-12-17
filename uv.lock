@@ -14,6 +14,31 @@ wheels = [
 ]
 
 [[package]]
+name = "dragonmapper"
+version = "0.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "hanzidentifier" },
+    { name = "zhon" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/44/56/7740952e75a1e6dae78a9695fdad901f98c8fe0acc8d68fd391e267e6323/dragonmapper-0.3.0.tar.gz", hash = "sha256:17b6a33ad98ed3d6cd2392bd41613bd57279e84ffb96fb4a5bda336f9fe0572e", size = 1384307 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/11/3a/a906236c0fd25c0c9e25684d17643b72c01031ae5bdcd20e03d91e4c70ff/dragonmapper-0.3.0-py3-none-any.whl", hash = "sha256:7b9f4503963e5e016bfcdfc4d58d73fc029214f54d643880fab834e51ec55f6a", size = 1384600 },
+]
+
+[[package]]
+name = "hanzidentifier"
+version = "1.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "zhon" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/cb/32/c1f5f7cf4d4372c7778e34f116c52539db717b73e1ec0b149ce3717b1c9c/hanzidentifier-1.3.0.tar.gz", hash = "sha256:7acd99ef00c69ab57f3441e2b3568348b58ef115500e5a01f66cedea603b3101", size = 3890 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/14/f6/94c3975b5e06ea4084056413da975395924ff0ddd89e975427bd46684359/hanzidentifier-1.3.0-py3-none-any.whl", hash = "sha256:8e36204a96072c328c8bc6ae9342fc6f9faea10bc519ff51da3ef6e6e0cee5a6", size = 4777 },
+]
+
+[[package]]
 name = "iso-language-codes"
 version = "1.1.0"
 source = { registry = "https://pypi.org/simple" }
@@ -21,6 +46,12 @@ sdist = { url = "https://files.pythonhosted.org/packages/76/c0/bc25d5fac42e6632f
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b0/8a/2e0d1c3981afb5e17bb3026e649318744e5d428ba82e025f50ea933b4166/iso_language_codes-1.1.0-py2.py3-none-any.whl", hash = "sha256:203b2cb7bd849cdfd3e821a802f9d89c69d0dba7bbe41a8427c9d3e3292bcaa2", size = 11721 },
 ]
+
+[[package]]
+name = "jieba"
+version = "0.42.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/c6/cb/18eeb235f833b726522d7ebed54f2278ce28ba9438e3135ab0278d9792a2/jieba-0.42.1.tar.gz", hash = "sha256:055ca12f62674fafed09427f176506079bc135638a14e23e25be909131928db2", size = 19214172 }
 
 [[package]]
 name = "langcodes"
@@ -128,12 +159,42 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/32/95/d2969f1071b7bc0afff407d1d7b4b3f445e8e6b59df7921c9c09e35ee375/pinyin-0.4.0.tar.gz", hash = "sha256:8842ae53cb7a81c8c3ec03d1cd7dba9aedb20d8d6962aebc620fad74da0868f5", size = 3632130 }
 
 [[package]]
+name = "pinyin-jyutping-sentence"
+version = "1.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "jieba" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a1/f5/9eb9524a3ca30569116bba634371f1fb9016349fca977a0b03ab511d0147/pinyin_jyutping_sentence-1.3.tar.gz", hash = "sha256:93d9d0486d5fd533f12f500cdb8945cacee989dfb7f9d3d2bfa4030f05da9b00", size = 12427987 }
+
+[[package]]
 name = "pyglossary"
 version = "4.7.1"
 source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/e4/90/38fd046286bc441d20e809e6f6d4f2c7c81de889768e521be9359995a204/pyglossary-4.7.1.tar.gz", hash = "sha256:4523aaec9a99b963bbcfb9849e349973b2827337fb2ed52427f7ae3342238956", size = 394425 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/96/f4/d9258202d4fc4a0e7c324ac434824d1e52d3f96be85c7ca621607a689930/pyglossary-4.7.1-py3-none-any.whl", hash = "sha256:58dab88a5cb3b51b4c956154d87b92361407d496ff62a1f04b1a64d10544ea7a", size = 515044 },
+]
+
+[[package]]
+name = "pypinyin"
+version = "0.53.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b8/2d/58c9e7d0825d834fc5ac62a340640953d39a80e78cba70eb73d3bad5b4be/pypinyin-0.53.0.tar.gz", hash = "sha256:a2d39ddc2bd31b55897bbb10d2e11a0c4d399988a97c00ad489c151afd9b106d", size = 824458 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b1/af/a1f9ee31b860ea55985a743b53fc06e61fe156bc1a9d64d94a81afa80470/pypinyin-0.53.0-py2.py3-none-any.whl", hash = "sha256:a906768919da3c31771f2c5e0e5a759214dc38d0087e15e6ff67649e03df8097", size = 834720 },
+]
+
+[[package]]
+name = "pypinyin-dict"
+version = "0.8.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pypinyin" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8f/1d/1825aa9bf96796ea3adf3e5bc61253d77d69f978e7bba1da1842be6cd0f6/pypinyin-dict-0.8.0.tar.gz", hash = "sha256:d3799bfdc551b7c7c04d36022c8b4ac00fa5ecb92a2acf5906363317c303c5a3", size = 9261782 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8a/3a/968e7ce00a570074d4cefaa33531355137c5acc707815cf73de2eb7e9b67/pypinyin_dict-0.8.0-py2.py3-none-any.whl", hash = "sha256:2c9210412e14167487a728843fe02e4c1920796ec0df5c8113be9e0363c8afa1", size = 9505111 },
 ]
 
 [[package]]
@@ -185,23 +246,40 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "beautifulsoup4" },
+    { name = "dragonmapper" },
     { name = "iso-language-codes" },
     { name = "langcodes" },
     { name = "lxml" },
     { name = "marisa-trie" },
     { name = "pinyin" },
+    { name = "pinyin-jyutping-sentence" },
     { name = "pyglossary" },
+    { name = "pypinyin" },
+    { name = "pypinyin-dict" },
     { name = "ruff" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "beautifulsoup4", specifier = ">=4.11.1" },
+    { name = "dragonmapper", specifier = ">=0.3.0" },
     { name = "iso-language-codes", specifier = ">=1.1.0" },
     { name = "langcodes", specifier = ">=3.5.0" },
     { name = "lxml", specifier = ">=4.9.1" },
     { name = "marisa-trie", specifier = ">=0.7.7" },
     { name = "pinyin", specifier = ">=0.4.0" },
+    { name = "pinyin-jyutping-sentence", specifier = ">=1.3" },
     { name = "pyglossary", specifier = ">=4.6.1" },
+    { name = "pypinyin", specifier = ">=0.53.0" },
+    { name = "pypinyin-dict", specifier = ">=0.8.0" },
     { name = "ruff", specifier = ">=0.8.2" },
+]
+
+[[package]]
+name = "zhon"
+version = "2.1.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/2a/8d/e6c8ee4df75940ddecb6f5e7b2753a9a3914e6cd357e7238987661723d81/zhon-2.1.1.tar.gz", hash = "sha256:c8da424fad4aa698ddd3e1735515b49ff522c84dd1091e8fafd986ac7c6898f0", size = 84448 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/be/13/b8d6ca3a41bf5959bc3915678837385bf668162a7295140d81ccae0b96b7/zhon-2.1.1-py3-none-any.whl", hash = "sha256:9ec0d42229ae60708a045270f755ccefb48f2689f2a6ce0bc6597abf6c4a9871", size = 83933 },
 ]

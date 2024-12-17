@@ -1,13 +1,14 @@
 # TODO
-- [ ] Add Pinyin to Thienchuu
+- [ ] Use functions to process all types of dicts: dsl, kindle, others
 - [ ] Add output for Apple Dictionary Source
 - [ ] Add output for MDict (.MDX)
 - [ ] Add cover page to dictionaries
 - [ ] Add name of separate dictionaries to TudienTonghopPhathoc
-- [ ] Sync config .dotfile across environtment
-- [ ] Update to an up-to-date Ubuntu distro when Wine is updated (error on Ubuntu v20 and 22)
-- [ ] Copy back star_hanviet.tab and star_vietnhat.tab to dict files in ext-stardict-vi 
-- [ ] Handle error code from script and exit (subprocess.call/run) so error stop remaining steps
+- [X] Add Pinyin to Thienchuu
+- [X] Sync config .dotfile across environtment
+- [X] Update to an up-to-date Ubuntu distro when Wine is updated (error on Ubuntu v20 and 22)
+- [x] Copy back star_hanviet.tab and star_vietnhat.tab to dict files in ext-stardict-vi 
+- [x] Handle error code from script and exit (subprocess.call/run) so error stop remaining steps
 - [X] Make use of CMake
 - [X] Check if dictionaries have inflections
 - [X] Add inflections files for different languages https://stackoverflow.com/questions/51097463/snowball-stemmer-poor-french-stemming

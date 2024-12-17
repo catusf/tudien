@@ -1,32 +1,35 @@
 #!/usr/bin/env python3
-''' Script to build all dictionaries with all formats
-    Usage:
-    ./bin/convert_all.py --input_folder=./ext-dict --output_folder=./ext-output --extension=tab
-'''
+"""Script to build all dictionaries with all formats
+
+Usage:
+./bin/convert_all.py --input_folder=./ext-dict --output_folder=./ext-output --extension=tab
+"""
 
 import argparse
-from fileinput import filename
 import glob
-import os.path
 import os
-import subprocess
-from iso_language_codes import language_name
+import os.path
+import re
 import shlex
+import subprocess
+from fileinput import filename
+
+from iso_language_codes import language_name
+
 
 def readDicInfo(filepath):
-    ''' Read metadata of dictionary with the following format
+    """Read metadata of dictionary with the following format
 
-            Name = Dictionary of xyz
-            Description = Description of this dictionary
-            Source = en
-            Target = vi
-            Inflections = "NoInflections.txt"
-            Version = 1.1
+        Name = Dictionary of xyz
+        Description = Description of this dictionary
+        Source = en
+        Target = vi
+        Inflections = "NoInflections.txt"
+        Version = 1.1
 
-        Target and Source are the ISO 2-character codes of the language.
-        Name, Source and Target are mandatory fields.
-    '''
-
+    Target and Source are the ISO 2-character codes of the language.
+    Name, Source and Target are mandatory fields.
+    """
     valuemap = {}
 
     try:
@@ -75,7 +78,7 @@ def execute_shell(cmd_line, message="", printout=True):
 
     Returns:
     bool: True if the command executes successfully, False if an error occurs.
-    """
+    """  # noqa: D401
     try:
         if printout:
             print(cmd_line)
@@ -94,6 +97,7 @@ def execute_shell(cmd_line, message="", printout=True):
 DEBUG_FLAG = False
 
 import re
+
 
 def escape_forbidden_chars(text, forbidden_chars=r" (){}[]$*?^|<>\\"):
     """
@@ -118,6 +122,7 @@ def escape_forbidden_chars(text, forbidden_chars=r" (){}[]$*?^|<>\\"):
 
     
 def main() -> None:
+    """Main entry point"""  # noqa: D401
     parser = argparse.ArgumentParser(description='Convert all dictionaries in a folder')
     parser.add_argument('-i', '--input_folder', required=True, help='Input folder containing .tsv and .dfo files')
     parser.add_argument('-o', '--output_folder', required=True, help='Output folder containing dictionary files')
@@ -252,7 +257,7 @@ def main() -> None:
         else:
             inflections = f'{INFLECTION_DIR}/{INFLECTION_NONE}'
 
-        cmd_line = f"python ./bin/tab2opf.py --title={dataName} --source={dataSource} --target={dataTarget} --inflection={inflections} --outdir={htmlOutDir} --creator={dataCreator} --publisher={dataCreator} {datafile}"
+        cmd_line = f"python ./bin/tab2opf.py --title={dataName} --source={dataSource} --target={dataTarget} --inflection={inflections} --outdir={htmlOutDir} --creator={dataCreator} --publisher={dataCreator} {datafile}"  # noqa: E501
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
@@ -307,7 +312,7 @@ def main() -> None:
 
         # Generare Lingvo dictionary
         out_path = os.path.join(output_folder, f'lingvo/{filebase}.dsl').replace(' ', '\\ ') 
-        cmd_line = f"ruby ./dsl-tools/tab2dsl/tab2dsl.rb --from-lang {dataFullSource} --to-lang {dataFullTarget} --dict-name {dataName} --output {out_path} {datafile}"
+        cmd_line = f"ruby ./dsl-tools/tab2dsl/tab2dsl.rb --from-lang {dataFullSource} --to-lang {dataFullTarget} --dict-name {dataName} --output {out_path} {datafile}"  # noqa: E501
         execute_shell(cmd_line=cmd_line, message=f"generating DSL/Longvo")
 
         cmd_line = f"mv {out_path}.dz {output_folder}"

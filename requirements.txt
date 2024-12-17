@@ -6,3 +6,5 @@ lxml >= 4.9.1
 beautifulsoup4 >= 4.11.1
 pinyin >= 0.4.0
 pyglossary >= 4.6.1
+pinyin_jyutping_sentence
+langcodes
