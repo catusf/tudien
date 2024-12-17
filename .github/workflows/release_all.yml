@@ -62,7 +62,7 @@ jobs:
       run: |
         source .venv/bin/activate &&
         uv pip list &&
-        python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab --filter=Hero
+        uv run python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab --filter=Hero
         
     - name: Report the results
       run: |

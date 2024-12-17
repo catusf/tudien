@@ -6,3 +6,7 @@ all:
 	cp -r dict/* ext-dict/
 	uv run python ./bin/convert_all.py --input_folder=ext-dict --output_folder=ext-output --extension=tab
 	echo "Release all"
+
+test:
+	echo "Run test the venv"
+	uv run python ./bin/test.py
