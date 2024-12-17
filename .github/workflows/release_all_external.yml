@@ -54,6 +54,7 @@ jobs:
     - name: Setup Python packages
       run: |
         pip install uv &&
+        uv venv .venv &&
         uv sync &&
         source .venv/bin/activate
         
