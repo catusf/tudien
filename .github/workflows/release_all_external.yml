@@ -55,8 +55,7 @@ jobs:
       run: |
         pip install uv &&
         uv venv .venv &&
-        uv sync &&
-        source .venv/bin/activate
+        uv sync
         
         # pip install -r ./requirements.txt
 
@@ -67,6 +66,8 @@ jobs:
 
     - name: Build all dictionaries
       run: |
+        source .venv/bin/activate &&
+        uv pip list &&
         python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab --filter=Hero
 
     - name: Report the results
