@@ -1,3 +1,5 @@
+from iso_language_codes import language_name
+
 import pinyin_jyutping_sentence
 import os
 import pypinyin
@@ -5,6 +7,9 @@ import pypinyin
 from pinyin import get as getpinyin
 
 from dragonmapper import hanzi
+
+print(language_name("vi"))
+print(language_name("zh"))
 
 s="我们还可以再见面吗?"
 print(s)

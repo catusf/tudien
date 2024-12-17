@@ -3,6 +3,6 @@ sample:
 	echo "Release sample"
 
 all:
-	cp dict/* ext-dict/
+	cp -r dict/* ext-dict/
 	uv run python ./bin/convert_all.py --input_folder=ext-dict --output_folder=ext-output --extension=tab
 	echo "Release all"
