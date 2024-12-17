@@ -52,7 +52,11 @@ jobs:
         
     - name: Setup Python packages
       run: |
-        pip install -r ./requirements.txt
+        pip install uv &&
+        uv sync &&
+        source .venv/bin/activate
+        
+        # pip install -r ./requirements.txt
 
     - name: Build all dictionaries
       run: |

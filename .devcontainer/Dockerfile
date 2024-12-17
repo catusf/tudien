@@ -16,7 +16,8 @@ RUN apt-get update && apt-get install -y \
 
 # Install pip requirements
 COPY requirements.txt .
-RUN python -m pip install -r requirements.txt
+#RUN python -m pip install -r requirements.txt
+RUN pip install uv && uv sync && source .venv/bin/activate
 
 WORKDIR /app
 COPY . /app
