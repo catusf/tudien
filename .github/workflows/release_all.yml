@@ -53,7 +53,6 @@ jobs:
     - name: Setup Python packages
       run: |
         pip install uv &&
-        uv venv .venv &&
         uv sync
         
         # pip install -r ./requirements.txt
@@ -67,7 +66,7 @@ jobs:
     - name: Report the results
       run: |
         ls -R -l $OUTPUT_DIR &&
-        python ./bin/dict_summary.py --dict_dir=$INPUT_DIR
+        uv run python ./bin/dict_summary.py --dict_dir=$INPUT_DIR
 
     - name: Get Current Timestamp
       id: timestamp
