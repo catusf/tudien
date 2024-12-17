@@ -263,8 +263,8 @@ dependencies = [
 requires-dist = [
     { name = "beautifulsoup4", specifier = ">=4.11.1" },
     { name = "dragonmapper", specifier = ">=0.3.0" },
-    { name = "iso-language-codes", specifier = ">=1.1.0" },
-    { name = "langcodes", specifier = ">=3.5.0" },
+    { name = "iso-language-codes", specifier = "==1.1.0" },
+    { name = "langcodes", specifier = "==3.5.0" },
     { name = "lxml", specifier = ">=4.9.1" },
     { name = "marisa-trie", specifier = ">=0.7.7" },
     { name = "pinyin", specifier = ">=0.4.0" },

@@ -6,8 +6,8 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "beautifulsoup4>=4.11.1",
-    "iso-language-codes>=1.1.0",
-    "langcodes>=3.5.0",
+    "iso-language-codes==1.1.0",
+    "langcodes==3.5.0",
     "lxml>=4.9.1",
     "marisa-trie>=0.7.7",
     "pinyin-jyutping-sentence>=1.3",

@@ -7,4 +7,5 @@ beautifulsoup4 >= 4.11.1
 pinyin >= 0.4.0
 pyglossary >= 4.6.1
 pinyin_jyutping_sentence
-langcodes
+langcodes==3.5.0
+iso-language-codes==1.1.0
