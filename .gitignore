@@ -60,7 +60,8 @@ dict/tvb_pleco.tab
 dict/TrungViet-big.tab
 dict/TrungViet-big.txt
 
-*.Identifier
+**/*.Identifier
+
 ext-dict/Bach_khoa_toan_thu.dfo
 ext-dict/CCCE-Thin.dfo
 ext-dict/CCCE-Thin.tab
