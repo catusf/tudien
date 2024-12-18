@@ -7,6 +7,7 @@ import argparse
 
 CLEANUP = False
 
+
 class IfoFileException(Exception):
     """Exception while parsing the .ifo file.
     Now version error in .ifo file is the only case raising this exception.
@@ -21,9 +22,7 @@ class IfoFileException(Exception):
         self._description = description
 
     def __str__(self):
-        """__str__ method, return the description of exception occured.
-
-        """
+        """__str__ method, return the description of exception occured."""
         return self._description
 
 
@@ -49,13 +48,9 @@ class IfoFileReader(object):
             value = value.strip()
             # check version info, raise an IfoFileException if error encounted
             if key != "version":
-                raise IfoFileException(
-                    "Version info expected in the second line of {!r:s}!".format(
-                        filename))
+                raise IfoFileException("Version info expected in the second line of {!r:s}!".format(filename))
             if value != "2.4.2" and value != "3.0.0":
-                raise IfoFileException(
-                    "Version expected to be either 2.4.2 or 3.0.0, but {!r:s} read!".format(
-                        value))
+                raise IfoFileException("Version expected to be either 2.4.2 or 3.0.0, but {!r:s} read!".format(value))
             self._ifo[key] = value
             # read in other infomation in the file
             # all values are all string
@@ -65,8 +60,7 @@ class IfoFileReader(object):
                 value = value.strip()
                 self._ifo[key] = value
             # check if idxoffsetbits should be discarded due to version info
-            if self._ifo[
-                    "version"] == "3.0.0" and "idxoffsetbits" in self._ifo:
+            if self._ifo["version"] == "3.0.0" and "idxoffsetbits" in self._ifo:
                 del self._ifo["version"]
 
     def get_ifo(self, key):
@@ -129,9 +123,7 @@ class IdxFileReader(object):
         del self._index
 
     def __iter__(self):
-        """Define the iterator interface.
-
-        """
+        """Define the iterator interface."""
         return self
 
     def __next__(self):
@@ -139,28 +131,26 @@ class IdxFileReader(object):
         return self.next()
 
     def next(self):
-        """Define the iterator interface.
-
-        """
+        """Define the iterator interface."""
         if self._offset == len(self._content):
             raise StopIteration
         word_data_offset = 0
         word_data_size = 0
         end = self._content.find(b"\0", self._offset)
         # word_str process
-        word_str = self._content[self._offset:end]
+        word_str = self._content[self._offset : end]
         self._offset = end + 1
         # word_data_offset
         if self._index_offset_bits == 64:
-            word_data_offset, = struct.unpack("!I", self._content[self._offset:self._offset + 8])
+            (word_data_offset,) = struct.unpack("!I", self._content[self._offset : self._offset + 8])
             self._offset += 8
         elif self._index_offset_bits == 32:
-            word_data_offset, = struct.unpack("!I", self._content[self._offset:self._offset + 4])
+            (word_data_offset,) = struct.unpack("!I", self._content[self._offset : self._offset + 4])
             self._offset += 4
         else:
             raise ValueError
         # word_data_size
-        word_data_size, = struct.unpack("!I", self._content[self._offset:self._offset + 4])
+        (word_data_size,) = struct.unpack("!I", self._content[self._offset : self._offset + 4])
         self._offset += 4
         self._index += 1
         return (word_str, word_data_offset, word_data_size, self._index)
@@ -175,9 +165,7 @@ class IdxFileReader(object):
         A tuple in form of (word_str, word_data_offset, word_data_size)
         """
         if number >= len(self._index_idx):
-            raise IndexError(
-                "Index out of range! Acessing the {:d} index but totally {:d}".format(
-                    number, len(self._index_idx)))
+            raise IndexError("Index out of range! Acessing the {:d} index but totally {:d}".format(number, len(self._index_idx)))
         return self._index_idx[number]
 
     def get_index_by_word(self, word_str):
@@ -226,15 +214,13 @@ class SynFileReader(object):
             end = content.find("\0", offset)
             synonym_word = content[offset:end]
             offset = end
-            original_word_index = struct.unpack("!I",
-                                                content[offset, offset + 4])
+            original_word_index = struct.unpack("!I", content[offset, offset + 4])
             offset += 4
             if synonym_word in self._syn:
                 if isinstance(self._syn[synonym_word], list):
                     self._syn[synonym_word].append(original_word_index)
                 else:
-                    self._syn[synonym_word] = [self._syn[synonym_word],
-                                               original_word_index]
+                    self._syn[synonym_word] = [self._syn[synonym_word], original_word_index]
             else:
                 self._syn[synonym_word] = original_word_index
 
@@ -252,8 +238,7 @@ class SynFileReader(object):
 
 
 class DictFileReader(object):
-    """Read the .dict file, store the data in memory for querying.
-    """
+    """Read the .dict file, store the data in memory for querying."""
 
     def __init__(self, filename, dict_ifo, dict_index, compressed=False):
         """Constructor.
@@ -299,38 +284,38 @@ class DictFileReader(object):
         return result
 
     def dump(self, save_file):
-        """"dump all word"""
-        with open(save_file, 'wb+') as f:
+        """ "dump all word"""
+        with open(save_file, "wb+") as f:
             for w in self._dict_index._word_idx:
                 meaning_lst = self.get_dict_by_word(w)
                 # print('--------------------------------')
                 # print(w)
                 # print(self.get_dict_by_word(w))
                 # print('--------------------------------')
-                #print(repr(w))
-                #out_encoding = 'utf-8'  # force/assume encoding to UTF8, no config
+                # print(repr(w))
+                # out_encoding = 'utf-8'  # force/assume encoding to UTF8, no config
 
-                if w.find(b'00-database') >= 0: # Skips line with StarDict metadata
+                if w.find(b"00-database") >= 0:  # Skips line with StarDict metadata
                     continue
-                
+
                 f.write(w)
-                f.write(b'\t')
+                f.write(b"\t")
                 for i, m in enumerate(meaning_lst):
                     meaning_bytes = b" ".join(m.values())
 
-                    if CLEANUP: # Skip first meaning if CLEAN is needed
-                        if meaning_bytes.find(b'@') == 0: # Start with @ means a repetition
-                            meaning_bytes = meaning_bytes[meaning_bytes.find(b'\n')+1:]
+                    if CLEANUP:  # Skip first meaning if CLEAN is needed
+                        if meaning_bytes.find(b"@") == 0:  # Start with @ means a repetition
+                            meaning_bytes = meaning_bytes[meaning_bytes.find(b"\n") + 1 :]
 
-                    meaning_bytes = meaning_bytes.replace(b'\r', b' ')  # replace
-                    meaning_bytes = meaning_bytes.replace(b'\n', b' ')  # replace
-                    #meaning_bytes = meaning_bytes.replace(b'\n', b'')  # remove
+                    meaning_bytes = meaning_bytes.replace(b"\r", b" ")  # replace
+                    meaning_bytes = meaning_bytes.replace(b"\n", b" ")  # replace
+                    # meaning_bytes = meaning_bytes.replace(b'\n', b'')  # remove
 
                     f.write(meaning_bytes)
 
-                f.write(b'\n')
+                f.write(b"\n")
 
-        print(f'Number of words written: {len(self._dict_index._word_idx)}')
+        print(f"Number of words written: {len(self._dict_index._word_idx)}")
 
     def get_dict_by_index(self, index):
         """Get the word's dictionary data by it's index infomation.
@@ -355,7 +340,7 @@ class DictFileReader(object):
         read_size = 0
         start_offset = self._offset
         while read_size < size:
-            type_identifier, = struct.unpack("!c", self._dict_file[self._offset:self._offset+1])
+            (type_identifier,) = struct.unpack("!c", self._dict_file[self._offset : self._offset + 1])
             self._offset += 1
             # type_identifier = str(type_identifier)
             # print(type_identifier)
@@ -386,34 +371,33 @@ class DictFileReader(object):
 
     def _get_entry_field_null_trail(self):
         end = self._dict_file.find("\0", self._offset)
-        result = self._dict_file[self._offset:end]
+        result = self._dict_file[self._offset : end]
         self._offset = end + 1
         return result
 
     def _get_entry_field_size(self, size=None):
         # for the 'W' 'P' case
         if size is None:
-            size, = struct.unpack("!I", self._dict_file[self._offset:self._offset + 4])
+            (size,) = struct.unpack("!I", self._dict_file[self._offset : self._offset + 4])
             self._offset += 4
-        result = self._dict_file[self._offset:self._offset + size]
+        result = self._dict_file[self._offset : self._offset + size]
         self._offset += size
         return result
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     if len(sys.argv) < 1:
         print("usage: stardict2txt pathbase")
         print("Note that the pathbase doesn't include file extension.")
         exit(1)
 
-    parser = argparse.ArgumentParser(description='Convert StarDict dictionary to tab seperated file',
-        usage='Usage: python stardict2txt --input basename')
-        
-    parser.add_argument('-c', '--cleanup', action=argparse.BooleanOptionalAction)
-    parser.add_argument('basename', help='Basename of StarDict dictionary files')
+    parser = argparse.ArgumentParser(description="Convert StarDict dictionary to tab seperated file", usage="Usage: python stardict2txt --input basename")
+
+    parser.add_argument("-c", "--cleanup", action=argparse.BooleanOptionalAction)
+    parser.add_argument("basename", help="Basename of StarDict dictionary files")
 
     args, array = parser.parse_known_args()
-    cleanup =args.cleanup
+    cleanup = args.cleanup
     CLEANUP = cleanup
 
     dict_name = args.basename
@@ -422,7 +406,7 @@ if __name__ == '__main__':
     dict_file = dict_name + ".dict.dz"
     text_file = dict_name + ".tab"
 
-    print(f'Start conversion: {ifo_file}')
+    print(f"Start conversion: {ifo_file}")
     # info read test done
     info = IfoFileReader(ifo_file)
     # info.dump()
@@ -435,4 +419,4 @@ if __name__ == '__main__':
     dict_reader = DictFileReader(dict_file, info, index, True)
     dict_reader.dump(text_file)
 
-    print('Done.')
+    print("Done.")

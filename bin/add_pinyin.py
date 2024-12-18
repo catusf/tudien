@@ -5,6 +5,7 @@ Verify tab file
 """
 
 import argparse
+
 import pinyin
 
 
@@ -28,9 +29,7 @@ def main() -> None:
     if not outfile:
         print(f"Couldnot open output file {outputfile}")
 
-    with open(
-        inputfile, "r", encoding="utf-8", errors="replace"
-    ) as infile:  # , errors='replace'
+    with open(inputfile, "r", encoding="utf-8", errors="replace") as infile:  # , errors='replace'
         count = 0
         count_issues = 0
 
