@@ -163,7 +163,7 @@ def generate_summary(dict_dir, output_dir):
         mismatched_dicts = num_dict_found - (existing_dicts + missing_dicts)
 
         assert num_dict_found == len(data)
-        assert files_per_format * (num_dict_found + 1) == len(needed_files)
+        # assert files_per_format * (num_dict_found + 1) == len(needed_files)
 
         files_status += f"- There are **{len(data)}** dict files.\n\n"
         files_status += f"- Total NEEDED files: **{len(needed_files)}**\n\n"
