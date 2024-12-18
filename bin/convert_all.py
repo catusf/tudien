@@ -126,13 +126,13 @@ def escape_forbidden_chars(text, forbidden_chars=r" (){}[]$*?^|<>\\"):
 def main() -> None:
     """Main entry point"""  # noqa: D401
     parser = argparse.ArgumentParser(description="Convert all dictionaries in a folder")
-    parser.add_argument("-i", "--input_folder", required=True, help="Input folder containing .tsv and .dfo files")
-    parser.add_argument("-o", "--output_folder", required=True, help="Output folder containing dictionary files")
+    parser.add_argument("-i", "--input_folder", default="dict", help="Input folder containing .tsv and .dfo files")
+    parser.add_argument("-o", "--output_folder", default="output", help="Output folder containing dictionary files")
     parser.add_argument("-e", "--extension", default="tab", help="Filename extention for input dictionary files. Default is .tab")
     parser.add_argument("-m", "--metadata", default="dfo", help="Filename extention for input metadata for dictionary. Default is .dfo")
     parser.add_argument("-f", "--filter", help="Filter only dictionary entries with matching keys (seperated by comma)")
 
-    args, array = parser.parse_known_args()
+    args = parser.parse_args()
 
     input_folder = escape_forbidden_chars(args.input_folder)
     output_folder = escape_forbidden_chars(args.output_folder)

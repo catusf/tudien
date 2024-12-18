@@ -56,13 +56,14 @@ def count_lines_in_tab(tab_path):
 
 
 SUPPORTED_EXTENSIONS = {
-    "dictd.zip": "DictD",
-    "dsl.dz": "Lingvo (DSL)",
-    "epub": "EPUB",
-    "kobo.zip": "Kobo",
-    "mobi": "Kindle (.mobi)",
-    "stardict.zip": "StartDict",
-    "yomitan.zip": "Yomitan",
+    "dictd.zip": {"dir": "dictd", "name": "DictD"},
+    "dsl.dz": {"dir": "lingvo", "name": "Lingvo (DSL)"},
+    "epub": {"dir": "epub", "name": "EPUB"},
+    "kobo.zip": {"dir": "kobo", "name": "Kobo"},
+    "mobi": {"dir": "kindle", "name": "Kindle (.mobi)"},
+    "stardict.zip": {"dir": "stardict", "name": "StartDict"},
+    "yomitan.zip": {"dir": "yomitan", "name": "Yomitan"},
+    # "mdict.zip": {"dir": "mdict", "MDict"),
 }
 
 COLUMNS = {
@@ -98,102 +99,112 @@ def generate_summary(dict_dir, output_dir):
     num_dict_found = 0
 
     for filename in os.listdir(dict_dir):
-        if filename.endswith(".dfo"):
-            filebase = filename[:-4]
-            dfo_path = os.path.join(dict_dir, filename)
-            tab_path = os.path.join(dict_dir, filebase + ".tab")
+        if not filename.endswith(".dfo"):
+            continue
+        filebase = filename[:-4]
+        dfo_path = os.path.join(dict_dir, filename)
+        tab_path = os.path.join(dict_dir, filebase + ".tab")
 
-            # Parse the .dfo file
-            metadata = parse_dfo_file(dfo_path)
+        # Parse the .dfo file
+        metadata = parse_dfo_file(dfo_path)
 
-            # Count lines in the corresponding .tab file
-            num_definitions = count_lines_in_tab(tab_path)
+        # Count lines in the corresponding .tab file
+        num_definitions = count_lines_in_tab(tab_path)
 
-            # Generate the download URL for the main file
-            # main_download_url = f"https://github.com/catusf/tudien/releases/tag/{TAG_DOWNLOAD}/all-kindle.zip"
+        # Generate the download URL for the main file
+        # main_download_url = f"https://github.com/catusf/tudien/releases/tag/{TAG_DOWNLOAD}/all-kindle.zip"
 
-            # Get the additional downloadable files
-            download_urls = get_downloadable_files(filebase, DOWNLOAD_TAG, dict_dir)
+        # Get the additional downloadable files
+        download_urls = get_downloadable_files(filebase, DOWNLOAD_TAG, dict_dir)
 
-            # Get full language names in Vietnamese
-            source_full_name = langcodes.Language.get(metadata["Source"]).display_name("vi")
-            # language_names.get(metadata['Source'], f"Unknown ({metadata['Source']})")
-            target_full_name = langcodes.Language.get(metadata["Target"]).display_name("vi")
-            # language_names.get(metadata['Target'], f"Unknown ({metadata['Target']})")
+        for ext in SUPPORTED_EXTENSIONS:
+            needed_files.append(os.path.join(output_dir, filebase + "." + ext))
 
-            # Append the data to the list
-            data.append(
-                {
-                    "Number": len(data) + 1,  # Add numbering
-                    "Name": metadata["Name"],
-                    "Description": metadata["Description"],
-                    "Source": f"{source_full_name} ({metadata['Source']})",  # Full language name in Vietnamese
-                    "Target": f"{target_full_name} ({metadata['Target']})",  # Full language name in Vietnamese
-                    "Owner/Editor": metadata["Owner/Editor"],
-                    "Version": metadata["Version"],
-                    "Definitions": num_definitions,
-                    "Download": download_urls,
-                }
-            )
+        # Get full language names in Vietnamese
+        source_full_name = langcodes.Language.get(metadata["Source"]).display_name("vi")
+        # language_names.get(metadata['Source'], f"Unknown ({metadata['Source']})")
+        target_full_name = langcodes.Language.get(metadata["Target"]).display_name("vi")
+        # language_names.get(metadata['Target'], f"Unknown ({metadata['Target']})")
 
-            num_dict_found += 1
+        # Append the data to the list
+        data.append(
+            {
+                "Number": len(data) + 1,  # Add numbering
+                "Name": metadata["Name"],
+                "Description": metadata["Description"],
+                "Source": f"{source_full_name} ({metadata['Source']})",  # Full language name in Vietnamese
+                "Target": f"{target_full_name} ({metadata['Target']})",  # Full language name in Vietnamese
+                "Owner/Editor": metadata["Owner/Editor"],
+                "Version": metadata["Version"],
+                "Definitions": num_definitions,
+                "Download": download_urls,
+            }
+        )
 
-        # Save the list of dictionaries as a JSON file
-        json_path = os.path.join(dict_dir, "dict_summary.json")
-        with open(json_path, "w", encoding="utf-8") as json_file:
-            json.dump(data, json_file, ensure_ascii=False, indent=4)
+        num_dict_found += 1
 
-            print(f"Data file writtend to '{json_path}'.")
+    for ext in SUPPORTED_EXTENSIONS:
+        item = SUPPORTED_EXTENSIONS[ext]
+        needed_files.append(os.path.join(output_dir, f"all-{item['dir']}.zip"))
 
-        existing_files = sorted(glob.glob(os.path.join(output_dir, "*.*")))
+    # Save the list of dictionaries as a JSON file
+    json_path = os.path.join(dict_dir, "dict_summary.json")
+    with open(json_path, "w", encoding="utf-8") as json_file:
+        json.dump(data, json_file, ensure_ascii=False, indent=4)
 
-        missing_files = sorted(set(needed_files) - set(existing_files))
+        print(f"Data file writtend to '{json_path}'.")
 
-        print("JSON file 'dict_summary.json' has been generated.")
+    existing_files = sorted(glob.glob(os.path.join(output_dir, "*.*")))
 
-        files_status = "# Status report\n\n"
-        files_status += "## Counts\n\n"
-        files_per_format = len(SUPPORTED_EXTENSIONS)
-        existing_dicts = (len(existing_files) - files_per_format) / files_per_format
-        missing_dicts = len(missing_files) / files_per_format
-        if existing_dicts < 0:
-            existing_dicts = 0
-            missing_dicts -= 1
+    missing_files = sorted(set(needed_files) - set(existing_files))
 
-        mismatched_dicts = num_dict_found - (existing_dicts + missing_dicts)
+    print("JSON file 'dict_summary.json' has been generated.")
 
-        assert num_dict_found == len(data)
-        # assert files_per_format * (num_dict_found + 1) == len(needed_files)
+    files_status = "# Status report\n\n"
+    files_status += "## Counts\n\n"
+    files_per_format = len(SUPPORTED_EXTENSIONS)
+    existing_dicts = (len(existing_files) - files_per_format) / files_per_format
+    missing_dicts = len(missing_files) / files_per_format
 
-        files_status += f"- There are **{len(data)}** dict files.\n\n"
-        files_status += f"- Total NEEDED files: **{len(needed_files)}**\n\n"
-        files_status += f"- Total EXISTING files: **{len(existing_files)}** "
-        files_status += f"- or **{existing_dicts:.1f}** dictionaries. "
-        if len(existing_files) % files_per_format != 0:
-            files_status += "ABNORMAL NUMBER of files. Some dict has **missing format(s)**. Check missing files list for details.\n\n"
-        else:
-            files_status += "The number of files looks NORMAL.\n\n"
+    if existing_dicts < 0:
+        existing_dicts = 0
+        missing_dicts -= 1
 
-        files_status += f"- Total MISSING files: {len(missing_files)}** "
-        files_status += f"(or **{missing_dicts:.1f}** dictionaries which is {'CORRECT' if mismatched_dicts == 0 else 'IN-CORRECT'})\n\n"
+    mismatched_dicts = num_dict_found - (existing_dicts + missing_dicts)
 
-        files_status_details = "# Errors\n"
+    assert num_dict_found == len(data)
+    # assert files_per_format * (num_dict_found + 1) == len(needed_files)
 
-        files_status_details += f"## Missing files list\n\n"
-        for item in missing_files:
-            files_status_details += f"\t{item}\n"
+    files_status += f"- There are **{len(data)}** dict files.\n\n"
+    files_status += f"- Total NEEDED files: **{len(needed_files)}**\n\n"
+    files_status += f"- Total GENERATED files: **{len(existing_files)}** "
+    files_status += f"- or **{existing_dicts:.1f}** dictionary sets. "
 
-        print(files_status_details)
-        print(files_status)
+    if len(missing_files) or len(existing_files) % files_per_format != 0:
+        files_status += "ABNORMAL NUMBER of files. Some dict has **missing format(s)**. Check missing files list for details.\n\n"
+    else:
+        files_status += "The number of files looks NORMAL.\n\n"
 
-        return data, files_status, files_status_details
+    files_status += f"- Total MISSING files: {len(missing_files)}** "
+    files_status += f"(or **{missing_dicts:.1f}** dictionaries which is {'CORRECT' if mismatched_dicts == 0 else 'IN-CORRECT'})\n\n"
+
+    files_status_details = "# Errors\n"
+
+    files_status_details += f"## Missing files list\n\n"
+    for item in missing_files:
+        files_status_details += f"\t{item}\n"
+
+    print(files_status_details)
+    print(files_status)
+
+    return data, files_status, files_status_details
 
 
 def generate_markdown_table(data, files_status, files_status_details, extensions, columns):
     """Generate a markdown table from the data."""
     print(f"Generating report for {len(data)} dictionaries for {extensions}")
 
-    types = [SUPPORTED_EXTENSIONS[ext] for ext in extensions]
+    types = [SUPPORTED_EXTENSIONS[ext]["name"] for ext in extensions]
     header = "| Number | Name | "  # " Description | Source | Target | Owner/Editor | Definitions | " + " | ".join(types)]
     seperator = "| --- | --- | "  # " --- | --- | --- | --- | --- |" + " --- |" * len(extensions)]
 
@@ -264,12 +275,12 @@ def main():
 
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description="Generate a dictionary summary.")
-    parser.add_argument("--dict_dir", type=str, nargs="?", default="dict", help="The directory containing the dictionary files (default is 'dict').")
-    parser.add_argument("--outfile", type=str, nargs="?", default="dict_summary.md", help="The output report file name (default is 'dict_summary.md').")
-    parser.add_argument("--output_dir", type=str, nargs="?", default="output", help="The output dir for all the dict results.")
-    parser.add_argument("--extensions", type=str, nargs="?", default=None, help="The extensions that need included in the report. None means all.")
-    parser.add_argument("--columns", type=str, nargs="?", default=None, help="The columns that will be kept (Other than the download links).")
-    parser.add_argument("--read_only", choices=["yes", "no"], default="no", required=False, help="Read data or create it.")
+    parser.add_argument("-d", "--dict_dir", default="dict", help="The directory containing the dictionary files (default is 'dict').")
+    parser.add_argument("-f", "--outfile", default="dict_summary.md", help="The output report file name (default is 'dict_summary.md').")
+    parser.add_argument("-o", "--output_dir", default="output", help="The output dir for all the dict results.")
+    parser.add_argument("-e", "--extensions", default=None, help="The extensions that need included in the report. None means all.")
+    parser.add_argument("-c", "--columns", default=None, help="The columns that will be kept (Other than the download links).")
+    parser.add_argument("-r", "--read_only", choices=["yes", "no"], default="no", required=False, help="Read data or create it.")
 
     args = parser.parse_args()
 

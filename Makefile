@@ -1,5 +1,5 @@
 sample:
-	uv run python ./bin/convert_all.py --input_folder=dict --output_folder=output --extension=tab --filter=Hero
+	uv run python ./bin/convert_all.py --input_folder=dict --output_folder=output --extension=tab --filter=C
 	echo "Release sample"
 
 all:
@@ -16,3 +16,6 @@ dict_new_stats:
 
 dict_stats:
 	uv run python ./bin/dict_summary.py --dict_dir=dict --read_only=yes
+
+dict_ext_stats:
+	uv run python ./bin/dict_summary.py --dict_dir=ext-dict --read_only=yes
