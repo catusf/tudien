@@ -140,7 +140,8 @@ def main() -> None:
     metadata = args.metadata
     dict_filters = args.filter.split(",") if args.filter is not None else []
 
-    print("Arguments:" + args)
+    print("Arguments:")
+    print(args)
 
     if input_folder:
         metafilelist = sorted(glob.glob(input_folder + f"/*.{metadata}"), reverse=True)
