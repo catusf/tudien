@@ -15,11 +15,14 @@ test:
 	echo "Run test the venv"
 	uv run python ./bin/test.py
 
-dict_new_stats:
-	uv run python ./bin/dict_summary.py --dict_dir=dict --read_only=no
+dict_stats_new:
+	uv run python ./bin/dict_summary.py --dict_dir=dict --output_dir=output --read_only=no
 
-dict_stats:
-	uv run python ./bin/dict_summary.py --dict_dir=dict --read_only=yes
+dict_stats_old:
+	uv run python ./bin/dict_summary.py --dict_dir=dict --output_dir=output --read_only=yes
 
-dict_ext_stats:
-	uv run python ./bin/dict_summary.py --dict_dir=ext-dict --read_only=yes
+dict_ext_stats_new:
+	uv run python ./bin/dict_summary.py --dict_dir=ext-dict --output_dir=ext-output --read_only=no
+
+dict_ext_stats_old:
+	uv run python ./bin/dict_summary.py --dict_dir=ext-dict --output_dir=ext-output --read_only=yes

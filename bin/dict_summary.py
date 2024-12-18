@@ -180,19 +180,24 @@ def generate_summary(dict_dir, output_dir):
     files_status += f"- Total GENERATED files: **{len(existing_files)}** "
     files_status += f"- or **{existing_dicts:.1f}** dictionary sets. "
 
+    normal = False
     if len(missing_files) or len(existing_files) % files_per_format != 0:
         files_status += "ABNORMAL NUMBER of files. Some dict has **missing format(s)**. Check missing files list for details.\n\n"
     else:
         files_status += "The number of files looks NORMAL.\n\n"
+        normal = True
 
     files_status += f"- Total MISSING files: {len(missing_files)}** "
-    files_status += f"(or **{missing_dicts:.1f}** dictionaries which is {'CORRECT' if mismatched_dicts == 0 else 'IN-CORRECT'})\n\n"
+    files_status += f"(or **{missing_dicts:.1f}** dictionaries which is {'CORRECT' if not missing_dicts and mismatched_dicts == 0 else 'IN-CORRECT'})\n\n"
 
-    files_status_details = "# Errors\n"
+    files_status_details = ""
 
-    files_status_details += f"## Missing files list\n\n"
-    for item in missing_files:
-        files_status_details += f"\t{item}\n"
+    if not normal:
+        files_status_details += "# Errors\n"
+
+        files_status_details += f"## Missing files list\n\n"
+        for item in missing_files:
+            files_status_details += f"\t{item}\n"
 
     print(files_status_details)
     print(files_status)
