@@ -1,3 +1,7 @@
+setup:
+	pip install uv
+	uv sync
+
 sample:
 	uv run python ./bin/convert_all.py --input_folder=dict --output_folder=output --extension=tab --filter=C
 	echo "Release sample"

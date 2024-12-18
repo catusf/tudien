@@ -68,6 +68,25 @@ Mã nguồn cho từ điển dành cho máy đọc sách Kindle. Để sử dụ
 
 ## Ghi chú
 
+## Thực hiện
+
+- Setup môi trường
+
+`make setup`
+
+- Test môi trường
+
+`make test`
+
+- Build mẫu vài từ điển
+
+`make sample`
+
+- Build tất cả từ điển
+
+`make all`
+
+
 ### SSH Private Key
 
 - Khi tạo khởi động CodeSpace để dev, thực hiện lệnh sau để đồng bộ SSH Private Key từ CodeSpace secret vào SSH Agent
