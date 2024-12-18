@@ -219,7 +219,7 @@ def main():
     parser.add_argument("--outfile", type=str, nargs="?", default="dict_summary.md", help="The output report file name (default is 'dict_summary.md').")
     parser.add_argument("--extensions", type=str, nargs="?", default=None, help="The extensions that need included in the report. None means all.")
     parser.add_argument("--columns", type=str, nargs="?", default=None, help="The columns that will be kept (Other than the download links).")
-    parser.add_argument("--read-only", choices=["yes", "no"], default="yes", required=False, help="Read data or create it.")
+    parser.add_argument("--read-only", choices=["yes", "no"], default="no", required=False, help="Read data or create it.")
 
     args = parser.parse_args()
 
