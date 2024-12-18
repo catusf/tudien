@@ -69,9 +69,7 @@ jobs:
       run: |
         source .venv/bin/activate &&
         uv pip list &&
-        echo "Temporary stop making dicts"
-        
-        #uv run python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab
+        uv run python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab --fileter=C
 
     - name: Report the results
       run: |
