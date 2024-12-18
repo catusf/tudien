@@ -61,13 +61,16 @@ jobs:
     - name: Copy internal dictionaries
       run: |
         cp dict/*.* $INPUT_DIR/ &&
-        ls $INPUT_DIR
+        ls $INPUT_DIR &&
+        ls -l | wc -l
 
     - name: Build all dictionaries
       run: |
         source .venv/bin/activate &&
         uv pip list &&
-        uv run python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab
+        echo "Temporary stop making dicts"
+        
+        #uv run python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab
 
     - name: Report the results
       run: |

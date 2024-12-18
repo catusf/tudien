@@ -223,6 +223,8 @@ def main():
 
     args = parser.parse_args()
 
+    print(args)
+    
     # Generate the summary data and save it as a JSON file
     ext_str = args.extensions
     col_str = args.columns
