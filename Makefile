@@ -10,3 +10,9 @@ all:
 test:
 	echo "Run test the venv"
 	uv run python ./bin/test.py
+
+dict_new_stats:
+	uv run python ./bin/dict_summary.py --dict_dir=dict --read_only=no
+
+dict_stats:
+	uv run python ./bin/dict_summary.py --dict_dir=dict --read_only=yes

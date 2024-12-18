@@ -1,6 +1,7 @@
 """Generates summary of available dictionaries"""
 
 import argparse
+import glob
 import json
 import os
 
@@ -88,11 +89,13 @@ def get_downloadable_files(filebase, tag_download, dict_dir):
   return download_links
 
 
-def generate_summary(dict_dir):
+def generate_summary(dict_dir, output_dir):
   """Generate a list of dictionaries containing metadata for each .dfo file."""
   print(f"Generating summary data for {dict_dir}")
 
   data = []
+  needed_files = []
+  num_dict_found = 0
 
   for filename in os.listdir(dict_dir):
     if filename.endswith(".dfo"):
@@ -133,17 +136,60 @@ def generate_summary(dict_dir):
         }
       )
 
+      num_dict_found += 1
+
     # Save the list of dictionaries as a JSON file
     json_path = os.path.join(dict_dir, "dict_summary.json")
-    with open(json_path, 'w', encoding='utf-8') as json_file:
-        json.dump(data, json_file, ensure_ascii=False, indent=4)
+    with open(json_path, "w", encoding="utf-8") as json_file:
+      json.dump(data, json_file, ensure_ascii=False, indent=4)
 
-        print(f"Data file writtend to '{json_path}'.")
+      print(f"Data file writtend to '{json_path}'.")
 
-    return data
+    existing_files = sorted(glob.glob(os.path.join(output_dir, "*.*")))
+
+    missing_files = sorted(set(needed_files) - set(existing_files))
+
+    print("JSON file 'dict_summary.json' has been generated.")
+
+    files_status = "# Status report\n\n"
+    files_status += "## Counts\n\n"
+    files_per_format = len(SUPPORTED_EXTENSIONS)
+    existing_dicts = (len(existing_files) - files_per_format) / files_per_format
+    missing_dicts = len(missing_files) / files_per_format
+    if existing_dicts < 0:
+      existing_dicts = 0
+      missing_dicts -= 1
+
+    mismatched_dicts = num_dict_found - (existing_dicts + missing_dicts)
+
+    assert num_dict_found == len(data)
+    assert files_per_format * (num_dict_found + 1) == len(needed_files)
+
+    files_status += f"- There are **{len(data)}** dict files.\n\n"
+    files_status += f"- Total NEEDED files: **{len(needed_files)}**\n\n"
+    files_status += f"- Total EXISTING files: **{len(existing_files)}** "
+    files_status += f"- or **{existing_dicts:.1f}** dictionaries. "
+    if len(existing_files) % files_per_format != 0:
+      files_status += "ABNORMAL NUMBER of files. Some dict has **missing format(s)**. Check missing files list for details.\n\n"
+    else:
+      files_status += "The number of files looks NORMAL.\n\n"
+
+    files_status += f"- Total MISSING files: {len(missing_files)}** "
+    files_status += f"(or **{missing_dicts:.1f}** dictionaries which is {'CORRECT' if mismatched_dicts == 0 else 'IN-CORRECT'})\n\n"
+
+    files_status_details = "# Errors\n"
+
+    files_status_details += f"## Missing files list\n\n"
+    for item in missing_files:
+      files_status_details += f"\t{item}\n"
+
+    print(files_status_details)
+    print(files_status)
+
+    return data, files_status, files_status_details
 
 
-def generate_markdown_table(data, extensions, columns):
+def generate_markdown_table(data, files_status, files_status_details, extensions, columns):
   """Generate a markdown table from the data."""
   print(f"Generating report for {len(data)} dictionaries for {extensions}")
 
@@ -207,51 +253,58 @@ def generate_markdown_table(data, extensions, columns):
 
     markdown.append(line)
 
+  markdown.insert(0, files_status_details)
+  markdown.insert(0, files_status)
+
   return "\n".join(markdown)
 
 
 def main():
-    """Main function to parse arguments and run the processes."""  # noqa: D202, D401
+  """Main function to parse arguments and run the processes."""  # noqa: D202, D401
 
-    # Parse command-line arguments
-    parser = argparse.ArgumentParser(description="Generate a dictionary summary.")
-    parser.add_argument("--dict_dir", type=str, nargs="?", default="dict", help="The directory containing the dictionary files (default is 'dict').")
-    parser.add_argument("--outfile", type=str, nargs="?", default="dict_summary.md", help="The output report file name (default is 'dict_summary.md').")
-    parser.add_argument("--extensions", type=str, nargs="?", default=None, help="The extensions that need included in the report. None means all.")
-    parser.add_argument("--columns", type=str, nargs="?", default=None, help="The columns that will be kept (Other than the download links).")
-    parser.add_argument("--read_only", choices=["yes", "no"], default="no", required=False, help="Read data or create it.")
+  # Parse command-line arguments
+  parser = argparse.ArgumentParser(description="Generate a dictionary summary.")
+  parser.add_argument("--dict_dir", type=str, nargs="?", default="dict", help="The directory containing the dictionary files (default is 'dict').")
+  parser.add_argument("--outfile", type=str, nargs="?", default="dict_summary.md", help="The output report file name (default is 'dict_summary.md').")
+  parser.add_argument("--output_dir", type=str, nargs="?", default="output", help="The output dir for all the dict results.")
+  parser.add_argument("--extensions", type=str, nargs="?", default=None, help="The extensions that need included in the report. None means all.")
+  parser.add_argument("--columns", type=str, nargs="?", default=None, help="The columns that will be kept (Other than the download links).")
+  parser.add_argument("--read_only", choices=["yes", "no"], default="no", required=False, help="Read data or create it.")
 
-    args = parser.parse_args()
+  args = parser.parse_args()
 
-    print(args)
-    
-    # Generate the summary data and save it as a JSON file
-    ext_str = args.extensions
-    col_str = args.columns
-    read_only = args.read_only
-    dict_dir = args.dict_dir
-    outfile = args.outfile
+  print(args)
 
-    extensions = list(SUPPORTED_EXTENSIONS.keys()) if not ext_str else [item.strip() for item in ext_str.split(",")]
-    columns = list(COLUMNS.keys()) if not col_str else [item.strip() for item in col_str.split(",")]
-    
-    if read_only == "no":
-        data = generate_summary(dict_dir)
-    else:
-        json_path = os.path.join(dict_dir, "dict_summary.json")
-        with open(json_path, 'r', encoding='utf-8') as json_file:
-            data = json.load(json_file)
+  # Generate the summary data and save it as a JSON file
+  ext_str = args.extensions
+  col_str = args.columns
+  read_only = args.read_only
+  dict_dir = args.dict_dir
+  outfile = args.outfile
+  output_dir = args.output_dir
 
-    # Generate the markdown table from the JSON data
-    markdown_table = generate_markdown_table(data, extensions, columns)
+  extensions = list(SUPPORTED_EXTENSIONS.keys()) if not ext_str else [item.strip() for item in ext_str.split(",")]
+  columns = list(COLUMNS.keys()) if not col_str else [item.strip() for item in col_str.split(",")]
 
-    # Save the markdown table to a .md file
-    markdown_file = os.path.join(dict_dir, outfile)
-    with open(markdown_file, 'w', encoding='utf-8') as file:
-        file.write(markdown_table)
-        print(f"Data file written to: {markdown_file}")
+  files_status = ""
+  files_status_details = ""
+  if read_only == "no":
+    data, files_status, files_status_details = generate_summary(dict_dir, output_dir)
+  else:
+    json_path = os.path.join(dict_dir, "dict_summary.json")
+    with open(json_path, "r", encoding="utf-8") as json_file:
+      data = json.load(json_file)
 
-    print(f"Summary markdown file '{outfile}' has been generated.")
+  # Generate the markdown table from the JSON data
+  markdown_table = generate_markdown_table(data, files_status, files_status_details, extensions, columns)
+
+  # Save the markdown table to a .md file
+  markdown_file = os.path.join(dict_dir, outfile)
+  with open(markdown_file, "w", encoding="utf-8") as file:
+    file.write(markdown_table)
+    print(f"Data file written to: {markdown_file}")
+
+  print(f"Summary markdown file '{outfile}' has been generated.")
 
 
 if __name__ == "__main__":
