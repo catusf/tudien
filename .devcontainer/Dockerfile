@@ -18,10 +18,13 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 COPY pyproject.toml .
 #RUN python -m pip install -r requirements.txt
-RUN pip install uv && uv sync && source .venv/bin/activate
+
+COPY --from=ghcr.io/astral-sh/uv:latest/uv/uvx/bin/
+
+RUN uv sync && source .venv/bin/activate
 
 WORKDIR /app
-COPY . /app
+COPY . /app`
 
 # Creates a non-root user with an explicit UID and adds permission to access the /app folder
 # For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers
