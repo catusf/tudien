@@ -7,7 +7,7 @@ import os
 
 import langcodes
 
-DOWNLOAD_TAG = "v4.0"  # Set the GitHub tag version that asscociates with the release
+DOWNLOAD_TAG = "v4.1"  # Set the GitHub tag version that asscociates with the release
 
 
 def parse_dfo_file(dfo_path):
