@@ -237,18 +237,18 @@ def generate_markdown_table(data, files_status, files_status_details, extensions
         seperator += " --- |"
 
     if "definition" in columns:
-        header += "Definitions |"
-        seperator += " --- |"
+        header += "# Definitions |"
+        seperator += " ---: |"  # Right align number of definitions
 
     header += " | ".join(types) + " |"
     seperator += " --- |" * len(extensions)
 
     markdown = [header, seperator]
 
-    for entry in data:
+    for num, entry in enumerate(data, start=1):
         download_links = " | ".join([f"[Download]({entry['Download'][ext]})" for ext in extensions])
 
-        line = f"| {entry['Number']} | {entry['Name']} | "
+        line = f"| {num} | {entry['Name']} | "
 
         if "desc" in columns:
             line += f"{entry['Description']} |"
