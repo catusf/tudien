@@ -1,8 +1,8 @@
 Name = Từ điển Trung-Việt β (trung) v1.0
-Description = Từ điển Trung-Việt β (cỡ trung)
+Description = Từ điển Trung-Việt β (cỡ trung). Bao gồm hơn 130k mục từ, phủ hết mục từ trong CCCE.
 Source = zh
 Target = vi
-Version = 1.0
+Version = 1.1
 Owner/Editor = 
 URL = https://github.com/catusphan/dictionary
 Inflections = 
