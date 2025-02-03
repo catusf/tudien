@@ -209,6 +209,9 @@ def generate_markdown_table(data, files_status, files_status_details, extensions
     """Generate a markdown table from the data."""
     print(f"Generating report for {len(data)} dictionaries for {extensions}")
 
+    # Sort the data by "Source" then by "Name"
+    data = sorted(data, key=lambda x: (x["Source"], x["Name"]))
+
     types = [SUPPORTED_EXTENSIONS[ext]["name"] for ext in extensions]
     header = "| Number | Name | "  # " Description | Source | Target | Owner/Editor | Definitions | " + " | ".join(types)]
     seperator = "| --- | --- | "  # " --- | --- | --- | --- | --- |" + " --- |" * len(extensions)]
