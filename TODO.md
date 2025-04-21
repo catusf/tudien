@@ -1,4 +1,5 @@
 # TODO
+- [ ] Add links to download Pleco dict (bin/text)
 - [ ] Use functions to process all types of dicts: dsl, kindle, others
 - [ ] Add output for Apple Dictionary Source
 - [ ] Add output for MDict (.MDX)
