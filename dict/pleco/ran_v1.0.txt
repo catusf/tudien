@@ -1,0 +1,790 @@
+// Radical name dictionary (v0.9)
+偏旁	piānpáng	RADICALS HOMEPAGE①⼀ · ⼁ · ⼂ · ⼃ · ⼄ · ⼅②⼆ · ⼇ · ⼈ · ⼉ · ⼊ · ⼋ · ⼌ · ⼍ · ⼎ · ⼏ · ⼐ · ⼑ · ⼒ · ⼓ · ⼔ · ⼕ · ⼖ · ⼗ · ⼘ · ⼙ · ⼚ · ⼛ · ⼜③⼝ · ⼞ · ⼟ · ⼠ · ⼡ · ⼢ · ⼣ · ⼤ · ⼥ · ⼦ · ⼧ · ⼨ · ⼩ · ⼪ · ⼫ · ⼬ · ⼭ · ⼮ · ⼯ · ⼰ · ⼱ · ⼲ · ⼳ · ⼴ · ⼵ · ⼶ · ⼷ · ⼸ · ⼹ · ⼺ · ⼻④⼼ · ⼽ · ⼾ · ⼿ · ⽀ · ⽁ · ⽂ · ⽃ · ⽄ · ⽅ · ⽆ · ⽇ · ⽈ · ⽉ · ⽊ · ⽋ · ⽌ · ⽍ · ⽎ · ⽏ · ⽐ · ⽑ · ⽒ · ⽓ · ⽔ · ⽕ · ⽖ · ⽗ · ⽘ · ⽙ · ⽚ · ⽛ · ⽜ · ⽝⑤⽞ · ⽟ · ⽠ · ⽡ · ⽢ · ⽣ · ⽤ · ⽥ · ⽦ · ⽧ · ⽨ · ⽩ · ⽪ · ⽫ · ⽬ · ⽭ · ⽮ · ⽯ · ⽰ · ⽱ · ⽲ · ⽳ · ⽴⑥⽵ · ⽶ · ⽷ · ⽸ · ⽹ · ⽺ · ⽻ · ⽼ · ⽽ · ⽾ · ⽿ · ⾀ · ⾁ · ⾂ · ⾃ · ⾄ · ⾅ · ⾆ · ⾇ · ⾈ · ⾉ · ⾊ · ⾋ · ⾌ · ⾍ · ⾎ · ⾏ · ⾐ · ⾑⑦⾒ · ⾓ · ⾔ · ⾕ · ⾖ · ⾗ · ⾘ · ⾙ · ⾚ · ⾛ · ⾜ · ⾝ · ⾞ · ⾟ · ⾠ · ⾡ · ⾢ · ⾣ · ⾤ · ⾥⑧⾦ · ⾧ · ⾨ · ⾩ · ⾪ · ⾫ · ⾬ · ⾭ · ⾮⑨⾯ · ⾰ · ⾱ · ⾲ · ⾳ · ⾴ · ⾵ · ⾶ · ⾷ · ⾸ · ⾹⑩⾺ · ⾻ · ⾼ · ⾽ · ⾾ · ⾿ · ⿀ · ⿁⑪⿂ · ⿃ · ⿄ · ⿅ · ⿆ · ⿇⑫⿈ · ⿉ · ⿊ · ⿋⑬⿌ · ⿍ · ⿎ · ⿏⑭⿐ · ⿑⑮⿒⑯⿓ · ⿔⑰⿕WITH NAMES 有名字⼀ · ⼂ · ⼇ · ⼈ · ⼉ · ⼊ · ⼋ · ⼌ · ⼍ · ⼎ · ⼏ · ⼐ · ⼑ · ⼒ · ⼓ · ⼔ · ⼕ · ⼗ · ⼙ · ⼚ · ⼛ · ⼜ · ⼝ · ⼞ · ⼟ · ⼠ · ⼡ · ⼣ · ⼤ · ⼥ · ⼦ · ⼧ · ⼨ · ⼩ · ⼫ · ⼭ · ⼯ · ⼱ · ⼲ · ⼴ · ⼵ · ⼶ · ⼸ · ⼺ · ⼻ · ⼼ · ⼽ · ⼾ · ⼿ · ⽁ · ⽄ · ⽅ · ⽇ · ⽉ · ⽊ · ⽋ · ⽌ · ⽎ · ⽔ · ⽕ · ⽖ · ⽙ · ⽜ · ⽝ · ⽟ · ⽥ · ⽦ · ⽧ · ⽨ · ⽩ · ⽪ · ⽫ · ⽬ · ⽯ · ⽰ · ⽲ · ⽳ · ⽴ · ⽵ · ⽶ · ⽷ · ⽹ · ⽺ · ⽻ · ⽼ · ⽿ · ⾆ · ⾈ · ⾉ · ⾋ · ⾍ · ⾐ · ⾒ · ⾔ · ⾙ · ⾛ · ⾜ · ⾞ · ⾟ · ⾡ · ⾢ · ⾣ · ⾥ · ⾦ · ⾨ · ⾩ · ⾫ · ⾬ · ⾭ · ⾴ · ⾷ · ⾺ · ⿃
+一	yī	Variant of radical ⼀ (one)EXAMPLES 王·丁·七·三HOMEPAGE ► 偏旁
+一字旁	yīzìpáng	Name of radical number 1 ⼀MEANING oneEXAMPLES 王·丁·七·三HOMEPAGE ► 偏旁
+⼀	yī	Kangxi radical number 1NAME 一字旁 yīzìpángVARIANTS 一STANDALONE 一MEANING oneEXAMPLES 王·丁·七·三RANK 88.5%DISTINGHUISH FROM 乛·亠·冖·宀NOTES  Characters are classified here when they have a horizontal stroke and don't fit under any other radicalsHOMEPAGE ► 偏旁
+丨	gǔn	Variant of radical ⼁ (line)EXAMPLES 十·中·串·丰HOMEPAGE ► 偏旁
+⼁	gǔn	Kangxi radical number 2NAME  VARIANTS 丨MEANING lineEXAMPLES 十·中·串·丰RANK 66.3%DISTINGHUISH FROM 亅NOTES  Now simply called shu4 - 竖, which means vertical stroke, see gun3HOMEPAGE ► 偏旁
+⺀	zhǔ	Variant of radical ⼂ (dot)EXAMPLES 丸·凡·丹·户HOMEPAGE ► 偏旁
+丶	zhǔ	Variant of radical ⼂ (dot)EXAMPLES 丸·凡·丹·户HOMEPAGE ► 偏旁
+丶字旁	zhǔzìpáng	Name of radical number 3 ⼂MEANING dotEXAMPLES 丸·凡·丹·户HOMEPAGE ► 偏旁
+⼂	zhǔ	Kangxi radical number 3NAME 丶字旁 zhǔzìpángVARIANTS ⺀·丶MEANING dotEXAMPLES 丸·凡·丹·户RANK 63.1%HOMEPAGE ► 偏旁
+丿	piě	Variant of radical ⼃ (slash)EXAMPLES 乂·乃·久·八HOMEPAGE ► 偏旁
+乀	piě	Variant of radical ⼃ (slash)EXAMPLES 乂·乃·久·八HOMEPAGE ► 偏旁
+乁	piě	Variant of radical ⼃ (slash)EXAMPLES 乂·乃·久·八HOMEPAGE ► 偏旁
+⼃	piě	Kangxi radical number 4NAME  VARIANTS 丿·乀·乁MEANING slashEXAMPLES 乂·乃·久·八RANK 76.3%NOTES  general stroke, sometimes means fallingHOMEPAGE ► 偏旁
+⺂	yǐ	Variant of radical ⼄ (second)EXAMPLES 九·乞·也HOMEPAGE ► 偏旁
+⺃	yǐ	Variant of radical ⼄ (second)EXAMPLES 九·乞·也HOMEPAGE ► 偏旁
+⺄	yǐ	Variant of radical ⼄ (second)EXAMPLES 九·乞·也HOMEPAGE ► 偏旁
+乙	yǐ	Variant of radical ⼄ (second)EXAMPLES 九·乞·也HOMEPAGE ► 偏旁
+乚	yǐ	Variant of radical ⼄ (second)EXAMPLES 九·乞·也HOMEPAGE ► 偏旁
+乛	yǐ	Variant of radical ⼄ (second)EXAMPLES 九·乞·也HOMEPAGE ► 偏旁
+⼄	yǐ	Kangxi radical number 5NAME  VARIANTS ⺂·⺃·⺄·乙·乚·乛STANDALONE 乙MEANING secondEXAMPLES 九·乞·也MNEMONIC  possibly represents a sproutRANK 52.7%HOMEPAGE ► 偏旁
+亅	jué	Variant of radical ⼅ (hook)EXAMPLES 了·矛·事HOMEPAGE ► 偏旁
+𠄌	jué	Variant of radical ⼅ (hook)EXAMPLES 了·矛·事HOMEPAGE ► 偏旁
+⼅	jué	Kangxi radical number 6NAME  VARIANTS 亅·𠄌MEANING hookEXAMPLES 了·矛·事RANK 44.4%DISTINGHUISH FROM 丨HOMEPAGE ► 偏旁
+二	èr	Variant of radical ⼆ (two)EXAMPLES 貳·于·云·些HOMEPAGE ► 偏旁
+⼆	èr	Kangxi radical number 7NAME  VARIANTS 二STANDALONE 二MEANING twoEXAMPLES 貳·于·云·些RANK 74.6%HOMEPAGE ► 偏旁
+亠	tóu	Variant of radical ⼇ (lid)EXAMPLES 方·亡·亢·交HOMEPAGE ► 偏旁
+六字头	lìuzìtóu	Name of radical number 8 ⼇MEANING lidEXAMPLES 方·亡·亢·交HOMEPAGE ► 偏旁
+⼇	tóu	Kangxi radical number 8NAME 六字头 lìuzìtóuVARIANTS 亠MEANING lidEXAMPLES 方·亡·亢·交RANK 75.3%DISTINGHUISH FROM 一·冖·宀·乛NOTES  known in chinese as “点横” or “文字头”. Only a couple characters relate to any concept of cover or lid, a few more relate to the idea of a head as something up above. HOMEPAGE ► 偏旁
+⺅	rén	Variant of radical ⼈ (man)EXAMPLES 你·什·仁·仇HOMEPAGE ► 偏旁
+人	rén	Variant of radical ⼈ (man)EXAMPLES 你·什·仁·仇HOMEPAGE ► 偏旁
+亻	rén	Variant of radical ⼈ (man)EXAMPLES 你·什·仁·仇HOMEPAGE ► 偏旁
+单立人	dānlìrén	Name of radical number 9 ⼈MEANING manEXAMPLES 你·什·仁·仇HOMEPAGE ► 偏旁
+单人旁	dānrénpáng	Name of radical number 9 ⼈MEANING manEXAMPLES 你·什·仁·仇HOMEPAGE ► 偏旁
+⼈	rén	Kangxi radical number 9NAME 单立人 dānlìrén·单人旁 dānrénpángVARIANTS ⺅·人·亻STANDALONE 人MEANING manEXAMPLES 你·什·仁·仇MNEMONIC  This is a simple stick figure, or a pair of legsRANK 75.3%DISTINGHUISH FROM 入,八NOTES  One of the most common radicals, typically used in characters representing human attributes or actions that man undertakes; Modern dictionaries group 人 and 入 togetherHOMEPAGE ► 偏旁
+儿	ér	Variant of radical ⼉ (son, legs)EXAMPLES 兒·兀·允·元HOMEPAGE ► 偏旁
+儿座底	érzuòdǐ	Name of radical number 10 ⼉MEANING son, legsEXAMPLES 兒·兀·允·元HOMEPAGE ► 偏旁
+⼉	ér	Kangxi radical number 10NAME 儿座底 érzuòdǐVARIANTS 儿STANDALONE 儿MEANING son, legsEXAMPLES 兒·兀·允·元MNEMONIC  Depicts the two legs of a person.   Few characters actually represent this meaning.RANK 79.1%NOTES  Also known as the LEGS radical due to ancient meaning.  Known now as the short form of 兒.HOMEPAGE ► 偏旁
+入	rù	Variant of radical ⼊ (enter)EXAMPLES 內·全·兩·汆HOMEPAGE ► 偏旁
+入字旁	rùzìpáng	Name of radical number 11 ⼊MEANING enterEXAMPLES 內·全·兩·汆HOMEPAGE ► 偏旁
+⼊	rù	Kangxi radical number 11NAME 入字旁 rùzìpángVARIANTS 入STANDALONE 入MEANING enterEXAMPLES 內·全·兩·汆MNEMONIC  The open door of a tentRANK 44.4%DISTINGHUISH FROM 八,人NOTES  modern dictionaries group 人 and 入 togetherHOMEPAGE ► 偏旁
+丷	bā	Variant of radical ⼋ (eight)EXAMPLES 公·六·兮·穴HOMEPAGE ► 偏旁
+八	bā	Variant of radical ⼋ (eight)EXAMPLES 公·六·兮·穴HOMEPAGE ► 偏旁
+八字旁	bāzìpáng	Name of radical number 12 ⼋MEANING eightEXAMPLES 公·六·兮·穴HOMEPAGE ► 偏旁
+⼋	bā	Kangxi radical number 12NAME 八字旁 bāzìpángVARIANTS 丷·八STANDALONE 八MEANING eightEXAMPLES 公·六·兮·穴MNEMONIC  Indicates separation, to split something. Can also have a meaning like 拔 - to pull outRANK 20.1%DISTINGHUISH FROM 入,人NOTES  Used in some characters with two downward strokesHOMEPAGE ► 偏旁
+⺆	jiōng	Variant of radical ⼌ (wide)EXAMPLES 冇·冊·冉·肉HOMEPAGE ► 偏旁
+冂	jiōng	Variant of radical ⼌ (wide)EXAMPLES 冇·冊·冉·肉HOMEPAGE ► 偏旁
+同字匡	tóngzìkuāng	Name of radical number 13 ⼌MEANING wideEXAMPLES 冇·冊·冉·肉HOMEPAGE ► 偏旁
+⼌	jiōng	Kangxi radical number 13NAME 同字匡 tóngzìkuāngVARIANTS ⺆·冂MEANING wideEXAMPLES 冇·冊·冉·肉RANK 52.7%NOTES  Also known as DOWN BOX radicalHOMEPAGE ► 偏旁
+冖	mì	Variant of radical ⼍ (cloth cover)EXAMPLES 冗·冠·冥·運HOMEPAGE ► 偏旁
+秃宝盖	tūbǎogài	Name of radical number 14 ⼍MEANING cloth coverEXAMPLES 冗·冠·冥·運HOMEPAGE ► 偏旁
+⼍	mì	Kangxi radical number 14NAME 秃宝盖 tūbǎogàiVARIANTS 冖MEANING cloth coverEXAMPLES 冗·冠·冥·運RANK 59.0%DISTINGHUISH FROM 一·亠·宀·乛NOTES  aka COVER radicalHOMEPAGE ► 偏旁
+冫	bīng	Variant of radical ⼎ (ice)EXAMPLES 冬·冰·冶·凉HOMEPAGE ► 偏旁
+两点水	liǎngdiǎnshǔi	Name of radical number 15 ⼎MEANING iceEXAMPLES 冬·冰·冶·凉HOMEPAGE ► 偏旁
+⼎	bīng	Kangxi radical number 15NAME 两点水 liǎngdiǎnshǔiVARIANTS 冫MEANING iceEXAMPLES 冬·冰·冶·凉MNEMONIC  possibly a reduction of 仌, sometimes indicates a splitRANK 82.2%DISTINGHUISH FROM 彡，氵NOTES  All things cold and icy are encompassed by this radicalHOMEPAGE ► 偏旁
+⺇	jī	Variant of radical ⼏ (table)EXAMPLES 風·殳·凡·凱HOMEPAGE ► 偏旁
+几	jī	Variant of radical ⼏ (table)EXAMPLES 風·殳·凡·凱HOMEPAGE ► 偏旁
+𠘧	jī	Variant of radical ⼏ (table)EXAMPLES 風·殳·凡·凱HOMEPAGE ► 偏旁
+𠘨	jī	Variant of radical ⼏ (table)EXAMPLES 風·殳·凡·凱HOMEPAGE ► 偏旁
+几字旁	jīzìpáng	Name of radical number 16 ⼏MEANING tableEXAMPLES 風·殳·凡·凱HOMEPAGE ► 偏旁
+⼏	jī	Kangxi radical number 16NAME 几字旁 jīzìpángVARIANTS ⺇·几·𠘧·𠘨STANDALONE 几MEANING tableEXAMPLES 風·殳·凡·凱RANK 63.1%HOMEPAGE ► 偏旁
+凵	kǎn	Variant of radical ⼐ (receptacle)EXAMPLES 凶·凸·凹·齒HOMEPAGE ► 偏旁
+凶字框	xiōngzìkuàng	Name of radical number 17 ⼐MEANING receptacleEXAMPLES 凶·凸·凹·齒HOMEPAGE ► 偏旁
+⼐	kǎn	Kangxi radical number 17NAME 凶字框 xiōngzìkuàngVARIANTS 凵MEANING receptacleEXAMPLES 凶·凸·凹·齒MNEMONIC  primitive of an open vessel or receptacleRANK 59.0%NOTES  aka open boxHOMEPAGE ► 偏旁
+⺈	dāo	Variant of radical ⼑ (knife)EXAMPLES 刁·解·分·劍HOMEPAGE ► 偏旁
+⺉	dāo	Variant of radical ⼑ (knife)EXAMPLES 刁·解·分·劍HOMEPAGE ► 偏旁
+刀	dāo	Variant of radical ⼑ (knife)EXAMPLES 刁·解·分·劍HOMEPAGE ► 偏旁
+刁	dāo	Variant of radical ⼑ (knife)EXAMPLES 刁·解·分·劍HOMEPAGE ► 偏旁
+刂	dāo	Variant of radical ⼑ (knife)EXAMPLES 刁·解·分·劍HOMEPAGE ► 偏旁
+𠂊	dāo	Variant of radical ⼑ (knife)EXAMPLES 刁·解·分·劍HOMEPAGE ► 偏旁
+刀字旁	dāozìpáng	Name of radical number 18 ⼑MEANING knifeEXAMPLES 刁·解·分·劍HOMEPAGE ► 偏旁
+立刀旁	lìdāopáng	Name of radical number 18 ⼑MEANING knifeEXAMPLES 刁·解·分·劍HOMEPAGE ► 偏旁
+⼑	dāo	Kangxi radical number 18NAME 刀字旁 dāozìpáng·立刀旁 lìdāopángVARIANTS ⺈·⺉·刀·刁·刂·𠂊STANDALONE 刀MEANING knifeEXAMPLES 刁·解·分·劍MNEMONIC  picture of a ancient bronze knifeRANK 44.4%DISTINGHUISH FROM 力勹NOTES  Encompasses numerous characters relating to sharpness and actions undertaken with sharp items.HOMEPAGE ► 偏旁
+力	lì	Variant of radical ⼒ (power)EXAMPLES 加·功·劣·男HOMEPAGE ► 偏旁
+力字旁	lìzìpáng	Name of radical number 19 ⼒MEANING powerEXAMPLES 加·功·劣·男HOMEPAGE ► 偏旁
+⼒	lì	Kangxi radical number 19NAME 力字旁 lìzìpángVARIANTS 力STANDALONE 力MEANING powerEXAMPLES 加·功·劣·男RANK 86.1%DISTINGHUISH FROM 刀NOTES  Used in a variety of characters industrious characters, or those having to do with exertion. aka POWER radicalHOMEPAGE ► 偏旁
+勹	bāo	Variant of radical ⼓ (wrap)EXAMPLES 包·勺·勻·勾HOMEPAGE ► 偏旁
+包字头	bāozìtóu	Name of radical number 20 ⼓MEANING wrapEXAMPLES 包·勺·勻·勾HOMEPAGE ► 偏旁
+⼓	bāo	Kangxi radical number 20NAME 包字头 bāozìtóuVARIANTS 勹MEANING wrapEXAMPLES 包·勺·勻·勾MNEMONIC  A figure leaning over to hold or cover somethingRANK 66.3%DISTINGHUISH FROM 刀,力NOTES  Adds a grouping or enclosing meaning to a number of characters, more often as a component as the actual 部首HOMEPAGE ► 偏旁
+匕	bǐ	Variant of radical ⼔ (spoon)EXAMPLES 化·北·匙·比HOMEPAGE ► 偏旁
+匕字旁	bǐzìpáng	Name of radical number 21 ⼔MEANING spoonEXAMPLES 化·北·匙·比HOMEPAGE ► 偏旁
+⼔	bǐ	Kangxi radical number 21NAME 匕字旁 bǐzìpángVARIANTS 匕STANDALONE 匕MEANING spoonEXAMPLES 化·北·匙·比MNEMONIC  picture of a type of spoon or  ladle, possibly an upside down 人 in some charactersRANK 35.0%NOTES  aka spoonHOMEPAGE ► 偏旁
+匚	fāng	Variant of radical ⼕ (box)EXAMPLES 匿·區·巨·匠HOMEPAGE ► 偏旁
+医字框	yìzìkuàng	Name of radical number 22 ⼕MEANING boxEXAMPLES 匿·區·巨·匠HOMEPAGE ► 偏旁
+⼕	fāng	Kangxi radical number 22NAME 医字框 yìzìkuàngVARIANTS 匚STANDALONE 匚MEANING boxEXAMPLES 匿·區·巨·匠RANK 52.7%DISTINGHUISH FROM 匸HOMEPAGE ► 偏旁
+匸	xǐ	Variant of radical ⼖ (hiding enclosure)EXAMPLES 亡·匹·匼·匽HOMEPAGE ► 偏旁
+⼖	xǐ	Kangxi radical number 23NAME  VARIANTS 匸MEANING hiding enclosureEXAMPLES 亡·匹·匼·匽RANK 44.4%DISTINGHUISH FROM 匚HOMEPAGE ► 偏旁
+十	shí	Variant of radical ⼗ (ten)EXAMPLES 千·半·卅·升HOMEPAGE ► 偏旁
+十字旁	shízìpáng	Name of radical number 24 ⼗MEANING tenEXAMPLES 千·半·卅·升HOMEPAGE ► 偏旁
+⼗	shí	Kangxi radical number 24NAME 十字旁 shízìpángVARIANTS 十STANDALONE 十MEANING tenEXAMPLES 千·半·卅·升MNEMONIC  originally 丨 meaning straight - pronounced zhi - 一 one unit of 丨 pronounced shiRANK 78.4%HOMEPAGE ► 偏旁
+⺊	bǔ	Variant of radical ⼘ (divination)EXAMPLES 下·上·卡·占HOMEPAGE ► 偏旁
+卜	bǔ	Variant of radical ⼘ (divination)EXAMPLES 下·上·卡·占HOMEPAGE ► 偏旁
+⼘	bǔ	Kangxi radical number 25NAME  VARIANTS ⺊·卜STANDALONE 卜MEANING divinationEXAMPLES 下·上·卡·占MNEMONIC  represents cracks in a turtle shell which were used for divinationRANK 59.0%HOMEPAGE ► 偏旁
+⺋	jié	Variant of radical ⼙ (seal (device))EXAMPLES 即·卬·卷·夗HOMEPAGE ► 偏旁
+㔾	jié	Variant of radical ⼙ (seal (device))EXAMPLES 即·卬·卷·夗HOMEPAGE ► 偏旁
+卩	jié	Variant of radical ⼙ (seal (device))EXAMPLES 即·卬·卷·夗HOMEPAGE ► 偏旁
+单耳刀	dāněrdāo	Name of radical number 26 ⼙MEANING seal (device)EXAMPLES 即·卬·卷·夗HOMEPAGE ► 偏旁
+⼙	jié	Kangxi radical number 26NAME 单耳刀 dāněrdāoVARIANTS ⺋·㔾·卩MEANING seal (device)EXAMPLES 即·卬·卷·夗MNEMONIC  A kneeling person - in some cases provides the character meaning as wellRANK 67.7%NOTES  primary form - used on the left side of a character. Most characters don't relate to the characters meaning.HOMEPAGE ► 偏旁
+⺁	chǎng 	Variant of radical ⼚ (cliff)EXAMPLES 厄·原·厚·厰HOMEPAGE ► 偏旁
+厂	chǎng 	Variant of radical ⼚ (cliff)EXAMPLES 厄·原·厚·厰HOMEPAGE ► 偏旁
+𠂆	chǎng 	Variant of radical ⼚ (cliff)EXAMPLES 厄·原·厚·厰HOMEPAGE ► 偏旁
+厂字旁	chǎngzìpáng	Name of radical number 27 ⼚MEANING cliffEXAMPLES 厄·原·厚·厰HOMEPAGE ► 偏旁
+⼚	chǎng 	Kangxi radical number 27NAME 厂字旁 chǎngzìpángVARIANTS ⺁·厂·𠂆STANDALONE 厂MEANING cliffEXAMPLES 厄·原·厚·厰RANK 79.1%DISTINGHUISH FROM 广,疒,⺁NOTES  aka SLOPE radicalHOMEPAGE ► 偏旁
+厶	sī	Variant of radical ⼛ (private)EXAMPLES 台·公·去·參·HOMEPAGE ► 偏旁
+私字旁	sīzìpáng	Name of radical number 28 ⼛MEANING privateEXAMPLES 台·公·去·參·HOMEPAGE ► 偏旁
+⼛	sī	Kangxi radical number 28NAME 私字旁 sīzìpángVARIANTS 厶MEANING privateEXAMPLES 台·公·去·參·MNEMONIC  Originally a picture of a tightly wound coccoon.  Some interperetations view it as a mouth whisperingRANK 59.0%NOTES  Used in many characters related to silkHOMEPAGE ► 偏旁
+又	yòu	Variant of radical ⼜ (again)EXAMPLES 叉·及·友·取HOMEPAGE ► 偏旁
+又字旁	yòuzìpáng	Name of radical number 29 ⼜MEANING againEXAMPLES 叉·及·友·取HOMEPAGE ► 偏旁
+⼜	yòu	Kangxi radical number 29NAME 又字旁 yòuzìpángVARIANTS 又STANDALONE 又MEANING againEXAMPLES 叉·及·友·取MNEMONIC  primitive representing the right handRANK 76.3%DISTINGHUISH FROM 攵,文NOTES  Like 手, this character also signifies things done by man or with one's hand.  Perhaps because of the higher value placed on the right hand in Chinese culture the meanings here may be of similar value, such as offering friendship (友) or turning against (反).  Modern meaning from sound loan, also called the AGAIN radicalHOMEPAGE ► 偏旁
+口	kǒu	Variant of radical ⼝ (mouth)EXAMPLES 哎·古·只·品HOMEPAGE ► 偏旁
+口字旁	kǒuzìpáng	Name of radical number 30 ⼝MEANING mouthEXAMPLES 哎·古·只·品HOMEPAGE ► 偏旁
+⼝	kǒu	Kangxi radical number 30NAME 口字旁 kǒuzìpángVARIANTS 口STANDALONE 口MEANING mouthEXAMPLES 哎·古·只·品MNEMONIC  This is a simple picture of an open mouthRANK 99.3%DISTINGHUISH FROM 囗NOTES  Used in characters involving things done with one's mouth, eating, speaking, drinking, etc.HOMEPAGE ► 偏旁
+囗	wéi	Variant of radical ⼞ (enclosure)EXAMPLES 囚·四·國·圍HOMEPAGE ► 偏旁
+国字框	guózìkuàng	Name of radical number 31 ⼞MEANING enclosureEXAMPLES 囚·四·國·圍HOMEPAGE ► 偏旁
+⼞	wéi	Kangxi radical number 31NAME 国字框 guózìkuàngVARIANTS 囗STANDALONE 囗MEANING enclosureEXAMPLES 囚·四·國·圍MNEMONIC  Represents a wall surrounding somethingRANK 81.2%DISTINGHUISH FROM 口NOTES  This radical always surrounds or contains other components, that action generally providing a strong clue to the meaning of the character.  Also known as Surround radicalHOMEPAGE ► 偏旁
+土	tǔ	Variant of radical ⼟ (earth)EXAMPLES 地·圣·圭·堯HOMEPAGE ► 偏旁
+提土旁	títǔpáng	Name of radical number 32 ⼟MEANING earthEXAMPLES 地·圣·圭·堯HOMEPAGE ► 偏旁
+⼟	tǔ	Kangxi radical number 32NAME 提土旁 títǔpángVARIANTS 土STANDALONE 土MEANING earthEXAMPLES 地·圣·圭·堯MNEMONIC  a lump of clay on a  potter's wheel or a cross in the earthRANK 96.5%DISTINGHUISH FROM 士NOTES  Earthly attributes and forces tend to be represented under this radical.  Merged with 士 in many dictionariesHOMEPAGE ► 偏旁
+士	shì	Variant of radical ⼠ (scholar)EXAMPLES 壬·喜·時·壽HOMEPAGE ► 偏旁
+士字旁	shìzìpáng	Name of radical number 33 ⼠MEANING scholarEXAMPLES 壬·喜·時·壽HOMEPAGE ► 偏旁
+⼠	shì	Kangxi radical number 33NAME 士字旁 shìzìpángVARIANTS 士STANDALONE 士MEANING scholarEXAMPLES 壬·喜·時·壽MNEMONIC  The story goes that a scholar (士) took ten (十) things and organized them into one (一); possibly a modification of 大RANK 63.1%DISTINGHUISH FROM 土NOTES  This radical is used in characters for desirable human attributes or conditions. Merged with 土 in many dictionariesHOMEPAGE ► 偏旁
+夂	zhǐ	Variant of radical ⼡ (go)EXAMPLES 各·冬·夆·愛HOMEPAGE ► 偏旁
+折文旁	zhéwénpáng	Name of radical number 34 ⼡MEANING goEXAMPLES 各·冬·夆·愛HOMEPAGE ► 偏旁
+⼡	zhǐ	Kangxi radical number 34NAME 折文旁 zhéwénpángVARIANTS 夂MEANING goEXAMPLES 各·冬·夆·愛MNEMONIC  A footprintRANK 52.7%DISTINGHUISH FROM 夕,夊,歹HOMEPAGE ► 偏旁
+夊	suī	Variant of radical ⼢ (go slowly)EXAMPLES 夌·复·夏HOMEPAGE ► 偏旁
+⼢	suī	Kangxi radical number 35NAME  VARIANTS 夊MEANING go slowlyEXAMPLES 夌·复·夏MNEMONIC  A footprintRANK 20.1%DISTINGHUISH FROM 夕,夂,歹NOTES  This radical only appears in two common characters - the traditional radical was merged with 夂HOMEPAGE ► 偏旁
+夕	xī	Variant of radical ⼣ (evening)EXAMPLES 外·夗·多·岁HOMEPAGE ► 偏旁
+夕字旁	xīzìpáng	Name of radical number 36 ⼣MEANING eveningEXAMPLES 外·夗·多·岁HOMEPAGE ► 偏旁
+⼣	xī	Kangxi radical number 36NAME 夕字旁 xīzìpángVARIANTS 夕STANDALONE 夕MEANING eveningEXAMPLES 外·夗·多·岁MNEMONIC  depicts the moon, representing eveningRANK 44.4%DISTINGHUISH FROM 夂,夊,歹NOTES  Subjects such as dreams and night are categorized hereHOMEPAGE ► 偏旁
+大	dà	Variant of radical ⼤ (big)EXAMPLES 太·天·夭·夯HOMEPAGE ► 偏旁
+大字旁	dàzìpáng	Name of radical number 37 ⼤MEANING bigEXAMPLES 太·天·夭·夯HOMEPAGE ► 偏旁
+⼤	dà	Kangxi radical number 37NAME 大字旁 dàzìpángVARIANTS 大STANDALONE 大MEANING bigEXAMPLES 太·天·夭·夯MNEMONIC  A man with arms and legs spread, trying to convey something largeRANK 88.5%HOMEPAGE ► 偏旁
+女	nǚ	Variant of radical ⼥ (woman)EXAMPLES 妳·婆·奶·如HOMEPAGE ► 偏旁
+女字旁	nv̌zìpáng	Name of radical number 38 ⼥MEANING womanEXAMPLES 妳·婆·奶·如HOMEPAGE ► 偏旁
+⼥	nǚ	Kangxi radical number 38NAME 女字旁 nv̌zìpángVARIANTS 女STANDALONE 女MEANING womanEXAMPLES 妳·婆·奶·如MNEMONIC  A woman with crossed legs, or possibly breastsRANK 95.4%NOTES  Generally included in all things feminine, also characters relating to marriage and courtship.HOMEPAGE ► 偏旁
+子	zǐ	Variant of radical ⼦ (child)EXAMPLES 孩·學·孔·仔HOMEPAGE ► 偏旁
+子字旁	zǐzìpáng	Name of radical number 39 ⼦MEANING childEXAMPLES 孩·學·孔·仔HOMEPAGE ► 偏旁
+⼦	zǐ	Kangxi radical number 39NAME 子字旁 zǐzìpángVARIANTS 子STANDALONE 子MEANING childEXAMPLES 孩·學·孔·仔MNEMONIC  A baby with arms & headRANK 82.2%NOTES  Generally appears in characters relating to life and a child's role in the familyHOMEPAGE ► 偏旁
+宀	mián	Variant of radical ⼧ (roof)EXAMPLES 家·安·寧·它HOMEPAGE ► 偏旁
+宝盖头	bǎogàitóu	Name of radical number 40 ⼧MEANING roofEXAMPLES 家·安·寧·它HOMEPAGE ► 偏旁
+⼧	mián	Kangxi radical number 40NAME 宝盖头 bǎogàitóuVARIANTS 宀MEANING roofEXAMPLES 家·安·寧·它MNEMONIC  The dot on top may represent a chimney, the edges eaves.RANK 93.4%DISTINGHUISH FROM 一·亠·冖·乛NOTES  The roof radical can represent various things relating to hearth and home.HOMEPAGE ► 偏旁
+寸	cùn	Variant of radical ⼨ (inch)EXAMPLES 村·寺·封·射HOMEPAGE ► 偏旁
+寸字旁	cùnzìpáng	Name of radical number 41 ⼨MEANING inchEXAMPLES 村·寺·封·射HOMEPAGE ► 偏旁
+⼨	cùn	Kangxi radical number 41NAME 寸字旁 cùnzìpángVARIANTS 寸STANDALONE 寸MEANING inchEXAMPLES 村·寺·封·射MNEMONIC  A hand with finger and thumb measuring something, though the dot could be the thumb itselfRANK 72.5%NOTES  Often used in characters having to do with investigation or measurement of things, also attentiveness and directionHOMEPAGE ► 偏旁
+⺌	xiǎo	Variant of radical ⼩ (small)EXAMPLES 少·尖·當·栄HOMEPAGE ► 偏旁
+⺍	xiǎo	Variant of radical ⼩ (small)EXAMPLES 少·尖·當·栄HOMEPAGE ► 偏旁
+小	xiǎo	Variant of radical ⼩ (small)EXAMPLES 少·尖·當·栄HOMEPAGE ► 偏旁
+𭕄	xiǎo	Variant of radical ⼩ (small)EXAMPLES 少·尖·當·栄HOMEPAGE ► 偏旁
+当字头	dāngzìtóu	Name of radical number 42 ⼩MEANING smallEXAMPLES 少·尖·當·栄HOMEPAGE ► 偏旁
+⼩	xiǎo	Kangxi radical number 42NAME 当字头 dāngzìtóuVARIANTS ⺌·⺍·小·𭕄STANDALONE 小MEANING smallEXAMPLES 少·尖·當·栄MNEMONIC  split 八 and make it smallRANK 63.1%HOMEPAGE ► 偏旁
+⺎	wāng	Variant of radical ⼪ (lame)EXAMPLES 尤·尷·尬·尩HOMEPAGE ► 偏旁
+⺏	wāng	Variant of radical ⼪ (lame)EXAMPLES 尤·尷·尬·尩HOMEPAGE ► 偏旁
+⺐	wāng	Variant of radical ⼪ (lame)EXAMPLES 尤·尷·尬·尩HOMEPAGE ► 偏旁
+⺑	wāng	Variant of radical ⼪ (lame)EXAMPLES 尤·尷·尬·尩HOMEPAGE ► 偏旁
+兀	wāng	Variant of radical ⼪ (lame)EXAMPLES 尤·尷·尬·尩HOMEPAGE ► 偏旁
+尢	wāng	Variant of radical ⼪ (lame)EXAMPLES 尤·尷·尬·尩HOMEPAGE ► 偏旁
+尣	wāng	Variant of radical ⼪ (lame)EXAMPLES 尤·尷·尬·尩HOMEPAGE ► 偏旁
+𡯁	wāng	Variant of radical ⼪ (lame)EXAMPLES 尤·尷·尬·尩HOMEPAGE ► 偏旁
+𡯂	wāng	Variant of radical ⼪ (lame)EXAMPLES 尤·尷·尬·尩HOMEPAGE ► 偏旁
+⼪	wāng	Kangxi radical number 43NAME  VARIANTS ⺎·⺏·⺐·⺑·兀·尢·尣·𡯁·𡯂STANDALONE 兀MEANING lameEXAMPLES 尤·尷·尬·尩MNEMONIC  This depicts two legs of different lengths to represent lameness.  The horizontal stroke emphasizes the difference, and may represent armsRANK 52.7%HOMEPAGE ► 偏旁
+尸	shī	Variant of radical ⼫ (corpse)EXAMPLES 屍·尺·尼·尻HOMEPAGE ► 偏旁
+尸字头	shīzìtóu	Name of radical number 44 ⼫MEANING corpseEXAMPLES 屍·尺·尼·尻HOMEPAGE ► 偏旁
+⼫	shī	Kangxi radical number 44NAME 尸字头 shīzìtóuVARIANTS 尸STANDALONE 尸MEANING corpseEXAMPLES 屍·尺·尼·尻MNEMONIC  A sitting person facing left (possibly laying)RANK 85.0%DISTINGHUISH FROM 戶HOMEPAGE ► 偏旁
+屮	chè	Variant of radical ⼬ (sprout)EXAMPLES 艸·屯·屰·頓HOMEPAGE ► 偏旁
+⼬	chè	Kangxi radical number 45NAME  VARIANTS 屮MEANING sproutEXAMPLES 艸·屯·屰·頓MNEMONIC  This is a picture of a sproutRANK 5.2%NOTES  Rare, but worthwhile remembering, as it links to more common words like 出, which is a picture of a 屮 growing out of a 凵HOMEPAGE ► 偏旁
+山	shān	Variant of radical ⼭ (mountain)EXAMPLES 嵗·密·峰·幽HOMEPAGE ► 偏旁
+山字旁	shānzìpáng	Name of radical number 46 ⼭MEANING mountainEXAMPLES 嵗·密·峰·幽HOMEPAGE ► 偏旁
+⼭	shān	Kangxi radical number 46NAME 山字旁 shānzìpángVARIANTS 山STANDALONE 山MEANING mountainEXAMPLES 嵗·密·峰·幽MNEMONIC  Picture of a mountainRANK 89.5%NOTES  Almost every character under the mountain radical is used for describing landscape features or heightsHOMEPAGE ► 偏旁
+巛	chuān	Variant of radical ⼮ (river)EXAMPLES 川·州·順·災HOMEPAGE ► 偏旁
+巜	chuān	Variant of radical ⼮ (river)EXAMPLES 川·州·順·災HOMEPAGE ► 偏旁
+川	chuān	Variant of radical ⼮ (river)EXAMPLES 川·州·順·災HOMEPAGE ► 偏旁
+⼮	chuān	Kangxi radical number 47NAME  VARIANTS 巛·巜·川STANDALONE 川MEANING riverEXAMPLES 川·州·順·災MNEMONIC  Picture of moving waterRANK 20.1%HOMEPAGE ► 偏旁
+工	gōng	Variant of radical ⼯ (work)EXAMPLES 左·巧·功·式HOMEPAGE ► 偏旁
+工字旁	gōngzìpáng	Name of radical number 48 ⼯MEANING workEXAMPLES 左·巧·功·式HOMEPAGE ► 偏旁
+⼯	gōng	Kangxi radical number 48NAME 工字旁 gōngzìpángVARIANTS 工STANDALONE 工MEANING workEXAMPLES 左·巧·功·式MNEMONIC  Depicts a carpenter's square.RANK 59.0%HOMEPAGE ► 偏旁
+⺒	jǐ	Variant of radical ⼰ (oneself)EXAMPLES 記·改·忌·龍HOMEPAGE ► 偏旁
+己	jǐ	Variant of radical ⼰ (oneself)EXAMPLES 記·改·忌·龍HOMEPAGE ► 偏旁
+已	jǐ	Variant of radical ⼰ (oneself)EXAMPLES 記·改·忌·龍HOMEPAGE ► 偏旁
+巳	jǐ	Variant of radical ⼰ (oneself)EXAMPLES 記·改·忌·龍HOMEPAGE ► 偏旁
+⼰	jǐ	Kangxi radical number 49NAME  VARIANTS ⺒·己·已·巳STANDALONE 己MEANING oneselfEXAMPLES 記·改·忌·龍MNEMONIC  represents the back and forth motion of the warp string in weavingRANK 44.4%HOMEPAGE ► 偏旁
+巾	jīn	Variant of radical ⼱ (turban)EXAMPLES 市·帥·刷·砸HOMEPAGE ► 偏旁
+巾字儿	jīnzìér	Name of radical number 50 ⼱MEANING turbanEXAMPLES 市·帥·刷·砸HOMEPAGE ► 偏旁
+⼱	jīn	Kangxi radical number 50NAME 巾字儿 jīnzìérVARIANTS 巾STANDALONE 巾MEANING turbanEXAMPLES 市·帥·刷·砸MNEMONIC  cloth hanging down, possibly from a loomRANK 87.8%NOTES  The characters under this radical usually represent things made of large expanses of cloth, though smaller items such as headpieces and handkerchiefs are sometimes covered as well.HOMEPAGE ► 偏旁
+干	gān	Variant of radical ⼲ (dry)EXAMPLES 旱·开·平·年HOMEPAGE ► 偏旁
+干字旁	gānzìpáng	Name of radical number 51 ⼲MEANING dryEXAMPLES 旱·开·平·年HOMEPAGE ► 偏旁
+⼲	gān	Kangxi radical number 51NAME 干字旁 gānzìpángVARIANTS 干STANDALONE 干MEANING dryEXAMPLES 旱·开·平·年MNEMONIC  Etymology indicates this is a pestle, but could also be construed as a shield primitiveRANK 52.7%HOMEPAGE ► 偏旁
+⺓	yāo	Variant of radical ⼳ (short thread)EXAMPLES 幻·麼·幽·幾HOMEPAGE ► 偏旁
+乡	yāo	Variant of radical ⼳ (short thread)EXAMPLES 幻·麼·幽·幾HOMEPAGE ► 偏旁
+幺	yāo	Variant of radical ⼳ (short thread)EXAMPLES 幻·麼·幽·幾HOMEPAGE ► 偏旁
+⼳	yāo	Kangxi radical number 52NAME  VARIANTS ⺓·乡·幺STANDALONE 幺MEANING short threadEXAMPLES 幻·麼·幽·幾MNEMONIC  evolved from a depiction of coiled silk threadRANK 35.0%DISTINGHUISH FROM 糸,·纟NOTES  Also known as the SLENDER radical. Seems to relate to that which is seemingly small or slight yet quite the opposite in reality.HOMEPAGE ► 偏旁
+广	guǎng	Variant of radical ⼴ (dotted cliff)EXAMPLES 庀·庂·庄HOMEPAGE ► 偏旁
+广字旁	guǎngzìpáng	Name of radical number 53 ⼴MEANING dotted cliffEXAMPLES 庀·庂·庄HOMEPAGE ► 偏旁
+⼴	guǎng	Kangxi radical number 53NAME 广字旁 guǎngzìpángVARIANTS 广STANDALONE 广MEANING dotted cliffEXAMPLES 庀·庂·庄MNEMONIC  This is a picture of a simple shelter, simplification gave the standalone 部首 a new meaningRANK 86.8%NOTES  Traditional form with this specific pronunciation/meaning is a different character. Generally in characters relating to different sorts of structuresHOMEPAGE ► 偏旁
+廴	yǐn	Variant of radical ⼵ (long stride)EXAMPLES 廵·廷·延HOMEPAGE ► 偏旁
+建之旁	jiànzhīpáng	Name of radical number 54 ⼵MEANING long strideEXAMPLES 廵·廷·延HOMEPAGE ► 偏旁
+⼵	yǐn	Kangxi radical number 54NAME 建之旁 jiànzhīpángVARIANTS 廴MEANING long strideEXAMPLES 廵·廷·延MNEMONIC  Depicts a man marching outRANK 35.0%DISTINGHUISH FROM 辶,·⻎,·⻍NOTES  References only three common modern charactersHOMEPAGE ► 偏旁
+廾	gǒng	Variant of radical ⼶ (arch)EXAMPLES 廿·弁·弄HOMEPAGE ► 偏旁
+弄字底	nòngzìdǐ	Name of radical number 55 ⼶MEANING archEXAMPLES 廿·弁·弄HOMEPAGE ► 偏旁
+⼶	gǒng	Kangxi radical number 55NAME 弄字底 nòngzìdǐVARIANTS 廾MEANING archEXAMPLES 廿·弁·弄MNEMONIC  Rough drawing of two joined handsRANK 52.7%HOMEPAGE ► 偏旁
+弋	yì	Variant of radical ⼷ (shoot)EXAMPLES 弌·弍·弎HOMEPAGE ► 偏旁
+⼷	yì	Kangxi radical number 56NAME  VARIANTS 弋STANDALONE 弋MEANING shootEXAMPLES 弌·弍·弎MNEMONIC  Depicts an ancient weapon described as a retrievable arrow with a string attachedRANK 5.2%NOTES  Also known as the dart radicalHOMEPAGE ► 偏旁
+弓	gōng	Variant of radical ⼸ (bow)EXAMPLES 弔·引·弗HOMEPAGE ► 偏旁
+弓字旁	gōngzìpáng	Name of radical number 57 ⼸MEANING bowEXAMPLES 弔·引·弗HOMEPAGE ► 偏旁
+⼸	gōng	Kangxi radical number 57NAME 弓字旁 gōngzìpángVARIANTS 弓STANDALONE 弓MEANING bowEXAMPLES 弔·引·弗MNEMONIC  a bowRANK 78.4%NOTES  As a bow must be stretched to be shot, characters under this radical tend to deal with elasticity and shooting thingsHOMEPAGE ► 偏旁
+⺔	jì	Variant of radical ⼹ (snout)EXAMPLES 彔·彖·彗HOMEPAGE ► 偏旁
+⺕	jì	Variant of radical ⼹ (snout)EXAMPLES 彔·彖·彗HOMEPAGE ► 偏旁
+彐	jì	Variant of radical ⼹ (snout)EXAMPLES 彔·彖·彗HOMEPAGE ► 偏旁
+彑	jì	Variant of radical ⼹ (snout)EXAMPLES 彔·彖·彗HOMEPAGE ► 偏旁
+⼹	jì	Kangxi radical number 58NAME  VARIANTS ⺔·⺕·彐·彑MEANING snoutEXAMPLES 彔·彖·彗MNEMONIC  tusks and nose of a pigRANK 44.4%NOTES  There is a third alternate form of this radical which doesn't appear to be encoded in unicodeHOMEPAGE ► 偏旁
+彡	shān	Variant of radical ⼺ (bristle)EXAMPLES 形·彤·彥HOMEPAGE ► 偏旁
+三撇儿	sānpiěr	Name of radical number 59 ⼺MEANING bristleEXAMPLES 形·彤·彥HOMEPAGE ► 偏旁
+⼺	shān	Kangxi radical number 59NAME 三撇儿 sānpiěrVARIANTS 彡STANDALONE 彡MEANING bristleEXAMPLES 形·彤·彥MNEMONIC  Typically represents hair, sometimes rays or threeRANK 67.7%DISTINGHUISH FROM 氵,·冫NOTES  This radical shows up in characters relating to stripes or imagery, and occasionally to hair.  Also referred to as the bristle radicalHOMEPAGE ► 偏旁
+彳	chì	Variant of radical ⼻ (step)EXAMPLES 㣔·彴·彷HOMEPAGE ► 偏旁
+双立人	shuānglìrén	Name of radical number 60 ⼻MEANING stepEXAMPLES 㣔·彴·彷HOMEPAGE ► 偏旁
+⼻	chì	Kangxi radical number 60NAME 双立人 shuānglìrénVARIANTS 彳MEANING stepEXAMPLES 㣔·彴·彷MNEMONIC  This is the 亻radical with an extra stroke, likely representing movement.RANK 82.2%DISTINGHUISH FROM 亻NOTES  Unlike 辶部 which relates to the greater journey, this 部首 focuses on smaller actions and relates the details of the tripHOMEPAGE ► 偏旁
+⺖	xīn	Variant of radical ⼼ (heart)EXAMPLES 必·忉·忌HOMEPAGE ► 偏旁
+⺗	xīn	Variant of radical ⼼ (heart)EXAMPLES 必·忉·忌HOMEPAGE ► 偏旁
+㣺	xīn	Variant of radical ⼼ (heart)EXAMPLES 必·忉·忌HOMEPAGE ► 偏旁
+心	xīn	Variant of radical ⼼ (heart)EXAMPLES 必·忉·忌HOMEPAGE ► 偏旁
+忄	xīn	Variant of radical ⼼ (heart)EXAMPLES 必·忉·忌HOMEPAGE ► 偏旁
+竖心旁	shùxīnpáng	Name of radical number 61 ⼼MEANING heartEXAMPLES 必·忉·忌HOMEPAGE ► 偏旁
+⼼	xīn	Kangxi radical number 61NAME 竖心旁 shùxīnpángVARIANTS ⺖·⺗·㣺·心·忄STANDALONE 心MEANING heartEXAMPLES 必·忉·忌MNEMONIC  heart lungRANK 94.0%NOTES  Used in characters relating to emotions.HOMEPAGE ► 偏旁
+戈	gē	Variant of radical ⼽ (halberd)EXAMPLES 戊·戉·戌HOMEPAGE ► 偏旁
+戈字旁	gēzìpáng	Name of radical number 62 ⼽MEANING halberdEXAMPLES 戊·戉·戌HOMEPAGE ► 偏旁
+⼽	gē	Kangxi radical number 62NAME 戈字旁 gēzìpángVARIANTS 戈STANDALONE 戈MEANING halberdEXAMPLES 戊·戉·戌MNEMONIC  This is likely a picture of an ancient weapon called a ge1 which can be seen in museums.  Some suggest it could represent any long handled instrument such as a hoe or axe.RANK 71.5%NOTES  Often lends a military or combative meaning to its charactersHOMEPAGE ► 偏旁
+戶	hù	Variant of radical ⼾ (door)EXAMPLES 戹·戼·戽HOMEPAGE ► 偏旁
+户	hù	Variant of radical ⼾ (door)EXAMPLES 戹·戼·戽HOMEPAGE ► 偏旁
+戸	hù	Variant of radical ⼾ (door)EXAMPLES 戹·戼·戽HOMEPAGE ► 偏旁
+户字旁	hùzìpáng	Name of radical number 63 ⼾MEANING doorEXAMPLES 戹·戼·戽HOMEPAGE ► 偏旁
+⼾	hù	Kangxi radical number 63NAME 户字旁 hùzìpángVARIANTS 戶·户·戸STANDALONE 户MEANING doorEXAMPLES 戹·戼·戽HOMEPAGE ► 偏旁
+⺘	shǒu	Variant of radical ⼿ (hand)EXAMPLES 才·扎·扐HOMEPAGE ► 偏旁
+手	shǒu	Variant of radical ⼿ (hand)EXAMPLES 才·扎·扐HOMEPAGE ► 偏旁
+扌	shǒu	Variant of radical ⼿ (hand)EXAMPLES 才·扎·扐HOMEPAGE ► 偏旁
+才	shǒu	Variant of radical ⼿ (hand)EXAMPLES 才·扎·扐HOMEPAGE ► 偏旁
+龵	shǒu	Variant of radical ⼿ (hand)EXAMPLES 才·扎·扐HOMEPAGE ► 偏旁
+提手旁	tíshǒupáng	Name of radical number 64 ⼿MEANING handEXAMPLES 才·扎·扐HOMEPAGE ► 偏旁
+看字头	kànzìtóu	Name of radical number 64 ⼿MEANING handEXAMPLES 才·扎·扐HOMEPAGE ► 偏旁
+⼿	shǒu	Kangxi radical number 64NAME 提手旁 tíshǒupáng·看字头 kànzìtóuVARIANTS ⺘·手·扌·才·龵STANDALONE 手MEANING handEXAMPLES 才·扎·扐MNEMONIC  Represents the palm of the hand, possibly the lines of the palmRANK 74.6%DISTINGHUISH FROM 毛NOTES  Typically signifies actions executed by one's hand.HOMEPAGE ► 偏旁
+支	zhī	Variant of radical ⽀ (branch)EXAMPLES 攰·攱·攲HOMEPAGE ► 偏旁
+⽀	zhī	Kangxi radical number 65NAME  VARIANTS 支STANDALONE 支MEANING branchEXAMPLES 攰·攱·攲MNEMONIC  Hand 又 holding a branchRANK 35.0%HOMEPAGE ► 偏旁
+⺙	pū	Variant of radical ⽁ (rap, tap)EXAMPLES 收·攷·攸HOMEPAGE ► 偏旁
+攴	pū	Variant of radical ⽁ (rap, tap)EXAMPLES 收·攷·攸HOMEPAGE ► 偏旁
+攵	pū	Variant of radical ⽁ (rap, tap)EXAMPLES 收·攷·攸HOMEPAGE ► 偏旁
+反文旁	fǎnwénpáng	Name of radical number 66 ⽁MEANING rap, tapEXAMPLES 收·攷·攸HOMEPAGE ► 偏旁
+旧反文旁	jìufǎnwénpáng	Name of radical number 66 ⽁MEANING rap, tapEXAMPLES 收·攷·攸HOMEPAGE ► 偏旁
+⽁	pū	Kangxi radical number 66NAME 反文旁 fǎnwénpáng·旧反文旁 jìufǎnwénpángVARIANTS ⺙·攴·攵STANDALONE 攴MEANING rap, tapEXAMPLES 收·攷·攸MNEMONIC  primitive of a hand 又 holding a tool 卜RANK 20.1%DISTINGHUISH FROM 文NOTES  As the hand is engaged in knocking, a number of the characters under this radical relate to actions one may make with their handsHOMEPAGE ► 偏旁
+文	wén	Variant of radical ⽂ (script)EXAMPLES 斉·斌·斐HOMEPAGE ► 偏旁
+⽂	wén	Kangxi radical number 67NAME  VARIANTS 文STANDALONE 文MEANING scriptEXAMPLES 斉·斌·斐MNEMONIC  a tatto on a chest inside clothsRANK 44.4%DISTINGHUISH FROM 攵·又HOMEPAGE ► 偏旁
+斗	dǒu	Variant of radical ⽃ (dipper)EXAMPLES 料·斚·斛HOMEPAGE ► 偏旁
+⽃	dǒu	Kangxi radical number 68NAME  VARIANTS 斗STANDALONE 斗MEANING dipperEXAMPLES 料·斚·斛MNEMONIC  This is a picture of a dipper, measuring out grains represented by the two dots.RANK 52.7%NOTES  Stands on it's own as a radical, but traditional variant of this character is 鬥, Radical 191. See dou3HOMEPAGE ► 偏旁
+斤	jīn	Variant of radical ⽄ (axe)EXAMPLES 斥·斧·斨HOMEPAGE ► 偏旁
+斤字旁	jīnzìpáng	Name of radical number 69 ⽄MEANING axeEXAMPLES 斥·斧·斨HOMEPAGE ► 偏旁
+⽄	jīn	Kangxi radical number 69NAME 斤字旁 jīnzìpángVARIANTS 斤STANDALONE 斤MEANING axeEXAMPLES 斥·斧·斨MNEMONIC  an axe over or penetrating into an object (the left-most stroke)RANK 63.1%NOTES  Characters with this radical relate to breaking or dividing actions/conceptsHOMEPAGE ► 偏旁
+方	fāng	Variant of radical ⽅ (square)EXAMPLES 㫃·於·㫄HOMEPAGE ► 偏旁
+方字旁	fāngzìpáng	Name of radical number 70 ⽅MEANING squareEXAMPLES 㫃·於·㫄HOMEPAGE ► 偏旁
+⽅	fāng	Kangxi radical number 70NAME 方字旁 fāngzìpángVARIANTS 方STANDALONE 方MEANING squareEXAMPLES 㫃·於·㫄MNEMONIC  a man 人 carrying a load 工 which must be balanced RANK 35.0%NOTES  In a number of 字 relating to flags and banners, otherwise doesn't seem to relate to many character's meaningHOMEPAGE ► 偏旁
+⺛	wú	Variant of radical ⽆ (not)EXAMPLES 既·旣·旤HOMEPAGE ► 偏旁
+无	wú	Variant of radical ⽆ (not)EXAMPLES 既·旣·旤HOMEPAGE ► 偏旁
+旡	wú	Variant of radical ⽆ (not)EXAMPLES 既·旣·旤HOMEPAGE ► 偏旁
+⽆	wú	Kangxi radical number 71NAME  VARIANTS ⺛·无·旡STANDALONE 无MEANING notEXAMPLES 既·旣·旤RANK 20.1%NOTES  This variant was introduced with simplified characters, traditional form represents a dancerHOMEPAGE ► 偏旁
+⺜	rì	Variant of radical ⽇ (sun)EXAMPLES 旦·旨·早HOMEPAGE ► 偏旁
+冃	rì	Variant of radical ⽇ (sun)EXAMPLES 旦·旨·早HOMEPAGE ► 偏旁
+日	rì	Variant of radical ⽇ (sun)EXAMPLES 旦·旨·早HOMEPAGE ► 偏旁
+日字旁	rìzìpáng	Name of radical number 72 ⽇MEANING sunEXAMPLES 旦·旨·早HOMEPAGE ► 偏旁
+⽇	rì	Kangxi radical number 72NAME 日字旁 rìzìpángVARIANTS ⺜·冃·日STANDALONE 日MEANING sunEXAMPLES 旦·旨·早MNEMONIC  primitive of the sun, possibly represents the two halves of a dayRANK 94.7%DISTINGHUISH FROM 曰,·白,·臼NOTES  As the sun is the original source of heat and light as well as time keeping such characters are found to use this radicalHOMEPAGE ► 偏旁
+曰	yuē	Variant of radical ⽈ (say)EXAMPLES 曲·曳·更HOMEPAGE ► 偏旁
+⽈	yuē	Kangxi radical number 73NAME  VARIANTS 曰STANDALONE 曰MEANING sayEXAMPLES 曲·曳·更MNEMONIC  a mouth with something - words - in itRANK 67.7%DISTINGHUISH FROM 日,·白,·臼NOTES  Most 字 under this radical have little to do with speakingHOMEPAGE ► 偏旁
+⺝	yuè	Variant of radical ⽉ (moon)EXAMPLES 有·朋·服HOMEPAGE ► 偏旁
+月	yuè	Variant of radical ⽉ (moon)EXAMPLES 有·朋·服HOMEPAGE ► 偏旁
+月字旁	yuèzìpáng	Name of radical number 74 ⽉MEANING moonEXAMPLES 有·朋·服HOMEPAGE ► 偏旁
+⽉	yuè	Kangxi radical number 74NAME 月字旁 yuèzìpángVARIANTS ⺝·月STANDALONE 月MEANING moonEXAMPLES 有·朋·服MNEMONIC  primitive of the crescent moonRANK 67.7%NOTES  Be careful to distinguish this from the meat radical, which looks identical. Often used in characters associated with friendship or romanceHOMEPAGE ► 偏旁
+木	mù	Variant of radical ⽊ (tree)EXAMPLES 未·末·本HOMEPAGE ► 偏旁
+朩	mù	Variant of radical ⽊ (tree)EXAMPLES 未·末·本HOMEPAGE ► 偏旁
+木字旁	mùzìpáng	Name of radical number 75 ⽊MEANING treeEXAMPLES 未·末·本HOMEPAGE ► 偏旁
+⽊	mù	Kangxi radical number 75NAME 木字旁 mùzìpángVARIANTS 木·朩STANDALONE 木MEANING treeEXAMPLES 未·末·本MNEMONIC  Primitive, Something like a banyan tree with branches and above ground roots on the bottomRANK 98.9%DISTINGHUISH FROM 禾,·釆,·米NOTES  Another very common radical, a large portion of the characters using this radical are items manufactured from wood. Also used for trees and fruitsHOMEPAGE ► 偏旁
+欠	qiàn	Variant of radical ⽋ (lack)EXAMPLES 次·欣·欥HOMEPAGE ► 偏旁
+欠字旁	qiànzìpáng	Name of radical number 76 ⽋MEANING lackEXAMPLES 次·欣·欥HOMEPAGE ► 偏旁
+⽋	qiàn	Kangxi radical number 76NAME 欠字旁 qiànzìpángVARIANTS 欠STANDALONE 欠MEANING lackEXAMPLES 次·欣·欥MNEMONIC  a man yawning - think of the upper part as a hand covering the mouth while in the actRANK 71.5%NOTES  The mouth is involved in yawning, and it's also involved in many other emotional displays and vocal actions, many of which are categorized under this 部首HOMEPAGE ► 偏旁
+止	zhǐ	Variant of radical ⽌ (stop)EXAMPLES 正·此·步HOMEPAGE ► 偏旁
+龰	zhǐ	Variant of radical ⽌ (stop)EXAMPLES 正·此·步HOMEPAGE ► 偏旁
+止字旁	zhǐzìpáng	Name of radical number 77 ⽌MEANING stopEXAMPLES 正·此·步HOMEPAGE ► 偏旁
+⽌	zhǐ	Kangxi radical number 77NAME 止字旁 zhǐzìpángVARIANTS 止·龰STANDALONE 止MEANING stopEXAMPLES 正·此·步MNEMONIC  This is a primitive of a footRANK 63.1%HOMEPAGE ► 偏旁
+⺞	dǎi	Variant of radical ⽍ (death)EXAMPLES 歺·死·歿HOMEPAGE ► 偏旁
+歹	dǎi	Variant of radical ⽍ (death)EXAMPLES 歺·死·歿HOMEPAGE ► 偏旁
+歺	dǎi	Variant of radical ⽍ (death)EXAMPLES 歺·死·歿HOMEPAGE ► 偏旁
+⽍	dǎi	Kangxi radical number 78NAME  VARIANTS ⺞·歹·歺STANDALONE 歹MEANING deathEXAMPLES 歺·死·歿MNEMONIC  A chip or remnant of a scapula bone 骨RANK 67.7%HOMEPAGE ► 偏旁
+殳	shū	Variant of radical ⽎ (weapon)EXAMPLES 段·殷·殺HOMEPAGE ► 偏旁
+殳字旁	shūzìpáng	Name of radical number 79 ⽎MEANING weaponEXAMPLES 段·殷·殺HOMEPAGE ► 偏旁
+⽎	shū	Kangxi radical number 79NAME 殳字旁 shūzìpángVARIANTS 殳STANDALONE 殳MEANING weaponEXAMPLES 段·殷·殺MNEMONIC  A hand 又 holding a weapon, probably a clubRANK 59.0%NOTES  Also known as the KILL radical.  A number of actions of violence are categorized under this 部首. In context usually means -ingHOMEPAGE ► 偏旁
+⺟	wú	Variant of radical ⽏ (do not)EXAMPLES 母·每·毐HOMEPAGE ► 偏旁
+毋	wú	Variant of radical ⽏ (do not)EXAMPLES 母·每·毐HOMEPAGE ► 偏旁
+毌	wú	Variant of radical ⽏ (do not)EXAMPLES 母·每·毐HOMEPAGE ► 偏旁
+母	wú	Variant of radical ⽏ (do not)EXAMPLES 母·每·毐HOMEPAGE ► 偏旁
+⽏	wú	Kangxi radical number 80NAME  VARIANTS ⺟·毋·毌·母STANDALONE 毋MEANING do notEXAMPLES 母·每·毐MNEMONIC  a woman with bound breasts - untouchableRANK 35.0%NOTES  Removed from modern simplified radical tablesHOMEPAGE ► 偏旁
+比	bǐ	Variant of radical ⽐ (compare)EXAMPLES 毖·毗·毘HOMEPAGE ► 偏旁
+⽐	bǐ	Kangxi radical number 81NAME  VARIANTS 比STANDALONE 比MEANING compareEXAMPLES 毖·毗·毘MNEMONIC  Two people or objects side by side for comparisonRANK 52.7%HOMEPAGE ► 偏旁
+毛	máo	Variant of radical ⽑ (fur)EXAMPLES 毡·毣·毧HOMEPAGE ► 偏旁
+⽑	máo	Kangxi radical number 82NAME  VARIANTS 毛STANDALONE 毛MEANING furEXAMPLES 毡·毣·毧MNEMONIC  a featherRANK 44.4%DISTINGHUISH FROM 手NOTES  This radical relates to fur and feathers as garments, and by extension most types of garmentsHOMEPAGE ► 偏旁
+⺠	shì	Variant of radical ⽒ (clan)EXAMPLES 氐·民·氓HOMEPAGE ► 偏旁
+氏	shì	Variant of radical ⽒ (clan)EXAMPLES 氐·民·氓HOMEPAGE ► 偏旁
+民	shì	Variant of radical ⽒ (clan)EXAMPLES 氐·民·氓HOMEPAGE ► 偏旁
+⽒	shì	Kangxi radical number 83NAME  VARIANTS ⺠·氏·民STANDALONE 氏MEANING clanEXAMPLES 氐·民·氓MNEMONIC  a man bowingRANK 20.1%HOMEPAGE ► 偏旁
+气	qì	Variant of radical ⽓ (steam)EXAMPLES 氕·氘·氚HOMEPAGE ► 偏旁
+⽓	qì	Kangxi radical number 84NAME  VARIANTS 气STANDALONE 气MEANING steamEXAMPLES 氕·氘·氚MNEMONIC  a man blowing air from his mouthRANK 72.5%HOMEPAGE ► 偏旁
+⺡	shuǐ	Variant of radical ⽔ (water)EXAMPLES 永·氷·氾HOMEPAGE ► 偏旁
+⺢	shuǐ	Variant of radical ⽔ (water)EXAMPLES 永·氷·氾HOMEPAGE ► 偏旁
+水	shuǐ	Variant of radical ⽔ (water)EXAMPLES 永·氷·氾HOMEPAGE ► 偏旁
+氵	shuǐ	Variant of radical ⽔ (water)EXAMPLES 永·氷·氾HOMEPAGE ► 偏旁
+氺	shuǐ	Variant of radical ⽔ (water)EXAMPLES 永·氷·氾HOMEPAGE ► 偏旁
+三点水	sāndiǎnshǔi	Name of radical number 85 ⽔MEANING waterEXAMPLES 永·氷·氾HOMEPAGE ► 偏旁
+⽔	shuǐ	Kangxi radical number 85NAME 三点水 sāndiǎnshǔiVARIANTS ⺡·⺢·水·氵·氺STANDALONE 水MEANING waterEXAMPLES 永·氷·氾MNEMONIC  A drawing of wavesRANK 52.7%NOTES  The standalone version of the radical typically is not used as a character component, see 氵HOMEPAGE ► 偏旁
+⺣	huǒ	Variant of radical ⽕ (fire)EXAMPLES 灰·灯·灶HOMEPAGE ► 偏旁
+火	huǒ	Variant of radical ⽕ (fire)EXAMPLES 灰·灯·灶HOMEPAGE ► 偏旁
+灬	huǒ	Variant of radical ⽕ (fire)EXAMPLES 灰·灯·灶HOMEPAGE ► 偏旁
+四点底	sìdiǎndǐ	Name of radical number 86 ⽕MEANING fireEXAMPLES 灰·灯·灶HOMEPAGE ► 偏旁
+火字旁	huǒzìpáng	Name of radical number 86 ⽕MEANING fireEXAMPLES 灰·灯·灶HOMEPAGE ► 偏旁
+⽕	huǒ	Kangxi radical number 86NAME 四点底 sìdiǎndǐ·火字旁 huǒzìpángVARIANTS ⺣·火·灬STANDALONE 火MEANING fireEXAMPLES 灰·灯·灶MNEMONIC  drawing of fireRANK 95.1%NOTES  Represents characters having to do with fire, heat, and cookingHOMEPAGE ► 偏旁
+⺤	zhǎo	Variant of radical ⽖ (claw)EXAMPLES 爬·爭·爰HOMEPAGE ► 偏旁
+⺥	zhǎo	Variant of radical ⽖ (claw)EXAMPLES 爬·爭·爰HOMEPAGE ► 偏旁
+爪	zhǎo	Variant of radical ⽖ (claw)EXAMPLES 爬·爭·爰HOMEPAGE ► 偏旁
+爫	zhǎo	Variant of radical ⽖ (claw)EXAMPLES 爬·爭·爰HOMEPAGE ► 偏旁
+受字头	shòuzìtóu	Name of radical number 87 ⽖MEANING clawEXAMPLES 爬·爭·爰HOMEPAGE ► 偏旁
+⽖	zhǎo	Kangxi radical number 87NAME 受字头 shòuzìtóuVARIANTS ⺤·⺥·爪·爫STANDALONE 爪MEANING clawEXAMPLES 爬·爭·爰MNEMONIC  Hand or claw 爫爪 grabbing something from aboveRANK 20.1%HOMEPAGE ► 偏旁
+父	fù	Variant of radical ⽗ (father)EXAMPLES 爸·爹·爺HOMEPAGE ► 偏旁
+⽗	fù	Kangxi radical number 88NAME  VARIANTS 父STANDALONE 父MEANING fatherEXAMPLES 爸·爹·爺MNEMONIC  Hand, sound borrowed from 斧RANK 44.4%HOMEPAGE ► 偏旁
+爻	yáo	Variant of radical ⽘ (Trigrams)EXAMPLES 爼·爽·爾HOMEPAGE ► 偏旁
+⽘	yáo	Kangxi radical number 89NAME  VARIANTS 爻STANDALONE 爻MEANING TrigramsEXAMPLES 爼·爽·爾MNEMONIC  Indicates strokes, marked or cutRANK 20.1%HOMEPAGE ► 偏旁
+⺦	qiáng	Variant of radical ⽙ (split wood)EXAMPLES 牀·牁·牂HOMEPAGE ► 偏旁
+丬	qiáng	Variant of radical ⽙ (split wood)EXAMPLES 牀·牁·牂HOMEPAGE ► 偏旁
+爿	qiáng	Variant of radical ⽙ (split wood)EXAMPLES 牀·牁·牂HOMEPAGE ► 偏旁
+将字旁	jiāngzìpáng	Name of radical number 90 ⽙MEANING split woodEXAMPLES 牀·牁·牂HOMEPAGE ► 偏旁
+⽙	qiáng	Kangxi radical number 90NAME 将字旁 jiāngzìpángVARIANTS ⺦·丬·爿MEANING split woodEXAMPLES 牀·牁·牂MNEMONIC  right hand table/boardRANK 5.2%DISTINGHUISH FROM 片HOMEPAGE ► 偏旁
+片	piàn	Variant of radical ⽚ (slice)EXAMPLES 版·牉·牌HOMEPAGE ► 偏旁
+⽚	piàn	Kangxi radical number 91NAME  VARIANTS 片STANDALONE 片MEANING sliceEXAMPLES 版·牉·牌MNEMONIC  A table with legs (possibly a bed), i.e. the reverse of 爿, which also represents a table. A place where documents are created.RANK 35.0%DISTINGHUISH FROM 爿NOTES  This radical is primarily used for representing various types of documentsHOMEPAGE ► 偏旁
+牙	yá	Variant of radical ⽛ (fang)EXAMPLES 㸦·㸧·牚HOMEPAGE ► 偏旁
+⽛	yá	Kangxi radical number 92NAME  VARIANTS 牙STANDALONE 牙MEANING fangEXAMPLES 㸦·㸧·牚MNEMONIC  This is a picture of teethRANK 5.2%NOTES  Usually loans it's sound to other charactersHOMEPAGE ► 偏旁
+⺧	niú	Variant of radical ⽜ (cow)EXAMPLES 牝·牟·牠HOMEPAGE ► 偏旁
+牛	niú	Variant of radical ⽜ (cow)EXAMPLES 牝·牟·牠HOMEPAGE ► 偏旁
+牜	niú	Variant of radical ⽜ (cow)EXAMPLES 牝·牟·牠HOMEPAGE ► 偏旁
+𠂒	niú	Variant of radical ⽜ (cow)EXAMPLES 牝·牟·牠HOMEPAGE ► 偏旁
+牛字旁	níuzìpáng	Name of radical number 93 ⽜MEANING cowEXAMPLES 牝·牟·牠HOMEPAGE ► 偏旁
+⽜	niú	Kangxi radical number 93NAME 牛字旁 níuzìpángVARIANTS ⺧·牛·牜·𠂒STANDALONE 牛MEANING cowEXAMPLES 牝·牟·牠MNEMONIC  A cow with horns and earsRANK 59.0%HOMEPAGE ► 偏旁
+⺨	quǎn	Variant of radical ⽝ (dog)EXAMPLES 犮·犯·犰HOMEPAGE ► 偏旁
+犬	quǎn	Variant of radical ⽝ (dog)EXAMPLES 犮·犯·犰HOMEPAGE ► 偏旁
+犭	quǎn	Variant of radical ⽝ (dog)EXAMPLES 犮·犯·犰HOMEPAGE ► 偏旁
+反犬旁	fǎnquǎnpáng	Name of radical number 94 ⽝MEANING dogEXAMPLES 犮·犯·犰HOMEPAGE ► 偏旁
+⽝	quǎn	Kangxi radical number 94NAME 反犬旁 fǎnquǎnpángVARIANTS ⺨·犬·犭STANDALONE 犬MEANING dogEXAMPLES 犮·犯·犰MNEMONIC  This is a picture of a dog - rotate in the same direction as other animal radicals such as 龜 and the similarity becomes clearerRANK 20.1%DISTINGHUISH FROM 大太NOTES  The dog radical is often used for medium sized animals and dog-like personality traits, leaning towards the fiercer traitsHOMEPAGE ► 偏旁
+玄	xuán	Variant of radical ⽞ (profound)EXAMPLES 玅·率·玈HOMEPAGE ► 偏旁
+⽞	xuán	Kangxi radical number 95NAME  VARIANTS 玄STANDALONE 玄MEANING profoundEXAMPLES 玅·率·玈MNEMONIC  a piece of yarn 糸 being dyed blackRANK 20.1%DISTINGHUISH FROM 幺,纟HOMEPAGE ► 偏旁
+⺩	yù	Variant of radical ⽟ (jade)EXAMPLES 玻·瑪·璧HOMEPAGE ► 偏旁
+玉	yù	Variant of radical ⽟ (jade)EXAMPLES 玻·瑪·璧HOMEPAGE ► 偏旁
+玊	yù	Variant of radical ⽟ (jade)EXAMPLES 玻·瑪·璧HOMEPAGE ► 偏旁
+王	yù	Variant of radical ⽟ (jade)EXAMPLES 玻·瑪·璧HOMEPAGE ► 偏旁
+𤣩	yù	Variant of radical ⽟ (jade)EXAMPLES 玻·瑪·璧HOMEPAGE ► 偏旁
+王字旁	wángzìpáng	Name of radical number 96 ⽟MEANING jadeEXAMPLES 玻·瑪·璧HOMEPAGE ► 偏旁
+⽟	yù	Kangxi radical number 96NAME 王字旁 wángzìpángVARIANTS ⺩·玉·玊·王·𤣩STANDALONE 玉MEANING jadeEXAMPLES 玻·瑪·璧MNEMONIC  Originally represented jade disks on a string.RANK 20.1%NOTES  This variant is infrequently used.  Typically found in characters having to do with precious/valuable things, stones in particularHOMEPAGE ► 偏旁
+瓜	guā	Variant of radical ⽠ (melon)EXAMPLES 瓝·瓞·瓟HOMEPAGE ► 偏旁
+⽠	guā	Kangxi radical number 97NAME  VARIANTS 瓜STANDALONE 瓜MEANING melonEXAMPLES 瓝·瓞·瓟MNEMONIC  A sprawling plant, the gourd is the hook at the bottomRANK 44.4%HOMEPAGE ► 偏旁
+瓦	wǎ	Variant of radical ⽡ (tile)EXAMPLES 㼚·瓮·瓫HOMEPAGE ► 偏旁
+⽡	wǎ	Kangxi radical number 98NAME  VARIANTS 瓦STANDALONE 瓦MEANING tileEXAMPLES 㼚·瓮·瓫MNEMONIC  A curved interlocking roof tileRANK 52.7%NOTES  The few characters under this radical were all originally earthenware items.HOMEPAGE ► 偏旁
+甘	gān	Variant of radical ⽢ (sweet)EXAMPLES 甚·甜·甛HOMEPAGE ► 偏旁
+⽢	gān	Kangxi radical number 99NAME  VARIANTS 甘STANDALONE 甘MEANING sweetEXAMPLES 甚·甜·甛MNEMONIC  something sweet in the mouth 口RANK 35.0%HOMEPAGE ► 偏旁
+生	shēng	Variant of radical ⽣ (life)EXAMPLES 甡·產·甥HOMEPAGE ► 偏旁
+⽣	shēng	Kangxi radical number 100NAME  VARIANTS 生STANDALONE 生MEANING lifeEXAMPLES 甡·產·甥MNEMONIC  a plant 屮 sprouting from the ground 土RANK 20.1%HOMEPAGE ► 偏旁
+用	yòng	Variant of radical ⽤ (use)EXAMPLES 甩·甫·甬HOMEPAGE ► 偏旁
+甩	yòng	Variant of radical ⽤ (use)EXAMPLES 甩·甫·甬HOMEPAGE ► 偏旁
+⽤	yòng	Kangxi radical number 101NAME  VARIANTS 用·甩STANDALONE 用MEANING useEXAMPLES 甩·甫·甬MNEMONIC  Likely represents a containerRANK 35.0%HOMEPAGE ► 偏旁
+田	tián	Variant of radical ⽥ (field)EXAMPLES 由·甲·申HOMEPAGE ► 偏旁
+由	tián	Variant of radical ⽥ (field)EXAMPLES 由·甲·申HOMEPAGE ► 偏旁
+甲	tián	Variant of radical ⽥ (field)EXAMPLES 由·甲·申HOMEPAGE ► 偏旁
+申	tián	Variant of radical ⽥ (field)EXAMPLES 由·甲·申HOMEPAGE ► 偏旁
+电	tián	Variant of radical ⽥ (field)EXAMPLES 由·甲·申HOMEPAGE ► 偏旁
+田字旁	tiánzìpáng	Name of radical number 102 ⽥MEANING fieldEXAMPLES 由·甲·申HOMEPAGE ► 偏旁
+⽥	tián	Kangxi radical number 102NAME 田字旁 tiánzìpángVARIANTS 田·由·甲·申·电STANDALONE 田MEANING fieldEXAMPLES 由·甲·申MNEMONIC  represents a rice paddyRANK 76.3%HOMEPAGE ► 偏旁
+⺪	pǐ	Variant of radical ⽦ (bolt of cloth)EXAMPLES 疌·疏·疎HOMEPAGE ► 偏旁
+疋	pǐ	Variant of radical ⽦ (bolt of cloth)EXAMPLES 疌·疏·疎HOMEPAGE ► 偏旁
+𤴔	pǐ	Variant of radical ⽦ (bolt of cloth)EXAMPLES 疌·疏·疎HOMEPAGE ► 偏旁
+疋字底	pǐzìdǐ	Name of radical number 103 ⽦MEANING bolt of clothEXAMPLES 疌·疏·疎HOMEPAGE ► 偏旁
+⽦	pǐ	Kangxi radical number 103NAME 疋字底 pǐzìdǐVARIANTS ⺪·疋·𤴔STANDALONE 疋MEANING bolt of clothEXAMPLES 疌·疏·疎RANK 5.2%NOTES  generally superseded by 匹HOMEPAGE ► 偏旁
+疒	nè	Variant of radical ⽧ (sickness)EXAMPLES 疔·疚·疝HOMEPAGE ► 偏旁
+病字旁	bìngzìpáng	Name of radical number 104 ⽧MEANING sicknessEXAMPLES 疔·疚·疝HOMEPAGE ► 偏旁
+⽧	nè	Kangxi radical number 104NAME 病字旁 bìngzìpángVARIANTS 疒MEANING sicknessEXAMPLES 疔·疚·疝MNEMONIC  A sick person stretched out on a bed (on the left - 丬)RANK 92.3%NOTES  If the character represents some disease or affliction then odds are good that this is the 部首HOMEPAGE ► 偏旁
+癶	bō	Variant of radical ⽨ (footsteps)EXAMPLES 癸·癹·発HOMEPAGE ► 偏旁
+登字头	dēngzìtóu	Name of radical number 105 ⽨MEANING footstepsEXAMPLES 癸·癹·発HOMEPAGE ► 偏旁
+⽨	bō	Kangxi radical number 105NAME 登字头 dēngzìtóuVARIANTS 癶MEANING footstepsEXAMPLES 癸·癹·発MNEMONIC  Two feet - 止 - back-to-backRANK 20.1%NOTES  This radical only links to three characters in modern usage - 發，噔，and 癸HOMEPAGE ► 偏旁
+白	bái	Variant of radical ⽩ (white)EXAMPLES 百·皀·皁HOMEPAGE ► 偏旁
+白字旁	báizìpáng	Name of radical number 106 ⽩MEANING whiteEXAMPLES 百·皀·皁HOMEPAGE ► 偏旁
+⽩	bái	Kangxi radical number 106NAME 白字旁 báizìpángVARIANTS 白STANDALONE 白MEANING whiteEXAMPLES 百·皀·皁MNEMONIC  A modification of the sun - 日 - to represent whiteRANK 67.7%DISTINGHUISH FROM 日,·曰,·臼,·目NOTES  Associated with the idea of purity and brightness in many 字HOMEPAGE ► 偏旁
+皮	pí	Variant of radical ⽪ (skin)EXAMPLES 皯·皰·皴HOMEPAGE ► 偏旁
+皮字旁	pízìpáng	Name of radical number 107 ⽪MEANING skinEXAMPLES 皯·皰·皴HOMEPAGE ► 偏旁
+⽪	pí	Kangxi radical number 107NAME 皮字旁 pízìpángVARIANTS 皮STANDALONE 皮MEANING skinEXAMPLES 皯·皰·皴MNEMONIC  A hand 又 flaying an animal hideRANK 35.0%NOTES  In a number of characters relating to different skin attributes/conditions as well as a number of different articles of clothing which once may have been made from hidesHOMEPAGE ► 偏旁
+皿	mǐn	Variant of radical ⽫ (dish)EXAMPLES 盂·盃·盅HOMEPAGE ► 偏旁
+皿字底	mǐnzìdǐ	Name of radical number 108 ⽫MEANING dishEXAMPLES 盂·盃·盅HOMEPAGE ► 偏旁
+⽫	mǐn	Kangxi radical number 108NAME 皿字底 mǐnzìdǐVARIANTS 皿STANDALONE 皿MEANING dishEXAMPLES 盂·盃·盅MNEMONIC  Primitive of a tub or plateRANK 79.1%NOTES  Numerous types of receptacles and their uses are categorized under this 部首HOMEPAGE ► 偏旁
+目	mù	Variant of radical ⽬ (eye)EXAMPLES 盯·盱·盲HOMEPAGE ► 偏旁
+目字旁	mùzìpáng	Name of radical number 109 ⽬MEANING eyeEXAMPLES 盯·盱·盲HOMEPAGE ► 偏旁
+⽬	mù	Kangxi radical number 109NAME 目字旁 mùzìpángVARIANTS 目STANDALONE 目MEANING eyeEXAMPLES 盯·盱·盲MNEMONIC  This is a picture of an eye (on its' side)RANK 91.6%DISTINGHUISH FROM 日,·曰,·臼NOTES  Used in characters which relate to seeing (or not seeing)HOMEPAGE ► 偏旁
+矛	máo	Variant of radical ⽭ (spear)EXAMPLES 矜·矞·矟HOMEPAGE ► 偏旁
+⽭	máo	Kangxi radical number 110NAME  VARIANTS 矛STANDALONE 矛MEANING spearEXAMPLES 矜·矞·矟MNEMONIC  A saw lance made of flint disksRANK 5.2%HOMEPAGE ► 偏旁
+矢	shǐ	Variant of radical ⽮ (arrow)EXAMPLES 矣·知·矧HOMEPAGE ► 偏旁
+⽮	shǐ	Kangxi radical number 111NAME  VARIANTS 矢STANDALONE 矢MEANING arrowEXAMPLES 矣·知·矧MNEMONIC  A picture - the point is at the top, feathers and knock belowRANK 63.1%HOMEPAGE ► 偏旁
+石	shí	Variant of radical ⽯ (stone)EXAMPLES 矸·矻·矼HOMEPAGE ► 偏旁
+石字旁	shízìpáng	Name of radical number 112 ⽯MEANING stoneEXAMPLES 矸·矻·矼HOMEPAGE ► 偏旁
+⽯	shí	Kangxi radical number 112NAME 石字旁 shízìpángVARIANTS 石STANDALONE 石MEANING stoneEXAMPLES 矸·矻·矼MNEMONIC  口 represents a rock which has rolled to the bottom of a cliffRANK 94.4%NOTES  Used in characters for hard, rocklike thingsHOMEPAGE ► 偏旁
+⺬	shì	Variant of radical ⽰ (spirit)EXAMPLES 礼·礽·社HOMEPAGE ► 偏旁
+⺭	shì	Variant of radical ⽰ (spirit)EXAMPLES 礼·礽·社HOMEPAGE ► 偏旁
+示	shì	Variant of radical ⽰ (spirit)EXAMPLES 礼·礽·社HOMEPAGE ► 偏旁
+礻	shì	Variant of radical ⽰ (spirit)EXAMPLES 礼·礽·社HOMEPAGE ► 偏旁
+示字旁	shìzìpáng	Name of radical number 113 ⽰MEANING spiritEXAMPLES 礼·礽·社HOMEPAGE ► 偏旁
+⽰	shì	Kangxi radical number 113NAME 示字旁 shìzìpángVARIANTS ⺬·⺭·示·礻STANDALONE 示MEANING spiritEXAMPLES 礼·礽·社MNEMONIC  image of an altarRANK 5.2%DISTINGHUISH FROM 衤NOTES  Also known as the SIGN radical - think divine or mystical signs.This form is not common as a character component.  Considered a separate radical from 礻in some modern simplified tables.HOMEPAGE ► 偏旁
+禸	róu	Variant of radical ⽱ (track)EXAMPLES 禹·禺·离HOMEPAGE ► 偏旁
+⽱	róu	Kangxi radical number 114NAME  VARIANTS 禸MEANING trackEXAMPLES 禹·禺·离MNEMONIC  typically indicates a rump and tailRANK 44.4%HOMEPAGE ► 偏旁
+禾	hé	Variant of radical ⽲ (grain)EXAMPLES 禿·秀·私HOMEPAGE ► 偏旁
+禾木旁	hémùpáng	Name of radical number 115 ⽲MEANING grainEXAMPLES 禿·秀·私HOMEPAGE ► 偏旁
+⽲	hé	Kangxi radical number 115NAME 禾木旁 hémùpángVARIANTS 禾STANDALONE 禾MEANING grainEXAMPLES 禿·秀·私MNEMONIC  represents a sheath of grain with a sagging headRANK 90.9%DISTINGHUISH FROM 釆,·米,·木NOTES  Characters relating to farming, harvesting, and of course grains contain this radicalHOMEPAGE ► 偏旁
+穴	xué	Variant of radical ⽳ (cave)EXAMPLES 究·穸·空HOMEPAGE ► 偏旁
+穴宝盖	xuébǎogài	Name of radical number 116 ⽳MEANING caveEXAMPLES 究·穸·空HOMEPAGE ► 偏旁
+⽳	xué	Kangxi radical number 116NAME 穴宝盖 xuébǎogàiVARIANTS 穴STANDALONE 穴MEANING caveEXAMPLES 究·穸·空MNEMONIC  a house 宀 with an entrance 入RANK 82.2%NOTES  This radical is used for cave-like things and investigationHOMEPAGE ► 偏旁
+立	lì	Variant of radical ⽴ (stand)EXAMPLES 竑·竒·竘HOMEPAGE ► 偏旁
+立字旁	lìzìpáng	Name of radical number 117 ⽴MEANING standEXAMPLES 竑·竒·竘HOMEPAGE ► 偏旁
+⽴	lì	Kangxi radical number 117NAME 立字旁 lìzìpángVARIANTS 立STANDALONE 立MEANING standEXAMPLES 竑·竒·竘MNEMONIC  This is a image of a man standing on the ground, arms raisedRANK 67.7%HOMEPAGE ► 偏旁
+⺮	zhú	Variant of radical ⽵ (bamboo)EXAMPLES 竺·竽·竿HOMEPAGE ► 偏旁
+竹	zhú	Variant of radical ⽵ (bamboo)EXAMPLES 竺·竽·竿HOMEPAGE ► 偏旁
+𥫗	zhú	Variant of radical ⽵ (bamboo)EXAMPLES 竺·竽·竿HOMEPAGE ► 偏旁
+竹字头	zhúzìtóu	Name of radical number 118 ⽵MEANING bambooEXAMPLES 竺·竽·竿HOMEPAGE ► 偏旁
+⽵	zhú	Kangxi radical number 118NAME 竹字头 zhúzìtóuVARIANTS ⺮·竹·𥫗STANDALONE 竹MEANING bambooEXAMPLES 竺·竽·竿MNEMONIC  Two bamboo stalks with leavesRANK 5.2%NOTES  Items which are or once were fashioned of bamboo are found under this radical. This full 字 isn't actually used as a component, see ⺮HOMEPAGE ► 偏旁
+米	mǐ	Variant of radical ⽶ (rice)EXAMPLES 籸·籹·籽HOMEPAGE ► 偏旁
+米字旁	mǐzìpáng	Name of radical number 119 ⽶MEANING riceEXAMPLES 籸·籹·籽HOMEPAGE ► 偏旁
+⽶	mǐ	Kangxi radical number 119NAME 米字旁 mǐzìpángVARIANTS 米STANDALONE 米MEANING riceEXAMPLES 籸·籹·籽MNEMONIC  Originally a picture of rice growing in a paddie, the horizontal line is the water lineRANK 85.0%NOTES  Products of rice and their qualities are covered here, but also characters having to do with business practices and quality gradesHOMEPAGE ► 偏旁
+⺯	mì	Variant of radical ⽷ (silk)EXAMPLES 系·糾·紀HOMEPAGE ► 偏旁
+⺰	mì	Variant of radical ⽷ (silk)EXAMPLES 系·糾·紀HOMEPAGE ► 偏旁
+糸	mì	Variant of radical ⽷ (silk)EXAMPLES 系·糾·紀HOMEPAGE ► 偏旁
+糹	mì	Variant of radical ⽷ (silk)EXAMPLES 系·糾·紀HOMEPAGE ► 偏旁
+纟	mì	Variant of radical ⽷ (silk)EXAMPLES 系·糾·紀HOMEPAGE ► 偏旁
+绞丝旁	jiǎosīpáng	Name of radical number 120 ⽷MEANING silkEXAMPLES 系·糾·紀HOMEPAGE ► 偏旁
+⽷	mì	Kangxi radical number 120NAME 绞丝旁 jiǎosīpángVARIANTS ⺯·⺰·糸·糹·纟MEANING silkEXAMPLES 系·糾·紀MNEMONIC  twisted stringRANK 72.5%DISTINGHUISH FROM 幺,·玄NOTES  Characters having to do with rope, threads, as well as actions having to do with the manufacturing of fabrics use this radicalHOMEPAGE ► 偏旁
+缶	fǒu	Variant of radical ⽸ (jar)EXAMPLES 缸·缺·缽HOMEPAGE ► 偏旁
+⽸	fǒu	Kangxi radical number 121NAME  VARIANTS 缶STANDALONE 缶MEANING jarEXAMPLES 缸·缺·缽MNEMONIC  pot with a lidRANK 35.0%NOTES  Earthenware vessels, jars, and their attributes use this radicalHOMEPAGE ► 偏旁
+⺫	wǎng	Variant of radical ⽹ (net)EXAMPLES 罔·罕·罘HOMEPAGE ► 偏旁
+⺱	wǎng	Variant of radical ⽹ (net)EXAMPLES 罔·罕·罘HOMEPAGE ► 偏旁
+⺲	wǎng	Variant of radical ⽹ (net)EXAMPLES 罔·罕·罘HOMEPAGE ► 偏旁
+⺳	wǎng	Variant of radical ⽹ (net)EXAMPLES 罔·罕·罘HOMEPAGE ► 偏旁
+⺴	wǎng	Variant of radical ⽹ (net)EXAMPLES 罔·罕·罘HOMEPAGE ► 偏旁
+⺵	wǎng	Variant of radical ⽹ (net)EXAMPLES 罔·罕·罘HOMEPAGE ► 偏旁
+㓁	wǎng	Variant of radical ⽹ (net)EXAMPLES 罔·罕·罘HOMEPAGE ► 偏旁
+网	wǎng	Variant of radical ⽹ (net)EXAMPLES 罔·罕·罘HOMEPAGE ► 偏旁
+罒	wǎng	Variant of radical ⽹ (net)EXAMPLES 罔·罕·罘HOMEPAGE ► 偏旁
+罓	wǎng	Variant of radical ⽹ (net)EXAMPLES 罔·罕·罘HOMEPAGE ► 偏旁
+𦉫	wǎng	Variant of radical ⽹ (net)EXAMPLES 罔·罕·罘HOMEPAGE ► 偏旁
+四字头	sìzìtóu	Name of radical number 122 ⽹MEANING netEXAMPLES 罔·罕·罘HOMEPAGE ► 偏旁
+⽹	wǎng	Kangxi radical number 122NAME 四字头 sìzìtóuVARIANTS ⺫·⺱·⺲·⺳·⺴·⺵·㓁·网·罒·罓·𦉫STANDALONE 网MEANING netEXAMPLES 罔·罕·罘RANK 5.2%NOTES  As nets are used to trap some thing or even a person, the characters under this radical generally relate to that concept, in particular a few characters relate to crime.  Traditional form for this pronunciation is 惘, not a radical though - see 罔HOMEPAGE ► 偏旁
+⺶	yáng	Variant of radical ⽺ (sheep)EXAMPLES 羋·羌·美HOMEPAGE ► 偏旁
+⺷	yáng	Variant of radical ⽺ (sheep)EXAMPLES 羋·羌·美HOMEPAGE ► 偏旁
+⺸	yáng	Variant of radical ⽺ (sheep)EXAMPLES 羋·羌·美HOMEPAGE ► 偏旁
+羊	yáng	Variant of radical ⽺ (sheep)EXAMPLES 羋·羌·美HOMEPAGE ► 偏旁
+羋	yáng	Variant of radical ⽺ (sheep)EXAMPLES 羋·羌·美HOMEPAGE ► 偏旁
+𦍋	yáng	Variant of radical ⽺ (sheep)EXAMPLES 羋·羌·美HOMEPAGE ► 偏旁
+𦍌	yáng	Variant of radical ⽺ (sheep)EXAMPLES 羋·羌·美HOMEPAGE ► 偏旁
+羊字旁	yángzìpáng	Name of radical number 123 ⽺MEANING sheepEXAMPLES 羋·羌·美HOMEPAGE ► 偏旁
+⽺	yáng	Kangxi radical number 123NAME 羊字旁 yángzìpángVARIANTS ⺶·⺷·⺸·羊·羋·𦍋·𦍌STANDALONE 羊MEANING sheepEXAMPLES 羋·羌·美MNEMONIC  This is an image of a goat/sheep, horns, ears, and legsRANK 52.7%NOTES  For whatever reason, 羊 is often used as the radical virtuous or noble attributes.  Also used as the radical for a variety of grazing animals.HOMEPAGE ► 偏旁
+羽	yǔ	Variant of radical ⽻ (feather)EXAMPLES 羿·翀·翁HOMEPAGE ► 偏旁
+羽	yǔ	Variant of radical ⽻ (feather)EXAMPLES 羿·翀·翁HOMEPAGE ► 偏旁
+羽字旁	yǔzìpáng	Name of radical number 124 ⽻MEANING featherEXAMPLES 羿·翀·翁HOMEPAGE ► 偏旁
+⽻	yǔ	Kangxi radical number 124NAME 羽字旁 yǔzìpángVARIANTS 羽·羽STANDALONE 羽MEANING featherEXAMPLES 羿·翀·翁MNEMONIC  This is an image of wingsRANK 75.3%NOTES  Birdlike attributes, and more specifically attributes of a bird's plumage are represented by this radical.HOMEPAGE ► 偏旁
+⺹	lǎo	Variant of radical ⽼ (old)EXAMPLES 考·者·耆HOMEPAGE ► 偏旁
+老	lǎo	Variant of radical ⽼ (old)EXAMPLES 考·者·耆HOMEPAGE ► 偏旁
+耂	lǎo	Variant of radical ⽼ (old)EXAMPLES 考·者·耆HOMEPAGE ► 偏旁
+老字头	lǎozìtóu	Name of radical number 125 ⽼MEANING oldEXAMPLES 考·者·耆HOMEPAGE ► 偏旁
+⽼	lǎo	Kangxi radical number 125NAME 老字头 lǎozìtóuVARIANTS ⺹·老·耂STANDALONE 老MEANING oldEXAMPLES 考·者·耆MNEMONIC  an old man with long hair leaning on a cane 匕RANK 44.4%NOTES  Used in characters conveying age. Not actually used as a radical, see variantHOMEPAGE ► 偏旁
+而	ér	Variant of radical ⽽ (and)EXAMPLES 耍·耎·耏HOMEPAGE ► 偏旁
+⽽	ér	Kangxi radical number 126NAME  VARIANTS 而STANDALONE 而MEANING andEXAMPLES 耍·耎·耏MNEMONIC  possibly represents a beardRANK 35.0%HOMEPAGE ► 偏旁
+耒	lěi	Variant of radical ⽾ (plough)EXAMPLES 耔·耕·耖HOMEPAGE ► 偏旁
+⽾	lěi	Kangxi radical number 127NAME  VARIANTS 耒STANDALONE 耒MEANING ploughEXAMPLES 耔·耕·耖MNEMONIC  A plow handle of wood and originally 3 cross lines indicating the furrows madeRANK 52.7%NOTES  The few characters under this radical generally relate to cultivation of cropsHOMEPAGE ► 偏旁
+耳	ěr	Variant of radical ⽿ (ear)EXAMPLES 耴·耵·耷HOMEPAGE ► 偏旁
+耳字旁	ěrzìpáng	Name of radical number 128 ⽿MEANING earEXAMPLES 耴·耵·耷HOMEPAGE ► 偏旁
+⽿	ěr	Kangxi radical number 128NAME 耳字旁 ěrzìpángVARIANTS 耳STANDALONE 耳MEANING earEXAMPLES 耴·耵·耷MNEMONIC  This is a picture of an earRANK 76.3%NOTES  Typically associated with characters having to do with listening and comprehendingHOMEPAGE ► 偏旁
+⺺	yù	Variant of radical ⾀ (brush)EXAMPLES 肄·肆·肅HOMEPAGE ► 偏旁
+⺻	yù	Variant of radical ⾀ (brush)EXAMPLES 肄·肆·肅HOMEPAGE ► 偏旁
+聿	yù	Variant of radical ⾀ (brush)EXAMPLES 肄·肆·肅HOMEPAGE ► 偏旁
+肀	yù	Variant of radical ⾀ (brush)EXAMPLES 肄·肆·肅HOMEPAGE ► 偏旁
+⾀	yù	Kangxi radical number 129NAME  VARIANTS ⺺·⺻·聿·肀STANDALONE 聿MEANING brushEXAMPLES 肄·肆·肅MNEMONIC  a hand with a brush, drawing a pair of linesRANK 35.0%HOMEPAGE ► 偏旁
+⺼	ròu	Variant of radical ⾁ (meat)EXAMPLES 肊·肋·然HOMEPAGE ► 偏旁
+肉	ròu	Variant of radical ⾁ (meat)EXAMPLES 肊·肋·然HOMEPAGE ► 偏旁
+⾁	ròu	Kangxi radical number 130NAME  VARIANTS ⺼·肉STANDALONE 肉MEANING meatEXAMPLES 肊·肋·然MNEMONIC  ribs of an animalRANK 20.1%NOTES  Fleshy things and body parts are represented by this radical.  An additional variant of the flesh radical is the top half of 炙, representing meat over a fire. This variant can be seen in several charactersHOMEPAGE ► 偏旁
+臣	chén	Variant of radical ⾂ (minister)EXAMPLES 臤·臥·臧HOMEPAGE ► 偏旁
+𦣝	chén	Variant of radical ⾂ (minister)EXAMPLES 臤·臥·臧HOMEPAGE ► 偏旁
+⾂	chén	Kangxi radical number 131NAME  VARIANTS 臣·𦣝STANDALONE 臣MEANING ministerEXAMPLES 臤·臥·臧MNEMONIC  a sideways version of an eye or a headRANK 52.7%HOMEPAGE ► 偏旁
+自	zì	Variant of radical ⾃ (self)EXAMPLES 臬·臭·臯HOMEPAGE ► 偏旁
+⾃	zì	Kangxi radical number 132NAME  VARIANTS 自STANDALONE 自MEANING selfEXAMPLES 臬·臭·臯MNEMONIC  primitive of a nose - one points to their nose when pointing at themselvesRANK 20.1%HOMEPAGE ► 偏旁
+至	zhì	Variant of radical ⾄ (arrive)EXAMPLES 致·臷·臺HOMEPAGE ► 偏旁
+⾄	zhì	Kangxi radical number 133NAME  VARIANTS 至STANDALONE 至MEANING arriveEXAMPLES 致·臷·臺MNEMONIC  an upside down arrow 矢 stuck in the ground where it (arrived) at after being shotRANK 35.0%HOMEPAGE ► 偏旁
+⺽	jiù	Variant of radical ⾅ (mortar)EXAMPLES 臾·臿·舁HOMEPAGE ► 偏旁
+臼	jiù	Variant of radical ⾅ (mortar)EXAMPLES 臾·臿·舁HOMEPAGE ► 偏旁
+𦥑	jiù	Variant of radical ⾅ (mortar)EXAMPLES 臾·臿·舁HOMEPAGE ► 偏旁
+⾅	jiù	Kangxi radical number 134NAME  VARIANTS ⺽·臼·𦥑STANDALONE 臼MEANING mortarEXAMPLES 臾·臿·舁MNEMONIC  Picture of a large wood mortar for pounding rice flour ( Usu in Japanese - still in use today for making Mochi)RANK 20.1%DISTINGHUISH FROM 日,·曰,·白NOTES  There is a variant form of this radical with 8 or 10 strokes, this variant seems to have different types of concepts placed into a mortar, such as 舉, 興, 輿 and 釁HOMEPAGE ► 偏旁
+舌	shé	Variant of radical ⾆ (tongue)EXAMPLES 舍·舐·舑HOMEPAGE ► 偏旁
+舌字旁	shézìpáng	Name of radical number 135 ⾆MEANING tongueEXAMPLES 舍·舐·舑HOMEPAGE ► 偏旁
+⾆	shé	Kangxi radical number 135NAME 舌字旁 shézìpángVARIANTS 舌STANDALONE 舌MEANING tongueEXAMPLES 舍·舐·舑MNEMONIC  A tongue sticking out of a mouth 口RANK 20.1%NOTES  Most of the characters under this radical do relate to things done with the tongue, a variant radical is 舍, which appears in words relating to housingHOMEPAGE ► 偏旁
+舛	chuǎn	Variant of radical ⾇ (oppose)EXAMPLES 舜·舝·舞HOMEPAGE ► 偏旁
+⾇	chuǎn	Kangxi radical number 136NAME  VARIANTS 舛STANDALONE 舛MEANING opposeEXAMPLES 舜·舝·舞MNEMONIC  two feet opposedRANK 20.1%HOMEPAGE ► 偏旁
+舟	zhōu	Variant of radical ⾈ (boat)EXAMPLES 舠·舡·舢HOMEPAGE ► 偏旁
+舟字旁	zhōuzìpáng	Name of radical number 137 ⾈MEANING boatEXAMPLES 舠·舡·舢HOMEPAGE ► 偏旁
+⾈	zhōu	Kangxi radical number 137NAME 舟字旁 zhōuzìpángVARIANTS 舟STANDALONE 舟MEANING boatEXAMPLES 舠·舡·舢MNEMONIC  A primitive of a boatRANK 72.5%NOTES  If this is the radical, then the character more than likely has a nautical natureHOMEPAGE ► 偏旁
+艮	gèn	Variant of radical ⾉ (stopping)EXAMPLES 良·艱HOMEPAGE ► 偏旁
+艮字旁	gènzìpáng	Name of radical number 138 ⾉MEANING stoppingEXAMPLES 良·艱HOMEPAGE ► 偏旁
+⾉	gèn	Kangxi radical number 138NAME 艮字旁 gènzìpángVARIANTS 艮STANDALONE 艮MEANING stoppingEXAMPLES 良·艱MNEMONIC  A man 匕 with an eye 目 on top, originally just the mirror of 見RANK 20.1%HOMEPAGE ► 偏旁
+色	sè	Variant of radical ⾊ (colour)EXAMPLES 艳·艴·艵HOMEPAGE ► 偏旁
+⾊	sè	Kangxi radical number 139NAME  VARIANTS 色STANDALONE 色MEANING colourEXAMPLES 艳·艴·艵MNEMONIC  The top portion is thought to be derived from 人, the bottom derived from the character for seal - 卩, so color is the thing a man chooses when he places his sealRANK 20.1%DISTINGHUISH FROM 邑HOMEPAGE ► 偏旁
+⺾	cǎo	Variant of radical ⾋ (grass)EXAMPLES 艽·艾·芃HOMEPAGE ► 偏旁
+⺿	cǎo	Variant of radical ⾋ (grass)EXAMPLES 艽·艾·芃HOMEPAGE ► 偏旁
+⻀	cǎo	Variant of radical ⾋ (grass)EXAMPLES 艽·艾·芃HOMEPAGE ► 偏旁
+艸	cǎo	Variant of radical ⾋ (grass)EXAMPLES 艽·艾·芃HOMEPAGE ► 偏旁
+艹	cǎo	Variant of radical ⾋ (grass)EXAMPLES 艽·艾·芃HOMEPAGE ► 偏旁
+艹	cǎo	Variant of radical ⾋ (grass)EXAMPLES 艽·艾·芃HOMEPAGE ► 偏旁
+草字头	cǎozìtóu	Name of radical number 140 ⾋MEANING grassEXAMPLES 艽·艾·芃HOMEPAGE ► 偏旁
+⾋	cǎo	Kangxi radical number 140NAME 草字头 cǎozìtóuVARIANTS ⺾·⺿·⻀·艸·艹·艹MEANING grassEXAMPLES 艽·艾·芃MNEMONIC  Two plants of grassRANK 0.0%NOTES  AKA 草字頭, the grass radical covers most all flora and fauna, as well as things like medicine, arts, and crafts which come from manipulating the natural world.HOMEPAGE ► 偏旁
+⻁	hū	Variant of radical ⾌ (tiger)EXAMPLES 虎·虐·虒HOMEPAGE ► 偏旁
+虍	hū	Variant of radical ⾌ (tiger)EXAMPLES 虎·虐·虒HOMEPAGE ► 偏旁
+虎	hū	Variant of radical ⾌ (tiger)EXAMPLES 虎·虐·虒HOMEPAGE ► 偏旁
+⾌	hū	Kangxi radical number 141NAME  VARIANTS ⻁·虍·虎STANDALONE 虎MEANING tigerEXAMPLES 虎·虐·虒MNEMONIC  A tigers head pointing leftRANK 52.7%HOMEPAGE ► 偏旁
+虫	chóng	Variant of radical ⾍ (insect)EXAMPLES 虬·虯·虱HOMEPAGE ► 偏旁
+虫字旁	chóngzìpáng	Name of radical number 142 ⾍MEANING insectEXAMPLES 虬·虯·虱HOMEPAGE ► 偏旁
+⾍	chóng	Kangxi radical number 142NAME 虫字旁 chóngzìpángVARIANTS 虫STANDALONE 虫MEANING insectEXAMPLES 虬·虯·虱MNEMONIC  picture of a snakeRANK 93.0%NOTES  This radical covers all things of the insect kingdom along with the insect-like crustacea.  Originally a snake, this character eventually came to represent insects. This is an alternate of 蟲HOMEPAGE ► 偏旁
+血	xuè	Variant of radical ⾎ (blood)EXAMPLES 衁·衂·衃HOMEPAGE ► 偏旁
+⾎	xuè	Kangxi radical number 143NAME  VARIANTS 血STANDALONE 血MEANING bloodEXAMPLES 衁·衂·衃MNEMONIC  A bowl 皿 of bloodRANK 20.1%HOMEPAGE ► 偏旁
+行	xíng	Variant of radical ⾏ (walk enclosure)EXAMPLES 衍·衎·衒HOMEPAGE ► 偏旁
+⾏	xíng	Kangxi radical number 144NAME  VARIANTS 行STANDALONE 行MEANING walk enclosureEXAMPLES 衍·衎·衒MNEMONIC  step 彳 + step 亍 = go 行RANK 59.0%DISTINGHUISH FROM 彳NOTES  When this radical is used some other character component is always inserted between 彳 and 亍HOMEPAGE ► 偏旁
+⻂	yī	Variant of radical ⾐ (clothes)EXAMPLES 初·表·衫HOMEPAGE ► 偏旁
+衣	yī	Variant of radical ⾐ (clothes)EXAMPLES 初·表·衫HOMEPAGE ► 偏旁
+衤	yī	Variant of radical ⾐ (clothes)EXAMPLES 初·表·衫HOMEPAGE ► 偏旁
+𧘇	yī	Variant of radical ⾐ (clothes)EXAMPLES 初·表·衫HOMEPAGE ► 偏旁
+衣字旁	yīzìpáng	Name of radical number 145 ⾐MEANING clothesEXAMPLES 初·表·衫HOMEPAGE ► 偏旁
+⾐	yī	Kangxi radical number 145NAME 衣字旁 yīzìpángVARIANTS ⻂·衣·衤·𧘇STANDALONE 衣MEANING clothesEXAMPLES 初·表·衫MNEMONIC  cloth top indicating shoulders and head, bottom indicating flaps or foldsRANK 79.1%NOTES  Used for different articles of clothing as well as specific parts of garmentsHOMEPAGE ► 偏旁
+⻃	yà	Variant of radical ⾑ (cover)EXAMPLES 西·要·覂HOMEPAGE ► 偏旁
+⻄	yà	Variant of radical ⾑ (cover)EXAMPLES 西·要·覂HOMEPAGE ► 偏旁
+襾	yà	Variant of radical ⾑ (cover)EXAMPLES 西·要·覂HOMEPAGE ► 偏旁
+西	yà	Variant of radical ⾑ (cover)EXAMPLES 西·要·覂HOMEPAGE ► 偏旁
+覀	yà	Variant of radical ⾑ (cover)EXAMPLES 西·要·覂HOMEPAGE ► 偏旁
+⾑	yà	Kangxi radical number 146NAME  VARIANTS ⻃·⻄·襾·西·覀STANDALONE 襾MEANING coverEXAMPLES 西·要·覂MNEMONIC  a picture of a stopper in a jarRANK 0.0%HOMEPAGE ► 偏旁
+⻅	jiàn	Variant of radical ⾒ (see)EXAMPLES 規·覓·視HOMEPAGE ► 偏旁
+見	jiàn	Variant of radical ⾒ (see)EXAMPLES 規·覓·視HOMEPAGE ► 偏旁
+见	jiàn	Variant of radical ⾒ (see)EXAMPLES 規·覓·視HOMEPAGE ► 偏旁
+见字旁	jiànzìpáng	Name of radical number 147 ⾒MEANING seeEXAMPLES 規·覓·視HOMEPAGE ► 偏旁
+⾒	jiàn	Kangxi radical number 147NAME 见字旁 jiànzìpángVARIANTS ⻅·見·见STANDALONE 见MEANING seeEXAMPLES 規·覓·視HOMEPAGE ► 偏旁
+⻆	jiǎo	Variant of radical ⾓ (horn)EXAMPLES 觓·觔·觕HOMEPAGE ► 偏旁
+⻇	jiǎo	Variant of radical ⾓ (horn)EXAMPLES 觓·觔·觕HOMEPAGE ► 偏旁
+角	jiǎo	Variant of radical ⾓ (horn)EXAMPLES 觓·觔·觕HOMEPAGE ► 偏旁
+𧢲	jiǎo	Variant of radical ⾓ (horn)EXAMPLES 觓·觔·觕HOMEPAGE ► 偏旁
+⾓	jiǎo	Kangxi radical number 148NAME  VARIANTS ⻆·⻇·角·𧢲STANDALONE 角MEANING hornEXAMPLES 觓·觔·觕MNEMONIC  image of an animal hornRANK 35.0%HOMEPAGE ► 偏旁
+⻈	yán	Variant of radical ⾔ (speech)EXAMPLES 訂·訃·計HOMEPAGE ► 偏旁
+言	yán	Variant of radical ⾔ (speech)EXAMPLES 訂·訃·計HOMEPAGE ► 偏旁
+訁	yán	Variant of radical ⾔ (speech)EXAMPLES 訂·訃·計HOMEPAGE ► 偏旁
+讠	yán	Variant of radical ⾔ (speech)EXAMPLES 訂·訃·計HOMEPAGE ► 偏旁
+言字旁	yánzìpáng	Name of radical number 149 ⾔MEANING speechEXAMPLES 訂·訃·計HOMEPAGE ► 偏旁
+⾔	yán	Kangxi radical number 149NAME 言字旁 yánzìpángVARIANTS ⻈·言·訁·讠STANDALONE 言MEANING speechEXAMPLES 訂·訃·計MNEMONIC  a mouth and tongue with words on itRANK 66.3%HOMEPAGE ► 偏旁
+谷	gǔ	Variant of radical ⾕ (valley)EXAMPLES 谹·谽·谿HOMEPAGE ► 偏旁
+⾕	gǔ	Kangxi radical number 150NAME  VARIANTS 谷STANDALONE 谷MEANING valleyEXAMPLES 谹·谽·谿MNEMONIC  water flowing forth 八八 from an opening 口RANK 20.1%HOMEPAGE ► 偏旁
+豆	dòu	Variant of radical ⾖ (bean)EXAMPLES 豇·豈·豉HOMEPAGE ► 偏旁
+⾖	dòu	Kangxi radical number 151NAME  VARIANTS 豆STANDALONE 豆MEANING beanEXAMPLES 豇·豈·豉MNEMONIC  a steamed rice container on a stand - loaned it's soundRANK 20.1%NOTES  Few characters are categorized under this radical, most have no clear relationship to beansHOMEPAGE ► 偏旁
+豕	shǐ	Variant of radical ⾗ (pig)EXAMPLES 豗·豚·豜HOMEPAGE ► 偏旁
+⾗	shǐ	Kangxi radical number 152NAME  VARIANTS 豕STANDALONE 豕MEANING pigEXAMPLES 豗·豚·豜MNEMONIC  This is a picture, head is replaced by the horizontal line on topRANK 44.4%DISTINGHUISH FROM 豸,·犭NOTES  Mostly covers swine related terminologyHOMEPAGE ► 偏旁
+豸	zhì	Variant of radical ⾘ (badger)EXAMPLES 豺·豻·豹HOMEPAGE ► 偏旁
+⾘	zhì	Kangxi radical number 153NAME  VARIANTS 豸MEANING badgerEXAMPLES 豺·豻·豹MNEMONIC  primitive of a small animal, possibly a reptileRANK 44.4%DISTINGHUISH FROM 豕,·犭NOTES  Tends to cover a variety of wild and mythical animals, with the large cats seeing heavy representationHOMEPAGE ► 偏旁
+⻉	bèi	Variant of radical ⾙ (shell)EXAMPLES 貞·負·財HOMEPAGE ► 偏旁
+貝	bèi	Variant of radical ⾙ (shell)EXAMPLES 貞·負·財HOMEPAGE ► 偏旁
+贝	bèi	Variant of radical ⾙ (shell)EXAMPLES 貞·負·財HOMEPAGE ► 偏旁
+贝字旁	bèizìpáng	Name of radical number 154 ⾙MEANING shellEXAMPLES 貞·負·財HOMEPAGE ► 偏旁
+⾙	bèi	Kangxi radical number 154NAME 贝字旁 bèizìpángVARIANTS ⻉·貝·贝STANDALONE 贝MEANING shellEXAMPLES 貞·負·財HOMEPAGE ► 偏旁
+赤	chì	Variant of radical ⾚ (red)EXAMPLES 赦·赧·赨HOMEPAGE ► 偏旁
+⾚	chì	Kangxi radical number 155NAME  VARIANTS 赤STANDALONE 赤MEANING redEXAMPLES 赦·赧·赨MNEMONIC  土 in this character was originally 大, representing a person over a fire - 火, put them together and you have a red blushing or angry personRANK 35.0%HOMEPAGE ► 偏旁
+走	zǒu	Variant of radical ⾛ (run)EXAMPLES 赳·赴·赶HOMEPAGE ► 偏旁
+赱	zǒu	Variant of radical ⾛ (run)EXAMPLES 赳·赴·赶HOMEPAGE ► 偏旁
+走字旁	zǒuzìpáng	Name of radical number 156 ⾛MEANING runEXAMPLES 赳·赴·赶HOMEPAGE ► 偏旁
+⾛	zǒu	Kangxi radical number 156NAME 走字旁 zǒuzìpángVARIANTS 走·赱STANDALONE 走MEANING runEXAMPLES 赳·赴·赶MNEMONIC  a man 土大 with foot 止RANK 72.5%NOTES  Many characters relating to human motion through walking, running use this radicalHOMEPAGE ► 偏旁
+⻊	zú	Variant of radical ⾜ (foot)EXAMPLES 趴·趵·趷HOMEPAGE ► 偏旁
+足	zú	Variant of radical ⾜ (foot)EXAMPLES 趴·趵·趷HOMEPAGE ► 偏旁
+𧾷	zú	Variant of radical ⾜ (foot)EXAMPLES 趴·趵·趷HOMEPAGE ► 偏旁
+足字旁	zúzìpáng	Name of radical number 157 ⾜MEANING footEXAMPLES 趴·趵·趷HOMEPAGE ► 偏旁
+⾜	zú	Kangxi radical number 157NAME 足字旁 zúzìpángVARIANTS ⻊·足·𧾷STANDALONE 足MEANING footEXAMPLES 趴·趵·趷MNEMONIC  a foot and a legRANK 5.2%NOTES  Used for actions done with the footHOMEPAGE ► 偏旁
+身	shēn	Variant of radical ⾝ (body)EXAMPLES 躬·躭·躰HOMEPAGE ► 偏旁
+⾝	shēn	Kangxi radical number 158NAME  VARIANTS 身STANDALONE 身MEANING bodyEXAMPLES 躬·躭·躰MNEMONIC  a body with stomach and leg walkingRANK 52.7%NOTES  This radical represents things having to do with the body or actions one might take with it.HOMEPAGE ► 偏旁
+⻋	chē	Variant of radical ⾞ (cart)EXAMPLES 軋·軌·軍HOMEPAGE ► 偏旁
+車	chē	Variant of radical ⾞ (cart)EXAMPLES 軋·軌·軍HOMEPAGE ► 偏旁
+车	chē	Variant of radical ⾞ (cart)EXAMPLES 軋·軌·軍HOMEPAGE ► 偏旁
+车字旁	chēzìpáng	Name of radical number 159 ⾞MEANING cartEXAMPLES 軋·軌·軍HOMEPAGE ► 偏旁
+⾞	chē	Kangxi radical number 159NAME 车字旁 chēzìpángVARIANTS ⻋·車·车STANDALONE 车MEANING cartEXAMPLES 軋·軌·軍HOMEPAGE ► 偏旁
+辛	xīn	Variant of radical ⾟ (bitter)EXAMPLES 辜·辝·辟HOMEPAGE ► 偏旁
+辛字旁	xīnzìpáng	Name of radical number 160 ⾟MEANING bitterEXAMPLES 辜·辝·辟HOMEPAGE ► 偏旁
+⾟	xīn	Kangxi radical number 160NAME 辛字旁 xīnzìpángVARIANTS 辛STANDALONE 辛MEANING bitterEXAMPLES 辜·辝·辟MNEMONIC  The lower part (below 亠) means 'to oppose', 亠 in this context may mean superiors or that above. Another interperation is this is an upside down person, with all the negative connotations of a person who may be in that positionRANK 52.7%DISTINGHUISH FROM 幸NOTES  Duplicated in many characters, like 辩.  It's bitter connotations reveal themselves in many characters, as do the connotations of hard work and suffering.HOMEPAGE ► 偏旁
+辰	chén	Variant of radical ⾠ (morning)EXAMPLES 辱·農·辴HOMEPAGE ► 偏旁
+⾠	chén	Kangxi radical number 161NAME  VARIANTS 辰STANDALONE 辰MEANING morningEXAMPLES 辱·農·辴MNEMONIC  A man handling an Egyptian hoeRANK 20.1%HOMEPAGE ► 偏旁
+⻌	chuò	Variant of radical ⾡ (walk)EXAMPLES 边·巡·迂HOMEPAGE ► 偏旁
+⻍	chuò	Variant of radical ⾡ (walk)EXAMPLES 边·巡·迂HOMEPAGE ► 偏旁
+⻎	chuò	Variant of radical ⾡ (walk)EXAMPLES 边·巡·迂HOMEPAGE ► 偏旁
+辵	chuò	Variant of radical ⾡ (walk)EXAMPLES 边·巡·迂HOMEPAGE ► 偏旁
+辶	chuò	Variant of radical ⾡ (walk)EXAMPLES 边·巡·迂HOMEPAGE ► 偏旁
+走之底	zǒuzhīdǐ	Name of radical number 162 ⾡MEANING walkEXAMPLES 边·巡·迂HOMEPAGE ► 偏旁
+⾡	chuò	Kangxi radical number 162NAME 走之底 zǒuzhīdǐVARIANTS ⻌·⻍·⻎·辵·辶STANDALONE 辵MEANING walkEXAMPLES 边·巡·迂MNEMONIC   辶辵 foot prints 止 on a road 彳RANK 5.2%NOTES  This form is not used, see 辶HOMEPAGE ► 偏旁
+⻏	yì	Variant of radical ⾢ (city)EXAMPLES 邕·邗·邘HOMEPAGE ► 偏旁
+邑	yì	Variant of radical ⾢ (city)EXAMPLES 邕·邗·邘HOMEPAGE ► 偏旁
+右耳朵	yòuěrduǒ	Name of radical number 163 ⾢MEANING cityEXAMPLES 邕·邗·邘HOMEPAGE ► 偏旁
+⾢	yì	Kangxi radical number 163NAME 右耳朵 yòuěrduǒVARIANTS ⻏·邑STANDALONE 邑MEANING cityEXAMPLES 邕·邗·邘MNEMONIC  A city with buildings - 口, and subservient people -卩 RANK 5.2%DISTINGHUISH FROM 色HOMEPAGE ► 偏旁
+酉	yǒu	Variant of radical ⾣ (wine)EXAMPLES 酊·酋·酌HOMEPAGE ► 偏旁
+酉字旁	yǒuzìpáng	Name of radical number 164 ⾣MEANING wineEXAMPLES 酊·酋·酌HOMEPAGE ► 偏旁
+⾣	yǒu	Kangxi radical number 164NAME 酉字旁 yǒuzìpángVARIANTS 酉STANDALONE 酉MEANING wineEXAMPLES 酊·酋·酌MNEMONIC  This is a picture of a jug.  Another ancient form was 丣, representing the handles of a sealed wine jug.RANK 86.8%DISTINGHUISH FROM 西NOTES  Used in characters relating to alcohol, celebration, and other reasons one might turn to the bottle.  Also in a few characters relating to cooking and fermented foodstuffsHOMEPAGE ► 偏旁
+釆	biàn	Variant of radical ⾤ (distinguish)EXAMPLES 采·釉·釋HOMEPAGE ► 偏旁
+⾤	biàn	Kangxi radical number 165NAME  VARIANTS 釆STANDALONE 釆MEANING distinguishEXAMPLES 采·釉·釋MNEMONIC  Represents sorting the rocks out of riceRANK 35.0%DISTINGHUISH FROM 米,·禾,·木NOTES  Used in few characters, among others, those for weight, quantity, and distanceHOMEPAGE ► 偏旁
+里	lǐ	Variant of radical ⾥ (village)EXAMPLES 重·野·量HOMEPAGE ► 偏旁
+里字旁	lǐzìpáng	Name of radical number 166 ⾥MEANING villageEXAMPLES 重·野·量HOMEPAGE ► 偏旁
+⾥	lǐ	Kangxi radical number 166NAME 里字旁 lǐzìpángVARIANTS 里STANDALONE 里MEANING villageEXAMPLES 重·野·量MNEMONIC  a measurement or combination of land 土 and fields 田RANK 44.4%DISTINGHUISH FROM cai3HOMEPAGE ► 偏旁
+⻐	jīn	Variant of radical ⾦ (gold)EXAMPLES 釓·釔·釕HOMEPAGE ► 偏旁
+金	jīn	Variant of radical ⾦ (gold)EXAMPLES 釓·釔·釕HOMEPAGE ► 偏旁
+釒	jīn	Variant of radical ⾦ (gold)EXAMPLES 釓·釔·釕HOMEPAGE ► 偏旁
+钅	jīn	Variant of radical ⾦ (gold)EXAMPLES 釓·釔·釕HOMEPAGE ► 偏旁
+金字旁	jīnzìpáng	Name of radical number 167 ⾦MEANING goldEXAMPLES 釓·釔·釕HOMEPAGE ► 偏旁
+⾦	jīn	Kangxi radical number 167NAME 金字旁 jīnzìpángVARIANTS ⻐·金·釒·钅STANDALONE 金MEANING goldEXAMPLES 釓·釔·釕MNEMONIC  This represents a cast musical metal bell of the ancient variety seen in China, with bumps on the outsideRANK 35.0%NOTES  Many characters relating to metal, metal objects, and valuable items use this radicalHOMEPAGE ► 偏旁
+⻑	cháng	Variant of radical ⾧ (long)EXAMPLES 镺·镻·镼HOMEPAGE ► 偏旁
+⻒	cháng	Variant of radical ⾧ (long)EXAMPLES 镺·镻·镼HOMEPAGE ► 偏旁
+⻓	cháng	Variant of radical ⾧ (long)EXAMPLES 镺·镻·镼HOMEPAGE ► 偏旁
+長	cháng	Variant of radical ⾧ (long)EXAMPLES 镺·镻·镼HOMEPAGE ► 偏旁
+镸	cháng	Variant of radical ⾧ (long)EXAMPLES 镺·镻·镼HOMEPAGE ► 偏旁
+长	cháng	Variant of radical ⾧ (long)EXAMPLES 镺·镻·镼HOMEPAGE ► 偏旁
+⾧	cháng	Kangxi radical number 168NAME  VARIANTS ⻑·⻒·⻓·長·镸·长STANDALONE 长MEANING longEXAMPLES 镺·镻·镼HOMEPAGE ► 偏旁
+⻔	mén	Variant of radical ⾨ (gate)EXAMPLES 閂·閃·閆HOMEPAGE ► 偏旁
+門	mén	Variant of radical ⾨ (gate)EXAMPLES 閂·閃·閆HOMEPAGE ► 偏旁
+门	mén	Variant of radical ⾨ (gate)EXAMPLES 閂·閃·閆HOMEPAGE ► 偏旁
+门字框	ménzìkuàng	Name of radical number 169 ⾨MEANING gateEXAMPLES 閂·閃·閆HOMEPAGE ► 偏旁
+⾨	mén	Kangxi radical number 169NAME 门字框 ménzìkuàngVARIANTS ⻔·門·门STANDALONE 门MEANING gateEXAMPLES 閂·閃·閆HOMEPAGE ► 偏旁
+⻕	fù	Variant of radical ⾩ (mound)EXAMPLES 阞·阡·阢HOMEPAGE ► 偏旁
+⻖	fù	Variant of radical ⾩ (mound)EXAMPLES 阞·阡·阢HOMEPAGE ► 偏旁
+阜	fù	Variant of radical ⾩ (mound)EXAMPLES 阞·阡·阢HOMEPAGE ► 偏旁
+阝	fù	Variant of radical ⾩ (mound)EXAMPLES 阞·阡·阢HOMEPAGE ► 偏旁
+𨸏	fù	Variant of radical ⾩ (mound)EXAMPLES 阞·阡·阢HOMEPAGE ► 偏旁
+双耳刀	shuāngěrdāo	Name of radical number 170 ⾩MEANING moundEXAMPLES 阞·阡·阢HOMEPAGE ► 偏旁
+左耳刀	zuǒěrdāo	Name of radical number 170 ⾩MEANING moundEXAMPLES 阞·阡·阢HOMEPAGE ► 偏旁
+⾩	fù	Kangxi radical number 170NAME 双耳刀 shuāngěrdāo·左耳刀 zuǒěrdāoVARIANTS ⻕·⻖·阜·阝·𨸏STANDALONE 阜MEANING moundEXAMPLES 阞·阡·阢MNEMONIC  Represents steps coming down from a city, or possiby a wallRANK 5.2%NOTES  Rare variant.  If one things of something like the great wall as the ultimate mound, a lot of the characters under this radical make quite a bit of senseHOMEPAGE ► 偏旁
+隶	lì	Variant of radical ⾪ (slave)EXAMPLES 𨽻·隷·隸HOMEPAGE ► 偏旁
+⾪	lì	Kangxi radical number 171NAME  VARIANTS 隶STANDALONE 隶MEANING slaveEXAMPLES 𨽻·隷·隸MNEMONIC  a subordinate who has a futile 柰 life with a broom 隶RANK 5.2%HOMEPAGE ► 偏旁
+隹	zhuī	Variant of radical ⾫ (short-tailed bird)EXAMPLES 隻·隼·隽HOMEPAGE ► 偏旁
+隹字旁	zhūizìpáng	Name of radical number 172 ⾫MEANING short-tailed birdEXAMPLES 隻·隼·隽HOMEPAGE ► 偏旁
+⾫	zhuī	Kangxi radical number 172NAME 隹字旁 zhūizìpángVARIANTS 隹STANDALONE 隹MEANING short-tailed birdEXAMPLES 隻·隼·隽MNEMONIC  A small bird, wings outstretchedRANK 72.5%NOTES  Smaller birds are under this radical, as are a lot of characters which don't immediately make one think of birds.HOMEPAGE ► 偏旁
+⻗	yǔ	Variant of radical ⾬ (rain)EXAMPLES 雩·雪·雯HOMEPAGE ► 偏旁
+雨	yǔ	Variant of radical ⾬ (rain)EXAMPLES 雩·雪·雯HOMEPAGE ► 偏旁
+雨字头	yǔzìtóu	Name of radical number 173 ⾬MEANING rainEXAMPLES 雩·雪·雯HOMEPAGE ► 偏旁
+⾬	yǔ	Kangxi radical number 173NAME 雨字头 yǔzìtóuVARIANTS ⻗·雨STANDALONE 雨MEANING rainEXAMPLES 雩·雪·雯MNEMONIC  Rain drops falling from skyRANK 81.2%NOTES  Characters representing various climate and weather conditions are represented hereHOMEPAGE ► 偏旁
+⻘	qīng	Variant of radical ⾭ (blue)EXAMPLES 靖·静·靚HOMEPAGE ► 偏旁
+靑	qīng	Variant of radical ⾭ (blue)EXAMPLES 靖·静·靚HOMEPAGE ► 偏旁
+青	qīng	Variant of radical ⾭ (blue)EXAMPLES 靖·静·靚HOMEPAGE ► 偏旁
+青字旁	qīngzìpáng	Name of radical number 174 ⾭MEANING blueEXAMPLES 靖·静·靚HOMEPAGE ► 偏旁
+⾭	qīng	Kangxi radical number 174NAME 青字旁 qīngzìpángVARIANTS ⻘·靑·青STANDALONE 青MEANING blueEXAMPLES 靖·静·靚MNEMONIC  grass 生 around a well 井 (not 月)RANK 0.0%HOMEPAGE ► 偏旁
+非	fēi	Variant of radical ⾮ (wrong)EXAMPLES 靟·靠·靡HOMEPAGE ► 偏旁
+⾮	fēi	Kangxi radical number 175NAME  VARIANTS 非STANDALONE 非MEANING wrongEXAMPLES 靟·靠·靡MNEMONIC  outward turned (broken) wings which do not functionRANK 35.0%DISTINGHUISH FROM 韭HOMEPAGE ► 偏旁
+面	miàn	Variant of radical ⾯ (face)EXAMPLES 靤·靦·靧HOMEPAGE ► 偏旁
+靣	miàn	Variant of radical ⾯ (face)EXAMPLES 靤·靦·靧HOMEPAGE ► 偏旁
+⾯	miàn	Kangxi radical number 176NAME  VARIANTS 面·靣STANDALONE 面MEANING faceEXAMPLES 靤·靦·靧MNEMONIC  a face with an eye 目 in the middleRANK 5.2%HOMEPAGE ► 偏旁
+革	gé	Variant of radical ⾰ (leather)EXAMPLES 靭·靮·靳HOMEPAGE ► 偏旁
+⾰	gé	Kangxi radical number 177NAME  VARIANTS 革STANDALONE 革MEANING leatherEXAMPLES 靭·靮·靳MNEMONIC  Represents a spread out animal skinRANK 67.7%NOTES  Leather goods are categorized under this radicalHOMEPAGE ► 偏旁
+⻙	wéi	Variant of radical ⾱ (tanned leather)EXAMPLES 韌·韍·韎HOMEPAGE ► 偏旁
+韋	wéi	Variant of radical ⾱ (tanned leather)EXAMPLES 韌·韍·韎HOMEPAGE ► 偏旁
+韦	wéi	Variant of radical ⾱ (tanned leather)EXAMPLES 韌·韍·韎HOMEPAGE ► 偏旁
+⾱	wéi	Kangxi radical number 178NAME  VARIANTS ⻙·韋·韦STANDALONE 韦MEANING tanned leatherEXAMPLES 韌·韍·韎HOMEPAGE ► 偏旁
+韭	jiǔ	Variant of radical ⾲ (leek)EXAMPLES 韰·韲·䪢HOMEPAGE ► 偏旁
+⾲	jiǔ	Kangxi radical number 179NAME  VARIANTS 韭STANDALONE 韭MEANING leekEXAMPLES 韰·韲·䪢MNEMONIC  an ideograph of leeksRANK 5.2%DISTINGHUISH FROM 非HOMEPAGE ► 偏旁
+音	yīn	Variant of radical ⾳ (sound)EXAMPLES 竟·章·韵HOMEPAGE ► 偏旁
+⾳	yīn	Kangxi radical number 180NAME  VARIANTS 音STANDALONE 音MEANING soundEXAMPLES 竟·章·韵MNEMONIC  a mouth with something in it and a tongue sticking out with something on itRANK 44.4%HOMEPAGE ► 偏旁
+⻚	yè	Variant of radical ⾴ (leaf)EXAMPLES 頂·頃·頄HOMEPAGE ► 偏旁
+頁	yè	Variant of radical ⾴ (leaf)EXAMPLES 頂·頃·頄HOMEPAGE ► 偏旁
+页	yè	Variant of radical ⾴ (leaf)EXAMPLES 頂·頃·頄HOMEPAGE ► 偏旁
+页字旁	yèzìpáng	Name of radical number 181 ⾴MEANING leafEXAMPLES 頂·頃·頄HOMEPAGE ► 偏旁
+⾴	yè	Kangxi radical number 181NAME 页字旁 yèzìpángVARIANTS ⻚·頁·页STANDALONE 页MEANING leafEXAMPLES 頂·頃·頄HOMEPAGE ► 偏旁
+⻛	fēng	Variant of radical ⾵ (wind)EXAMPLES 颩·颭·颮HOMEPAGE ► 偏旁
+風	fēng	Variant of radical ⾵ (wind)EXAMPLES 颩·颭·颮HOMEPAGE ► 偏旁
+风	fēng	Variant of radical ⾵ (wind)EXAMPLES 颩·颭·颮HOMEPAGE ► 偏旁
+⾵	fēng	Kangxi radical number 182NAME  VARIANTS ⻛·風·风STANDALONE 风MEANING windEXAMPLES 颩·颭·颮HOMEPAGE ► 偏旁
+⻜	fēi	Variant of radical ⾶ (fly)EXAMPLES 䬡·飜·飝HOMEPAGE ► 偏旁
+飛	fēi	Variant of radical ⾶ (fly)EXAMPLES 䬡·飜·飝HOMEPAGE ► 偏旁
+飞	fēi	Variant of radical ⾶ (fly)EXAMPLES 䬡·飜·飝HOMEPAGE ► 偏旁
+⾶	fēi	Kangxi radical number 183NAME  VARIANTS ⻜·飛·飞STANDALONE 飞MEANING flyEXAMPLES 䬡·飜·飝HOMEPAGE ► 偏旁
+⻝	shí	Variant of radical ⾷ (eat)EXAMPLES 飡·飢·飣HOMEPAGE ► 偏旁
+⻞	shí	Variant of radical ⾷ (eat)EXAMPLES 飡·飢·飣HOMEPAGE ► 偏旁
+⻟	shí	Variant of radical ⾷ (eat)EXAMPLES 飡·飢·飣HOMEPAGE ► 偏旁
+⻠	shí	Variant of radical ⾷ (eat)EXAMPLES 飡·飢·飣HOMEPAGE ► 偏旁
+食	shí	Variant of radical ⾷ (eat)EXAMPLES 飡·飢·飣HOMEPAGE ► 偏旁
+飠	shí	Variant of radical ⾷ (eat)EXAMPLES 飡·飢·飣HOMEPAGE ► 偏旁
+饣	shí	Variant of radical ⾷ (eat)EXAMPLES 飡·飢·飣HOMEPAGE ► 偏旁
+𩙿	shí	Variant of radical ⾷ (eat)EXAMPLES 飡·飢·飣HOMEPAGE ► 偏旁
+食字旁	shízìpáng	Name of radical number 184 ⾷MEANING eatEXAMPLES 飡·飢·飣HOMEPAGE ► 偏旁
+⾷	shí	Kangxi radical number 184NAME 食字旁 shízìpángVARIANTS ⻝·⻞·⻟·⻠·食·飠·饣·𩙿STANDALONE 食MEANING eatEXAMPLES 飡·飢·飣MNEMONIC  a man's mouth 亼 over a bowl of rice on a stand 皀 (the two dots combine). Note the lower part is not 艮RANK 20.1%NOTES  Many types of food and mealtime activities are encompassed by characters with this radicalHOMEPAGE ► 偏旁
+⻡	shǒu	Variant of radical ⾸ (head)EXAMPLES 馗·䭫·馘HOMEPAGE ► 偏旁
+首	shǒu	Variant of radical ⾸ (head)EXAMPLES 馗·䭫·馘HOMEPAGE ► 偏旁
+𩠐	shǒu	Variant of radical ⾸ (head)EXAMPLES 馗·䭫·馘HOMEPAGE ► 偏旁
+⾸	shǒu	Kangxi radical number 185NAME  VARIANTS ⻡·首·𩠐STANDALONE 首MEANING headEXAMPLES 馗·䭫·馘MNEMONIC  a head like 頁 but with hair on topRANK 20.1%HOMEPAGE ► 偏旁
+香	xiāng	Variant of radical ⾹ (fragrant)EXAMPLES 馝·馞·馡HOMEPAGE ► 偏旁
+⾹	xiāng	Kangxi radical number 186NAME  VARIANTS 香STANDALONE 香MEANING fragrantEXAMPLES 馝·馞·馡MNEMONIC  represents nice food going in the mouthRANK 5.2%HOMEPAGE ► 偏旁
+⻢	mǎ	Variant of radical ⾺ (horse)EXAMPLES 馭·馮·馯HOMEPAGE ► 偏旁
+馬	mǎ	Variant of radical ⾺ (horse)EXAMPLES 馭·馮·馯HOMEPAGE ► 偏旁
+马	mǎ	Variant of radical ⾺ (horse)EXAMPLES 馭·馮·馯HOMEPAGE ► 偏旁
+马字旁	mǎzìpáng	Name of radical number 187 ⾺MEANING horseEXAMPLES 馭·馮·馯HOMEPAGE ► 偏旁
+⾺	mǎ	Kangxi radical number 187NAME 马字旁 mǎzìpángVARIANTS ⻢·馬·马STANDALONE 马MEANING horseEXAMPLES 馭·馮·馯HOMEPAGE ► 偏旁
+⻣	gǔ	Variant of radical ⾻ (bone)EXAMPLES 骫·骭·骯HOMEPAGE ► 偏旁
+骨	gǔ	Variant of radical ⾻ (bone)EXAMPLES 骫·骭·骯HOMEPAGE ► 偏旁
+⾻	gǔ	Kangxi radical number 188NAME  VARIANTS ⻣·骨STANDALONE 骨MEANING boneEXAMPLES 骫·骭·骯MNEMONIC  scapula with the meat radical (moon variant)RANK 35.0%NOTES  Characters under this radical cover various body parts, and not surprisingly, bones.  Things associated with bones are also covered such as 骯髒 and 骴. Simplification has occasionally replaced 骨 with the standing meat radical (月)HOMEPAGE ► 偏旁
+高	gāo	Variant of radical ⾼ (tall)EXAMPLES 髚·髛·𩫛HOMEPAGE ► 偏旁
+髙	gāo	Variant of radical ⾼ (tall)EXAMPLES 髚·髛·𩫛HOMEPAGE ► 偏旁
+⾼	gāo	Kangxi radical number 189NAME  VARIANTS 高·髙STANDALONE 高MEANING tallEXAMPLES 髚·髛·𩫛MNEMONIC  represents a high buildingRANK 5.2%HOMEPAGE ► 偏旁
+髟	biāo	Variant of radical ⾽ (hair)EXAMPLES 髠·髡·髢HOMEPAGE ► 偏旁
+⾽	biāo	Kangxi radical number 190NAME  VARIANTS 髟STANDALONE 髟MEANING hairEXAMPLES 髠·髡·髢MNEMONIC  長 long hair and 彡 more hairRANK 20.1%NOTES  Not surprisingly, shows up in characters describing all things hairyHOMEPAGE ► 偏旁
+鬥	dòu	Variant of radical ⾾ (fight)EXAMPLES 鬦·鬧·鬨HOMEPAGE ► 偏旁
+⾾	dòu	Kangxi radical number 191NAME  VARIANTS 鬥MEANING fightEXAMPLES 鬦·鬧·鬨HOMEPAGE ► 偏旁
+鬯	chàng	Variant of radical ⾿ (sacrificial wine)EXAMPLES 鬰·鬱HOMEPAGE ► 偏旁
+⾿	chàng	Kangxi radical number 192NAME  VARIANTS 鬯STANDALONE 鬯MEANING sacrificial wineEXAMPLES 鬰·鬱MNEMONIC  a container of riceRANK 20.1%HOMEPAGE ► 偏旁
+鬲	lì	Variant of radical ⿀ (cauldron)EXAMPLES 鬳·鬴·鬵HOMEPAGE ► 偏旁
+⿀	lì	Kangxi radical number 193NAME  VARIANTS 鬲STANDALONE 鬲MEANING cauldronEXAMPLES 鬳·鬴·鬵MNEMONIC  three legged cauldronRANK 5.2%HOMEPAGE ► 偏旁
+⻤	guǐ	Variant of radical ⿁ (ghost)EXAMPLES 鬾·魁·魂HOMEPAGE ► 偏旁
+鬼	guǐ	Variant of radical ⿁ (ghost)EXAMPLES 鬾·魁·魂HOMEPAGE ► 偏旁
+⿁	guǐ	Kangxi radical number 194NAME  VARIANTS ⻤·鬼STANDALONE 鬼MEANING ghostEXAMPLES 鬾·魁·魂MNEMONIC  A man (goblin) with an ugly head and a tailRANK 59.0%NOTES  Otherworldy things tend to be represented by this radicalHOMEPAGE ► 偏旁
+⻥	yú	Variant of radical ⿂ (fish)EXAMPLES 魟·魠·魦HOMEPAGE ► 偏旁
+魚	yú	Variant of radical ⿂ (fish)EXAMPLES 魟·魠·魦HOMEPAGE ► 偏旁
+鱼	yú	Variant of radical ⿂ (fish)EXAMPLES 魟·魠·魦HOMEPAGE ► 偏旁
+⿂	yú	Kangxi radical number 195NAME  VARIANTS ⻥·魚·鱼STANDALONE 鱼MEANING fishEXAMPLES 魟·魠·魦HOMEPAGE ► 偏旁
+⻦	niǎo	Variant of radical ⿃ (bird)EXAMPLES 鳦·鳧·鳩HOMEPAGE ► 偏旁
+鳥	niǎo	Variant of radical ⿃ (bird)EXAMPLES 鳦·鳧·鳩HOMEPAGE ► 偏旁
+鸟	niǎo	Variant of radical ⿃ (bird)EXAMPLES 鳦·鳧·鳩HOMEPAGE ► 偏旁
+鸟字旁	niǎozìpáng	Name of radical number 196 ⿃MEANING birdEXAMPLES 鳦·鳧·鳩HOMEPAGE ► 偏旁
+⿃	niǎo	Kangxi radical number 196NAME 鸟字旁 niǎozìpángVARIANTS ⻦·鳥·鸟STANDALONE 鸟MEANING birdEXAMPLES 鳦·鳧·鳩HOMEPAGE ► 偏旁
+⻧	lǔ	Variant of radical ⿄ (salt)EXAMPLES 鹹·鹺·鹼HOMEPAGE ► 偏旁
+卤	lǔ	Variant of radical ⿄ (salt)EXAMPLES 鹹·鹺·鹼HOMEPAGE ► 偏旁
+鹵	lǔ	Variant of radical ⿄ (salt)EXAMPLES 鹹·鹺·鹼HOMEPAGE ► 偏旁
+⿄	lǔ	Kangxi radical number 197NAME  VARIANTS ⻧·卤·鹵STANDALONE 卤MEANING saltEXAMPLES 鹹·鹺·鹼HOMEPAGE ► 偏旁
+鹿	lù	Variant of radical ⿅ (deer)EXAMPLES 麀·麁·麂HOMEPAGE ► 偏旁
+⿅	lù	Kangxi radical number 198NAME  VARIANTS 鹿STANDALONE 鹿MEANING deerEXAMPLES 麀·麁·麂MNEMONIC  primitive of an antlered deer - see seal charactersRANK 20.1%NOTES  Denotes the most attractive aspects of the wilderness and wild thingsHOMEPAGE ► 偏旁
+⻨	mài	Variant of radical ⿆ (wheat)EXAMPLES 麨·麩·麪HOMEPAGE ► 偏旁
+麥	mài	Variant of radical ⿆ (wheat)EXAMPLES 麨·麩·麪HOMEPAGE ► 偏旁
+麦	mài	Variant of radical ⿆ (wheat)EXAMPLES 麨·麩·麪HOMEPAGE ► 偏旁
+⿆	mài	Kangxi radical number 199NAME  VARIANTS ⻨·麥·麦STANDALONE 麦MEANING wheatEXAMPLES 麨·麩·麪HOMEPAGE ► 偏旁
+麻	má	Variant of radical ⿇ (hemp)EXAMPLES 麼·麾·黁HOMEPAGE ► 偏旁
+⿇	má	Kangxi radical number 200NAME  VARIANTS 麻STANDALONE 麻MEANING hempEXAMPLES 麼·麾·黁MNEMONIC  hemp (from 痲) in the barn  广 - separate etymology from 林RANK 5.2%HOMEPAGE ► 偏旁
+⻩	huáng	Variant of radical ⿈ (yellow)EXAMPLES 黈·䵍·黌HOMEPAGE ► 偏旁
+黃	huáng	Variant of radical ⿈ (yellow)EXAMPLES 黈·䵍·黌HOMEPAGE ► 偏旁
+黄	huáng	Variant of radical ⿈ (yellow)EXAMPLES 黈·䵍·黌HOMEPAGE ► 偏旁
+⿈	huáng	Kangxi radical number 201NAME  VARIANTS ⻩·黃·黄STANDALONE 黄MEANING yellowEXAMPLES 黈·䵍·黌MNEMONIC  a man 大 with a (yellow) pendant, now 璜RANK 5.2%HOMEPAGE ► 偏旁
+黍	shǔ	Variant of radical ⿉ (millet)EXAMPLES 黎·黏·黐HOMEPAGE ► 偏旁
+⿉	shǔ	Kangxi radical number 202NAME  VARIANTS 黍STANDALONE 黍MEANING milletEXAMPLES 黎·黏·黐MNEMONIC  grain 禾 that grows by water 水RANK 5.2%HOMEPAGE ► 偏旁
+黑	hēi	Variant of radical ⿊ (black)EXAMPLES 墨·黓·黔HOMEPAGE ► 偏旁
+黒	hēi	Variant of radical ⿊ (black)EXAMPLES 墨·黓·黔HOMEPAGE ► 偏旁
+⿊	hēi	Kangxi radical number 203NAME  VARIANTS 黑·黒STANDALONE 黑MEANING blackEXAMPLES 墨·黓·黔MNEMONIC  black from charcoal grain in an air tight container over a fire, in early forms the bottom half was more clearly 炎RANK 84.3%NOTES  Primary form.  Opposite of 白, blackness can often add dark connotations to many charactersHOMEPAGE ► 偏旁
+黹	zhǐ	Variant of radical ⿋ (embroidery)EXAMPLES 黺·黻·黼HOMEPAGE ► 偏旁
+⿋	zhǐ	Kangxi radical number 204NAME  VARIANTS 黹STANDALONE 黹MEANING embroideryEXAMPLES 黺·黻·黼MNEMONIC  primitive of embroideryRANK 44.4%HOMEPAGE ► 偏旁
+⻪	mǐn	Variant of radical ⿌ (frog)EXAMPLES 黿·鼀·鼁HOMEPAGE ► 偏旁
+黽	mǐn	Variant of radical ⿌ (frog)EXAMPLES 黿·鼀·鼁HOMEPAGE ► 偏旁
+黾	mǐn	Variant of radical ⿌ (frog)EXAMPLES 黿·鼀·鼁HOMEPAGE ► 偏旁
+⿌	mǐn	Kangxi radical number 205NAME  VARIANTS ⻪·黽·黾STANDALONE 黾MEANING frogEXAMPLES 黿·鼀·鼁HOMEPAGE ► 偏旁
+鼎	dǐng	Variant of radical ⿍ (tripod)EXAMPLES 鼏·鼐·鼒HOMEPAGE ► 偏旁
+⿍	dǐng	Kangxi radical number 206NAME  VARIANTS 鼎STANDALONE 鼎MEANING tripodEXAMPLES 鼏·鼐·鼒MNEMONIC  a bronze tripod with two earsRANK 35.0%HOMEPAGE ► 偏旁
+鼓	gǔ	Variant of radical ⿎ (drum)EXAMPLES 鼕·鼖·鼗HOMEPAGE ► 偏旁
+⿎	gǔ	Kangxi radical number 207NAME  VARIANTS 鼓STANDALONE 鼓MEANING drumEXAMPLES 鼕·鼖·鼗MNEMONIC  a drum 口 left and right ends with base and feathers on top 土 hit with stick 支RANK 35.0%HOMEPAGE ► 偏旁
+鼠	shǔ	Variant of radical ⿏ (rat)EXAMPLES 鼢·鼥·鼩HOMEPAGE ► 偏旁
+鼡	shǔ	Variant of radical ⿏ (rat)EXAMPLES 鼢·鼥·鼩HOMEPAGE ► 偏旁
+⿏	shǔ	Kangxi radical number 208NAME  VARIANTS 鼠·鼡STANDALONE 鼠MEANING ratEXAMPLES 鼢·鼥·鼩MNEMONIC  A mouse with legs tail and whiskersRANK 66.3%HOMEPAGE ► 偏旁
+鼻	bí	Variant of radical ⿐ (nose)EXAMPLES 鼽·鼾·齁HOMEPAGE ► 偏旁
+⿐	bí	Kangxi radical number 209NAME  VARIANTS 鼻STANDALONE 鼻MEANING noseEXAMPLES 鼽·鼾·齁MNEMONIC  synonym for 自 noseRANK 44.4%HOMEPAGE ► 偏旁
+⻫	qí	Variant of radical ⿑ (even)EXAMPLES 齋·齌·齍HOMEPAGE ► 偏旁
+⻬	qí	Variant of radical ⿑ (even)EXAMPLES 齋·齌·齍HOMEPAGE ► 偏旁
+斉	qí	Variant of radical ⿑ (even)EXAMPLES 齋·齌·齍HOMEPAGE ► 偏旁
+齊	qí	Variant of radical ⿑ (even)EXAMPLES 齋·齌·齍HOMEPAGE ► 偏旁
+齐	qí	Variant of radical ⿑ (even)EXAMPLES 齋·齌·齍HOMEPAGE ► 偏旁
+⿑	qí	Kangxi radical number 210NAME  VARIANTS ⻫·⻬·斉·齊·齐STANDALONE 齐MEANING evenEXAMPLES 齋·齌·齍HOMEPAGE ► 偏旁
+⻭	chǐ	Variant of radical ⿒ (tooth)EXAMPLES 齔·齕·齖HOMEPAGE ► 偏旁
+⻮	chǐ	Variant of radical ⿒ (tooth)EXAMPLES 齔·齕·齖HOMEPAGE ► 偏旁
+歯	chǐ	Variant of radical ⿒ (tooth)EXAMPLES 齔·齕·齖HOMEPAGE ► 偏旁
+齒	chǐ	Variant of radical ⿒ (tooth)EXAMPLES 齔·齕·齖HOMEPAGE ► 偏旁
+齿	chǐ	Variant of radical ⿒ (tooth)EXAMPLES 齔·齕·齖HOMEPAGE ► 偏旁
+⿒	chǐ	Kangxi radical number 211NAME  VARIANTS ⻭·⻮·歯·齒·齿STANDALONE 齿MEANING toothEXAMPLES 齔·齕·齖HOMEPAGE ► 偏旁
+⻯	lóng	Variant of radical ⿓ (dragon)EXAMPLES 龏·龑·龔HOMEPAGE ► 偏旁
+⻰	lóng	Variant of radical ⿓ (dragon)EXAMPLES 龏·龑·龔HOMEPAGE ► 偏旁
+竜	lóng	Variant of radical ⿓ (dragon)EXAMPLES 龏·龑·龔HOMEPAGE ► 偏旁
+龍	lóng	Variant of radical ⿓ (dragon)EXAMPLES 龏·龑·龔HOMEPAGE ► 偏旁
+龙	lóng	Variant of radical ⿓ (dragon)EXAMPLES 龏·龑·龔HOMEPAGE ► 偏旁
+⿓	lóng	Kangxi radical number 212NAME  VARIANTS ⻯·⻰·竜·龍·龙STANDALONE 龙MEANING dragonEXAMPLES 龏·龑·龔HOMEPAGE ► 偏旁
+⻱	guī	Variant of radical ⿔ (turtle)EXAMPLES 䶰·龝·龞HOMEPAGE ► 偏旁
+⻲	guī	Variant of radical ⿔ (turtle)EXAMPLES 䶰·龝·龞HOMEPAGE ► 偏旁
+⻳	guī	Variant of radical ⿔ (turtle)EXAMPLES 䶰·龝·龞HOMEPAGE ► 偏旁
+亀	guī	Variant of radical ⿔ (turtle)EXAMPLES 䶰·龝·龞HOMEPAGE ► 偏旁
+龜	guī	Variant of radical ⿔ (turtle)EXAMPLES 䶰·龝·龞HOMEPAGE ► 偏旁
+龟	guī	Variant of radical ⿔ (turtle)EXAMPLES 䶰·龝·龞HOMEPAGE ► 偏旁
+⿔	guī	Kangxi radical number 213NAME  VARIANTS ⻱·⻲·⻳·亀·龜·龟STANDALONE 龟MEANING turtleEXAMPLES 䶰·龝·龞HOMEPAGE ► 偏旁
+龠	yuè	Variant of radical ⿕ (flute)EXAMPLES 龡·龢·龤HOMEPAGE ► 偏旁
+⿕	yuè	Kangxi radical number 214NAME  VARIANTS 龠STANDALONE 龠MEANING fluteEXAMPLES 龡·龢·龤MNEMONIC  a mouth blowing 亼 a flute with holes 口, possibly pan-pipesRANK 20.0%HOMEPAGE ► 偏旁
+有名字	yǒu míngzì	RADICALS WITH NAMES⼀ yīzìpáng 一字旁 one⼂ zhǔzìpáng 丶字旁 dot⼇ lìuzìtóu 六字头 lid⼈ dānlìrén 单立人 man⼈ dānrénpáng 单人旁 man⼉ érzuòdǐ 儿座底 son, legs⼊ rùzìpáng 入字旁 enter⼋ bāzìpáng 八字旁 eight⼌ tóngzìkuāng 同字匡 wide⼍ tūbǎogài 秃宝盖 cloth cover⼎ liǎngdiǎnshǔi 两点水 ice⼏ jīzìpáng 几字旁 table⼐ xiōngzìkuàng 凶字框 receptacle⼑ dāozìpáng 刀字旁 knife⼑ lìdāopáng 立刀旁 knife⼒ lìzìpáng 力字旁 power⼓ bāozìtóu 包字头 wrap⼔ bǐzìpáng 匕字旁 spoon⼕ yìzìkuàng 医字框 box⼗ shízìpáng 十字旁 ten⼙ dāněrdāo 单耳刀 seal (device)⼚ chǎngzìpáng 厂字旁 cliff⼛ sīzìpáng 私字旁 private⼜ yòuzìpáng 又字旁 again⼝ kǒuzìpáng 口字旁 mouth⼞ guózìkuàng 国字框 enclosure⼟ títǔpáng 提土旁 earth⼠ shìzìpáng 士字旁 scholar⼡ zhéwénpáng 折文旁 go⼣ xīzìpáng 夕字旁 evening⼤ dàzìpáng 大字旁 big⼥ nv̌zìpáng 女字旁 woman⼦ zǐzìpáng 子字旁 child⼧ bǎogàitóu 宝盖头 roof⼨ cùnzìpáng 寸字旁 inch⼩ dāngzìtóu 当字头 small⼫ shīzìtóu 尸字头 corpse⼭ shānzìpáng 山字旁 mountain⼯ gōngzìpáng 工字旁 work⼱ jīnzìér 巾字儿 turban⼲ gānzìpáng 干字旁 dry⼴ guǎngzìpáng 广字旁 dotted cliff⼵ jiànzhīpáng 建之旁 long stride⼶ nòngzìdǐ 弄字底 arch⼸ gōngzìpáng 弓字旁 bow⼺ sānpiěr 三撇儿 bristle⼻ shuānglìrén 双立人 step⼼ shùxīnpáng 竖心旁 heart⼽ gēzìpáng 戈字旁 halberd⼾ hùzìpáng 户字旁 door⼿ tíshǒupáng 提手旁 hand⼿ kànzìtóu 看字头 hand⽁ fǎnwénpáng 反文旁 rap, tap⽁ jìufǎnwénpáng 旧反文旁 rap, tap⽄ jīnzìpáng 斤字旁 axe⽅ fāngzìpáng 方字旁 square⽇ rìzìpáng 日字旁 sun⽉ yuèzìpáng 月字旁 moon⽊ mùzìpáng 木字旁 tree⽋ qiànzìpáng 欠字旁 lack⽌ zhǐzìpáng 止字旁 stop⽎ shūzìpáng 殳字旁 weapon⽔ sāndiǎnshǔi 三点水 water⽕ sìdiǎndǐ 四点底 fire⽕ huǒzìpáng 火字旁 fire⽖ shòuzìtóu 受字头 claw⽙ jiāngzìpáng 将字旁 split wood⽜ níuzìpáng 牛字旁 cow⽝ fǎnquǎnpáng 反犬旁 dog⽟ wángzìpáng 王字旁 jade⽥ tiánzìpáng 田字旁 field⽦ pǐzìdǐ 疋字底 bolt of cloth⽧ bìngzìpáng 病字旁 sickness⽨ dēngzìtóu 登字头 footsteps⽩ báizìpáng 白字旁 white⽪ pízìpáng 皮字旁 skin⽫ mǐnzìdǐ 皿字底 dish⽬ mùzìpáng 目字旁 eye⽯ shízìpáng 石字旁 stone⽰ shìzìpáng 示字旁 spirit⽲ hémùpáng 禾木旁 grain⽳ xuébǎogài 穴宝盖 cave⽴ lìzìpáng 立字旁 stand⽵ zhúzìtóu 竹字头 bamboo⽶ mǐzìpáng 米字旁 rice⽷ jiǎosīpáng 绞丝旁 silk⽹ sìzìtóu 四字头 net⽺ yángzìpáng 羊字旁 sheep⽻ yǔzìpáng 羽字旁 feather⽼ lǎozìtóu 老字头 old⽿ ěrzìpáng 耳字旁 ear⾆ shézìpáng 舌字旁 tongue⾈ zhōuzìpáng 舟字旁 boat⾉ gènzìpáng 艮字旁 stopping⾋ cǎozìtóu 草字头 grass⾍ chóngzìpáng 虫字旁 insect⾐ yīzìpáng 衣字旁 clothes⾒ jiànzìpáng 见字旁 see⾔ yánzìpáng 言字旁 speech⾙ bèizìpáng 贝字旁 shell⾛ zǒuzìpáng 走字旁 run⾜ zúzìpáng 足字旁 foot⾞ chēzìpáng 车字旁 cart⾟ xīnzìpáng 辛字旁 bitter⾡ zǒuzhīdǐ 走之底 walk⾢ yòuěrduǒ 右耳朵 city⾣ yǒuzìpáng 酉字旁 wine⾥ lǐzìpáng 里字旁 village⾦ jīnzìpáng 金字旁 gold⾨ ménzìkuàng 门字框 gate⾩ shuāngěrdāo 双耳刀 mound⾩ zuǒěrdāo 左耳刀 mound⾫ zhūizìpáng 隹字旁 short-tailed bird⾬ yǔzìtóu 雨字头 rain⾭ qīngzìpáng 青字旁 blue⾴ yèzìpáng 页字旁 leaf⾷ shízìpáng 食字旁 eat⾺ mǎzìpáng 马字旁 horse⿃ niǎozìpáng 鸟字旁 birdHOMEPAGE ► 偏旁
