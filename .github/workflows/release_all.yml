@@ -59,7 +59,7 @@ jobs:
       run: |
         source .venv/bin/activate &&
         uv pip list &&
-        uv run python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab --filter=TrungViet
+        uv run python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab --filter=HanziHeroVietPleco
         
     - name: Report the results
       run: |

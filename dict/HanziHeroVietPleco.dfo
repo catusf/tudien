@@ -1,0 +1,8 @@
+Name = Chinese Character Stories in Vietnamese v1.0
+Description = Chinese Character Stories in Vietnamese based on the components
+Source = zh
+Target = vi
+Version = 1.0
+Owner/Editor = 
+URL = https://github.com/catusphan/dictionary
+Inflections = 
