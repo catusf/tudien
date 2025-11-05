@@ -17,4 +17,5 @@ dependencies = [
     "pypinyin>=0.53.0",
     "dragonmapper>=0.3.0",
     "pypinyin-dict>=0.8.0",
+    "mdict-utils>=1.3.14",
 ]
