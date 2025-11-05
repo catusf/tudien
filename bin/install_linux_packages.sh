@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt-get update &&
-sudo apt-get install -y dictzip systemd pandoc &&
+sudo apt-get install -y dictzip systemd pandoc liblzo2-2 liblzo2-dev &&
 sudo apt install -y ruby-full &&
 ruby -v &&
 #sudo gem install bundler &&
