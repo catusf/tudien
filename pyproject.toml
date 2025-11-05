@@ -18,4 +18,5 @@ dependencies = [
     "dragonmapper>=0.3.0",
     "pypinyin-dict>=0.8.0",
     "mdict-utils>=1.3.14",
+    "python-lzo>=1.15",
 ]
