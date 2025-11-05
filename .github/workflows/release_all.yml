@@ -1,4 +1,4 @@
-name: Release sample dictionaries
+name: Release all INTERNAL & EXTERNAL dictionaries
 
 on:
   workflow_dispatch:
@@ -8,11 +8,12 @@ on:
       - .gitignore
       - '*.md'
       - LICENSE
-      - bin/create_inflections.py
+      - bin/create_inflections.py      
+      - .github/workflows/release_all.yml   
 
 env:
-  INPUT_DIR: dict
-  OUTPUT_DIR: output
+  INPUT_DIR: ext-dict
+  OUTPUT_DIR: ext-output
 
 concurrency:
   group: ${{ github.workflow }}
@@ -55,12 +56,19 @@ jobs:
         
         # pip install -r ./requirements.txt
 
+    - name: Copy internal dictionaries
+      run: |
+        cp dict/*.* $INPUT_DIR/ &&
+        ls $INPUT_DIR &&
+        mkdir $OUTPUT_DIR &&
+        ls -l | wc -l
+
     - name: Build all dictionaries
       run: |
         source .venv/bin/activate &&
         uv pip list &&
-        uv run python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab --filter=HanziHeroVietPleco
-        
+        uv run python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab
+
     - name: Report the results
       run: |
         ls -R -l $OUTPUT_DIR &&
@@ -79,5 +87,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
           draft: true
-          name: "Release samples at ${{ github.ref }} - ${{ env.TIMESTAMP }}"
+          name: "Release ALL dictionaries at ${{ github.ref }} - ${{ env.TIMESTAMP }}"
           bodyFile: ${{ env.INPUT_DIR }}/dict_summary.md

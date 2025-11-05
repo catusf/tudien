@@ -1,0 +1,83 @@
+name: Release sample dictionaries
+
+on:
+  workflow_dispatch:
+
+  push:
+    paths-ignore:
+      - .gitignore
+      - '*.md'
+      - LICENSE
+      - bin/create_inflections.py
+
+env:
+  INPUT_DIR: dict
+  OUTPUT_DIR: output
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+  
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 1
+        submodules: 'recursive'
+
+    - name: Setup Ubuntu packages
+      run: |
+        # Call a script so that it can be used in a shell/container as well
+        ./bin/install_linux_packages.sh 
+
+    - name: Setup Wine32
+      run: |
+        # Call a script so that it can be used in a shell/container as well
+        ./bin/install_wine32.sh
+
+    - name: Setup Utilities
+      run: |
+        # Call a script so that it can be used in a shell/container as well
+        ./bin/install_utilities.sh
+
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.12' 
+        
+    - name: Setup Python packages
+      run: |
+        pip install uv &&
+        uv sync
+        
+        # pip install -r ./requirements.txt
+
+    - name: Build all dictionaries
+      run: |
+        source .venv/bin/activate &&
+        uv pip list &&
+        uv run python ./bin/convert_all.py --input_folder=$INPUT_DIR --output_folder=$OUTPUT_DIR --extension=tab --filter=HanziHeroVietPleco
+        
+    - name: Report the results
+      run: |
+        ls -R -l $OUTPUT_DIR &&
+        uv run python ./bin/dict_summary.py --dict_dir=$INPUT_DIR --output_dir=$OUTPUT_DIR --read_only=no
+
+    - name: Get Current Timestamp
+      id: timestamp
+      run: |
+        echo "TIMESTAMP=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+
+    - name: Create a new release draft
+      id: create_release
+      uses: ncipollo/release-action@v1
+      with:
+          artifacts: "${{ env.OUTPUT_DIR }}/*.*,${{ env.INPUT_DIR }}/dict_summary.json"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}
+          draft: true
+          name: "Release samples at ${{ github.ref }} - ${{ env.TIMESTAMP }}"
+          bodyFile: ${{ env.INPUT_DIR }}/dict_summary.md

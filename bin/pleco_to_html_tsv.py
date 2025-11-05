@@ -1,9 +1,11 @@
+#!/usr/bin/env python
+
 # Converts Pleco-formatted input data file to Tab-separated values (TSV) format for PyGlossary
+import glob
 import os
 from os.path import join
 
-from tools_configs import DICT_DIR
-import glob
+# from tools_configs import DICT_DIR
 
 # dict_names = ["char_dict_pleco.txt", "radical_lookup_pleco.txt", "radical_name_pleco.txt", "tvb_pleco.txt"]
 dict_names = glob.glob("dict/*.txt")
@@ -22,6 +24,9 @@ replaces = {
 }
 
 for filepath in dict_names:
+    if "Inflections" in filepath:
+        continue
+
     print(f"{filepath} being read")
     with open(filepath, "r", encoding="utf-8") as fread:
         name, ext = os.path.splitext(filepath)
