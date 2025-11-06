@@ -39,8 +39,8 @@ ENV PATH="/root/.local/bin/:$PATH"
 # RUN uv sync && source .venv/bin/activate
 RUN uv sync && . .venv/bin/activate
 
-# WORKDIR /app
-# COPY . /app
+WORKDIR /app
+COPY . /app
 
 # Creates a non-root user with an explicit UID and adds permission to access the /app folder
 # For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers
