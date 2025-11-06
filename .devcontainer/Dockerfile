@@ -6,16 +6,6 @@ ENV PYTHONDONTWRITEBYTECODE=1
 
 # Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED=1
- 
-# Install pip requirements
-#COPY requirements.txt .
-COPY pyproject.toml .
-COPY ./bin/install_linux_packages.sh .
-COPY ./bin/install_wine32.sh .
-COPY ./bin/install_utilities.sh .
-
-#RUN python -m pip install -r requirements.txt
-
 
 # Install necessary system dependencies
 RUN apt-get update && apt-get install -y \
@@ -24,15 +14,13 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# WORKDIR /workspaces/tudien
-
-# RUN ./bin/install_linux_packages.sh \
-#     && ./bin/install_wine32.sh
-
-# RUN ./bin/install_utilities.sh
+# Install pip requirements
+COPY requirements.txt .
+COPY pyproject.toml .
+#RUN python -m pip install -r requirements.txt
 
 # Download the latest installer
-ADD https://astral.sh/uv/install.sh /uv-installer.sh
+ADD https://astral.sh/uv/install.sh/uv-installer.sh
 
 # Run the installer then remove it
 RUN sh/uv-installer.sh && rm/uv-installer.sh
@@ -51,5 +39,5 @@ RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /
 USER appuser
 
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-#CMD ["python", "convert_all.py"]
+CMD ["python", "convert_all.py"]
 # CMD ["ls", "-d", "/app"]
