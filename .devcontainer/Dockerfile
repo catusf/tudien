@@ -10,6 +10,7 @@ ENV PYTHONUNBUFFERED=1
 
 # Install necessary system dependencies
 RUN apt-get update && apt-get install -y \
+    sudo \
     pkg-config \
     curl \
     liblzo2-2 liblzo2-dev \ 
