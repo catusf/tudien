@@ -11,20 +11,21 @@ ENV PYTHONUNBUFFERED=1
 RUN apt-get update && apt-get install -y \
     pkg-config \
     curl \
+    liblzo2-2 liblzo2-dev \ 
     libmariadb-dev \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /workspaces/tudien
+# WORKDIR /workspaces/tudien
 
-RUN ./bin/install_linux_packages.sh \
-	&& ./bin/install_wine32.sh \
-	&& ./bin/install_utilities.sh
+# RUN ./bin/install_linux_packages.sh \
+# 	&& ./bin/install_wine32.sh \
+# 	&& ./bin/install_utilities.sh
 
 # Install pip requirements
 # COPY requirements.txt .
-COPY pyproject.toml .
 #RUN python -m pip install -r requirements.txt
+COPY pyproject.toml .
 
 # Download the latest installer
 ADD https://astral.sh/uv/install.sh /uv-installer.sh
