@@ -20,7 +20,7 @@ COPY pyproject.toml .
 #RUN python -m pip install -r requirements.txt
 
 # Download the latest installer
-ADD https://astral.sh/uv/install.sh/uv-installer.sh
+ADD https://astral.sh/uv/install.sh /uv-installer.sh
 
 # Run the installer then remove it
 RUN sh/uv-installer.sh && rm/uv-installer.sh
