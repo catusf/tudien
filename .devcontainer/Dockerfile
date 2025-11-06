@@ -24,10 +24,12 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-RUN install_linux_packages.sh \
-    && install_wine32.sh
+# WORKDIR /workspaces/tudien
 
-RUN install_utilities.sh
+# RUN ./bin/install_linux_packages.sh \
+#     && ./bin/install_wine32.sh
+
+# RUN ./bin/install_utilities.sh
 
 # Download the latest installer
 ADD https://astral.sh/uv/install.sh /uv-installer.sh
@@ -41,7 +43,7 @@ ENV PATH="/root/.local/bin/:$PATH"
 RUN uv sync && source .venv/bin/activate
 
 WORKDIR /app
-COPY . /app`
+COPY . /app
 
 # Creates a non-root user with an explicit UID and adds permission to access the /app folder
 # For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers
