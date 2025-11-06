@@ -24,8 +24,8 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-RUN install_linux_packages.sh &&
-    install_wine32.sh &&
+RUN install_linux_packages.sh \
+    && install_wine32.sh
 
 RUN install_utilities.sh
 
