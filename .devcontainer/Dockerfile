@@ -6,6 +6,16 @@ ENV PYTHONDONTWRITEBYTECODE=1
 
 # Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED=1
+ 
+# Install pip requirements
+#COPY requirements.txt .
+COPY pyproject.toml .
+COPY ./bin/install_linux_packages.sh .
+COPY ./bin/install_wine32.sh .
+COPY ./bin/install_utilities.sh .
+
+#RUN python -m pip install -r requirements.txt
+
 
 # Install necessary system dependencies
 RUN apt-get update && apt-get install -y \
@@ -14,15 +24,10 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-RUN ./bin/install_linux_packages.sh &&
-    ./bin/install_wine32.sh &&
+RUN install_linux_packages.sh &&
+    install_wine32.sh &&
 
-RUN ./bin/install_utilities.sh
- 
-# Install pip requirements
-#COPY requirements.txt .
-COPY pyproject.toml .
-#RUN python -m pip install -r requirements.txt
+RUN install_utilities.sh
 
 # Download the latest installer
 ADD https://astral.sh/uv/install.sh/uv-installer.sh
