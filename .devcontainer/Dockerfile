@@ -15,8 +15,14 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
+WORKDIR /workspaces/tudien
+
+RUN ./bin/install_linux_packages.sh \
+	&& ./bin/install_wine32.sh \
+	&& ./bin/install_utilities.sh
+
 # Install pip requirements
-COPY requirements.txt .
+# COPY requirements.txt .
 COPY pyproject.toml .
 #RUN python -m pip install -r requirements.txt
 
@@ -31,8 +37,8 @@ ENV PATH="/root/.local/bin/:$PATH"
 
 RUN uv sync && source .venv/bin/activate
 
-WORKDIR /app
-COPY . /app
+# WORKDIR /app
+# COPY . /app
 
 # Creates a non-root user with an explicit UID and adds permission to access the /app folder
 # For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers
@@ -40,5 +46,5 @@ RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /
 USER appuser
 
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-CMD ["python", "convert_all.py"]
+# CMD ["python", "convert_all.py"]
 # CMD ["ls", "-d", "/app"]
