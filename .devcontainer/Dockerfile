@@ -36,7 +36,8 @@ RUN sh /uv-installer.sh && rm /uv-installer.sh
 # Ensure the installed binary is on the `PATH`
 ENV PATH="/root/.local/bin/:$PATH"
 
-RUN uv sync && source .venv/bin/activate
+# RUN uv sync && source .venv/bin/activate
+RUN uv sync && . .venv/bin/activate
 
 # WORKDIR /app
 # COPY . /app
