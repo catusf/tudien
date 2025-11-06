@@ -30,7 +30,7 @@ RUN install_linux_packages.sh \
 RUN install_utilities.sh
 
 # Download the latest installer
-ADD https://astral.sh/uv/install.sh/uv-installer.sh
+ADD https://astral.sh/uv/install.sh /uv-installer.sh
 
 # Run the installer then remove it
 RUN sh/uv-installer.sh && rm/uv-installer.sh
