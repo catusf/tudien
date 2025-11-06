@@ -10,6 +10,7 @@ ENV PYTHONUNBUFFERED=1
 # Install necessary system dependencies
 RUN apt-get update && apt-get install -y \
     pkg-config \
+    curl \
     libmariadb-dev \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
