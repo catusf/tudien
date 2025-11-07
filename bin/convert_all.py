@@ -310,6 +310,9 @@ def main() -> None:
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
+        cmd_line = f"rm {htmlOutDir}/{filebase}*"
+        execute_shell(cmd_line=cmd_line, message=f"Removes html files for {filebase}")
+
         # Zip to create Pleco dictionary
         pleco_dict_file = f"dict/{filebase}.txt"
         if os.path.exists(pleco_dict_file):
@@ -347,7 +350,7 @@ def main() -> None:
             execute_shell(cmd_line=cmd_line, message=f"generating {write_format}")
 
             if needzip:
-                out_path = os.path.join(output_folder, f"{folder}/{filebase}.*")
+                out_path = os.path.join(output_folder, f"{folder}/{filebase}.")
                 zip_path = os.path.join(output_folder, f"{filebase}.{folder}.zip")
                 cmd_line = f"zip -j {zip_path} {out_path}"
 
@@ -372,6 +375,10 @@ def main() -> None:
         gen_mdict(datafile, filebase, os.path.join(output_folder, "mdict"), dataName, dataDescription)
         cmd_line = f"mv {output_folder}/mdict/*.mdx {output_folder}/"
         execute_shell(cmd_line=cmd_line, message=f"moving output {out_path} to output folder {output_folder}")
+
+        # Deletes src data file to save space
+        cmd_line = f"rm {datafile}"
+        execute_shell(cmd_line=cmd_line, message=f"Removes {datafile} to save space")
 
     dir_formats = [
         ("stardict", "*.stardict.zip"),
