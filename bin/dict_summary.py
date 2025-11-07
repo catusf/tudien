@@ -95,6 +95,8 @@ def generate_summary(dict_dir, output_dir):
     """Generate a list of dictionaries containing metadata for each .dfo file."""
     print(f"Generating summary data for {dict_dir}")
 
+    print(f"Input directory: {dict_dir}\nOutput directory: {output_dir}")
+    
     data = []
     needed_files = []
     num_dict_found = 0
