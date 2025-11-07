@@ -7,7 +7,7 @@ import os
 
 import langcodes
 
-DOWNLOAD_TAG = "v4.1"  # Set the GitHub tag version that asscociates with the release
+DOWNLOAD_TAG = "v4.2"  # Set the GitHub tag version that asscociates with the release
 
 
 def parse_dfo_file(dfo_path):
@@ -63,7 +63,8 @@ SUPPORTED_EXTENSIONS = {
     "mobi": {"dir": "kindle", "name": "Kindle (.mobi)"},
     "stardict.zip": {"dir": "stardict", "name": "StartDict"},
     "yomitan.zip": {"dir": "yomitan", "name": "Yomitan"},
-    # "mdict.zip": {"dir": "mdict", "MDict"),
+    "mdx": {"dir": "mdict", "name": "MDict"},
+    "pleco.zip": {"dir": "pleco", "name": "Pleco"},
 }
 
 COLUMNS = {
