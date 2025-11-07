@@ -83,7 +83,7 @@ jobs:
       id: create_release
       uses: ncipollo/release-action@v1
       with:
-          artifacts: "${{ env.OUTPUT_DIR }}/*.*,${{ env.INPUT_DIR }}/dict_summary.json"
+          artifacts: "${{ env.OUTPUT_DIR }}/*.*,${{ env.INPUT_DIR }}/dict_summary.json,${{ env.INPUT_DIR }}/dict_summary.md"
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
           draft: true
