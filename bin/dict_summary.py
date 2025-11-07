@@ -244,6 +244,9 @@ def generate_markdown_table(data, files_status, files_status_details, extensions
     header += " | ".join(types) + " |"
     seperator += " --- |" * len(extensions)
 
+    header += " Number |"
+    seperator += " --- |"
+
     markdown = [header, seperator]
 
     for num, entry in enumerate(data, start=1):
@@ -270,6 +273,8 @@ def generate_markdown_table(data, files_status, files_status_details, extensions
             line += f"{entry['Definitions']:,} |"
 
         line += f" {download_links} |"
+
+        line += f" {num} |"
 
         markdown.append(line)
 

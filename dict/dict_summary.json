@@ -64,48 +64,6 @@
     },
     {
         "Number": 4,
-        "Name": "Từ điển tra cứu các bộ tiếng Trung v1.0",
-        "Description": "Từ điển Tra cứu 214 bộ Kangxi tiếng Trung",
-        "Source": "Tiếng Trung (zh)",
-        "Target": "Tiếng Anh (en)",
-        "Owner/Editor": "",
-        "Version": "1.0",
-        "Definitions": 789,
-        "Download": {
-            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/radical_name_pleco.dictd.zip",
-            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/radical_name_pleco.dsl.dz",
-            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/radical_name_pleco.epub",
-            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/radical_name_pleco.kobo.zip",
-            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/radical_name_pleco.mobi",
-            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/radical_name_pleco.stardict.zip",
-            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/radical_name_pleco.yomitan.zip",
-            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/radical_name_pleco.mdx",
-            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/radical_name_pleco.pleco.zip"
-        }
-    },
-    {
-        "Number": 5,
-        "Name": "Chinese Character Stories in Vietnamese v1.0",
-        "Description": "Từ điển Câu chuyện chữ Hán",
-        "Source": "Tiếng Trung (zh)",
-        "Target": "Tiếng Việt (vi)",
-        "Owner/Editor": "",
-        "Version": "1.0",
-        "Definitions": 3189,
-        "Download": {
-            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziHeroVietPleco.dictd.zip",
-            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziHeroVietPleco.dsl.dz",
-            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziHeroVietPleco.epub",
-            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziHeroVietPleco.kobo.zip",
-            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziHeroVietPleco.mobi",
-            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziHeroVietPleco.stardict.zip",
-            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziHeroVietPleco.yomitan.zip",
-            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziHeroVietPleco.mdx",
-            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziHeroVietPleco.pleco.zip"
-        }
-    },
-    {
-        "Number": 6,
         "Name": "Từ điển Phật học Tinh tuyển v1.0",
         "Description": "Từ điển Phật học Tinh tuyển",
         "Source": "Tiếng Việt (vi)",
@@ -126,7 +84,7 @@
         }
     },
     {
-        "Number": 7,
+        "Number": 5,
         "Name": "Rộng mở tâm hồn v1.0",
         "Description": "Rộng mở tâm hồn",
         "Source": "Tiếng Việt (vi)",
@@ -147,28 +105,7 @@
         }
     },
     {
-        "Number": 8,
-        "Name": "Chinese Character Stories v1.0",
-        "Description": "Chinese Character Stories based on the components",
-        "Source": "Tiếng Trung (zh)",
-        "Target": "Tiếng Anh (en)",
-        "Owner/Editor": "",
-        "Version": "1.0",
-        "Definitions": 3189,
-        "Download": {
-            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziHeroPleco.dictd.zip",
-            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziHeroPleco.dsl.dz",
-            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziHeroPleco.epub",
-            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziHeroPleco.kobo.zip",
-            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziHeroPleco.mobi",
-            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziHeroPleco.stardict.zip",
-            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziHeroPleco.yomitan.zip",
-            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziHeroPleco.mdx",
-            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziHeroPleco.pleco.zip"
-        }
-    },
-    {
-        "Number": 9,
+        "Number": 6,
         "Name": "Ngữ vựng danh từ thiền học v1.0",
         "Description": "Ngữ vựng danh từ thiền học",
         "Source": "Tiếng Việt (vi)",
@@ -189,7 +126,7 @@
         }
     },
     {
-        "Number": 10,
+        "Number": 7,
         "Name": "Từ điển Đạo Uyển v1.0",
         "Description": "Từ điển Đạo Uyển",
         "Source": "Tiếng Việt (vi)",
@@ -210,7 +147,7 @@
         }
     },
     {
-        "Number": 11,
+        "Number": 8,
         "Name": "Chinese Thesaurus (big) v1.0",
         "Description": "Chinese Thesaurus (big size)",
         "Source": "Tiếng Trung (zh)",
@@ -231,7 +168,7 @@
         }
     },
     {
-        "Number": 12,
+        "Number": 9,
         "Name": "Phật quang Đại từ điển Hán ngữ v1.0",
         "Description": "Phật quang Đại từ điển Hán ngữ",
         "Source": "Tiếng Trung (zh)",
@@ -252,7 +189,7 @@
         }
     },
     {
-        "Number": 13,
+        "Number": 10,
         "Name": "Từ điển Trung-Việt β (tiểu) v1.0",
         "Description": "Từ điển Trung-Việt β (cỡ tiểu) với ít chi tiết nhất. Bao gồm hơn 130k mục từ, phủ hết mục từ trong CCCE.",
         "Source": "Tiếng Trung (zh)",
@@ -273,7 +210,7 @@
         }
     },
     {
-        "Number": 14,
+        "Number": 11,
         "Name": "Cấu thành từ tiếng Trung v1.0",
         "Description": "Từ điển phân tích các chữ cái tiếng Trung thành các cấu thành",
         "Source": "Tiếng Trung (zh)",
@@ -294,7 +231,7 @@
         }
     },
     {
-        "Number": 15,
+        "Number": 12,
         "Name": "Chinese Thesaurus (small) v1.0",
         "Description": "Chinese Thesaurus (small size)",
         "Source": "Tiếng Trung (zh)",
@@ -315,7 +252,7 @@
         }
     },
     {
-        "Number": 16,
+        "Number": 13,
         "Name": "Từ điển Phật học Việt Anh - Thiện Phúc v1.0",
         "Description": "Từ điển Phật học Việt Anh - Thiện Phúc",
         "Source": "Tiếng Việt (vi)",
@@ -336,7 +273,28 @@
         }
     },
     {
-        "Number": 17,
+        "Number": 14,
+        "Name": "Từ điển Câu chuyện chữ Hán bằng tiếng Việt v1.0",
+        "Description": "Từ điển Câu chuyện chữ Hán",
+        "Source": "Tiếng Trung (zh)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "",
+        "Version": "1.0",
+        "Definitions": 3189,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziStoriesViet.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziStoriesViet.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziStoriesViet.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziStoriesViet.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziStoriesViet.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziStoriesViet.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziStoriesViet.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziStoriesViet.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziStoriesViet.pleco.zip"
+        }
+    },
+    {
+        "Number": 15,
         "Name": "Từ điển Trung-Việt β (trung) v1.0",
         "Description": "Từ điển Trung-Việt β (cỡ trung). Bao gồm hơn 130k mục từ, phủ hết mục từ trong CCCE.",
         "Source": "Tiếng Trung (zh)",
@@ -357,7 +315,7 @@
         }
     },
     {
-        "Number": 18,
+        "Number": 16,
         "Name": "Từ điển Phật Quang v1.0",
         "Description": "Từ điển Phật Quang",
         "Source": "Tiếng Việt (vi)",
@@ -378,7 +336,7 @@
         }
     },
     {
-        "Number": 19,
+        "Number": 17,
         "Name": "Từ điển từ Hán Việt Thiền Chửu v1.0",
         "Description": "Từ điển từ Hán Việt Thiền Chửu",
         "Source": "Tiếng Việt (vi)",
@@ -396,6 +354,48 @@
             "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/TudienThienChuu.yomitan.zip",
             "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/TudienThienChuu.mdx",
             "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/TudienThienChuu.pleco.zip"
+        }
+    },
+    {
+        "Number": 18,
+        "Name": "Từ điển tra cứu các bộ tiếng Trung v1.0",
+        "Description": "Từ điển Tra cứu 214 bộ Kangxi tiếng Trung",
+        "Source": "Tiếng Trung (zh)",
+        "Target": "Tiếng Anh (en)",
+        "Owner/Editor": "",
+        "Version": "1.0",
+        "Definitions": 789,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/radical_name.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/radical_name.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/radical_name.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/radical_name.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/radical_name.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/radical_name.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/radical_name.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/radical_name.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/radical_name.pleco.zip"
+        }
+    },
+    {
+        "Number": 19,
+        "Name": "Chinese Character Stories v1.0",
+        "Description": "Chinese Character Stories based on the components",
+        "Source": "Tiếng Trung (zh)",
+        "Target": "Tiếng Anh (en)",
+        "Owner/Editor": "",
+        "Version": "1.0",
+        "Definitions": 3189,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziStories.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziStories.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziStories.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziStories.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziStories.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziStories.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziStories.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziStories.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/HanziStories.pleco.zip"
         }
     },
     {
