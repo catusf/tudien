@@ -8,7 +8,6 @@ Usage:
 import argparse
 import glob
 import os
-import os.path
 import re
 import shlex
 import subprocess
@@ -122,6 +121,46 @@ def escape_forbidden_chars(text, forbidden_chars=r" (){}[]$*?^|<>\\"):
 
 # Example usage
 
+def gen_mdict(filepath, filebase, output_folder, dataName, dataDescription):
+    """" Generates mdx dictionary
+    """
+
+    title_filepath = os.path.join(output_folder, filebase + ".title.html")
+    with open(title_filepath, "w", encoding="utf-8") as file:
+        file.write(dataName)
+
+    desc_filepath = os.path.join(output_folder, filebase + ".description.html")
+    with open(desc_filepath, "w", encoding="utf-8") as file:
+        file.write(dataDescription)
+
+    def_filepath = os.path.join(output_folder, filebase + ".txt")
+    dict_filepath = os.path.join(output_folder, filebase + ".mdx")
+
+    print(f"{filepath} - {output_folder} - {dict_filepath}")
+
+    with open(def_filepath, "w", encoding="utf-8") as outfile:
+        with open(filepath, "r", encoding="utf-8") as file:
+            for line in file:
+                line = line.strip("\n")        # remove trailing newline
+
+                if not line:
+                    continue
+                
+                if line.count("\t") != 1:
+                    print(f"Warning: line in {filepath} has no tab or multiple tabs, skipping: {line!r}")
+                    continue
+                # assert(line.count("\t") == 1)
+                
+                headword, definition = line.split("\t")   # split by tab
+
+                outfile.write(f"{headword}\n{definition}\n</>\n")
+
+    cmd_line = (
+        f"mdict --title {title_filepath} --description {desc_filepath} -a {def_filepath} {dict_filepath}"  # noqa: E501
+    )
+    
+    return execute_shell(cmd_line=cmd_line, message=f"generating MDict MDX")
+    
 
 def main() -> None:
     """Main entry point"""  # noqa: D401
@@ -207,7 +246,7 @@ def main() -> None:
 
         print(f"Len of checked datafilelist: {len(datafilelist)}")
 
-    dirs = ["stardict", "epub", "kobo", "lingvo", "kindle", "dictd", "yomitan"]
+    dirs = ["stardict", "epub", "kobo", "lingvo", "kindle", "dictd", "yomitan", "mdict"]
 
     cmd_line = f"rm -r {output_folder}/*"
     execute_shell(cmd_line=cmd_line, message="Remove existing file in {output_folder}")
@@ -242,6 +281,7 @@ def main() -> None:
 
         dataTarget = data["Target"]
         dataSource = data["Source"]
+        dataDescription = data["Description"]
         dataFullSource = data["FullSource"]
         dataFullTarget = data["FullTarget"]
         dataName = escape_forbidden_chars(data["Name"])
@@ -272,11 +312,6 @@ def main() -> None:
 
         if DEBUG_FLAG:
             continue
-
-        # Move input file to final destinations. Using subprocess.call
-        # cmd_line = f'rm *.html *.opf'
-        # print(cmd_line)
-        # subprocess.call(cmd_line, shell=True)
 
         cmd_line = f"mv {htmlOutDir}/*.mobi {output_folder}/"
         print(cmd_line)
@@ -326,6 +361,12 @@ def main() -> None:
         execute_shell(cmd_line=cmd_line, message=f"moving output {out_path} to output folder {output_folder}")
         pass
 
+        # Generare Mdict dictionary
+        out_dictdir = os.path.join(output_folder, "mdict")
+        gen_mdict(datafile, filebase, os.path.join(output_folder, "mdict"), dataName, dataDescription)
+        cmd_line = f"mv {output_folder}/mdict/*.mdx {output_folder}/"
+        execute_shell(cmd_line=cmd_line, message=f"moving output {out_path} to output folder {output_folder}")
+
     dir_formats = [
         ("stardict", "*.stardict.zip"),
         ("epub", "*.epub"),
@@ -334,6 +375,7 @@ def main() -> None:
         ("kindle", "*.mobi"),
         ("dictd", "*.dictd.zip"),
         ("yomitan", "*.yomitan.zip"),
+        ("mdict", "*.mdx"),
     ]
 
     for dir, format in dir_formats:
