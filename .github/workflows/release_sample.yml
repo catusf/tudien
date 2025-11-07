@@ -55,7 +55,7 @@ jobs:
         
     - name: Build all dictionaries
       run: |
-        make sample
+        make sample -B
 
     # - name: Build all dictionaries
     #   run: |
@@ -83,4 +83,5 @@ jobs:
           draft: true
           name: "Release samples at ${{ github.ref }} - ${{ env.TIMESTAMP }}"
           bodyFile: ${{ env.INPUT_DIR }}/dict_summary.md
+
 
