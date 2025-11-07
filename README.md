@@ -106,7 +106,6 @@ graph LR;
 13. Từ điển Phật học Tinh tuyển (2'918)
 
 ### Chat với tác giả
-
-[![Join the chat at https://gitter.im/catusf/tudienanhviet](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/catusf/tudienanhviet?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+👉 [**Chat với tác giả trên Discord:**](https://discord.gg/Zr4XUgH7)
  
 [![Release all dictionaries](https://github.com/catusf/tudien/actions/workflows/release_all.yml/badge.svg)](https://github.com/catusf/tudien/actions/workflows/release_all.yml)
