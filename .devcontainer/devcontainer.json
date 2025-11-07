@@ -5,7 +5,7 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/python:2-3.12-bullseye",
 	"features": {
-		"ghcr.io/cirolosapio/devcontainers-features/alpine-git:0": {},
+    	"ghcr.io/devcontainers/features/git:1": {},
 		"ghcr.io/va-h/devcontainers-features/uv:1": {}
 	}
 
