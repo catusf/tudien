@@ -5,17 +5,17 @@ setup:
 sample:
 	cp dict/*.* ext-dict
 	ls ext-dict
-	mkdir ext-output
+	mkdir -p ext-output
 	ls -l | wc -l
 
-	uv run python ./bin/convert_all.py --input_folder=ext-dict --output_folder=ext-output --extension=tab --filter=Hanzi
+	uv run python ./bin/convert_all.py --input_folder=ext-dict --output_folder=ext-output --extension=tab --filter=HanziStoriesViet
 	uv run python ./bin/dict_summary.py --dict_dir=ext-dict --output_dir=ext-output --read_only=no
 	echo "Released sample dictionaries"
 
 all:
-	cp dict/*.* ext-dict
+	mv dict/*.* ext-dict
 	ls ext-dict
-	mkdir ext-output
+	mkdir -p ext-output
 	ls -l | wc -l
 
 	uv run python ./bin/convert_all.py --input_folder=ext-dict --output_folder=ext-output --extension=tab
