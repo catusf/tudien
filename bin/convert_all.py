@@ -382,7 +382,7 @@ def main() -> None:
         execute_shell(cmd_line=cmd_line, message=f"Removes temp mdict files in {output_folder}/mdict")
 
         # Deletes src data file to save space
-        cmd_line = f"rm {input_folder}/{filebase}*"
+        cmd_line = f"rm {input_folder}/{filebase}.txt" # Still keeps .tab file for counting lines later
         execute_shell(cmd_line=cmd_line, message=f"Removes {filebase} input files to save space")
 
     dir_formats = [

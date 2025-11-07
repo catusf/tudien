@@ -79,7 +79,7 @@ COLUMNS = {
 }
 
 
-def get_downloadable_files(filebase, tag_download, dict_dir):
+def get_downloadable_files(filebase, tag_download, output_dir):
     """Return the downloadable file links based on the filebase name."""
     download_links = {}
 
@@ -87,7 +87,11 @@ def get_downloadable_files(filebase, tag_download, dict_dir):
         # Generate the URL for the downloadable file
         download_url = f"https://github.com/catusf/tudien/releases/download/{tag_download}/{filebase}.{ext}"
 
-        if os.path.exists(os.path.join(dict_dir, f"{filebase}.{ext}")):
+        download_path = os.path.join(output_dir, f"{filebase}.{ext}")
+        
+        print(f"*** Checking for {download_path}")
+
+        if os.path.exists(os.path.join(output_dir, f"{filebase}.{ext}")):
             download_links[ext] = download_url
         else:
             download_links[ext] = ""
@@ -122,7 +126,7 @@ def generate_summary(dict_dir, output_dir):
         # main_download_url = f"https://github.com/catusf/tudien/releases/tag/{TAG_DOWNLOAD}/all-kindle.zip"
 
         # Get the additional downloadable files
-        download_urls = get_downloadable_files(filebase, DOWNLOAD_TAG, dict_dir)
+        download_urls = get_downloadable_files(filebase, DOWNLOAD_TAG, output_dir)
 
         for ext in SUPPORTED_EXTENSIONS:
             needed_files.append(os.path.join(output_dir, filebase + "." + ext))
