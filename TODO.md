@@ -1,4 +1,5 @@
 # TODO
+- [ ] Add check if file exists, then has link, otherwise empty
 - [ ] Use symlink instead of moving files `ln soource symlink`
 - [ ] Use functions to process all types of dicts: dsl, kindle, others
 - [ ] Add output for Apple Dictionary Source
@@ -46,4 +47,5 @@
 - [x] Move html folders inside html
 - [x] Streamline convert process to be able to add new dictionaries easiy: 
 - [x] Use a lib to create epub (pyglossary or penelope)
+
 
