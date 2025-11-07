@@ -11,8 +11,8 @@ on:
       - bin/create_inflections.py
 
 env:
-  INPUT_DIR: dict
-  OUTPUT_DIR: output
+  INPUT_DIR: ext-dict
+  OUTPUT_DIR: ext-output
 
 concurrency:
   group: ${{ github.workflow }}
@@ -83,3 +83,4 @@ jobs:
           draft: true
           name: "Release samples at ${{ github.ref }} - ${{ env.TIMESTAMP }}"
           bodyFile: ${{ env.INPUT_DIR }}/dict_summary.md
+
