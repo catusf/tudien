@@ -3,7 +3,7 @@ setup:
 	uv sync
 
 sample:
-	uv run python ./bin/convert_all.py --input_folder=dict --output_folder=output --extension=tab --filter=C
+	uv run python ./bin/convert_all.py --input_folder=dict --output_folder=output --extension=tab --filter=HanziHeroViet
 	echo "Release sample"
 
 all:

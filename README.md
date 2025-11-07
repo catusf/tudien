@@ -40,6 +40,23 @@ ssh-add <(echo "$SSH_PRIVATE_TUDIEN_CODESPACE")
 git submodule update --init --recursive
 ```
 
+## Codespaces
+
+Khi dùng Codespaces để develop, ban đầu hãy chạy 2 lệnh sau để cài đặt tool:
+
+```
+./bin/install_utilities.sh
+./bin/install_wine32.sh
+
+```
+
+Sau đó test lại bằng
+
+```
+make sample
+```
+
+
 ## Tại sao?
 Do tôi thấy cần:
 - Có các từ điển có chất lượng để giúp việc học hỏi của bản thân và mọi người
