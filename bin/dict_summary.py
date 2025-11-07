@@ -86,7 +86,11 @@ def get_downloadable_files(filebase, tag_download, dict_dir):
     for ext in SUPPORTED_EXTENSIONS:
         # Generate the URL for the downloadable file
         download_url = f"https://github.com/catusf/tudien/releases/download/{tag_download}/{filebase}.{ext}"
-        download_links[ext] = download_url
+
+        if os.path.exists(os.path.join(dict_dir, f"{filebase}.{ext}")):
+            download_links[ext] = download_url
+        else:
+            download_links[ext] = ""
 
     return download_links
 
@@ -252,7 +256,7 @@ def generate_markdown_table(data, files_status, files_status_details, extensions
     markdown = [header, seperator]
 
     for num, entry in enumerate(data, start=1):
-        download_links = " | ".join([f"[Download]({entry['Download'][ext]})" for ext in extensions])
+        download_links = " | ".join([f"[Download]({entry['Download'][ext]})" if entry['Download'][ext] else "N/A" for ext in extensions])
 
         line = f"| {num} | {entry['Name']} | "
 
