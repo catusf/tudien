@@ -235,7 +235,7 @@ def main() -> None:
 
             # If datafile is a .bz2
             if datafile.find(".bz2") >= 0:
-                cmd_line = f'bzip2 -kd "{datafile}"'
+                cmd_line = f'bzip2 -d "{datafile}"' # Add -k to keep the original file
                 # print(cmd_line)
 
                 if not DEBUG_FLAG:
