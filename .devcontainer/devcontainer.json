@@ -7,7 +7,7 @@
 	"features": {
     	"ghcr.io/devcontainers/features/git:1": {},
 		"ghcr.io/va-h/devcontainers-features/uv:1": {}
-	}
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -17,6 +17,14 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+	"postCreateCommand": [
+		"./bin/install_linux_packages.sh",
+		"./bin/install_wine32.sh",
+		"./bin/install_utilities.sh",
+		"pip install uv && uv sync",
+		"eval $(ssh-agent -s)",
+		"ssh-add <(echo '$SSH_PRIVATE_TUDIEN_CODESPACE')"
+	]
 
 	// Configure tool-specific properties.
 	// "customizations": {},
