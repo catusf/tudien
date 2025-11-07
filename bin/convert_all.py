@@ -310,6 +310,12 @@ def main() -> None:
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
+        # Zip to create Pleco dictionary
+        pleco_dict_file = f"dict/{filebase}.txt"
+        if os.path.exists(pleco_dict_file):
+            cmd_line = f"zip -j {output_folder}/{filebase}.pleco.zip dict/{filebase}.txt"
+            execute_shell(cmd_line=cmd_line, message=f"Making Pleco dict file for {pleco_dict_file}")
+
         if DEBUG_FLAG:
             continue
 
@@ -376,6 +382,7 @@ def main() -> None:
         ("dictd", "*.dictd.zip"),
         ("yomitan", "*.yomitan.zip"),
         ("mdict", "*.mdx"),
+        ("pleco", "*.pleco.zip"),
     ]
 
     for dir, format in dir_formats:
