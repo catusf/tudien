@@ -85,7 +85,7 @@ def get_downloadable_files(filebase, tag_download, dict_dir):
 
     for ext in SUPPORTED_EXTENSIONS:
         # Generate the URL for the downloadable file
-        download_url = f"https://github.com/catusf/tudien/releases/tag/{tag_download}/{filebase}.{ext}"
+        download_url = f"https://github.com/catusf/tudien/releases/download/{tag_download}/{filebase}.{ext}"
         download_links[ext] = download_url
 
     return download_links
