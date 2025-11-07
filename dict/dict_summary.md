@@ -6,9 +6,9 @@
 
 - Total NEEDED files: **243**
 
-- Total GENERATED files: **0** - or **0.0** dictionary sets. ABNORMAL NUMBER of files. Some dict has **missing format(s)**. Check missing files list for details.
+- Total GENERATED files: **27** - or **2.0** dictionary sets. ABNORMAL NUMBER of files. Some dict has **missing format(s)**. Check missing files list for details.
 
-- Total MISSING files: 243** (or **26.0** dictionaries which is IN-CORRECT)
+- Total MISSING files: 216** (or **24.0** dictionaries which is IN-CORRECT)
 
 
 # Errors
@@ -59,24 +59,6 @@
 	output/ChineseThesaurus-small.pleco.zip
 	output/ChineseThesaurus-small.stardict.zip
 	output/ChineseThesaurus-small.yomitan.zip
-	output/HanziStories.dictd.zip
-	output/HanziStories.dsl.dz
-	output/HanziStories.epub
-	output/HanziStories.kobo.zip
-	output/HanziStories.mdx
-	output/HanziStories.mobi
-	output/HanziStories.pleco.zip
-	output/HanziStories.stardict.zip
-	output/HanziStories.yomitan.zip
-	output/HanziStoriesViet.dictd.zip
-	output/HanziStoriesViet.dsl.dz
-	output/HanziStoriesViet.epub
-	output/HanziStoriesViet.kobo.zip
-	output/HanziStoriesViet.mdx
-	output/HanziStoriesViet.mobi
-	output/HanziStoriesViet.pleco.zip
-	output/HanziStoriesViet.stardict.zip
-	output/HanziStoriesViet.yomitan.zip
 	output/Ngu-vung-Danh-tu-Thien-hoc.dictd.zip
 	output/Ngu-vung-Danh-tu-Thien-hoc.dsl.dz
 	output/Ngu-vung-Danh-tu-Thien-hoc.epub
@@ -239,15 +221,6 @@
 	output/TudienThienChuu.pleco.zip
 	output/TudienThienChuu.stardict.zip
 	output/TudienThienChuu.yomitan.zip
-	output/all-dictd.zip
-	output/all-epub.zip
-	output/all-kindle.zip
-	output/all-kobo.zip
-	output/all-lingvo.zip
-	output/all-mdict.zip
-	output/all-pleco.zip
-	output/all-stardict.zip
-	output/all-yomitan.zip
 	output/radical_name.dictd.zip
 	output/radical_name.dsl.dz
 	output/radical_name.epub
