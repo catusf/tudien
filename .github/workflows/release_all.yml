@@ -91,3 +91,4 @@ jobs:
           draft: true
           name: "Release ALL dictionaries at ${{ github.ref }} - ${{ env.TIMESTAMP }}"
           bodyFile: ${{ env.INPUT_DIR }}/dict_summary.md
+
