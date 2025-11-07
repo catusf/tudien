@@ -9,14 +9,14 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 # Install necessary system dependencies
-RUN apt-get update && apt-get install -y \
+# RUN apt-get update && apt-get install -y \
     # sudo \
-    pkg-config \
+    # pkg-config \
     # curl \
     # liblzo2-2 liblzo2-dev \ 
     # libmariadb-dev \
     # build-essential \
-    && rm -rf /var/lib/apt/lists/*
+    # && rm -rf /var/lib/apt/lists/*
 
 # WORKDIR /workspaces/tudien
 
@@ -36,13 +36,13 @@ RUN apt-get update && apt-get install -y \
 # RUN sh /uv-installer.sh && rm /uv-installer.sh
 
 # Ensure the installed binary is on the `PATH`
-ENV PATH="/root/.local/bin/:$PATH"
+# ENV PATH="/root/.local/bin/:$PATH"
 
 # RUN uv sync && source .venv/bin/activate
 # RUN uv sync && . .venv/bin/activate
 
-WORKDIR /app
-COPY . /app
+# WORKDIR /app
+# COPY . /app
 
 # Creates a non-root user with an explicit UID and adds permission to access the /app folder
 # For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers
@@ -55,3 +55,4 @@ USER appuser
 # CMD ["python", "convert_all.py"]
 
 # CMD ["ls", "-d", "/app"]
+
