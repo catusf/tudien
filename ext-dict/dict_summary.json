@@ -1,6 +1,69 @@
 [
     {
         "Number": 1,
+        "Name": "Từ điển Pháp - Việt - Pháp v1.0",
+        "Description": "Từ điển Pháp - Việt - Pháp với các dạng từ",
+        "Source": "Tiếng Pháp (fr)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 85804,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_phapvietphap.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_phapvietphap.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_phapvietphap.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_phapvietphap.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_phapvietphap.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_phapvietphap.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_phapvietphap.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_phapvietphap.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_phapvietphap.pleco.zip"
+        }
+    },
+    {
+        "Number": 2,
+        "Name": "Từ điển Tây Ban Nha - Việt - Tây Ban Nha v1.0",
+        "Description": "Từ điển Tây Ban Nha - Việt - Tây Ban Nha với các dạng từ",
+        "Source": "Tiếng Tây Ban Nha (es)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 40712,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_tbnviettbn.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_tbnviettbn.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_tbnviettbn.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_tbnviettbn.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_tbnviettbn.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_tbnviettbn.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_tbnviettbn.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_tbnviettbn.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_tbnviettbn.pleco.zip"
+        }
+    },
+    {
+        "Number": 3,
+        "Name": "Từ điển Việt - Đức v1.0",
+        "Description": "Từ điển Việt - Đức",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Đức (de)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 11922,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietduc.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietduc.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietduc.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietduc.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietduc.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietduc.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietduc.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietduc.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietduc.pleco.zip"
+        }
+    },
+    {
+        "Number": 4,
         "Name": "Từ điển từ Hán Việt Thiền Chửu + Trần Văn Chánh v1.0",
         "Description": "TTừ điển từ Hán Việt Thiền Chửu + Trần Văn Chánh",
         "Source": "Tiếng Trung (zh)",
@@ -21,7 +84,70 @@
         }
     },
     {
-        "Number": 2,
+        "Number": 5,
+        "Name": "Từ điển Việt - Hàn v1.0",
+        "Description": "Từ điển Việt - Hàn",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Hàn (ko)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 22148,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_viethan.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_viethan.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_viethan.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_viethan.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_viethan.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_viethan.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_viethan.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_viethan.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_viethan.pleco.zip"
+        }
+    },
+    {
+        "Number": 6,
+        "Name": "Từ điển Nhật - Việt v1.0",
+        "Description": "Từ điển Nhật - Việt",
+        "Source": "Tiếng Nhật (ja)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 172321,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nhatviet.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nhatviet.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nhatviet.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nhatviet.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nhatviet.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nhatviet.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nhatviet.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nhatviet.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nhatviet.pleco.zip"
+        }
+    },
+    {
+        "Number": 7,
+        "Name": "Từ điển Tây Ban Nha - Việt v1.0",
+        "Description": "Từ điển Tây Ban Nha - Việt với các dạng từ",
+        "Source": "Tiếng Tây Ban Nha (es)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 19104,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_tbnviet.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_tbnviet.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_tbnviet.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_tbnviet.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_tbnviet.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_tbnviet.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_tbnviet.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_tbnviet.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_tbnviet.pleco.zip"
+        }
+    },
+    {
+        "Number": 8,
         "Name": "Từ điển tổng hợp Phật học v1.0",
         "Description": "Từ điển tổng hợp Phật học",
         "Source": "Tiếng Việt (vi)",
@@ -42,7 +168,70 @@
         }
     },
     {
-        "Number": 3,
+        "Number": 9,
+        "Name": "Từ điển Pháp - Việt v1.0",
+        "Description": "Từ điển Pháp - Việt với các dạng từ",
+        "Source": "Tiếng Pháp (fr)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 47454,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_phapviet.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_phapviet.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_phapviet.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_phapviet.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_phapviet.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_phapviet.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_phapviet.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_phapviet.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_phapviet.pleco.zip"
+        }
+    },
+    {
+        "Number": 10,
+        "Name": "Từ điển Anh-Việt Kinh doanh Prodict v1.1",
+        "Description": "Từ điển Anh-Việt Kinh doanh Prodict",
+        "Source": "Tiếng Anh (en)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "Prodict",
+        "Version": "1.1",
+        "Definitions": 0,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_EV_business.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_EV_business.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_EV_business.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_EV_business.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_EV_business.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_EV_business.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_EV_business.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_EV_business.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_EV_business.pleco.zip"
+        }
+    },
+    {
+        "Number": 11,
+        "Name": "Từ điển Anh-Việt Kỹ thuật Prodict v1.1",
+        "Description": "Từ điển Anh-Việt Kỹ thuật Prodict",
+        "Source": "Tiếng Anh (en)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "Prodict",
+        "Version": "1.1",
+        "Definitions": 0,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_EV_Tech.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_EV_Tech.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_EV_Tech.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_EV_Tech.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_EV_Tech.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_EV_Tech.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_EV_Tech.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_EV_Tech.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_EV_Tech.pleco.zip"
+        }
+    },
+    {
+        "Number": 12,
         "Name": "Từ điển Phật học Việt Anh - Minh Thông v1.0",
         "Description": "Từ điển Phật học Việt Anh - Minh Thông",
         "Source": "Tiếng Việt (vi)",
@@ -63,7 +252,49 @@
         }
     },
     {
-        "Number": 4,
+        "Number": 13,
+        "Name": "Từ điển Bồ Đào Nha - Việt v1.0",
+        "Description": "Từ điển Bồ Đào Nha - Việt với các dạng từ",
+        "Source": "Tiếng Bồ Đào Nha (pt)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 10453,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_bdnviet.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_bdnviet.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_bdnviet.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_bdnviet.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_bdnviet.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_bdnviet.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_bdnviet.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_bdnviet.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_bdnviet.pleco.zip"
+        }
+    },
+    {
+        "Number": 14,
+        "Name": "Từ điển Anh - Việt v1.1",
+        "Description": "Từ điển Anh - Việt với các dạng từ",
+        "Source": "Tiếng Anh (en)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.1",
+        "Definitions": 386600,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_anhviet.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_anhviet.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_anhviet.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_anhviet.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_anhviet.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_anhviet.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_anhviet.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_anhviet.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_anhviet.pleco.zip"
+        }
+    },
+    {
+        "Number": 15,
         "Name": "Từ điển Phật học Tinh tuyển v1.0",
         "Description": "Từ điển Phật học Tinh tuyển",
         "Source": "Tiếng Việt (vi)",
@@ -84,7 +315,7 @@
         }
     },
     {
-        "Number": 5,
+        "Number": 16,
         "Name": "Rộng mở tâm hồn v1.0",
         "Description": "Rộng mở tâm hồn",
         "Source": "Tiếng Việt (vi)",
@@ -105,7 +336,49 @@
         }
     },
     {
-        "Number": 6,
+        "Number": 17,
+        "Name": "Từ điển Nga - Việt - Nga v1.0",
+        "Description": "Từ điển Nga - Việt - Nga với các dạng từ",
+        "Source": "Tiếng Nga (ru)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 73781,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ngavietnga.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ngavietnga.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ngavietnga.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ngavietnga.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ngavietnga.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ngavietnga.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ngavietnga.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ngavietnga.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ngavietnga.pleco.zip"
+        }
+    },
+    {
+        "Number": 18,
+        "Name": "English Irregular Verbs SPDict v1.1",
+        "Description": "English Irregular Verbs SPDict",
+        "Source": "Tiếng Anh (en)",
+        "Target": "Tiếng Anh (en)",
+        "Owner/Editor": "SPDict",
+        "Version": "1.1",
+        "Definitions": 343,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Irregular-Verbs.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Irregular-Verbs.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Irregular-Verbs.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Irregular-Verbs.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Irregular-Verbs.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Irregular-Verbs.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Irregular-Verbs.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Irregular-Verbs.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Irregular-Verbs.pleco.zip"
+        }
+    },
+    {
+        "Number": 19,
         "Name": "Ngữ vựng danh từ thiền học v1.0",
         "Description": "Ngữ vựng danh từ thiền học",
         "Source": "Tiếng Việt (vi)",
@@ -126,7 +399,7 @@
         }
     },
     {
-        "Number": 7,
+        "Number": 20,
         "Name": "Từ điển Đạo Uyển v1.0",
         "Description": "Từ điển Đạo Uyển",
         "Source": "Tiếng Việt (vi)",
@@ -147,7 +420,7 @@
         }
     },
     {
-        "Number": 8,
+        "Number": 21,
         "Name": "Chinese Thesaurus (big) v1.0",
         "Description": "Chinese Thesaurus (big size)",
         "Source": "Tiếng Trung (zh)",
@@ -168,7 +441,28 @@
         }
     },
     {
-        "Number": 9,
+        "Number": 22,
+        "Name": "Từ điển Hán ngữ v1.0",
+        "Description": "Từ điển Hán ngữ",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "",
+        "Version": "1.0",
+        "Definitions": 0,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Tu_dien_Han_ngu.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/Tu_dien_Han_ngu.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/Tu_dien_Han_ngu.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Tu_dien_Han_ngu.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/Tu_dien_Han_ngu.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Tu_dien_Han_ngu.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Tu_dien_Han_ngu.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/Tu_dien_Han_ngu.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Tu_dien_Han_ngu.pleco.zip"
+        }
+    },
+    {
+        "Number": 23,
         "Name": "Phật quang Đại từ điển Hán ngữ v1.0",
         "Description": "Phật quang Đại từ điển Hán ngữ",
         "Source": "Tiếng Trung (zh)",
@@ -189,7 +483,28 @@
         }
     },
     {
-        "Number": 10,
+        "Number": 24,
+        "Name": "Từ điển Việt-Anh Kỹ thuật Prodict v1.0",
+        "Description": "Từ điển Việt-Anh Kỹ thuật Prodict",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Anh (en)",
+        "Owner/Editor": "Prodict",
+        "Version": "1.0",
+        "Definitions": 0,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_VE_Tech.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_VE_Tech.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_VE_Tech.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_VE_Tech.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_VE_Tech.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_VE_Tech.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_VE_Tech.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_VE_Tech.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_VE_Tech.pleco.zip"
+        }
+    },
+    {
+        "Number": 25,
         "Name": "Từ điển Trung-Việt β (tiểu) v1.0",
         "Description": "Từ điển Trung-Việt β (cỡ tiểu) với ít chi tiết nhất. Bao gồm hơn 130k mục từ, phủ hết mục từ trong CCCE.",
         "Source": "Tiếng Trung (zh)",
@@ -210,7 +525,7 @@
         }
     },
     {
-        "Number": 11,
+        "Number": 26,
         "Name": "Cấu thành từ tiếng Trung v1.0",
         "Description": "Từ điển phân tích các chữ cái tiếng Trung thành các cấu thành",
         "Source": "Tiếng Trung (zh)",
@@ -231,7 +546,28 @@
         }
     },
     {
-        "Number": 12,
+        "Number": 27,
+        "Name": "Từ điển Nga - Việt v1.0",
+        "Description": "Từ điển Nga - Việt với các dạng từ",
+        "Source": "Tiếng Nga (ru)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 38039,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ngaviet.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ngaviet.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ngaviet.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ngaviet.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ngaviet.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ngaviet.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ngaviet.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ngaviet.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ngaviet.pleco.zip"
+        }
+    },
+    {
+        "Number": 28,
         "Name": "Chinese Thesaurus (small) v1.0",
         "Description": "Chinese Thesaurus (small size)",
         "Source": "Tiếng Trung (zh)",
@@ -252,7 +588,49 @@
         }
     },
     {
-        "Number": 13,
+        "Number": 29,
+        "Name": "Từ điển Việt-Anh Kỹ thuật Prodict v1.0",
+        "Description": "Từ điển Việt-Anh Kỹ thuật Prodict",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Anh (en)",
+        "Owner/Editor": "Prodict",
+        "Version": "1.0",
+        "Definitions": 0,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_VE_business.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_VE_business.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_VE_business.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_VE_business.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_VE_business.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_VE_business.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_VE_business.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_VE_business.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Prodict_VE_business.pleco.zip"
+        }
+    },
+    {
+        "Number": 30,
+        "Name": "Từ điển Việt - Nhật v1.0",
+        "Description": "Anh - Việt",
+        "Source": "Tiếng Nhật (ja)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "",
+        "Version": "1.0",
+        "Definitions": 0,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Viet-Nhat_NXBVHTT.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/Viet-Nhat_NXBVHTT.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/Viet-Nhat_NXBVHTT.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Viet-Nhat_NXBVHTT.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/Viet-Nhat_NXBVHTT.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Viet-Nhat_NXBVHTT.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Viet-Nhat_NXBVHTT.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/Viet-Nhat_NXBVHTT.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Viet-Nhat_NXBVHTT.pleco.zip"
+        }
+    },
+    {
+        "Number": 31,
         "Name": "Từ điển Phật học Việt Anh - Thiện Phúc v1.0",
         "Description": "Từ điển Phật học Việt Anh - Thiện Phúc",
         "Source": "Tiếng Việt (vi)",
@@ -273,7 +651,49 @@
         }
     },
     {
-        "Number": 14,
+        "Number": 32,
+        "Name": "Từ diển Anh-Việt-Anh SPDict v1.1",
+        "Description": "Từ diển Anh-Việt-Anh SPDict với các dạng từ tiếng Anh",
+        "Source": "Tiếng Anh (en)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "SPDict",
+        "Version": "1.1",
+        "Definitions": 0,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Anh-Viet-Anh.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Anh-Viet-Anh.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Anh-Viet-Anh.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Anh-Viet-Anh.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Anh-Viet-Anh.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Anh-Viet-Anh.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Anh-Viet-Anh.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Anh-Viet-Anh.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Anh-Viet-Anh.pleco.zip"
+        }
+    },
+    {
+        "Number": 33,
+        "Name": "Từ điển Việt - Nhật v1.0",
+        "Description": "Từ điển Việt - Nhật",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Nhật (ja)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 21614,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietnhat.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietnhat.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietnhat.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietnhat.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietnhat.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietnhat.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietnhat.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietnhat.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietnhat.pleco.zip"
+        }
+    },
+    {
+        "Number": 34,
         "Name": "Từ điển Câu chuyện chữ Hán bằng tiếng Việt v1.0",
         "Description": "Từ điển Câu chuyện chữ Hán",
         "Source": "Tiếng Trung (zh)",
@@ -294,7 +714,7 @@
         }
     },
     {
-        "Number": 15,
+        "Number": 35,
         "Name": "Từ điển Trung-Việt β (trung) v1.0",
         "Description": "Từ điển Trung-Việt β (cỡ trung). Bao gồm hơn 130k mục từ, phủ hết mục từ trong CCCE.",
         "Source": "Tiếng Trung (zh)",
@@ -315,7 +735,91 @@
         }
     },
     {
-        "Number": 16,
+        "Number": 36,
+        "Name": "Bách khoa toàn thư v1.0",
+        "Description": "Bách khoa toàn thư tiếng Việt",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "",
+        "Version": "1.0",
+        "Definitions": 0,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Bach_khoa_toan_thu.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/Bach_khoa_toan_thu.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/Bach_khoa_toan_thu.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Bach_khoa_toan_thu.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/Bach_khoa_toan_thu.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Bach_khoa_toan_thu.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Bach_khoa_toan_thu.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/Bach_khoa_toan_thu.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Bach_khoa_toan_thu.pleco.zip"
+        }
+    },
+    {
+        "Number": 37,
+        "Name": "Từ điển Trung - Việt v1.0",
+        "Description": "Từ điển Trung - Việt",
+        "Source": "Tiếng Trung (zh)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 161194,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_trungviet.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_trungviet.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_trungviet.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_trungviet.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_trungviet.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_trungviet.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_trungviet.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_trungviet.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_trungviet.pleco.zip"
+        }
+    },
+    {
+        "Number": 38,
+        "Name": "Từ điển Wikipedia tiếng Việt v1.0",
+        "Description": "Từ điển Wikipedia tiếng Việt",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "Wikipedia",
+        "Version": "1.0",
+        "Definitions": 0,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Wikipedia.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/Wikipedia.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/Wikipedia.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Wikipedia.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/Wikipedia.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Wikipedia.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Wikipedia.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/Wikipedia.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/Wikipedia.pleco.zip"
+        }
+    },
+    {
+        "Number": 39,
+        "Name": "Từ điển Ý - Việt v1.0",
+        "Description": "Từ điển Ý - Việt với các dạng từ",
+        "Source": "Tiếng Italy (it)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 70682,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_yviet.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_yviet.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_yviet.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_yviet.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_yviet.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_yviet.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_yviet.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_yviet.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_yviet.pleco.zip"
+        }
+    },
+    {
+        "Number": 40,
         "Name": "Từ điển Phật Quang v1.0",
         "Description": "Từ điển Phật Quang",
         "Source": "Tiếng Việt (vi)",
@@ -336,7 +840,7 @@
         }
     },
     {
-        "Number": 17,
+        "Number": 41,
         "Name": "Từ điển từ Hán Việt Thiền Chửu v1.0",
         "Description": "Từ điển từ Hán Việt Thiền Chửu",
         "Source": "Tiếng Việt (vi)",
@@ -357,7 +861,7 @@
         }
     },
     {
-        "Number": 18,
+        "Number": 42,
         "Name": "Từ điển tra cứu các bộ tiếng Trung v1.0",
         "Description": "Từ điển Tra cứu 214 bộ Kangxi tiếng Trung",
         "Source": "Tiếng Trung (zh)",
@@ -378,7 +882,49 @@
         }
     },
     {
-        "Number": 19,
+        "Number": 43,
+        "Name": "Từ điển Việt - Pháp v1.0",
+        "Description": "Từ điển Việt - Pháp",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Pháp (fr)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 38350,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietphap.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietphap.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietphap.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietphap.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietphap.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietphap.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietphap.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietphap.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietphap.pleco.zip"
+        }
+    },
+    {
+        "Number": 44,
+        "Name": "Từ điển Việt - Anh v1.0",
+        "Description": "Từ điển Việt - Anh",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Anh (en)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 42155,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietanh.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietanh.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietanh.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietanh.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietanh.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietanh.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietanh.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietanh.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietanh.pleco.zip"
+        }
+    },
+    {
+        "Number": 45,
         "Name": "Chinese Character Stories v1.0",
         "Description": "Chinese Character Stories based on the components",
         "Source": "Tiếng Trung (zh)",
@@ -399,7 +945,91 @@
         }
     },
     {
-        "Number": 20,
+        "Number": 46,
+        "Name": "Từ điển Nhật - Việt - Nhật v1.0",
+        "Description": "Từ điển Nhật - Việt - Nhật",
+        "Source": "Tiếng Nhật (ja)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 193935,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nhatvietnhat.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nhatvietnhat.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nhatvietnhat.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nhatvietnhat.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nhatvietnhat.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nhatvietnhat.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nhatvietnhat.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nhatvietnhat.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nhatvietnhat.pleco.zip"
+        }
+    },
+    {
+        "Number": 47,
+        "Name": "Từ điển Đức - Việt v1.0",
+        "Description": "Từ điển Đức - Việt với các dạng từ",
+        "Source": "Tiếng Đức (de)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 43634,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ducviet.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ducviet.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ducviet.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ducviet.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ducviet.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ducviet.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ducviet.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ducviet.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ducviet.pleco.zip"
+        }
+    },
+    {
+        "Number": 48,
+        "Name": "Từ điển Đức - Việt - Đức v1.0",
+        "Description": "Từ điển Đức - Việt - Đức với các dạng từ",
+        "Source": "Tiếng Đức (de)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 55556,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ducvietduc.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ducvietduc.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ducvietduc.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ducvietduc.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ducvietduc.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ducvietduc.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ducvietduc.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ducvietduc.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_ducvietduc.pleco.zip"
+        }
+    },
+    {
+        "Number": 49,
+        "Name": "Từ điển Hàn - Việt - Hàn v1.0",
+        "Description": "Từ điển Hàn - Việt - Hàn",
+        "Source": "Tiếng Hàn (ko)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 71947,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_hanviethan.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_hanviethan.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_hanviethan.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_hanviethan.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_hanviethan.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_hanviethan.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_hanviethan.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_hanviethan.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_hanviethan.pleco.zip"
+        }
+    },
+    {
+        "Number": 50,
         "Name": "Từ điển Phật học Việt Anh - Đồng Loại v1.0",
         "Description": "Từ điển Phật học Việt Anh - Đồng Loại",
         "Source": "Tiếng Việt (vi)",
@@ -420,7 +1050,112 @@
         }
     },
     {
-        "Number": 21,
+        "Number": 51,
+        "Name": "Từ điển Hàn - Việt v1.0",
+        "Description": "Từ điển Hàn - Việt",
+        "Source": "Tiếng Hàn (ko)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 49799,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_hanviet.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_hanviet.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_hanviet.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_hanviet.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_hanviet.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_hanviet.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_hanviet.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_hanviet.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_hanviet.pleco.zip"
+        }
+    },
+    {
+        "Number": 52,
+        "Name": "Từ điển Việt - Nga v1.0",
+        "Description": "Từ điển Việt - Nga",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Nga (ru)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 35742,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietnga.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietnga.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietnga.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietnga.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietnga.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietnga.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietnga.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietnga.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietnga.pleco.zip"
+        }
+    },
+    {
+        "Number": 53,
+        "Name": "Từ điển Na Uy - Việt v1.0",
+        "Description": "Từ điển Na Uy - Việt với các dạng từ",
+        "Source": "Tiếng Na Uy (no)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 17446,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nauyviet.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nauyviet.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nauyviet.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nauyviet.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nauyviet.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nauyviet.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nauyviet.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nauyviet.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_nauyviet.pleco.zip"
+        }
+    },
+    {
+        "Number": 54,
+        "Name": "Từ diển Việt-Anh SPDict v1.0",
+        "Description": "Từ diển Việt-Anh SPDict",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Anh (en)",
+        "Owner/Editor": "SPDict",
+        "Version": "1.0",
+        "Definitions": 0,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Viet-Anh.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Viet-Anh.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Viet-Anh.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Viet-Anh.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Viet-Anh.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Viet-Anh.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Viet-Anh.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Viet-Anh.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Viet-Anh.pleco.zip"
+        }
+    },
+    {
+        "Number": 55,
+        "Name": "Từ điển Việt - Tây Ban Nha v1.0",
+        "Description": "Từ điển Việt - Tây Ban Nha",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Tây Ban Nha (es)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 21608,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_viettbn.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_viettbn.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_viettbn.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_viettbn.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_viettbn.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_viettbn.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_viettbn.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_viettbn.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_viettbn.pleco.zip"
+        }
+    },
+    {
+        "Number": 56,
         "Name": "CCCE Dictionary (thin) v1.0",
         "Description": "CCCE Dictionary (thin)",
         "Source": "Tiếng Trung (zh)",
@@ -441,7 +1176,7 @@
         }
     },
     {
-        "Number": 22,
+        "Number": 57,
         "Name": "Từ điển Anh-Việt β v1.4",
         "Description": "Từ điển Anh-Việt Beta (β) với các dạng từ tiếng Anh",
         "Source": "Tiếng Anh (en)",
@@ -462,7 +1197,28 @@
         }
     },
     {
-        "Number": 23,
+        "Number": 58,
+        "Name": "Từ diển Anh-Việt SPDict v1.0",
+        "Description": "Từ diển Anh-Việt SPDict với các dạng từ tiếng Anh",
+        "Source": "Tiếng Anh (en)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "SPDict",
+        "Version": "1.0",
+        "Definitions": 0,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Anh-Viet.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Anh-Viet.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Anh-Viet.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Anh-Viet.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Anh-Viet.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Anh-Viet.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Anh-Viet.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Anh-Viet.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/SPDict-Anh-Viet.pleco.zip"
+        }
+    },
+    {
+        "Number": 59,
         "Name": "Từ điển Phật học Anh-Hán-Việt v1.1",
         "Description": "Từ điển Phật học Anh-Hán-Việt",
         "Source": "Tiếng Anh (en)",
@@ -483,7 +1239,28 @@
         }
     },
     {
-        "Number": 24,
+        "Number": 60,
+        "Name": "Từ điển Séc - Việt v1.0",
+        "Description": "Từ điển Séc - Việt với các dạng từ",
+        "Source": "Tiếng Séc (cs)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "OVDP",
+        "Version": "1.0",
+        "Definitions": 69520,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_secviet.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_secviet.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_secviet.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_secviet.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_secviet.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_secviet.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_secviet.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_secviet.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_secviet.pleco.zip"
+        }
+    },
+    {
+        "Number": 61,
         "Name": "Chinese Thesaurus (mid) v1.0",
         "Description": "Chinese Thesaurus (mid size)",
         "Source": "Tiếng Trung (zh)",
@@ -504,7 +1281,7 @@
         }
     },
     {
-        "Number": 25,
+        "Number": 62,
         "Name": "Từ điển Anh-Việt-Anh v1.1",
         "Description": "Từ điển Anh-Việt-Anh với các dạng từ tiếng Anh",
         "Source": "Tiếng Anh (en)",
@@ -525,7 +1302,7 @@
         }
     },
     {
-        "Number": 26,
+        "Number": 63,
         "Name": "Từ điển Trung-Việt β (đại) v1.0",
         "Description": "Từ điển Trung-Việt β (cỡ đại) với nhiều chi tiết nhất. Bao gồm hơn 130k mục từ, phủ hết mục từ trong CCCE.",
         "Source": "Tiếng Trung (zh)",
@@ -543,6 +1320,48 @@
             "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/TrungViet-big.yomitan.zip",
             "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/TrungViet-big.mdx",
             "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/TrungViet-big.pleco.zip"
+        }
+    },
+    {
+        "Number": 64,
+        "Name": "Từ điển Tiếng Việt",
+        "Description": "Từ điển Tiếng Việt (Hồ Ngọc Đức)",
+        "Source": "Tiếng Italy (it)",
+        "Target": "Tiếng Việt (vi)",
+        "Owner/Editor": "Hồ Ngọc Đức",
+        "Version": "1.0",
+        "Definitions": 23804,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietviet.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietviet.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietviet.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietviet.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietviet.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietviet.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietviet.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietviet.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/star_vietviet.pleco.zip"
+        }
+    },
+    {
+        "Number": 65,
+        "Name": "Từ điển WordNet v1.0",
+        "Description": "Từ điển WordNet",
+        "Source": "Tiếng Anh (en)",
+        "Target": "Tiếng Anh (en)",
+        "Owner/Editor": "Wikipedia",
+        "Version": "1.0",
+        "Definitions": 0,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/WordNet2.0.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/tag/v4.2/WordNet2.0.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/tag/v4.2/WordNet2.0.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/WordNet2.0.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/tag/v4.2/WordNet2.0.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/WordNet2.0.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/WordNet2.0.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/tag/v4.2/WordNet2.0.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/tag/v4.2/WordNet2.0.pleco.zip"
         }
     }
 ]

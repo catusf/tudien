@@ -386,7 +386,7 @@ def main() -> None:
     ]
 
     for dir, format in dir_formats:
-        cmd_line = f"zip -9 -j output/all-{dir}.zip output/{format}"
+        cmd_line = f"zip -9 -j {output_folder}/all-{dir}.zip {output_folder}/{format}"
         execute_shell(cmd_line=cmd_line, message=f"Zipping all {dir}-format dicts in {output_folder}")
 
 
