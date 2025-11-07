@@ -3,7 +3,7 @@ setup:
 	uv sync
 
 sample:
-	cp dict/*.* ext-dict
+	mv dict/*.* ext-dict/
 	ls ext-dict
 	mkdir -p ext-output
 	ls -l | wc -l
@@ -13,7 +13,7 @@ sample:
 	echo "Released sample dictionaries"
 
 all:
-	mv dict/*.* ext-dict
+	mv dict/*.* ext-dict/
 	ls ext-dict
 	mkdir -p ext-output
 	ls -l | wc -l

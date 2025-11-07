@@ -310,21 +310,21 @@ def main() -> None:
         print(cmd_line)
         subprocess.run(shlex.split(cmd_line))
 
-        cmd_line = f"rm {htmlOutDir}/{filebase}*"
+        cmd_line = f"mv {htmlOutDir}/{filebase}.mobi {output_folder}/"
+        print(cmd_line)
+        subprocess.call(cmd_line, shell=True)
+
+        cmd_line = f"rm {htmlOutDir}/{filebase}*.html"
         execute_shell(cmd_line=cmd_line, message=f"Removes html files for {filebase}")
 
         # Zip to create Pleco dictionary
-        pleco_dict_file = f"dict/{filebase}.txt"
+        pleco_dict_file = f"{input_folder}/{filebase}.txt"
         if os.path.exists(pleco_dict_file):
-            cmd_line = f"zip -j {output_folder}/{filebase}.pleco.zip dict/{filebase}.txt"
+            cmd_line = f"zip -j {output_folder}/{filebase}.pleco.zip {input_folder}/{filebase}.txt"
             execute_shell(cmd_line=cmd_line, message=f"Making Pleco dict file for {pleco_dict_file}")
 
         if DEBUG_FLAG:
             continue
-
-        cmd_line = f"mv {htmlOutDir}/*.mobi {output_folder}/"
-        print(cmd_line)
-        subprocess.call(cmd_line, shell=True)
 
         # Generate other dictionary formats using PyGlossary
         pyglossary = "pyglossary"
@@ -350,11 +350,13 @@ def main() -> None:
             execute_shell(cmd_line=cmd_line, message=f"generating {write_format}")
 
             if needzip:
-                out_path = os.path.join(output_folder, f"{folder}/{filebase}.")
+                out_path = os.path.join(output_folder, f"{folder}/{filebase}.*")
                 zip_path = os.path.join(output_folder, f"{filebase}.{folder}.zip")
                 cmd_line = f"zip -j {zip_path} {out_path}"
-
                 execute_shell(cmd_line=cmd_line, message=f"creating zip file for {write_format} in {output_folder}")
+
+                cmd_line = f"rm {out_path}"
+                execute_shell(cmd_line=cmd_line, message=f"Remove temp file for {filebase} in {output_folder}")
             else:
                 cmd_line = f"mv {out_path} {output_folder}"
                 execute_shell(cmd_line=cmd_line, message=f"moving output {out_path} to output folder {output_folder}")
@@ -376,9 +378,12 @@ def main() -> None:
         cmd_line = f"mv {output_folder}/mdict/*.mdx {output_folder}/"
         execute_shell(cmd_line=cmd_line, message=f"moving output {out_path} to output folder {output_folder}")
 
+        cmd_line = f"rm {output_folder}/mdict/{filebase}*"
+        execute_shell(cmd_line=cmd_line, message=f"Removes temp mdict files in {output_folder}/mdict")
+
         # Deletes src data file to save space
-        cmd_line = f"rm {datafile}"
-        execute_shell(cmd_line=cmd_line, message=f"Removes {datafile} to save space")
+        cmd_line = f"rm {input_folder}/{filebase}*"
+        execute_shell(cmd_line=cmd_line, message=f"Removes {filebase} input files to save space")
 
     dir_formats = [
         ("stardict", "*.stardict.zip"),
