@@ -1,10 +1,11 @@
 # TODO
-- [ ] Add links to download Pleco dict (bin/text)
+- [ ] Use symlink instead of moving files `ln soource symlink`
 - [ ] Use functions to process all types of dicts: dsl, kindle, others
 - [ ] Add output for Apple Dictionary Source
-- [ ] Add output for MDict (.MDX)
 - [ ] Add cover page to dictionaries
-- [ ] Add name of separate dictionaries to TudienTonghopPhathoc
+- [X] Add name of separate dictionaries to TudienTonghopPhathoc
+- [X] Add links to download Pleco dict (bin/text)
+- [X] Add output for MDict (.MDX)
 - [X] Add Pinyin to Thienchuu
 - [X] Sync config .dotfile across environtment
 - [X] Update to an up-to-date Ubuntu distro when Wine is updated (error on Ubuntu v20 and 22)
@@ -45,3 +46,4 @@
 - [x] Move html folders inside html
 - [x] Streamline convert process to be able to add new dictionaries easiy: 
 - [x] Use a lib to create epub (pyglossary or penelope)
+
