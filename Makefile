@@ -39,5 +39,5 @@ dict_ext_stats_old:
 	uv run python ./bin/dict_summary.py --dict_dir=ext-dict --output_dir=ext-output --read_only=yes
 
 clean:
-	git reset --hard
+# 	git reset --hard
 	git clean -fdx

@@ -277,7 +277,7 @@ def main() -> None:
 
         # Add quote to wrap long filename/path
         datafile = datafile.replace(" ", "\\ ")
-        dataCreator = data["Owner/Editor"].replace(" ", "\\ ")
+        dataCreator = data["Owner_Editor"].replace(" ", "\\ ")
         if not dataCreator:
             dataCreator = "Panthera Tigris".replace(" ", "\\ ")
 
