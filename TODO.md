@@ -1,17 +1,17 @@
 # TODO
-- [X] Replace Download with dictionary format name
+- [ ] Use functions to process all types of dicts: dsl, kindle, others
+- [ ] Add output for Apple Dictionary Source
 - [ ] Add a secondary name for dictionary 
-- [X] Fix url issue in .io
-- [ ] Copy từ điển đồng trái nghãi
+- [ ] Copy từ điển đồng trái nghãi (ASD)
 - [ ] Migrrate .dfo to toml so that can update number of entries
 - [ ] Use number of entries in .toml to gen report
 - [ ] Fix phapviet mdx issue
-- [ ] Fix isues report .pleco.zip
-- [ ] Add check if file exists, then has link, otherwise empty
+- [X] Fix url issue in .io
+- [X] Replace Download with dictionary format name
+- [X] Fix isues report .pleco.zip
+- [X] Add check if file exists, then has link, otherwise empty
 - [x] Use symlink instead of moving files `ln soource symlink`
-- [ ] Use functions to process all types of dicts: dsl, kindle, others
-- [ ] Add output for Apple Dictionary Source
-- [ ] Add cover page to dictionaries
+- [X] Add cover page to dictionaries
 - [X] Add name of separate dictionaries to TudienTonghopPhathoc
 - [X] Add links to download Pleco dict (bin/text)
 - [X] Add output for MDict (.MDX)
@@ -55,6 +55,7 @@
 - [x] Move html folders inside html
 - [x] Streamline convert process to be able to add new dictionaries easiy: 
 - [x] Use a lib to create epub (pyglossary or penelope)
+
 
 
 
