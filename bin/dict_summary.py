@@ -134,7 +134,7 @@ def generate_summary(dict_dir, output_dir):
     for filename in os.listdir(dict_dir):
         if not filename.endswith(".toml"):
             continue
-        filebase = filename[:-6]
+        filebase, _ = os.path.splitext(filename)
         toml_path = os.path.join(dict_dir, filename)
         tab_path = os.path.join(dict_dir, filebase + ".tab")
 
@@ -301,7 +301,7 @@ def generate_markdown_table(data, files_status, files_status_details, extensions
         if "Version" in columns:
             line += f"{entry['Version']} |"
 
-        if "Num_en" in columns:
+        if "Num_entries" in columns:
             line += f"{entry['Num_entries']} |"
 
         line += f" {download_links} |"
