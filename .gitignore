@@ -8,8 +8,11 @@ __pycache__/
 # Distribution / packaging
 .Python
 output/
+ext-output/
+
 env/
 dict/kindle
+ext-dict/kindle
 build/
 develop-eggs/
 dist/

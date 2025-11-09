@@ -29,7 +29,9 @@ def parse_toml_file(toml_path):
         "Target": "",
         "Owner_Editor": "",
         "URL": "",
+        "Num_entries": 0,
         "Version": "",
+        "Inflections": "",
     }
 
     try:
@@ -37,15 +39,19 @@ def parse_toml_file(toml_path):
         with open(toml_path, "rb") as fh:
             doc = toml.load(fh)
 
-        # map known keys from the toml file to the metadata dict
-        metadata["Name"] = doc.get("Name", "")
-        metadata["Description"] = doc.get("Description", "")
-        metadata["Source"] = doc.get("Source", "")
-        metadata["Target"] = doc.get("Target", "")
-        metadata["Num_entires"] = doc.get("Num_entires", "")
-        metadata["Owner_Editor"] = doc.get("Owner_Editor", doc.get("Owner_Editor", ""))
-        metadata["URL"] = doc.get("URL", "")
-        metadata["Version"] = doc.get("Version", "")
+        for key in metadata.keys():
+            if key in doc:
+                metadata[key] = doc.get(key, metadata[key])
+
+        # # map known keys from the toml file to the metadata dict
+        # metadata["Name"] = doc.get("Name", "")
+        # metadata["Description"] = doc.get("Description", "")
+        # metadata["Source"] = doc.get("Source", "")
+        # metadata["Target"] = doc.get("Target", "")
+        # metadata["Num_entries"] = doc.get("Num_entires", "")
+        # metadata["Owner_Editor"] = doc.get("Owner_Editor", doc.get("Owner_Editor", ""))
+        # metadata["URL"] = doc.get("URL", "")
+        # metadata["Version"] = doc.get("Version", "")
     except FileNotFoundError:
         print(f"Error: {toml_path} not found.")
     except Exception as exc:
@@ -84,7 +90,7 @@ COLUMNS = {
     "Owner_Editor": "Owner_Editor",
     "Url": "URL",
     "Version": "Version",
-    "Num_entires": "Num entires",
+    "Num_entries": "Num_entries",
 }
 
 
@@ -163,7 +169,7 @@ def generate_summary(dict_dir, output_dir):
                 "Target": f"{target_full_name} ({metadata['Target']})",  # Full language name in Vietnamese
                 "Owner_Editor": metadata["Owner_Editor"],
                 "Version": metadata["Version"],
-                "Num_entires": metadata["Num_entires"],  # count_lines_in_tab(tab_path)
+                "Num_entries": metadata["Num_entries"],  # count_lines_in_tab(tab_path)
                 "Download": download_urls,
             }
         )
@@ -315,9 +321,9 @@ def main():
 
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description="Generate a dictionary summary.")
-    parser.add_argument("-d", "--dict_dir", default="dict", help="The directory containing the dictionary files (default is 'dict').")
+    parser.add_argument("-d", "--dict_dir", default="ext-dict", help="The directory containing the dictionary files (default is 'dict').")
     parser.add_argument("-f", "--outfile", default="dict_summary.md", help="The output report file name (default is 'dict_summary.md').")
-    parser.add_argument("-o", "--output_dir", default="output", help="The output dir for all the dict results.")
+    parser.add_argument("-o", "--output_dir", default="ext-output", help="The output dir for all the dict results.")
     parser.add_argument("-e", "--extensions", default=None, help="The extensions that need included in the report. None means all.")
     parser.add_argument("-c", "--columns", default=None, help="The columns that will be kept (Other than the download links).")
     parser.add_argument("-r", "--read_only", choices=["yes", "no"], default="no", required=False, help="Read data or create it.")
