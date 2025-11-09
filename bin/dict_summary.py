@@ -48,7 +48,7 @@ def parse_toml_file(toml_path):
         # metadata["Description"] = doc.get("Description", "")
         # metadata["Source"] = doc.get("Source", "")
         # metadata["Target"] = doc.get("Target", "")
-        # metadata["Num_entries"] = doc.get("Num_entires", "")
+        # metadata["Num_entries"] = doc.get("Num_entries", "")
         # metadata["Owner_Editor"] = doc.get("Owner_Editor", doc.get("Owner_Editor", ""))
         # metadata["URL"] = doc.get("URL", "")
         # metadata["Version"] = doc.get("Version", "")
@@ -246,7 +246,7 @@ def generate_markdown_table(data, files_status, files_status_details, extensions
     data = sorted(data, key=lambda x: (x["Source"], x["Name"]))
 
     types = [SUPPORTED_EXTENSIONS[ext]["name"] for ext in extensions]
-    header = "| Number | Name | "  # " Description | Source | Target | Owner/Editor | Num_entires | " + " | ".join(types)]
+    header = "| Number | Name | "  # " Description | Source | Target | Owner/Editor | Num_entries | " + " | ".join(types)]
     seperator = "| --- | --- | "  # " --- | --- | --- | --- | --- |" + " --- |" * len(extensions)]
 
     if "Description" in columns:
@@ -269,8 +269,8 @@ def generate_markdown_table(data, files_status, files_status_details, extensions
         header += "Version |"
         seperator += " --- |"
 
-    if "Num_entires" in columns:
-        header += "# Num_entires |"
+    if "Num_entries" in columns:
+        header += "# Num_entries |"
         seperator += " ---: |"  # Right align number of definitions
 
     header += " | ".join(types) + " |"
@@ -301,8 +301,8 @@ def generate_markdown_table(data, files_status, files_status_details, extensions
         if "Version" in columns:
             line += f"{entry['Version']} |"
 
-        if "Num_entires" in columns:
-            line += f"{entry['Num_entires']} |"
+        if "Num_en" in columns:
+            line += f"{entry['Num_entries']} |"
 
         line += f" {download_links} |"
 
