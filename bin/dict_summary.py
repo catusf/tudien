@@ -109,6 +109,13 @@ def generate_summary(dict_dir, output_dir):
     needed_files = []
     num_dict_found = 0
 
+    pleco_data = set()
+
+    for filename in os.listdir(dict_dir):
+        if filename.endswith(".txt"):
+            filebase = filename[:-4]
+            pleco_data.add(filebase)
+
     for filename in os.listdir(dict_dir):
         if not filename.endswith(".dfo"):
             continue
@@ -129,6 +136,9 @@ def generate_summary(dict_dir, output_dir):
         download_urls = get_downloadable_files(filebase, DOWNLOAD_TAG, output_dir)
 
         for ext in SUPPORTED_EXTENSIONS:
+            if "pleco.zip" in ext and not filebase in pleco_data:
+                continue
+
             needed_files.append(os.path.join(output_dir, filebase + "." + ext))
 
         # Get full language names in Vietnamese
@@ -154,9 +164,9 @@ def generate_summary(dict_dir, output_dir):
 
         num_dict_found += 1
 
-    for ext in SUPPORTED_EXTENSIONS:
-        item = SUPPORTED_EXTENSIONS[ext]
-        needed_files.append(os.path.join(output_dir, f"all-{item['dir']}.zip"))
+    # for ext in SUPPORTED_EXTENSIONS:
+    #     item = SUPPORTED_EXTENSIONS[ext]
+    #     needed_files.append(os.path.join(output_dir, f"all-{item['dir']}.zip"))
 
     # Save the list of dictionaries as a JSON file
     json_path = os.path.join(dict_dir, "dict_summary.json")
