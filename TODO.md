@@ -3,9 +3,9 @@
 - [ ] Add output for Apple Dictionary Source
 - [ ] Add a secondary name for dictionary 
 - [ ] Copy từ điển đồng trái nghãi (ASD)
-- [ ] Migrrate .dfo to toml so that can update number of entries
-- [ ] Use number of entries in .toml to gen report
-- [ ] Fix phapviet mdx issue
+- [X] Migrrate .dfo to toml so that can update number of entries
+- [X] Use number of entries in .toml to gen report
+- [X] Fix phapviet mdx issue
 - [X] Fix url issue in .io
 - [X] Replace Download with dictionary format name
 - [X] Fix isues report .pleco.zip
