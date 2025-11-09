@@ -1,9 +1,0 @@
-Name = "Từ điển Đạo Uyển v1.0"
-Description = "Từ điển Đạo Uyển"
-Source = "vi"
-Target = "vi"
-Version = "1.0"
-Owner_Editor = ""
-URL = "https://github.com/catusphan/dictionary"
-Inflections = ""
-Num_entries = 3262

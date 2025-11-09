@@ -1,8 +1,0 @@
-Name = Từ điển Anh-Việt-Anh v1.1
-Description = Từ điển Anh-Việt-Anh với các dạng từ tiếng Anh
-Source = en
-Target = vi
-Version = 1.1
-Owner/Editor = 
-URL = https://github.com/catusphan/dictionary
-Inflections = inflection-eng.tab

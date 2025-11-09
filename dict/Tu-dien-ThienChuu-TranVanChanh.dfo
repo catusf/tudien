@@ -1,8 +1,0 @@
-Name = Từ điển từ Hán Việt Thiền Chửu + Trần Văn Chánh v1.0
-Description = TTừ điển từ Hán Việt Thiền Chửu + Trần Văn Chánh
-Source = zh
-Target = vi
-Version = 1.0
-Owner/Editor = 
-URL = https://github.com/catusphan/dictionary
-Inflections = inflection-hanviet.tab
