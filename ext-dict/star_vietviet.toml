@@ -1,0 +1,8 @@
+Name = "Từ điển Tiếng Việt"
+Description = "Từ điển Tiếng Việt (Hồ Ngọc Đức)"
+Source = "it"
+Target = "vi"
+Version = "1.0"
+Owner_Editor = "Hồ Ngọc Đức"
+URL = "https://www.informatik.uni-leipzig.de/~duc/Dict/"
+Num_entries = 23804

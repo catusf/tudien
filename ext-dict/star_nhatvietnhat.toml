@@ -1,0 +1,9 @@
+Name = "Từ điển Nhật - Việt - Nhật v1.0"
+Description = "Từ điển Nhật - Việt - Nhật"
+Source = "ja"
+Target = "vi"
+Version = "1.0"
+Owner_Editor = "OVDP"
+URL = "https://github.com/catusphan/dictionary"
+Inflections = ""
+Num_entries = 193935

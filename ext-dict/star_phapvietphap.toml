@@ -1,0 +1,9 @@
+Name = "Từ điển Pháp - Việt - Pháp v1.0"
+Description = "Từ điển Pháp - Việt - Pháp với các dạng từ"
+Source = "fr"
+Target = "vi"
+Version = "1.0"
+Owner_Editor = "OVDP"
+URL = "https://github.com/catusphan/dictionary"
+Inflections = "inflection-fra.tab"
+Num_entries = 85804

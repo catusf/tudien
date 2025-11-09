@@ -1,0 +1,9 @@
+Name = "Từ điển Hán ngữ v1.0"
+Description = "Từ điển Hán ngữ"
+Source = "vi"
+Target = "vi"
+Version = "1.0"
+Owner_Editor = ""
+URL = "https://github.com/catusphan/dictionary"
+Inflections = ""
+Num_entries = 78573

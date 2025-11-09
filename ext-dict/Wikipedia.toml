@@ -1,0 +1,9 @@
+Name = "Từ điển Wikipedia tiếng Việt v1.0"
+Description = "Từ điển Wikipedia tiếng Việt"
+Source = "vi"
+Target = "vi"
+Version = "1.0"
+Owner_Editor = "Wikipedia"
+URL = "https://github.com/catusphan/dictionary"
+Inflections = ""
+Num_entries = 218181

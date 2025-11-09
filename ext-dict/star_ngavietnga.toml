@@ -1,0 +1,9 @@
+Name = "Từ điển Nga - Việt - Nga v1.0"
+Description = "Từ điển Nga - Việt - Nga với các dạng từ"
+Source = "ru"
+Target = "vi"
+Version = "1.0"
+Owner_Editor = "OVDP"
+URL = "https://github.com/catusphan/dictionary"
+Inflections = "inflection-rus.tab"
+Num_entries = 73781

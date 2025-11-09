@@ -1,0 +1,10 @@
+Name = "Từ điển tổng hợp Phật học v1.0"
+Description = "Từ điển tổng hợp Phật học"
+Source = "vi"
+Target = "vi"
+Version = "1.0"
+Owner_Editor = ""
+URL = "https://github.com/catusphan/dictionary"
+Inflections = ""
+num_entries = 49569
+Num_entries = 49569

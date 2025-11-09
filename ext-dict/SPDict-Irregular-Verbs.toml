@@ -1,0 +1,9 @@
+Name = "English Irregular Verbs SPDict v1.1"
+Description = "English Irregular Verbs SPDict"
+Source = "en"
+Target = "en"
+Version = "1.1"
+Owner_Editor = "SPDict"
+URL = "https://github.com/catusphan/dictionary"
+Inflections = "inflection-eng.tab"
+Num_entries = 343

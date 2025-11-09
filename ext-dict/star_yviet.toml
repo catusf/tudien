@@ -1,0 +1,9 @@
+Name = "Từ điển Ý - Việt v1.0"
+Description = "Từ điển Ý - Việt với các dạng từ"
+Source = "it"
+Target = "vi"
+Version = "1.0"
+Owner_Editor = "OVDP"
+URL = "https://github.com/catusphan/dictionary"
+Inflections = "inflection-ita.tab"
+Num_entries = 70682

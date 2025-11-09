@@ -1,0 +1,9 @@
+Name = "Từ diển Anh-Việt-Anh SPDict v1.1"
+Description = "Từ diển Anh-Việt-Anh SPDict với các dạng từ tiếng Anh"
+Source = "en"
+Target = "vi"
+Version = "1.1"
+Owner_Editor = "SPDict"
+URL = "https://github.com/catusphan/dictionary"
+Inflections = "inflection-eng.tab"
+Num_entries = 513875

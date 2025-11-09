@@ -19,4 +19,5 @@ dependencies = [
     "pypinyin-dict>=0.8.0",
     "mdict-utils>=1.3.14",
     "python-lzo>=1.15",
+    "tomli-w>=1.2.0",
 ]

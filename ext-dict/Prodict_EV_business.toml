@@ -1,0 +1,9 @@
+Name = "Từ điển Anh-Việt Kinh doanh Prodict v1.1"
+Description = "Từ điển Anh-Việt Kinh doanh Prodict"
+Source = "en"
+Target = "vi"
+Version = "1.1"
+Owner_Editor = "Prodict"
+URL = "https://github.com/catusphan/dictionary"
+Inflections = "inflection-eng.tab"
+Num_entries = 70307

@@ -1,0 +1,9 @@
+Name = "Từ điển Séc - Việt v1.0"
+Description = "Từ điển Séc - Việt với các dạng từ"
+Source = "cs"
+Target = "vi"
+Version = "1.0"
+Owner_Editor = "OVDP"
+URL = "https://github.com/catusphan/dictionary"
+Inflections = "inflection-ces.tab"
+Num_entries = 69520
