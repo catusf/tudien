@@ -260,7 +260,7 @@ def generate_markdown_table(data, files_status, files_status_details, extensions
     markdown = [header, seperator]
 
     for num, entry in enumerate(data, start=1):
-        download_links = " | ".join([f"[Download]({entry['Download'][ext]})" if entry['Download'][ext] else "N/A" for ext in extensions])
+        download_links = " | ".join([f"[{ext}]({entry['Download'][ext]})" if entry['Download'][ext] else "N/A" for ext in extensions])
 
         line = f"| {num} | {entry['Name']} | "
 
