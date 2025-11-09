@@ -1,8 +1,0 @@
-Name = Từ điển Anh-Việt Kỹ thuật Prodict v1.1
-Description = Từ điển Anh-Việt Kỹ thuật Prodict
-Source = en
-Target = vi
-Version = 1.1
-Owner/Editor = Prodict
-URL = https://github.com/catusphan/dictionary
-Inflections = inflection-eng.tab

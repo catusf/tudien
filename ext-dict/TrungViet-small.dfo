@@ -1,8 +1,0 @@
-Name = Từ điển Trung-Việt β (tiểu) v1.0
-Description = Từ điển Trung-Việt β (cỡ tiểu) với ít chi tiết nhất. Bao gồm hơn 130k mục từ, phủ hết mục từ trong CCCE.
-Source = zh
-Target = vi
-Version = 1.1
-Owner/Editor = 
-URL = https://github.com/catusphan/dictionary
-Inflections = 

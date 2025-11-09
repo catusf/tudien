@@ -1,8 +1,0 @@
-Name = Từ điển Bồ Đào Nha - Việt v1.0
-Description = Từ điển Bồ Đào Nha - Việt với các dạng từ
-Source = pt
-Target = vi
-Version = 1.0
-Owner/Editor = OVDP
-URL = https://github.com/catusphan/dictionary
-Inflections = inflection-por.tab

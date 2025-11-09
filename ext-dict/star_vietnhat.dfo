@@ -1,8 +1,0 @@
-Name = Từ điển Việt - Nhật v1.0
-Description = Từ điển Việt - Nhật
-Source = vi
-Target = ja
-Version = 1.0
-Owner/Editor = OVDP
-URL = https://github.com/catusphan/dictionary
-Inflections = 

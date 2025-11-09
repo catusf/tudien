@@ -1,8 +1,0 @@
-Name = Từ điển Tây Ban Nha - Việt v1.0
-Description = Từ điển Tây Ban Nha - Việt với các dạng từ
-Source = es
-Target = vi
-Version = 1.0
-Owner/Editor = OVDP
-URL = https://github.com/catusphan/dictionary
-Inflections = inflection-spa.tab

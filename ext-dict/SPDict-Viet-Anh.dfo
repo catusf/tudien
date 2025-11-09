@@ -1,8 +1,0 @@
-Name = Từ diển Việt-Anh SPDict v1.0
-Description = Từ diển Việt-Anh SPDict
-Source = vi
-Target = en
-Version = 1.0
-Owner/Editor = SPDict
-URL = https://github.com/catusphan/dictionary
-Inflections = 
