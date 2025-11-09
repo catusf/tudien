@@ -15,6 +15,7 @@ from fileinput import filename
 
 from iso_language_codes import language_name
 
+from dict_summary.py import parse_toml_file
 
 def readDicInfo(filepath):
     """Read metadata of dictionary with the following format
@@ -168,7 +169,7 @@ def main() -> None:
     parser.add_argument("-i", "--input_folder", default="dict", help="Input folder containing .tsv and .dfo files")
     parser.add_argument("-o", "--output_folder", default="output", help="Output folder containing dictionary files")
     parser.add_argument("-e", "--extension", default="tab", help="Filename extention for input dictionary files. Default is .tab")
-    parser.add_argument("-m", "--metadata", default="dfo", help="Filename extention for input metadata for dictionary. Default is .dfo")
+    parser.add_argument("-m", "--metadata", default="toml", help="Filename extention for input metadata for dictionary. Default is .dfo")
     parser.add_argument("-f", "--filter", help="Filter only dictionary entries with matching keys (seperated by comma)")
 
     args = parser.parse_args()
@@ -271,7 +272,8 @@ def main() -> None:
         # if filebase not in use_only_these:
         #     continue
 
-        data = readDicInfo(filepath)
+        # data = readDicInfo(filepath)
+        data = parse_toml_file(filepath)
 
         # Add quote to wrap long filename/path
         datafile = datafile.replace(" ", "\\ ")
