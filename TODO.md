@@ -1,4 +1,5 @@
 # TODO
+- [ ] Replace Download with dictionary format name
 - [ ] Add a secondary name for dictionary 
 - [ ] Fix url issue in .io
 - [ ] Copy từ điển đồng trái nghãi
@@ -54,6 +55,7 @@
 - [x] Move html folders inside html
 - [x] Streamline convert process to be able to add new dictionaries easiy: 
 - [x] Use a lib to create epub (pyglossary or penelope)
+
 
 
 
