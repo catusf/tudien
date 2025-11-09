@@ -7,40 +7,49 @@ import os
 
 import langcodes
 
+# Prefer the stdlib tomllib (Py3.11+) but fall back to tomli if necessary
+try:
+    import tomllib as toml
+except Exception:
+    import tomli as toml
+
 DOWNLOAD_TAG = "v4.2"  # Set the GitHub tag version that asscociates with the release
 
 
-def parse_dfo_file(dfo_path):
-    """Parse the .dfo file and return its metadata as a dictionary."""
+def parse_toml_file(toml_path):
+    """Parse the .toml file and return its metadata as a dictionary.
+
+    This maps the common keys found in the repository's .toml files to the
+    metadata shape expected by the rest of the script.
+    """
     metadata = {
         "Name": "",
         "Description": "",
         "Source": "",
         "Target": "",
-        "Owner/Editor": "",
+        "Owner_Editor": "",
         "URL": "",
-        "Version": "",  # Add version
+        "Version": "",
     }
 
     try:
-        with open(dfo_path, "r", encoding="utf-8") as file:
-            for line in file:
-                if line.startswith("Name = "):
-                    metadata["Name"] = line[len("Name = ") :].strip()
-                elif line.startswith("Description = "):
-                    metadata["Description"] = line[len("Description = ") :].strip()
-                elif line.startswith("Source = "):
-                    metadata["Source"] = line[len("Source = ") :].strip()
-                elif line.startswith("Target = "):
-                    metadata["Target"] = line[len("Target = ") :].strip()
-                elif line.startswith("Owner/Editor = "):
-                    metadata["Owner/Editor"] = line[len("Owner/Editor = ") :].strip()
-                elif line.startswith("URL = "):
-                    metadata["URL"] = line[len("URL = ") :].strip()
-                elif line.startswith("Version = "):
-                    metadata["Version"] = line[len("Version = ") :].strip()  # Get the version
+        # tomllib/tomli expect a binary file object for load()
+        with open(toml_path, "rb") as fh:
+            doc = toml.load(fh)
+
+        # map known keys from the toml file to the metadata dict
+        metadata["Name"] = doc.get("Name", "")
+        metadata["Description"] = doc.get("Description", "")
+        metadata["Source"] = doc.get("Source", "")
+        metadata["Target"] = doc.get("Target", "")
+        metadata["Num_entires"] = doc.get("Num_entires", "")
+        metadata["Owner_Editor"] = doc.get("Owner_Editor", doc.get("Owner_Editor", ""))
+        metadata["URL"] = doc.get("URL", "")
+        metadata["Version"] = doc.get("Version", "")
     except FileNotFoundError:
-        print(f"Error: {dfo_path} not found.")
+        print(f"Error: {toml_path} not found.")
+    except Exception as exc:
+        print(f"Error parsing TOML file {toml_path}: {exc}")
 
     return metadata
 
@@ -68,14 +77,14 @@ SUPPORTED_EXTENSIONS = {
 }
 
 COLUMNS = {
-    "name": "Name",
-    "desc": "Description",
-    "source": "Source",
-    "target": "Target",
-    "owner": "Owner",
-    "url": "URL",
-    "version": "Version",
-    "definition": "Definitions",
+    "Name": "Name",
+    "Description": "Description",
+    "Source": "Source",
+    "Target": "Target",
+    "Owner_Editor": "Owner_Editor",
+    "Url": "URL",
+    "Version": "Version",
+    "Num_entires": "Num entires",
 }
 
 
@@ -100,7 +109,7 @@ def get_downloadable_files(filebase, tag_download, output_dir):
 
 
 def generate_summary(dict_dir, output_dir):
-    """Generate a list of dictionaries containing metadata for each .dfo file."""
+    """Generate a list of dictionaries containing metadata for each .toml file."""
     print(f"Generating summary data for {dict_dir}")
 
     print(f"Input directory: {dict_dir}\nOutput directory: {output_dir}")
@@ -117,17 +126,14 @@ def generate_summary(dict_dir, output_dir):
             pleco_data.add(filebase)
 
     for filename in os.listdir(dict_dir):
-        if not filename.endswith(".dfo"):
+        if not filename.endswith(".toml"):
             continue
-        filebase = filename[:-4]
-        dfo_path = os.path.join(dict_dir, filename)
+        filebase = filename[:-6]
+        toml_path = os.path.join(dict_dir, filename)
         tab_path = os.path.join(dict_dir, filebase + ".tab")
 
-        # Parse the .dfo file
-        metadata = parse_dfo_file(dfo_path)
-
-        # Count lines in the corresponding .tab file
-        num_definitions = count_lines_in_tab(tab_path)
+        # Parse the .toml file
+        metadata = parse_toml_file(toml_path)
 
         # Generate the download URL for the main file
         # main_download_url = f"https://github.com/catusf/tudien/releases/tag/{TAG_DOWNLOAD}/all-kindle.zip"
@@ -155,9 +161,9 @@ def generate_summary(dict_dir, output_dir):
                 "Description": metadata["Description"],
                 "Source": f"{source_full_name} ({metadata['Source']})",  # Full language name in Vietnamese
                 "Target": f"{target_full_name} ({metadata['Target']})",  # Full language name in Vietnamese
-                "Owner/Editor": metadata["Owner/Editor"],
+                "Owner_Editor": metadata["Owner_Editor"],
                 "Version": metadata["Version"],
-                "Definitions": num_definitions,
+                "Num_entires": metadata["Num_entires"],  # count_lines_in_tab(tab_path)
                 "Download": download_urls,
             }
         )
@@ -234,31 +240,31 @@ def generate_markdown_table(data, files_status, files_status_details, extensions
     data = sorted(data, key=lambda x: (x["Source"], x["Name"]))
 
     types = [SUPPORTED_EXTENSIONS[ext]["name"] for ext in extensions]
-    header = "| Number | Name | "  # " Description | Source | Target | Owner/Editor | Definitions | " + " | ".join(types)]
+    header = "| Number | Name | "  # " Description | Source | Target | Owner/Editor | Num_entires | " + " | ".join(types)]
     seperator = "| --- | --- | "  # " --- | --- | --- | --- | --- |" + " --- |" * len(extensions)]
 
-    if "desc" in columns:
+    if "Description" in columns:
         header += "Description |"
         seperator += " --- |"
 
-    if "source" in columns:
+    if "Source" in columns:
         header += "Source |"
         seperator += " --- |"
 
-    if "target" in columns:
+    if "Target" in columns:
         header += "Target |"
         seperator += " --- |"
 
-    if "owner" in columns:
-        header += "Owner/Editor |"
+    if "Owner_Editor" in columns:
+        header += "Owner_Editor |"
         seperator += " --- |"
 
-    if "version" in columns:
+    if "Version" in columns:
         header += "Version |"
         seperator += " --- |"
 
-    if "definition" in columns:
-        header += "# Definitions |"
+    if "Num_entires" in columns:
+        header += "# Num_entires |"
         seperator += " ---: |"  # Right align number of definitions
 
     header += " | ".join(types) + " |"
@@ -274,23 +280,23 @@ def generate_markdown_table(data, files_status, files_status_details, extensions
 
         line = f"| {num} | {entry['Name']} | "
 
-        if "desc" in columns:
+        if "Description" in columns:
             line += f"{entry['Description']} |"
 
-        if "source" in columns:
+        if "Source" in columns:
             line += f"{entry['Source']} |"
 
-        if "target" in columns:
+        if "Target" in columns:
             line += f"{entry['Target']} |"
 
-        if "owner" in columns:
-            line += f"{entry['Owner/Editor']} |"
+        if "Owner_Editor" in columns:
+            line += f"{entry['Owner_Editor']} |"
 
-        if "version" in columns:
+        if "Version" in columns:
             line += f"{entry['Version']} |"
 
-        if "definition" in columns:
-            line += f"{entry['Definitions']:,} |"
+        if "Num_entires" in columns:
+            line += f"{entry['Num_entires']} |"
 
         line += f" {download_links} |"
 
