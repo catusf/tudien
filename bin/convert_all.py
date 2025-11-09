@@ -284,8 +284,8 @@ def main() -> None:
         dataTarget = data["Target"]
         dataSource = data["Source"]
         dataDescription = data["Description"]
-        dataFullSource = data["FullSource"]
-        dataFullTarget = data["FullTarget"]
+        dataFullSource = language_name(data["Source"])
+        dataFullTarget = language_name(data["Target"])
         dataName = escape_forbidden_chars(data["Name"])
         htmlDir = f"kindle"
         htmlOutDir = f"{input_folder}/{htmlDir}"
