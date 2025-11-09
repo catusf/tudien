@@ -1,9 +1,0 @@
-Name = "Chinese Thesaurus (big) v1.0"
-Description = "Chinese Thesaurus (big size)"
-Source = "zh"
-Target = "en"
-Version = "1.0"
-Owner_Editor = ""
-URL = "https://github.com/catusphan/dictionary"
-Inflections = ""
-Num_entries = 50129
