@@ -15,7 +15,7 @@ from fileinput import filename
 
 from iso_language_codes import language_name
 
-from dict_summary.py import parse_toml_file
+from dict_summary import parse_toml_file
 
 def readDicInfo(filepath):
     """Read metadata of dictionary with the following format
