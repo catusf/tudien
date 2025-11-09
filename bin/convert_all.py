@@ -142,7 +142,7 @@ def gen_mdict(filepath, filebase, output_folder, dataName, dataDescription):
     with open(def_filepath, "w", encoding="utf-8") as outfile:
         with open(filepath, "r", encoding="utf-8") as file:
             for line in file:
-                line = line.strip("\n")        # remove trailing newline
+                line = line.strip()        # remove trailing newline
 
                 if not line:
                     continue

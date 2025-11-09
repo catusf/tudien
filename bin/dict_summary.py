@@ -104,7 +104,7 @@ def get_downloadable_files(filebase, tag_download, output_dir):
 
         download_path = os.path.join(output_dir, f"{filebase}.{ext}")
         
-        print(f"*** Checking for {download_path}")
+        # print(f"*** Checking for {download_path}")
 
         if os.path.exists(os.path.join(output_dir, f"{filebase}.{ext}")):
             download_links[ext] = download_url
