@@ -1,7 +1,7 @@
 # TODO
-- [ ] Replace Download with dictionary format name
+- [X] Replace Download with dictionary format name
 - [ ] Add a secondary name for dictionary 
-- [ ] Fix url issue in .io
+- [X] Fix url issue in .io
 - [ ] Copy từ điển đồng trái nghãi
 - [ ] Migrrate .dfo to toml so that can update number of entries
 - [ ] Use number of entries in .toml to gen report
@@ -55,6 +55,7 @@
 - [x] Move html folders inside html
 - [x] Streamline convert process to be able to add new dictionaries easiy: 
 - [x] Use a lib to create epub (pyglossary or penelope)
+
 
 
 
