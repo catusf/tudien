@@ -11,7 +11,7 @@
             "args": [
                 "--input_folder=dict",
                 "--output_folder=output",
-                "--filter=HanziStoriesViet"
+                "--filter=Tu_dien_Han_ngu"
             ]
         }
     ]

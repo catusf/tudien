@@ -724,21 +724,12 @@ def search_data_files(input_folder, extension, metadata, dict_filters):
         print(f"Len of datafilelist: {len(datafilelist)}")
         print(f"Len of compressed datafilelist: {len(zippdatafilelist)}")
 
+        bothdatalist = datafilelist + zippdatafilelist # Lists of data files including compressed ones
+
         # Keep only pairs of metadata and dict data files
-        for filepath in metafilelist:
-            # folder, filename = os.path.split(filepath)
-            # filebase = filename.split(".")[0]
-            # filebase = filepath.stem
+        meta_dict = {full_stem(filepath): filepath for filepath in metafilelist}
 
-            meta_dict[filepath.stem] = filepath
-
-        bothdatalist = datafilelist + zippdatafilelist
-
-        for filepath in bothdatalist:
-            # folder, filename = os.path.split(filepath)
-            # filebase = filename.split(".")[0]
-
-            data_dict[filepath.stem] = filepath
+        data_dict = {full_stem(filepath): filepath for filepath in bothdatalist}
 
         common_keys = sorted(list(meta_dict.keys() & data_dict.keys()))
 
@@ -766,20 +757,41 @@ def search_data_files(input_folder, extension, metadata, dict_filters):
             datafile = data_dict[key]
 
             # If datafile is a .bz2
-            if datafile.suffix == ".bz2" >= 0:
+            if datafile.suffix == ".bz2":
                 cmd_line = f'bzip2 -d "{str(datafile)}"' # Add -k to keep the original file
-                # print(cmd_line)
 
                 if not DEBUG_FLAG:
                     # subprocess.call(cmd_line, shell=True)
                     execute_shell(cmd_line=cmd_line, message=f"bunzip data file")
 
-            # datafilelist.append(datafile.with_suffix("")) # Remove ".bz2"
-            datafilelist.append(datafile)
+                datafile = datafile.with_suffix(".tab")
+            else:
+                datafilelist.append(datafile)
 
         print(f"Len of checked datafilelist: {len(datafilelist)}")
 
     return metafilelist,datafilelist
+
+def full_stem(path):
+    """
+    Return the filename without any extensions.
+    
+    Parameters
+    ----------
+    path : str or Path
+        The path to the file.
+        
+    Returns
+    -------
+    str
+        The filename with all suffixes removed.
+    """
+    p = Path(path)
+    name = p.name
+    for _ in p.suffixes:
+        name = Path(name).with_suffix("")
+    return name
+
 
 if __name__ == "__main__":
     """"
