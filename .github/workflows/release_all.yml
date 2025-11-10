@@ -12,8 +12,8 @@ on:
       - .github/workflows/release_all.yml   
 
 env:
-  INPUT_DIR: ext-dict
-  OUTPUT_DIR: ext-output
+  INPUT_DIR: dict
+  OUTPUT_DIR: output
 
 concurrency:
   group: ${{ github.workflow }}

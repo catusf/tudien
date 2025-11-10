@@ -11,8 +11,8 @@ on:
       - bin/create_inflections.py
 
 env:
-  INPUT_DIR: ext-dict
-  OUTPUT_DIR: ext-output
+  INPUT_DIR: dict
+  OUTPUT_DIR: output
 
 concurrency:
   group: ${{ github.workflow }}
