@@ -8,11 +8,9 @@ __pycache__/
 # Distribution / packaging
 .Python
 output/
-ext-output/
 
 env/
 dict/kindle
-ext-dict/kindle
 build/
 develop-eggs/
 dist/
@@ -45,7 +43,7 @@ htmlcov/
 .cache
 nosetests.xml
 coverage.xml
-*,cover
+*.cover
 
 # Translations
 *.mo
@@ -59,9 +57,21 @@ docs/_build/
 
 # PyBuilder
 target/
-dict/tvb_pleco.tab
-dict/TrungViet-big.tab
-dict/TrungViet-big.txt
 
 **/*.Identifier
 
+dict/Bach_khoa_toan_thu.tab
+dict/Prodict_4in1_all.tab
+dict/Prodict_EV_Tech.tab
+dict/Prodict_EV_business.tab
+dict/Prodict_VE_Tech.tab
+dict/Prodict_VE_business.tab
+dict/SPDict-Anh-Viet-Anh.tab
+dict/SPDict-Anh-Viet.tab
+dict/SPDict-Viet-Anh.tab
+dict/TrungViet-big.tab
+dict/TrungViet-big.txt
+dict/Tu_dien_Han_ngu.tab
+dict/Viet-Nhat_NXBVHTT.tab
+dict/Wikipedia.tab
+dict/WordNet2.0.tab
