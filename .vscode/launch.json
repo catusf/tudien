@@ -9,8 +9,9 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "args": [
-                "--input_folder=ext-dict",
-                "--output_folder=ext-output"
+                "--input_folder=dict",
+                "--output_folder=output",
+                "--filter=HanziStoriesViet"
             ]
         }
     ]

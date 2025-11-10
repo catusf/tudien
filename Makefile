@@ -42,3 +42,7 @@ dict_ext_stats_old:
 clean:
 # 	git reset --hard
 	git clean -fdx
+
+ruff:
+	uv run ruff check ./bin/convert_all.py --fix
+	uv run ruff check ./bin/dict_summary.py --fix

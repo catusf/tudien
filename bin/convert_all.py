@@ -10,8 +10,10 @@ import glob
 import os
 import re
 import shlex
+import shutil
 import subprocess
 from fileinput import filename
+from pathlib import Path
 
 from dict_summary import parse_toml_file
 from iso_language_codes import language_name
@@ -127,7 +129,6 @@ def gen_mdict_target(filepath, filebase, output_folder, dataName, dataDescriptio
     Returns:
         Result of the `execute_shell()` call that runs the MDX generation command.
     """
-
     title_filepath = os.path.join(output_folder, filebase + ".title.html")
     with open(title_filepath, "w", encoding="utf-8") as file:
         file.write(dataName)
@@ -189,8 +190,8 @@ def main() -> None:
     4. Converts dictionaries to multiple formats:
        - Kindle (MOBI)
        - Pleco (TXT)
-       - Lingvo
-       - MDict
+       - Lingvo (DSL)
+       - MDict (MDX)
        - Other formats specified in DICT_FORMATS
     5. Creates ZIP archives of converted dictionaries
 
@@ -207,8 +208,8 @@ def main() -> None:
 
     args = parser.parse_args()
 
-    input_folder = escape_forbidden_chars(args.input_folder)
-    output_folder = escape_forbidden_chars(args.output_folder)
+    input_folder = Path(escape_forbidden_chars(args.input_folder))
+    output_folder = Path(escape_forbidden_chars(args.output_folder))
     extension = args.extension
     metadata = args.metadata
     dict_filters = args.filter.split(",") if args.filter is not None else []
@@ -220,22 +221,32 @@ def main() -> None:
 
     metafilelist, datafilelist = search_data_files(input_folder, extension, metadata, dict_filters)
 
-    dirs = ["stardict", "epub", "kobo", "lingvo", "kindle", "dictd", "yomitan", "mdict"]
+    # dirs = ["stardict", "epub", "kobo", "lingvo", "kindle", "dictd", "yomitan", "mdict"]
 
-    cmd_line = f"rm -r {output_folder}/*"
-    execute_shell(cmd_line=cmd_line, message="Remove existing file in {output_folder}")
+    output_kindle = output_folder / "kindle"
+    output_mdict = output_folder / "mdict"
+    dict_kindle = input_folder / "kindle"
 
-    cmd_line = f"rm -r {input_folder}/kindle/*"
-    execute_shell(cmd_line=cmd_line, message="Remove existing file in kindle {input_folder}/kindle")
+    # cmd_line = f"mkdir -p {input_folder}/kindle"
+    # execute_shell(cmd_line=cmd_line, message="Creating directory")
+    # subprocess.call(f'rm -r {output_folder}/*', shell=True)
+    dict_kindle.mkdir(parents=True, exist_ok=True)
 
-    for dir in dirs:
-        cmd_line = f"mkdir -p {output_folder}/{dir}"
-        execute_shell(cmd_line=cmd_line, message="Creating directory")
+    # cmd_line = f"rm -r {output_folder}/*"
+    # execute_shell(cmd_line=cmd_line, message="Remove existing file in {output_folder}")
+    shutil.rmtree(output_folder, ignore_errors=True)
+
+    # cmd_line = f"rm -r {input_folder}/kindle/*"
+    # execute_shell(cmd_line=cmd_line, message="Remove existing file in kindle {input_folder}/kindle")
+    shutil.rmtree(output_kindle, ignore_errors=True)
+
+    for dir, _ in DIR_FORMATS:
+        sub_path = Path(output_folder / dir)
+        sub_path.mkdir(parents=True, exist_ok=True)
+        # cmd_line = f"mkdir -p {output_folder}/{dir}"
+        # execute_shell(cmd_line=cmd_line, message="Creating directory")
         # subprocess.call(f'mkdir -p {output_folder}/{dir}', shell=True)
 
-    cmd_line = f"mkdir -p {input_folder}/kindle"
-    execute_shell(cmd_line=cmd_line, message="Creating directory")
-    # subprocess.call(f'rm -r {output_folder}/*', shell=True)
 
     # use_only_these = {'Tu-dien-ThienChuu-TranVanChanh'}
     for filepath, datafile in zip(metafilelist, datafilelist):
@@ -248,7 +259,7 @@ def main() -> None:
             continue
 
         # Add quote to wrap long filename/path
-        datafile = datafile.replace(" ", "\\ ")
+        #datafile = datafile.replace(" ", "\\ ") # safe = shlex.quote(str(datafile))
         dataCreator = data["Owner_Editor"].replace(" ", "\\ ")
         if not dataCreator:
             dataCreator = "Panthera Tigris".replace(" ", "\\ ")
@@ -281,19 +292,63 @@ def main() -> None:
         #     continue
 
         # Generate other dictionary formats using PyGlossary
-        for write_format, folder, extension, needzip in DICT_FORMATS:
+        for write_format, folder, ext, needzip in DICT_FORMATS:
             _, filename = os.path.split(filepath)
             filebase, _ = os.path.splitext(filename)
 
-            build_dict_many(output_folder, extension, datafile, filebase, dataTarget, dataSource, dataName, write_format, folder, needzip)
+            build_dict_many(output_folder, ext, datafile, filebase, dataTarget, dataSource, dataName, write_format, folder, needzip)
 
         # Deletes src data file to save space
-        cmd_line = f"rm {input_folder}/{filebase}.txt" # Still keeps .tab file for counting lines later
-        execute_shell(cmd_line=cmd_line, message=f"Removes {filebase} input files to save space")
+        delete_file(f"{filebase}.txt", input_folder)
+        delete_file(f"{filebase}.{extension}", input_folder)
+
+        # cmd_line = f"rm {input_folder}/{filebase}.txt" # Still keeps .tab file for counting lines later
+        # execute_shell(cmd_line=cmd_line, message=f"Removes {filebase} input files to save space")
 
     for dir, format in DIR_FORMATS:
         cmd_line = f"zip -9 -j {output_folder}/all-{dir}.zip {output_folder}/{format}"
         execute_shell(cmd_line=cmd_line, message=f"Zipping all {dir}-format dicts in {output_folder}")
+
+def delete_file(filename, input_folder=""):
+    """
+    Delete a single file if it exists.
+
+    Parameters
+    ----------
+    filename : str
+        Name of the file to delete.
+    input_folder : str, optional
+        Path to the folder containing the file (default is current directory).
+
+    Notes
+    -----
+    If the file does not exist, the function does nothing.
+    """
+    file_path = Path(input_folder) / filename
+    if file_path.exists():
+        file_path.unlink()
+
+def delete_file_pattern(filename, pattern, dir_path=""):
+    """
+    Delete all files in a directory that match a filename pattern.
+
+    Parameters
+    ----------
+    filename : str
+        Base name of the files to match.
+    pattern : str
+        Pattern appended to filename (e.g., "*.txt" or "_backup.*").
+    dir_path : str, optional
+        Directory to search for matching files (default is current directory).
+
+    Notes
+    -----
+    Only files are deleted. Subdirectories are ignored.
+    """
+    dir = Path(dir_path)
+    for f in dir.glob(f"{filename}{pattern}"):
+        if f.is_file():
+            f.unlink()
 
 def build_dict_many(output_folder, extension, datafile, filebase, dataTarget, dataSource, dataName, write_format, folder, needzip):
     """
@@ -384,11 +439,17 @@ def build_dict_many(output_folder, extension, datafile, filebase, dataTarget, da
         cmd_line = f"zip -j {zip_path} {out_path}"
         execute_shell(cmd_line=cmd_line, message=f"creating zip file for {write_format} in {output_folder}")
 
-        cmd_line = f"rm {out_path}"
-        execute_shell(cmd_line=cmd_line, message=f"Remove temp file for {filebase} in {output_folder}")
+        out_dir = Path(output_folder) / folder
+
+        for f in out_dir.glob(f"{filebase}.*"):
+            if f.is_file():
+                f.unlink()
+        # cmd_line = f"rm {out_path}"
+        # execute_shell(cmd_line=cmd_line, message=f"Remove temp file for {filebase} in {output_folder}")
     else:
-        cmd_line = f"mv {out_path} {output_folder}"
-        execute_shell(cmd_line=cmd_line, message=f"moving output {out_path} to output folder {output_folder}")
+        # cmd_line = f"mv {out_path} {output_folder}"
+        # execute_shell(cmd_line=cmd_line, message=f"moving output {out_path} to output folder {output_folder}")
+        Path(out_path).replace(Path(output_folder) / f"{filebase}.{extension}")
 
 def build_dict_mobi(input_folder, output_folder, datafile, filebase, inflections, dataCreator, dataTarget, dataSource, dataName):
     """
@@ -475,8 +536,10 @@ def build_dict_mobi(input_folder, output_folder, datafile, filebase, inflections
     print(cmd_line)
     subprocess.call(cmd_line, shell=True)
 
-    cmd_line = f"rm {htmlOutDir}/{filebase}*.html"
-    execute_shell(cmd_line=cmd_line, message=f"Removes html files for {filebase}")
+    # cmd_line = f"rm {htmlOutDir}/{filebase}*.html"
+    # execute_shell(cmd_line=cmd_line, message=f"Removes html files for {filebase}")
+
+    delete_file_pattern(filebase, "*.html", htmlOutDir)
 
 def build_dict_mdict(output_folder, datafile, filebase, dataDescription, dataName):
     """
@@ -504,9 +567,9 @@ def build_dict_mdict(output_folder, datafile, filebase, dataDescription, dataNam
     cmd_line = f"mv {out_dictdir}/*.mdx {output_folder}/"
     execute_shell(cmd_line=cmd_line, message=f"moving output {output_folder} to output folder {output_folder}")
 
-    cmd_line = f"rm {output_folder}/mdict/{filebase}*"
-    execute_shell(cmd_line=cmd_line, message=f"Removes temp mdict files in {output_folder}/mdict")
-
+    # cmd_line = f"rm {output_folder}/mdict/{filebase}*"
+    # execute_shell(cmd_line=cmd_line, message=f"Removes temp mdict files in {output_folder}/mdict")
+    delete_file_pattern(filebase, "*", f"{output_folder}/mdict/")
 
 def build_dict_pleco_txt(input_folder, output_folder,  filebase):
     """
@@ -651,9 +714,9 @@ def search_data_files(input_folder, extension, metadata, dict_filters):
         - Compressed files are automatically decompressed during processing
     """
     if input_folder:
-        metafilelist = sorted(glob.glob(input_folder + f"/*.{metadata}"), reverse=True)
-        datafilelist = sorted(glob.glob(input_folder + f"/*.{extension}"), reverse=True)
-        zippdatafilelist = sorted(glob.glob(input_folder + f"/*.bz2"), reverse=True)
+        metafilelist =      sorted(input_folder.glob(f"*.{metadata}"), reverse=True)
+        datafilelist =      sorted(input_folder.glob(f"*.{extension}"), reverse=True)
+        zippdatafilelist =  sorted(input_folder.glob(f"*.bz2"), reverse=True)
 
         meta_dict = {}
         data_dict = {}
@@ -663,18 +726,19 @@ def search_data_files(input_folder, extension, metadata, dict_filters):
 
         # Keep only pairs of metadata and dict data files
         for filepath in metafilelist:
-            folder, filename = os.path.split(filepath)
-            filebase = filename.split(".")[0]
+            # folder, filename = os.path.split(filepath)
+            # filebase = filename.split(".")[0]
+            # filebase = filepath.stem
 
-            meta_dict[filebase] = filepath
+            meta_dict[filepath.stem] = filepath
 
         bothdatalist = datafilelist + zippdatafilelist
 
         for filepath in bothdatalist:
-            folder, filename = os.path.split(filepath)
-            filebase = filename.split(".")[0]
+            # folder, filename = os.path.split(filepath)
+            # filebase = filename.split(".")[0]
 
-            data_dict[filebase] = filepath
+            data_dict[filepath.stem] = filepath
 
         common_keys = sorted(list(meta_dict.keys() & data_dict.keys()))
 
@@ -702,15 +766,16 @@ def search_data_files(input_folder, extension, metadata, dict_filters):
             datafile = data_dict[key]
 
             # If datafile is a .bz2
-            if datafile.find(".bz2") >= 0:
-                cmd_line = f'bzip2 -d "{datafile}"' # Add -k to keep the original file
+            if datafile.suffix == ".bz2" >= 0:
+                cmd_line = f'bzip2 -d "{str(datafile)}"' # Add -k to keep the original file
                 # print(cmd_line)
 
                 if not DEBUG_FLAG:
                     # subprocess.call(cmd_line, shell=True)
                     execute_shell(cmd_line=cmd_line, message=f"bunzip data file")
 
-            datafilelist.append(datafile.replace(".bz2", ""))
+            # datafilelist.append(datafile.with_suffix("")) # Remove ".bz2"
+            datafilelist.append(datafile)
 
         print(f"Len of checked datafilelist: {len(datafilelist)}")
 
