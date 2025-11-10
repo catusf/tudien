@@ -9,7 +9,7 @@ sample:
 	mkdir -p output
 	ls -l | wc -l
 
-	uv run python ./bin/convert_all.py --input_folder=dict --output_folder=output --extension=tab --filter=HanziStoriesViet
+	uv run python ./bin/convert_all.py --input_folder=dict --output_folder=output --extension=tab --filter=Tu_dien_Han_ngu
 	uv run python ./bin/dict_summary.py --dict_dir=dict --output_dir=output --read_only=no
 	echo "Released sample dictionaries"
 
