@@ -79,15 +79,15 @@ Việc còn lại là copy file .mobi vừa được tạo ra bằng dây cáp U
 
 ```mermaid
 graph LR;
-    GenMetadat(File mô tả <.dfo>) --> GenTab(File định nghĩa <.tsv>);
+    ReadMetadata(File mô tả <.toml>) --> GenTab(File định nghĩa <.tab>);
     GenTab -- tool tab2opf --> HTML_File(File <.opf/html>) -- mobigen --> KindleDict(Từ điển Kindle <.mobi>);
-    GenTab -- tool convert2mdict  --> HTML_TXT_File(File <.txt/html>) -- mdict_utils --> Mdict(Từ điển Mdict <.mdx>);
+    GenTab -- tool convert2mdict --> HTML_TXT_File(File <.txt/html>) -- mdict_utils --> Mdict(Từ điển Mdict <.mdx>);
     GenTab -- chạy PyGlossary --> EpubDict(Từ điển <.epub>);
-    GenTab --  chạy PyGlossary --> KoboDict(Từ điển Kobo <.kobo.zip>);
-    GenTab --  chạy PyGlossary --> StarDict(Từ điển StarDict <.ifo>);
-    GenTab --  chạy PyGlossary --> dictd(Từ điển dictd <.index>);
-    GenTab --  chạy PyGlossary --> Yomitan(Từ điển dictd <.zip>);
-    GenTab --  chạy DSL Tools --> DSLDict(Từ điển Lingvo <.dsl.dz>);
+    GenTab -- chạy PyGlossary --> KoboDict(Từ điển Kobo <.kobo.zip>);
+    GenTab -- chạy PyGlossary --> StarDict(Từ điển StarDict <.ifo>);
+    GenTab -- chạy PyGlossary --> dictd(Từ điển dictd <.index>);
+    GenTab -- chạy PyGlossary --> Yomitan(Từ điển dictd <.zip>);
+    GenTab -- chạy DSL Tools --> DSLDict(Từ điển Lingvo <.dsl.dz>);
 ```
 
 ## Danh sách các từ điển và số từ hiện có
