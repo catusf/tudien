@@ -55,7 +55,7 @@ jobs:
         
     - name: Build all dictionaries
       run: |
-        make sample -B
+        make sample
 
     - name: Get Current Timestamp
       id: timestamp
@@ -72,6 +72,7 @@ jobs:
           draft: true
           name: "Release samples at ${{ github.ref }} - ${{ env.TIMESTAMP }}"
           bodyFile: ${{ env.INPUT_DIR }}/dict_summary.md
+
 
 
 
