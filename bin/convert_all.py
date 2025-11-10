@@ -94,6 +94,39 @@ def escape_forbidden_chars(text, forbidden_chars=r" (){}[]$*?^|<>\\"):
 # Example usage
 
 def gen_mdict_target(filepath, filebase, output_folder, dataName, dataDescription):
+    """
+    Generate MDict source files (*.title.html, *.description.html, *.txt) and build an MDX dictionary.
+
+    This function creates the necessary metadata and definition files for building an MDict (.mdx) file
+    from a tab-separated input text file. Each valid line in the input must contain exactly one tab: 
+    `<headword>\t<definition>`. The function then calls the `mdict` command-line tool to produce the MDX file.
+
+    Parameters:
+        filepath (str): Path to the input text file containing dictionary entries. 
+                        Each line must have one headword and one definition separated by a tab.
+        filebase (str): Base filename (without extension) used for generated output files.
+        output_folder (str): Directory where all output files will be created.
+        dataName (str): Title of the dictionary, written to `<filebase>.title.html`.
+        dataDescription (str): Description of the dictionary, written to `<filebase>.description.html`.
+
+    Output Files Generated (in output_folder):
+        <filebase>.title.html         Contains the dictionary title.
+        <filebase>.description.html   Contains the dictionary description.
+        <filebase>.txt                Contains formatted entries for MDict (headword + definition).
+        <filebase>.mdx                Final MDict dictionary output (built by `mdict` CLI).
+
+    Behavior:
+        • Skips empty lines.
+        • Skips lines without exactly one tab, printing a warning for each skipped line.
+        • Writes entries to the .txt file in the MDict expected format:
+              headword
+              definition
+              </>
+        • Executes the `mdict` tool to build the `.mdx` file.
+
+    Returns:
+        Result of the `execute_shell()` call that runs the MDX generation command.
+    """
 
     title_filepath = os.path.join(output_folder, filebase + ".title.html")
     with open(title_filepath, "w", encoding="utf-8") as file:
