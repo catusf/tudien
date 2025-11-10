@@ -80,6 +80,7 @@ Việc còn lại là copy file .mobi vừa được tạo ra bằng dây cáp U
 ```mermaid
 graph LR;
     ReadMetadata(File mô tả <.toml>) --> GenTab(File định nghĩa <.tab>);
+    ReadMetadata(File mô tả <.toml>) --> GenTxt(File định nghĩa Pleco <.txt>);
     GenTab -- tool tab2opf --> HTML_File(File <.opf/html>) -- mobigen --> KindleDict(Từ điển Kindle <.mobi>);
     GenTab -- tool convert2mdict --> HTML_TXT_File(File <.txt/html>) -- mdict_utils --> Mdict(Từ điển Mdict <.mdx>);
     GenTab -- chạy PyGlossary --> EpubDict(Từ điển <.epub>);
@@ -88,6 +89,7 @@ graph LR;
     GenTab -- chạy PyGlossary --> dictd(Từ điển dictd <.index>);
     GenTab -- chạy PyGlossary --> Yomitan(Từ điển dictd <.zip>);
     GenTab -- chạy DSL Tools --> DSLDict(Từ điển Lingvo <.dsl.dz>);
+    GenTxt -- Dùng app Pleco import --> Pleco_PQB(Từ điển Pleco <.pqb>);
 ```
 
 ## Danh sách các từ điển và số từ hiện có
