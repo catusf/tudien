@@ -1164,14 +1164,14 @@
         "Version": "1.0",
         "Num_entries": 85804,
         "Download": {
-            "dictd.zip": "https://github.com/catusf/tudien/releases/download/v4.2/star_phapvietphap.dictd.zip",
-            "dsl.dz": "https://github.com/catusf/tudien/releases/download/v4.2/star_phapvietphap.dsl.dz",
-            "epub": "https://github.com/catusf/tudien/releases/download/v4.2/star_phapvietphap.epub",
-            "kobo.zip": "https://github.com/catusf/tudien/releases/download/v4.2/star_phapvietphap.kobo.zip",
-            "mobi": "https://github.com/catusf/tudien/releases/download/v4.2/star_phapvietphap.mobi",
-            "stardict.zip": "https://github.com/catusf/tudien/releases/download/v4.2/star_phapvietphap.stardict.zip",
-            "yomitan.zip": "https://github.com/catusf/tudien/releases/download/v4.2/star_phapvietphap.yomitan.zip",
-            "mdx": "https://github.com/catusf/tudien/releases/download/v4.2/star_phapvietphap.mdx",
+            "dictd.zip": "",
+            "dsl.dz": "",
+            "epub": "",
+            "kobo.zip": "",
+            "mobi": "",
+            "stardict.zip": "",
+            "yomitan.zip": "",
+            "mdx": "",
             "pleco.zip": ""
         }
     },
@@ -1290,15 +1290,15 @@
         "Version": "1.0",
         "Num_entries": 3189,
         "Download": {
-            "dictd.zip": "",
-            "dsl.dz": "",
-            "epub": "",
-            "kobo.zip": "",
-            "mobi": "",
-            "stardict.zip": "",
-            "yomitan.zip": "",
-            "mdx": "",
-            "pleco.zip": ""
+            "dictd.zip": "https://github.com/catusf/tudien/releases/download/v4.2/HanziStoriesViet.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/download/v4.2/HanziStoriesViet.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/download/v4.2/HanziStoriesViet.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/download/v4.2/HanziStoriesViet.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/download/v4.2/HanziStoriesViet.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/download/v4.2/HanziStoriesViet.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/download/v4.2/HanziStoriesViet.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/download/v4.2/HanziStoriesViet.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/download/v4.2/HanziStoriesViet.pleco.zip"
         }
     },
     {

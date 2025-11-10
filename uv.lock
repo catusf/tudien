@@ -311,6 +311,11 @@ dependencies = [
     { name = "tomli-w" },
 ]
 
+[package.dev-dependencies]
+dev = [
+    { name = "ruff" },
+]
+
 [package.metadata]
 requires-dist = [
     { name = "beautifulsoup4", specifier = ">=4.11.1" },
@@ -329,6 +334,9 @@ requires-dist = [
     { name = "ruff", specifier = ">=0.8.2" },
     { name = "tomli-w", specifier = ">=1.2.0" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "ruff", specifier = ">=0.8.2" }]
 
 [[package]]
 name = "xxhash"

@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
+import argparse
+import gzip
 import struct
 import sys
-import gzip
-import argparse
 
 CLEANUP = False
 
@@ -76,7 +76,7 @@ class IfoFileReader(object):
         return self._ifo[key]
 
     def dump(self):
-        """debug function"""
+        """Debug function"""
         for k, v in self._ifo.iteritems():
             if type(v) is not str:
                 v = str(v)

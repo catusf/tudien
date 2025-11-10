@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 
 # from nltk.corpus import words
-from pattern.en import lexeme  # conjugate, lemma,
-from pattern.en import pluralize
+from pattern.en import (
+    lexeme,  # conjugate, lemma,
+    pluralize,
+)
 
 # List of common English words
 wordlist = set(open("../misc/354984si.ngl").read().split())

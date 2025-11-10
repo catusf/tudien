@@ -41,13 +41,12 @@
 # VERSION
 VERSION = "0.2"
 
-import sys
-import os
 import argparse
-from itertools import islice, count, groupby
-from contextlib import contextmanager
 import importlib
-
+import os
+import sys
+from contextlib import contextmanager
+from itertools import count, groupby, islice
 
 # Hand-made table from PloneTool.py
 mapping_custom_1 = {138: "s", 142: "z", 154: "s", 158: "z", 159: "Y"}

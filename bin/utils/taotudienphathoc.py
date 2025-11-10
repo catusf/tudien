@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-import os
 import json
+import os
 
 filepath = "./dict/Tu-dien-Tong-hop-Phat-hoc.json"
 fileout = "./dict/Tu-dien-Tong-hop-Phat-hoc.tab.new"

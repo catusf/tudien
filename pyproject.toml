@@ -21,3 +21,8 @@ dependencies = [
     "python-lzo>=1.15",
     "tomli-w>=1.2.0",
 ]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8.2",
+]

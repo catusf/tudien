@@ -1,8 +1,8 @@
 """Statistics for the dictionary data file"""
 
 import argparse
-import pathlib
 import collections
+import pathlib
 import string
 
 

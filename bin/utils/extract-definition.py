@@ -7,10 +7,11 @@ Steps
 4. Now the output can be run through PyGlossary to convert to many dictionary formats
 """
 
-from email.quoprimime import header_decode
-from bs4 import BeautifulSoup
 import re
+from email.quoprimime import header_decode
 from html import unescape
+
+from bs4 import BeautifulSoup
 
 
 def striphtml(data):
