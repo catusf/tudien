@@ -2,6 +2,7 @@ setup:
 	pip install uv
 	uv sync
 
+.PHONY: sample
 sample:
 # 	mv dict/*.* dict/
 	ls dict
