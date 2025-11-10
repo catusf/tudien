@@ -1,5 +1,5 @@
 # TODO
-- [ ] Use functions to process all types of dicts: dsl, kindle, others
+- [X] Use functions to process all types of dicts: dsl, kindle, others
 - [ ] Add output for Apple Dictionary Source
 - [ ] Add a secondary name for dictionary 
 - [ ] Copy từ điển đồng trái nghãi (ASD)
