@@ -790,7 +790,7 @@ def full_stem(path):
     name = p.name
     for _ in p.suffixes:
         name = Path(name).with_suffix("")
-    return name
+    return str(name)
 
 
 if __name__ == "__main__":
