@@ -2,7 +2,7 @@
 """Script to build all dictionaries with all formats
 
 Usage:
-./bin/convert_all.py --input_folder=./ext-dict --output_folder=./ext-output --extension=tab
+./bin/convert_all.py --input_folder=./dict --output_folder=./output --extension=tab
 """
 
 import argparse

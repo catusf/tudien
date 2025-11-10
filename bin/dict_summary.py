@@ -321,9 +321,9 @@ def main():
 
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description="Generate a dictionary summary.")
-    parser.add_argument("-d", "--dict_dir", default="ext-dict", help="The directory containing the dictionary files (default is 'dict').")
+    parser.add_argument("-d", "--dict_dir", default="dict", help="The directory containing the dictionary files (default is 'dict').")
     parser.add_argument("-f", "--outfile", default="dict_summary.md", help="The output report file name (default is 'dict_summary.md').")
-    parser.add_argument("-o", "--output_dir", default="ext-output", help="The output dir for all the dict results.")
+    parser.add_argument("-o", "--output_dir", default="output", help="The output dir for all the dict results.")
     parser.add_argument("-e", "--extensions", default=None, help="The extensions that need included in the report. None means all.")
     parser.add_argument("-c", "--columns", default=None, help="The columns that will be kept (Other than the download links).")
     parser.add_argument("-r", "--read_only", choices=["yes", "no"], default="no", required=False, help="Read data or create it.")
