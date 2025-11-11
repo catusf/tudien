@@ -519,27 +519,27 @@ def build_dict_mobi(input_folder, output_folder, datafile, filebase, inflections
               dataName="Latin–English Dictionary"
          )
     """
-    htmlDir = f"kindle"
-    htmlOutDir = f"{input_folder}/{htmlDir}"
+    html_dir = f"kindle"
+    html_out_dir = f"{input_folder}/{html_dir}"
 
-    cmd_line = f"python ./bin/tab2opf.py --title={dataName} --source={dataSource} --target={dataTarget} --inflection={inflections} --outdir={htmlOutDir} --creator={dataCreator} --publisher={dataCreator} {datafile}"  # noqa: E501
+    cmd_line = f"python ./bin/tab2opf.py --title={dataName} --source={dataSource} --target={dataTarget} --inflection={inflections} --outdir={html_out_dir} --creator={dataCreator} --publisher={dataCreator} {datafile}"  # noqa: E501
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
 
         # Generate .mobi dictionary from opf+html file
-    out_path = f"{htmlOutDir}/{filebase}.opf".replace(" ", "\\ ")
+    out_path = f"{html_out_dir}/{filebase}.opf".replace(" ", "\\ ")
     cmd_line = f"wine ./bin/mobigen/mobigen.exe -unicode -s0 {out_path}"
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
 
-    cmd_line = f"mv {htmlOutDir}/{filebase}.mobi {output_folder}/"
+    cmd_line = f"mv {html_out_dir}/{filebase}.mobi {output_folder}/"
     print(cmd_line)
     subprocess.call(cmd_line, shell=True)
 
     # cmd_line = f"rm {htmlOutDir}/{filebase}*.html"
     # execute_shell(cmd_line=cmd_line, message=f"Removes html files for {filebase}")
 
-    delete_file_pattern(filebase, "*.html", htmlOutDir)
+    delete_file_pattern(filebase, "*.html", html_out_dir)
 
 def build_dict_mdict(output_folder, datafile, filebase, dataDescription, dataName):
     """
@@ -760,11 +760,9 @@ def search_data_files(input_folder, extension, metadata, dict_filters):
             if datafile.suffix == ".bz2":
                 cmd_line = f'bzip2 -d "{str(datafile)}"' # Add -k to keep the original file
 
-                if not DEBUG_FLAG:
-                    # subprocess.call(cmd_line, shell=True)
-                    execute_shell(cmd_line=cmd_line, message=f"bunzip data file")
+                execute_shell(cmd_line=cmd_line, message=f"bunzip data file")
 
-                datafile = datafile.with_suffix(".tab")
+                datafilelist.append(datafile.with_suffix("")) # Remove .bz2 suffix
             else:
                 datafilelist.append(datafile)
 
@@ -774,7 +772,8 @@ def search_data_files(input_folder, extension, metadata, dict_filters):
 
 def full_stem(path):
     """
-    Return the filename without any extensions.
+    Return the filename without any extensions for files with multiple suffixes (e.g., .tar.gz).
+    Files with a single suffix behave as path.stem
     
     Parameters
     ----------
