@@ -13,7 +13,7 @@ try:
 except Exception:
     import tomli as toml
 
-DOWNLOAD_TAG = "v4.2"  # Set the GitHub tag version that asscociates with the release
+DOWNLOAD_TAG = "v4.3"  # Set the GitHub tag version that asscociates with the release
 
 
 def parse_toml_file(toml_path):
