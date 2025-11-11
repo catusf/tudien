@@ -18,6 +18,7 @@ from pathlib import Path
 from dict_summary import parse_toml_file
 from iso_language_codes import language_name
 
+# List of dictionary formats to generate using pyglossary
 DICT_FORMATS = [
     # DictType, foldername, file ending, need zip
     ("Yomichan", "yomitan", "yomitan.zip", False),
@@ -27,8 +28,9 @@ DICT_FORMATS = [
     ("DictOrg", "dictd", "index", True),
 ]
 
+# List of directory formats and their file patterns
 DIR_FORMATS = [
-    # (Folder, File pattern)
+    # (Dir, File pattern)
     ("stardict", "*.stardict.zip"),
     ("epub", "*.epub"),
     ("kobo", "*.kobo.zip"),
@@ -69,9 +71,6 @@ def execute_shell(cmd_line, message="", printout=True):
 
 
 DEBUG_FLAG = False
-
-import re
-
 
 def escape_forbidden_chars(text, forbidden_chars=r" (){}[]$*?^|<>\\"):
     """
