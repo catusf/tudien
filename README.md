@@ -61,18 +61,18 @@ make sample
 Do tôi thấy cần:
 - Có các từ điển có chất lượng để giúp việc học hỏi của bản thân và mọi người
 - Lập trình viên bất kỳ có thể dùng dữ liệu đầu vào ở đây để tạo output khác
-- Có thể dễ dàng bổ sung từ điển - chỉ cần tạo 1 file văn bản phân cách bằng dấu \t (.tab) và 1 file mô tả .dfo
+- Có thể dễ dàng bổ sung từ điển - chỉ cần tạo 1 file văn bản phân cách bằng dấu \t (.tab) và 1 file mô tả .toml
 
 Các từ điển cần: 
 
 - Chính xác và dễ tra cứu
 - Dùng được trên nhiều thiết bị (Kindle, Kobo, Onyx, mobile và PC apps)
 
-## Các bước cách tạo ra file từ điển
+## Các bước cách tạo ra file từ điển mới
 1. Cài Python 3.x
 2. Cài các package cần thiết `pip install -r requirements.txt`
 3. Tạo mới hay sửa file định nghĩa từ điển (như `./dict/TudienCuatoi.tab`)
-4. Tạo một file mô tả từ điển (như `./dict/TudienCuatoi.dfo`)
+4. Tạo một file mô tả từ điển (như `./dict/TudienCuatoi.toml`)
 5. Chạy dòng lệnh `python ./bin/convert_all.py` để tạo từ điển. Kết quả sẽ có trong thư mục `output`
 
 Việc còn lại là copy file .mobi vừa được tạo ra bằng dây cáp USB vào thư mục `documents` trên Kindle để bắt đầu sử dụng.
