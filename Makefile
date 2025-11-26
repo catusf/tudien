@@ -9,7 +9,7 @@ sample:
 	mkdir -p output
 	ls -l | wc -l
 
-	uv run python ./bin/convert_all.py --input_folder=dict --output_folder=output --extension=tab --filter=HanziStoriesViet
+	uv run python ./bin/convert_all.py --input_folder=dict --output_folder=output --extension=tab --filter=Viet-Trung
 	uv run python ./bin/dict_summary.py --dict_dir=dict --output_dir=output --read_only=no
 	echo "Released sample dictionaries"
 
@@ -27,6 +27,10 @@ test:
 	echo "Run test the venv"
 	uv run python ./bin/test.py
 
+to_pleco:
+	echo "Convert to Pleco format"
+	uv run python ./bin/tsv_to_pleco.py --folder=dict --pattern=Viet-Trung.tab
+	
 dict_stats_new:
 	uv run python ./bin/dict_summary.py --dict_dir=dict --output_dir=output --read_only=no
 

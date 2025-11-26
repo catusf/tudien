@@ -1,0 +1,9 @@
+Name = "Từ điển Việt - Trung v1.0"
+Description = "Từ điển Việt - Trung"
+Source = "vi"
+Target = "zh"
+Version = "1.0"
+Owner_Editor = ""
+URL = "https://github.com/catusphan/dictionary"
+Inflections = ""
+Num_entries = 19767
