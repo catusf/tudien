@@ -58,7 +58,7 @@ def main():
                     
                     items = line.split("\t")
                     
-                    print(f"Processing line {num}: {line}")
+                    # print(f"Processing line {num}: {line}")
 
                     # if len(items) != 2:
                     #     print(f"Line {num} in {filepath} does not have 2 items: {line}")

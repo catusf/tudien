@@ -302,7 +302,8 @@ def generate_markdown_table(data, files_status, files_status_details, extensions
             line += f"{entry['Version']} |"
 
         if "Num_entries" in columns:
-            line += f"{entry['Num_entries']} |"
+            n = entry['Num_entries']
+            line += f"{n:,} |"
 
         line += f" {download_links} |"
 
