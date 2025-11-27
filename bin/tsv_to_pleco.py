@@ -56,21 +56,17 @@ def main():
                     if not line.strip():
                         continue
                     
-                    try:
-                        items = line.split("\t")
-                        
-                        print(f"Processing line {num}: {line}")
+                    items = line.split("\t")
+                    
+                    print(f"Processing line {num}: {line}")
 
-                        if len(items) != 2:
-                            print(f"Line {num} in {filepath} does not have 2 items: {line}")
-                            continue
-                        
-                        assert len(items) == 2
-                        fwrite.write(f"{items[0]}\t{items[1]}\n")
-                        
-                    except expression as identifier:
-                        pass
-
+                    # if len(items) != 2:
+                    #     print(f"Line {num} in {filepath} does not have 2 items: {line}")
+                    #     continue
+                    
+                    assert len(items) == 2
+                    fwrite.write(f"{items[0]}\t{items[1]}\n")
+                    
             print(f"\t{outpath} written")
 
 if __name__ == "__main__":
