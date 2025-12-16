@@ -1,6 +1,8 @@
 # Từ điển tiếng Việt dành cho máy đọc sách Kindle, Pocketbook, Kobo, Boox, v.v. cũng như trên điện thoại và máy tính, như StarDict, Lingvo, Yomichan/Yomitan, v.v.
 
-Mã nguồn cho từ điển dành cho máy đọc sách Kindle. Để sử dụng từ điển, download tại đây http://catusf.github.io/.
+Đây là trang mã nguồn cho từ điển dành cho máy đọc sách. 
+
+Để sử dụng từ điển, download tại đây http://catusf.github.io/.
 
 ## Ghi chú
 
