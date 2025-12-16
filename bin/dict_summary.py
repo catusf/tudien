@@ -81,6 +81,7 @@ SUPPORTED_EXTENSIONS = {
     "mdx": {"dir": "mdict", "name": "MDict"},
     "pleco.zip": {"dir": "pleco", "name": "Pleco"},
     "slob": {"dir": "slob", "name": "Aard 2"},
+    "dic": {"dir": "xdxf", "name": "Pocketbook"},
 }
 
 COLUMNS = {

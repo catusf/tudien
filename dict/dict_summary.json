@@ -17,7 +17,9 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
@@ -38,7 +40,9 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
@@ -59,7 +63,9 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
@@ -80,7 +86,9 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
@@ -101,7 +109,9 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
@@ -122,7 +132,9 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
@@ -143,7 +155,9 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
@@ -164,7 +178,9 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
@@ -185,7 +201,9 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
@@ -206,7 +224,9 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
@@ -227,7 +247,9 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
@@ -248,7 +270,9 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
@@ -269,7 +293,9 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
@@ -290,7 +316,9 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
@@ -311,11 +339,36 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
         "Number": 16,
+        "Name": "Từ điển Việt - Trung v1.0",
+        "Description": "Từ điển Việt - Trung",
+        "Source": "Tiếng Việt (vi)",
+        "Target": "Tiếng Trung (zh)",
+        "Owner_Editor": "",
+        "Version": "1.0",
+        "Num_entries": 19767,
+        "Download": {
+            "dictd.zip": "https://github.com/catusf/tudien/releases/download/v4.3/Viet-Trung.dictd.zip",
+            "dsl.dz": "https://github.com/catusf/tudien/releases/download/v4.3/Viet-Trung.dsl.dz",
+            "epub": "https://github.com/catusf/tudien/releases/download/v4.3/Viet-Trung.epub",
+            "kobo.zip": "https://github.com/catusf/tudien/releases/download/v4.3/Viet-Trung.kobo.zip",
+            "mobi": "https://github.com/catusf/tudien/releases/download/v4.3/Viet-Trung.mobi",
+            "stardict.zip": "https://github.com/catusf/tudien/releases/download/v4.3/Viet-Trung.stardict.zip",
+            "yomitan.zip": "https://github.com/catusf/tudien/releases/download/v4.3/Viet-Trung.yomitan.zip",
+            "mdx": "https://github.com/catusf/tudien/releases/download/v4.3/Viet-Trung.mdx",
+            "pleco.zip": "https://github.com/catusf/tudien/releases/download/v4.3/Viet-Trung.pleco.zip",
+            "slob": "https://github.com/catusf/tudien/releases/download/v4.3/Viet-Trung.slob",
+            "dic": "https://github.com/catusf/tudien/releases/download/v4.3/Viet-Trung.dic"
+        }
+    },
+    {
+        "Number": 17,
         "Name": "Từ điển Việt - Nga v1.0",
         "Description": "Từ điển Việt - Nga",
         "Source": "Tiếng Việt (vi)",
@@ -332,11 +385,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 17,
+        "Number": 18,
         "Name": "Từ điển Trung-Việt β (tiểu) v1.0",
         "Description": "Từ điển Trung-Việt β (cỡ tiểu) với ít chi tiết nhất. Bao gồm hơn 130k mục từ, phủ hết mục từ trong CCCE.",
         "Source": "Tiếng Trung (zh)",
@@ -353,11 +408,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 18,
+        "Number": 19,
         "Name": "Từ điển Phật học Việt Anh - Thiện Phúc v1.0",
         "Description": "Từ điển Phật học Việt Anh - Thiện Phúc",
         "Source": "Tiếng Việt (vi)",
@@ -374,11 +431,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 19,
+        "Number": 20,
         "Name": "Từ điển Anh-Việt β v1.4",
         "Description": "Từ điển Anh-Việt Beta (β) với các dạng từ tiếng Anh",
         "Source": "Tiếng Anh (en)",
@@ -395,11 +454,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 20,
+        "Number": 21,
         "Name": "Rộng mở tâm hồn v1.0",
         "Description": "Rộng mở tâm hồn",
         "Source": "Tiếng Việt (vi)",
@@ -416,11 +477,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 21,
+        "Number": 22,
         "Name": "Chinese Character Stories v1.0",
         "Description": "Chinese Character Stories based on the components",
         "Source": "Tiếng Trung (zh)",
@@ -437,11 +500,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 22,
+        "Number": 23,
         "Name": "Từ điển Tiếng Việt",
         "Description": "Từ điển Tiếng Việt (Hồ Ngọc Đức)",
         "Source": "Tiếng Italy (it)",
@@ -458,11 +523,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 23,
+        "Number": 24,
         "Name": "Từ điển Việt - Đức v1.0",
         "Description": "Từ điển Việt - Đức",
         "Source": "Tiếng Việt (vi)",
@@ -479,11 +546,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 24,
+        "Number": 25,
         "Name": "Từ điển Việt - Anh v1.0",
         "Description": "Từ điển Việt - Anh",
         "Source": "Tiếng Việt (vi)",
@@ -500,11 +569,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 25,
+        "Number": 26,
         "Name": "Từ điển từ Hán Việt Thiền Chửu + Trần Văn Chánh v1.0",
         "Description": "TTừ điển từ Hán Việt Thiền Chửu + Trần Văn Chánh",
         "Source": "Tiếng Trung (zh)",
@@ -521,11 +592,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 26,
+        "Number": 27,
         "Name": "Chinese Thesaurus (big) v1.0",
         "Description": "Chinese Thesaurus (big size)",
         "Source": "Tiếng Trung (zh)",
@@ -542,11 +615,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 27,
+        "Number": 28,
         "Name": "Từ điển Tây Ban Nha - Việt v1.0",
         "Description": "Từ điển Tây Ban Nha - Việt với các dạng từ",
         "Source": "Tiếng Tây Ban Nha (es)",
@@ -563,11 +638,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 28,
+        "Number": 29,
         "Name": "Từ điển Việt - Hàn v1.0",
         "Description": "Từ điển Việt - Hàn",
         "Source": "Tiếng Việt (vi)",
@@ -584,11 +661,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 29,
+        "Number": 30,
         "Name": "Từ điển WordNet v1.0",
         "Description": "Từ điển WordNet",
         "Source": "Tiếng Anh (en)",
@@ -605,11 +684,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 30,
+        "Number": 31,
         "Name": "Từ diển Việt-Anh SPDict v1.0",
         "Description": "Từ diển Việt-Anh SPDict",
         "Source": "Tiếng Việt (vi)",
@@ -626,11 +707,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 31,
+        "Number": 32,
         "Name": "Từ điển Anh-Việt Kỹ thuật Prodict v1.1",
         "Description": "Từ điển Anh-Việt Kỹ thuật Prodict",
         "Source": "Tiếng Anh (en)",
@@ -647,11 +730,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 32,
+        "Number": 33,
         "Name": "Từ điển Việt - Nhật v1.0",
         "Description": "Anh - Việt",
         "Source": "Tiếng Nhật (ja)",
@@ -668,11 +753,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 33,
+        "Number": 34,
         "Name": "Từ điển Trung - Việt v1.0",
         "Description": "Từ điển Trung - Việt",
         "Source": "Tiếng Trung (zh)",
@@ -689,11 +776,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 34,
+        "Number": 35,
         "Name": "Từ điển Ý - Việt v1.0",
         "Description": "Từ điển Ý - Việt với các dạng từ",
         "Source": "Tiếng Italy (it)",
@@ -710,11 +799,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 35,
+        "Number": 36,
         "Name": "Từ điển từ Hán Việt Thiền Chửu v1.0",
         "Description": "Từ điển từ Hán Việt Thiền Chửu",
         "Source": "Tiếng Việt (vi)",
@@ -731,11 +822,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 36,
+        "Number": 37,
         "Name": "Từ điển Đạo Uyển v1.0",
         "Description": "Từ điển Đạo Uyển",
         "Source": "Tiếng Việt (vi)",
@@ -752,11 +845,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 37,
+        "Number": 38,
         "Name": "Từ điển Pháp - Việt v1.0",
         "Description": "Từ điển Pháp - Việt với các dạng từ",
         "Source": "Tiếng Pháp (fr)",
@@ -773,11 +868,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 38,
+        "Number": 39,
         "Name": "Từ điển Hàn - Việt v1.0",
         "Description": "Từ điển Hàn - Việt",
         "Source": "Tiếng Hàn (ko)",
@@ -794,11 +891,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 39,
+        "Number": 40,
         "Name": "Chinese Thesaurus (small) v1.0",
         "Description": "Chinese Thesaurus (small size)",
         "Source": "Tiếng Trung (zh)",
@@ -815,11 +914,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 40,
+        "Number": 41,
         "Name": "Từ điển Việt - Nhật v1.0",
         "Description": "Từ điển Việt - Nhật",
         "Source": "Tiếng Việt (vi)",
@@ -836,11 +937,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 41,
+        "Number": 42,
         "Name": "Từ điển Đức - Việt - Đức v1.0",
         "Description": "Từ điển Đức - Việt - Đức với các dạng từ",
         "Source": "Tiếng Đức (de)",
@@ -857,11 +960,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 42,
+        "Number": 43,
         "Name": "Từ điển Phật học Việt Anh - Minh Thông v1.0",
         "Description": "Từ điển Phật học Việt Anh - Minh Thông",
         "Source": "Tiếng Việt (vi)",
@@ -878,11 +983,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 43,
+        "Number": 44,
         "Name": "Từ điển Na Uy - Việt v1.0",
         "Description": "Từ điển Na Uy - Việt với các dạng từ",
         "Source": "Tiếng Na Uy (no)",
@@ -899,11 +1006,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 44,
+        "Number": 45,
         "Name": "Từ điển Phật học Anh-Hán-Việt v1.1",
         "Description": "Từ điển Phật học Anh-Hán-Việt",
         "Source": "Tiếng Anh (en)",
@@ -920,11 +1029,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 45,
+        "Number": 46,
         "Name": "Từ điển Séc - Việt v1.0",
         "Description": "Từ điển Séc - Việt với các dạng từ",
         "Source": "Tiếng Séc (cs)",
@@ -941,11 +1052,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 46,
+        "Number": 47,
         "Name": "Ngữ vựng danh từ thiền học v1.0",
         "Description": "Ngữ vựng danh từ thiền học",
         "Source": "Tiếng Việt (vi)",
@@ -962,11 +1075,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 47,
+        "Number": 48,
         "Name": "Từ điển Nhật - Việt v1.0",
         "Description": "Từ điển Nhật - Việt",
         "Source": "Tiếng Nhật (ja)",
@@ -983,11 +1098,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 48,
+        "Number": 49,
         "Name": "Từ điển Anh-Việt-Anh v1.1",
         "Description": "Từ điển Anh-Việt-Anh với các dạng từ tiếng Anh",
         "Source": "Tiếng Anh (en)",
@@ -1004,11 +1121,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 49,
+        "Number": 50,
         "Name": "Từ điển Nhật - Việt - Nhật v1.0",
         "Description": "Từ điển Nhật - Việt - Nhật",
         "Source": "Tiếng Nhật (ja)",
@@ -1025,11 +1144,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 50,
+        "Number": 51,
         "Name": "Bách khoa toàn thư v1.0",
         "Description": "Bách khoa toàn thư tiếng Việt",
         "Source": "Tiếng Việt (vi)",
@@ -1046,11 +1167,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 51,
+        "Number": 52,
         "Name": "CCCE Dictionary (thin) v1.0",
         "Description": "CCCE Dictionary (thin)",
         "Source": "Tiếng Trung (zh)",
@@ -1067,11 +1190,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 52,
+        "Number": 53,
         "Name": "Từ điển Anh - Việt v1.1",
         "Description": "Từ điển Anh - Việt với các dạng từ",
         "Source": "Tiếng Anh (en)",
@@ -1088,11 +1213,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 53,
+        "Number": 54,
         "Name": "Từ điển Phật học Tinh tuyển v1.0",
         "Description": "Từ điển Phật học Tinh tuyển",
         "Source": "Tiếng Việt (vi)",
@@ -1109,11 +1236,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 54,
+        "Number": 55,
         "Name": "Chinese Thesaurus (mid) v1.0",
         "Description": "Chinese Thesaurus (mid size)",
         "Source": "Tiếng Trung (zh)",
@@ -1130,11 +1259,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 55,
+        "Number": 56,
         "Name": "Phật quang Đại từ điển Hán ngữ v1.0",
         "Description": "Phật quang Đại từ điển Hán ngữ",
         "Source": "Tiếng Trung (zh)",
@@ -1151,11 +1282,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 56,
+        "Number": 57,
         "Name": "Từ điển Pháp - Việt - Pháp v1.0",
         "Description": "Từ điển Pháp - Việt - Pháp với các dạng từ",
         "Source": "Tiếng Pháp (fr)",
@@ -1172,11 +1305,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 57,
+        "Number": 58,
         "Name": "Từ điển Phật Quang v1.0",
         "Description": "Từ điển Phật Quang",
         "Source": "Tiếng Việt (vi)",
@@ -1193,11 +1328,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 58,
+        "Number": 59,
         "Name": "Từ diển Anh-Việt-Anh SPDict v1.1",
         "Description": "Từ diển Anh-Việt-Anh SPDict với các dạng từ tiếng Anh",
         "Source": "Tiếng Anh (en)",
@@ -1214,11 +1351,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 59,
+        "Number": 60,
         "Name": "Từ điển Tây Ban Nha - Việt - Tây Ban Nha v1.0",
         "Description": "Từ điển Tây Ban Nha - Việt - Tây Ban Nha với các dạng từ",
         "Source": "Tiếng Tây Ban Nha (es)",
@@ -1235,11 +1374,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 60,
+        "Number": 61,
         "Name": "Từ điển Phật học Việt Anh - Đồng Loại v1.0",
         "Description": "Từ điển Phật học Việt Anh - Đồng Loại",
         "Source": "Tiếng Việt (vi)",
@@ -1256,11 +1397,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 61,
+        "Number": 62,
         "Name": "Cấu thành từ tiếng Trung v1.0",
         "Description": "Từ điển phân tích các chữ cái tiếng Trung thành các cấu thành",
         "Source": "Tiếng Trung (zh)",
@@ -1277,11 +1420,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 62,
+        "Number": 63,
         "Name": "Từ điển Câu chuyện chữ Hán bằng tiếng Việt v1.0",
         "Description": "Từ điển Câu chuyện chữ Hán",
         "Source": "Tiếng Trung (zh)",
@@ -1290,19 +1435,21 @@
         "Version": "1.0",
         "Num_entries": 3189,
         "Download": {
-            "dictd.zip": "https://github.com/catusf/tudien/releases/download/v4.2/HanziStoriesViet.dictd.zip",
-            "dsl.dz": "https://github.com/catusf/tudien/releases/download/v4.2/HanziStoriesViet.dsl.dz",
-            "epub": "https://github.com/catusf/tudien/releases/download/v4.2/HanziStoriesViet.epub",
-            "kobo.zip": "https://github.com/catusf/tudien/releases/download/v4.2/HanziStoriesViet.kobo.zip",
-            "mobi": "https://github.com/catusf/tudien/releases/download/v4.2/HanziStoriesViet.mobi",
-            "stardict.zip": "https://github.com/catusf/tudien/releases/download/v4.2/HanziStoriesViet.stardict.zip",
-            "yomitan.zip": "https://github.com/catusf/tudien/releases/download/v4.2/HanziStoriesViet.yomitan.zip",
-            "mdx": "https://github.com/catusf/tudien/releases/download/v4.2/HanziStoriesViet.mdx",
-            "pleco.zip": "https://github.com/catusf/tudien/releases/download/v4.2/HanziStoriesViet.pleco.zip"
+            "dictd.zip": "",
+            "dsl.dz": "",
+            "epub": "",
+            "kobo.zip": "",
+            "mobi": "",
+            "stardict.zip": "",
+            "yomitan.zip": "",
+            "mdx": "",
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 63,
+        "Number": 64,
         "Name": "Từ điển Trung-Việt β (trung) v1.0",
         "Description": "Từ điển Trung-Việt β (cỡ trung). Bao gồm hơn 130k mục từ, phủ hết mục từ trong CCCE.",
         "Source": "Tiếng Trung (zh)",
@@ -1319,11 +1466,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 64,
+        "Number": 65,
         "Name": "Từ điển Việt - Tây Ban Nha v1.0",
         "Description": "Từ điển Việt - Tây Ban Nha",
         "Source": "Tiếng Việt (vi)",
@@ -1340,11 +1489,13 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     },
     {
-        "Number": 65,
+        "Number": 66,
         "Name": "Từ điển Bồ Đào Nha - Việt v1.0",
         "Description": "Từ điển Bồ Đào Nha - Việt với các dạng từ",
         "Source": "Tiếng Bồ Đào Nha (pt)",
@@ -1361,7 +1512,9 @@
             "stardict.zip": "",
             "yomitan.zip": "",
             "mdx": "",
-            "pleco.zip": ""
+            "pleco.zip": "",
+            "slob": "",
+            "dic": ""
         }
     }
 ]

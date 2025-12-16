@@ -281,6 +281,16 @@ def main() -> None:
         else:
             inflections = f"{INFLECTION_DIR}/{INFLECTION_NONE}"
 
+        # Generate other dictionary formats using PyGlossary
+        for write_format, folder, ext, needzip in DICT_FORMATS:
+            _, filename = os.path.split(filepath)
+            filebase, _ = os.path.splitext(filename)
+
+            build_dict_many(output_folder, ext, datafile, filebase, dataTarget, dataSource, dataName, write_format, folder, needzip)
+        
+        # Must run after dictd was created
+        build_dict_pocketbook(output_folder, filebase)
+
         build_dict_mobi(input_folder, output_folder, datafile, filebase, inflections, dataCreator, dataTarget, dataSource, dataName)
 
         build_dict_pleco_txt(input_folder, output_folder, filebase)
@@ -291,13 +301,6 @@ def main() -> None:
 
         # if DEBUG_FLAG:
         #     continue
-
-        # Generate other dictionary formats using PyGlossary
-        for write_format, folder, ext, needzip in DICT_FORMATS:
-            _, filename = os.path.split(filepath)
-            filebase, _ = os.path.splitext(filename)
-
-            build_dict_many(output_folder, ext, datafile, filebase, dataTarget, dataSource, dataName, write_format, folder, needzip)
 
         # Deletes src data file to save space
         delete_file(f"{filebase}.txt", input_folder)
@@ -440,11 +443,13 @@ def build_dict_many(output_folder, extension, datafile, filebase, dataTarget, da
         cmd_line = f"zip -j {zip_path} {out_path}"
         execute_shell(cmd_line=cmd_line, message=f"creating zip file for {write_format} in {output_folder}")
 
-        out_dir = Path(output_folder) / folder
+        if folder not in ("dictd"): # keep dictd files for Pocketbook conversion
+            out_dir = Path(output_folder) / folder
 
-        for f in out_dir.glob(f"{filebase}.*"):
-            if f.is_file():
-                f.unlink()
+            for f in out_dir.glob(f"{filebase}.*"):
+                if f.is_file():
+                    f.unlink()
+
         # cmd_line = f"rm {out_path}"
         # execute_shell(cmd_line=cmd_line, message=f"Remove temp file for {filebase} in {output_folder}")
     else:
@@ -541,6 +546,53 @@ def build_dict_mobi(input_folder, output_folder, datafile, filebase, inflections
     # execute_shell(cmd_line=cmd_line, message=f"Removes html files for {filebase}")
 
     delete_file_pattern(filebase, "*.html", html_out_dir)
+
+def build_dict_pocketbook(output_folder, filebase):
+    """
+    Builds an Pocketbook from dictd file. This MUST RUN AFTER dictd was created
+
+    Args:
+        output_folder (str): Directory path where the output dictionary will be saved
+        datafile (str): Path to input data file
+        filebase (str): Base filename to use for generated dictionary
+        dataDescription (str): Description of the dictionary data
+        dataName (str): Name of the dictionary
+
+    The function:
+    1. Generates an XDXF datafile using makedict tool
+    2. Use Pocketbook LanguageFilesPocketbookConverter to convert XDXF to Pocketbook .dic format
+    3. Renames output file
+
+    Requires:
+        - gen_mdict_target() function to generate the dictionary
+        - execute_shell() function to run shell commands
+    """
+    # Generare Pocketbook dictionary
+
+    cmd_line = f"mkdir {output_folder}/xdxf"
+    print(cmd_line)
+    subprocess.run(shlex.split(cmd_line))
+
+    # Generare xdxf intermediate dictionary format
+    out_dictdir = os.path.join(output_folder, "xdxf")
+    cmd_line = f"makedict -i dictd -o xdxf {output_folder}/dictd/{filebase}.index --work-dir {out_dictdir}"
+    print(cmd_line)
+    subprocess.run(shlex.split(cmd_line))
+
+    converter = "wine LanguageFilesPocketbookConverter/converter.exe"
+    lang_data = "./LanguageFilesPocketbookConverter/en/"
+
+    cmd_line = f"{converter} /workspaces/tudien/{output_folder}/xdxf/{filebase}/dict.xdxf {lang_data}"
+    print(cmd_line)
+    subprocess.run(shlex.split(cmd_line))
+
+    cmd_line = f"mv {out_dictdir}/{filebase}/dict.dic {output_folder}/{filebase}.dic"
+    print(cmd_line)
+    subprocess.run(shlex.split(cmd_line))
+
+    # cmd_line = f"rm {output_folder}/mdict/{filebase}*"
+    # execute_shell(cmd_line=cmd_line, message=f"Removes temp mdict files in {output_folder}/mdict")
+    # delete_file_pattern(filebase, "*", f"{output_folder}/mdict/")
 
 def build_dict_mdict(output_folder, datafile, filebase, dataDescription, dataName):
     """

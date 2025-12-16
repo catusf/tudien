@@ -26,5 +26,6 @@ sudo make install
 # 8. Test
 makedict --help
 
-# ./makedict -i dictd -o xdxf ./TudienAnhVietBeta.index 
-# wine LanguageFilesPocketbookConverter/converter.exe ./dict.xdxf ./en/
+# makedict -i dictd -o xdxf /workspaces/tudien/output/Viet-Trung.index --work-dir output/xdxf
+# wine LanguageFilesPocketbookConverter/converter.exe /workspaces/tudien/output/xdxf/Viet-Trung/dict.xdxf ./LanguageFilesPocketbookConverter/en/
+# mv output/xdxf/Viet-Trung/dict.dic output/Viet-Trung.dic
