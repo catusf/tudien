@@ -80,6 +80,7 @@ SUPPORTED_EXTENSIONS = {
     "yomitan.zip": {"dir": "yomitan", "name": "Yomitan"},
     "mdx": {"dir": "mdict", "name": "MDict"},
     "pleco.zip": {"dir": "pleco", "name": "Pleco"},
+    "slob": {"dir": "slob", "name": "Aard 2"},
 }
 
 COLUMNS = {
