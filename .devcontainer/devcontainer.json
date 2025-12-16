@@ -21,6 +21,7 @@
 		"./bin/install_linux_packages.sh",
 		"./bin/install_wine32.sh",
 		"./bin/install_utilities.sh",
+		"./bin/install_makedict.sh",
 		"pip install uv && uv sync",
 		"eval $(ssh-agent -s)",
 		"ssh-add <(echo '$SSH_PRIVATE_TUDIEN_CODESPACE')"

@@ -9,6 +9,9 @@ __pycache__/
 .Python
 output/
 
+xdxf_makedict/
+LanguageFilesPocketbookConverter/
+
 env/
 dict/kindle
 build/
