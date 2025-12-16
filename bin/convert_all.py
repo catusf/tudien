@@ -26,7 +26,7 @@ DICT_FORMATS = [
     ("Kobo", "kobo", "kobo.zip", False),
     ("Stardict", "stardict", "ifo", True),
     ("DictOrg", "dictd", "index", True),
-    ("Aard", "aard", "slob", False),
+    ("Aard2Slob", "aard", "slob", False),
 ]
 
 # List of directory formats and their file patterns
