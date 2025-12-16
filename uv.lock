@@ -199,6 +199,12 @@ wheels = [
 ]
 
 [[package]]
+name = "pyicu"
+version = "2.16"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/11/c3/8d558b30deb33eb583c0bcae3e64d6db8316b69461a04bb9db5ff63d3f6e/pyicu-2.16.tar.gz", hash = "sha256:42b3a8062e3b23e927ca727e6b5e1730d86c70279834e4887152895d2eb012d9", size = 268126, upload-time = "2025-11-04T23:33:00.006Z" }
+
+[[package]]
 name = "pypinyin"
 version = "0.53.0"
 source = { registry = "https://pypi.org/simple" }
@@ -304,6 +310,7 @@ dependencies = [
     { name = "pinyin" },
     { name = "pinyin-jyutping-sentence" },
     { name = "pyglossary" },
+    { name = "pyicu" },
     { name = "pypinyin" },
     { name = "pypinyin-dict" },
     { name = "python-lzo" },
@@ -328,6 +335,7 @@ requires-dist = [
     { name = "pinyin", specifier = ">=0.4.0" },
     { name = "pinyin-jyutping-sentence", specifier = ">=1.3" },
     { name = "pyglossary", specifier = ">=4.6.1" },
+    { name = "pyicu", specifier = ">=2.16" },
     { name = "pypinyin", specifier = ">=0.53.0" },
     { name = "pypinyin-dict", specifier = ">=0.8.0" },
     { name = "python-lzo", specifier = ">=1.15" },

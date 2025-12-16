@@ -26,6 +26,7 @@ DICT_FORMATS = [
     ("Kobo", "kobo", "kobo.zip", False),
     ("Stardict", "stardict", "ifo", True),
     ("DictOrg", "dictd", "index", True),
+    ("Aard", "aard", "slob", False),
 ]
 
 # List of directory formats and their file patterns
@@ -40,6 +41,7 @@ DIR_FORMATS = [
     ("yomitan", "*.yomitan.zip"),
     ("mdict", "*.mdx"),
     ("pleco", "*.pleco.zip"),
+    ("aard", "*.slob"),
 ]
 
 def execute_shell(cmd_line, message="", printout=True):
