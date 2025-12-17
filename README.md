@@ -93,7 +93,7 @@ graph LR;
     GenTab -- chạy DSL Tools --> DSLDict(Từ điển Lingvo <.dsl.dz>);
     GenTxt -- Dùng app Pleco import --> Pleco_PQB(Từ điển Pleco <.pqb>);
     dictd(Từ điển dictd <.index>) -- chạy makedict --> XDXF(Từ điển dạng XDXF);
-    XDXF(Từ điển dạng XDXF) -- chạy Pocketbook converter.exe --> DIC(Từ điển Pocketbook <.dic>);
+    XDXF(Từ điển XDXF <.xdxf>) -- chạy Pocketbook converter.exe --> DIC(Từ điển Pocketbook <.dic>);
 ```
 
 ## Danh sách các từ điển và số từ hiện có
