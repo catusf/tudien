@@ -293,8 +293,8 @@ def main() -> None:
         
         # Must run after dictd was created
         build_dict_pocketbook(output_folder, filebase)
-        cmd_line = f"ls -llR {output_folder}"
-        execute_shell(cmd_line=cmd_line, message=f"Listing all files in {output_folder}")
+        # cmd_line = f"ls -llR {output_folder}"
+        # execute_shell(cmd_line=cmd_line, message=f"Listing all files in {output_folder}")
 
         build_dict_mobi(input_folder, output_folder, datafile, filebase, inflections, dataCreator, dataTarget, dataSource, dataName)
 
@@ -314,8 +314,8 @@ def main() -> None:
         # cmd_line = f"rm {input_folder}/{filebase}.txt" # Still keeps .tab file for counting lines later
         # execute_shell(cmd_line=cmd_line, message=f"Removes {filebase} input files to save space")
 
-    cmd_line = f"ls -llR {output_folder}"
-    execute_shell(cmd_line=cmd_line, message=f"Listing all files in {output_folder}")
+    # cmd_line = f"ls -llR {output_folder}"
+    # execute_shell(cmd_line=cmd_line, message=f"Listing all files in {output_folder}")
 
     for dir, format in DIR_FORMATS:
         cmd_line = f"zip -9 -j {output_folder}/all-{dir}.zip {output_folder}/{format}"
@@ -609,9 +609,9 @@ def build_dict_pocketbook(output_folder, filebase):
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
 
-    cmd_line = f"mv {old_dic_file} {new_dic_file}"
-    print(cmd_line)
-    subprocess.run(shlex.split(cmd_line))
+    # cmd_line = f"mv {old_dic_file} {new_dic_file}"
+    # print(cmd_line)
+    # subprocess.run(shlex.split(cmd_line))
 
     cmd_line = f"zip -j -m -9 {output_folder}/{filebase}.xdxf.zip {out_xdxfdir}/{filebase}.xdxf"
     execute_shell(cmd_line=cmd_line, message=f"Making Pleco dict file for {filebase}")
