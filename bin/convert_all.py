@@ -588,7 +588,7 @@ def build_dict_pocketbook(output_folder, filebase):
     converter = "wine LanguageFilesPocketbookConverter/converter.exe"
     lang_data = "./LanguageFilesPocketbookConverter/en/"
 
-    cmd_line = f"{converter} /workspaces/tudien/{out_dictdir}/{filebase}/dict.xdxf {lang_data}"
+    cmd_line = f"{converter} {out_dictdir}/{filebase}/dict.xdxf {lang_data}"
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
 
