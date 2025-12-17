@@ -448,7 +448,7 @@ def build_dict_many(output_folder, extension, datafile, filebase, dataTarget, da
     if needzip:
         out_path = os.path.join(output_folder, f"{folder}/{filebase}.*")
         zip_path = os.path.join(output_folder, f"{filebase}.{folder}.zip")
-        cmd_line = f"zip -j {zip_path} {out_path}"
+        cmd_line = f"zip -j -9 {zip_path} {out_path}"
         execute_shell(cmd_line=cmd_line, message=f"creating zip file for {write_format} in {output_folder}")
 
         if folder not in ("dictd"): # keep dictd files for Pocketbook conversion
@@ -605,7 +605,7 @@ def build_dict_pocketbook(output_folder, filebase):
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
 
-    cmd_line = f"cp {old_dic_file} {output_folder}/"
+    cmd_line = f"mv {old_dic_file} {output_folder}/"
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
 
@@ -613,7 +613,7 @@ def build_dict_pocketbook(output_folder, filebase):
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
 
-    cmd_line = f"zip -j {output_folder}/{filebase}.xdxf.zip {out_xdxfdir}/{filebase}.xdxf"
+    cmd_line = f"zip -j -m -9 {output_folder}/{filebase}.xdxf.zip {out_xdxfdir}/{filebase}.xdxf"
     execute_shell(cmd_line=cmd_line, message=f"Making Pleco dict file for {filebase}")
 
     # cmd_line = f"rm {output_folder}/mdict/{filebase}*"
@@ -695,7 +695,7 @@ def build_dict_pleco_txt(input_folder, output_folder,  filebase):
     # Zip to create Pleco dictionary
     pleco_dict_file = f"{input_folder}/{filebase}.txt"
     if os.path.exists(pleco_dict_file):
-        cmd_line = f"zip -j {output_folder}/{filebase}.pleco.zip {input_folder}/{filebase}.txt"
+        cmd_line = f"zip -j -m -9 {output_folder}/{filebase}.pleco.zip {input_folder}/{filebase}.txt"
         execute_shell(cmd_line=cmd_line, message=f"Making Pleco dict file for {pleco_dict_file}")
 
 def build_dict_lingvo(input_folder, output_folder, datafile, filebase, dataCreator, dataFullTarget, dataFullSource, dataName):
