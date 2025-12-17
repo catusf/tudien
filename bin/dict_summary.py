@@ -83,7 +83,7 @@ SUPPORTED_EXTENSIONS = {
     "pleco.zip": {"dir": "pleco", "name": "Pleco"},
     "slob": {"dir": "slob", "name": "Aard 2"},
     "dic": {"dir": "xdxf", "name": "Pocketbook"},
-    "xdxf": {"dir": "xdxf", "name": "XDXF"},
+    "xdxf.zip": {"dir": "xdxf", "name": "XDXF"},
 }
 
 COLUMNS = {
