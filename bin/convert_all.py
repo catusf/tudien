@@ -42,7 +42,7 @@ DIR_FORMATS = [
     ("mdict", "*.mdx"),
     ("pleco", "*.pleco.zip"),
     ("aard", "*.slob"),
-    ("dic", "*.dict"),
+    ("dic", "*.dic"),
 ]
 
 def execute_shell(cmd_line, message="", printout=True):
@@ -577,8 +577,8 @@ def build_dict_pocketbook(output_folder, filebase):
 
     out_dictdir = os.path.join(output_folder, "dic")
     # cmd_line = f"mkdir {out_dictdir}"
-    print(cmd_line)
-    subprocess.run(shlex.split(cmd_line))
+    # print(cmd_line)
+    # subprocess.run(shlex.split(cmd_line))
 
     # Generare xdxf intermediate dictionary format
     cmd_line = f"makedict -i dictd -o xdxf {output_folder}/dictd/{filebase}.index --work-dir {out_dictdir}"
@@ -589,6 +589,10 @@ def build_dict_pocketbook(output_folder, filebase):
     lang_data = "./LanguageFilesPocketbookConverter/en/"
 
     cmd_line = f"{converter} /workspaces/tudien/{out_dictdir}/{filebase}/dict.xdxf {lang_data}"
+    print(cmd_line)
+    subprocess.run(shlex.split(cmd_line))
+
+    cmd_line = f"cp {out_dictdir}/{filebase}/dict.dic {out_dictdir}/{filebase}.dic"
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
 
