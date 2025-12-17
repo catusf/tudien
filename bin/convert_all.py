@@ -21,6 +21,7 @@ from iso_language_codes import language_name
 # List of dictionary formats to generate using pyglossary
 DICT_FORMATS = [
     # DictType, foldername, file ending, need zip
+    # DictType is the pyglossary write-format name
     ("Yomichan", "yomitan", "yomitan.zip", False),
     ("Epub2", "epub", "epub", False),
     ("Kobo", "kobo", "kobo.zip", False),
@@ -43,6 +44,7 @@ DIR_FORMATS = [
     ("pleco", "*.pleco.zip"),
     ("aard", "*.slob"),
     ("dic", "*.dic"),
+    ("xdxf", "*.xdxf.zip"),
 ]
 
 def execute_shell(cmd_line, message="", printout=True):
@@ -576,6 +578,7 @@ def build_dict_pocketbook(output_folder, filebase):
     # Generare Pocketbook dictionary
 
     out_dictdir = os.path.join(output_folder, "dic")
+    out_xdxfdir = os.path.join(output_folder, "xdxf")
     # cmd_line = f"mkdir {out_dictdir}"
     # print(cmd_line)
     # subprocess.run(shlex.split(cmd_line))
@@ -588,17 +591,30 @@ def build_dict_pocketbook(output_folder, filebase):
     converter = "wine LanguageFilesPocketbookConverter/converter.exe"
     lang_data = "./LanguageFilesPocketbookConverter/en/"
 
-    cmd_line = f"{converter} {out_dictdir}/{filebase}/dict.xdxf {lang_data}"
+    old_xdxf_file = f"{out_dictdir}/{filebase}/dict.xdxf"
+    new_xdxf_file = f"{out_xdxfdir}/{filebase}.xdxf"
+
+    old_dic_file = f"{out_xdxfdir}/{filebase}.dic"
+    new_dic_file = f"{out_dictdir}/"
+
+    cmd_line = f"mv {old_xdxf_file} {new_xdxf_file}"
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
 
-    cmd_line = f"cp {out_dictdir}/{filebase}/dict.dic {out_dictdir}/{filebase}.dic"
+    cmd_line = f"{converter} {new_xdxf_file} {lang_data}"
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
 
-    cmd_line = f"mv {out_dictdir}/{filebase}/dict.dic {output_folder}/{filebase}.dic"
+    cmd_line = f"cp {old_dic_file} {output_folder}/"
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
+
+    cmd_line = f"mv {old_dic_file} {new_dic_file}"
+    print(cmd_line)
+    subprocess.run(shlex.split(cmd_line))
+
+    cmd_line = f"zip -j {output_folder}/{filebase}.xdxf.zip {out_xdxfdir}/{filebase}.xdxf"
+    execute_shell(cmd_line=cmd_line, message=f"Making Pleco dict file for {filebase}")
 
     # cmd_line = f"rm {output_folder}/mdict/{filebase}*"
     # execute_shell(cmd_line=cmd_line, message=f"Removes temp mdict files in {output_folder}/mdict")

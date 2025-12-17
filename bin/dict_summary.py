@@ -71,6 +71,7 @@ def count_lines_in_tab(tab_path):
 
 
 SUPPORTED_EXTENSIONS = {
+#   Extension: {Dir: "dir", "name": "Name"},
     "dictd.zip": {"dir": "dictd", "name": "DictD"},
     "dsl.dz": {"dir": "lingvo", "name": "Lingvo (DSL)"},
     "epub": {"dir": "epub", "name": "EPUB"},
@@ -82,6 +83,7 @@ SUPPORTED_EXTENSIONS = {
     "pleco.zip": {"dir": "pleco", "name": "Pleco"},
     "slob": {"dir": "slob", "name": "Aard 2"},
     "dic": {"dir": "xdxf", "name": "Pocketbook"},
+    "xdxf": {"dir": "xdxf", "name": "XDXF"},
 }
 
 COLUMNS = {
