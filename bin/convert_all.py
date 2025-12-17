@@ -42,6 +42,7 @@ DIR_FORMATS = [
     ("mdict", "*.mdx"),
     ("pleco", "*.pleco.zip"),
     ("aard", "*.slob"),
+    ("dic", "*.dict"),
 ]
 
 def execute_shell(cmd_line, message="", printout=True):
@@ -309,6 +310,9 @@ def main() -> None:
         # cmd_line = f"rm {input_folder}/{filebase}.txt" # Still keeps .tab file for counting lines later
         # execute_shell(cmd_line=cmd_line, message=f"Removes {filebase} input files to save space")
 
+    cmd_line = f"ls -llR {output_folder}"
+    execute_shell(cmd_line=cmd_line, message=f"Listing all files in {output_folder}")
+
     for dir, format in DIR_FORMATS:
         cmd_line = f"zip -9 -j {output_folder}/all-{dir}.zip {output_folder}/{format}"
         execute_shell(cmd_line=cmd_line, message=f"Zipping all {dir}-format dicts in {output_folder}")
@@ -569,12 +573,12 @@ def build_dict_pocketbook(output_folder, filebase):
     """
     # Generare Pocketbook dictionary
 
-    cmd_line = f"mkdir {output_folder}/xdxf"
+    out_dictdir = os.path.join(output_folder, "dic")
+    cmd_line = f"mkdir {out_dictdir}"
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
 
     # Generare xdxf intermediate dictionary format
-    out_dictdir = os.path.join(output_folder, "xdxf")
     cmd_line = f"makedict -i dictd -o xdxf {output_folder}/dictd/{filebase}.index --work-dir {out_dictdir}"
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
@@ -582,7 +586,7 @@ def build_dict_pocketbook(output_folder, filebase):
     converter = "wine LanguageFilesPocketbookConverter/converter.exe"
     lang_data = "./LanguageFilesPocketbookConverter/en/"
 
-    cmd_line = f"{converter} /workspaces/tudien/{output_folder}/xdxf/{filebase}/dict.xdxf {lang_data}"
+    cmd_line = f"{converter} /workspaces/tudien/{out_dictdir}/{filebase}/dict.xdxf {lang_data}"
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
 
