@@ -291,6 +291,8 @@ def main() -> None:
         
         # Must run after dictd was created
         build_dict_pocketbook(output_folder, filebase)
+        cmd_line = f"ls -llR {output_folder}"
+        execute_shell(cmd_line=cmd_line, message=f"Listing all files in {output_folder}")
 
         build_dict_mobi(input_folder, output_folder, datafile, filebase, inflections, dataCreator, dataTarget, dataSource, dataName)
 
@@ -574,7 +576,7 @@ def build_dict_pocketbook(output_folder, filebase):
     # Generare Pocketbook dictionary
 
     out_dictdir = os.path.join(output_folder, "dic")
-    cmd_line = f"mkdir {out_dictdir}"
+    # cmd_line = f"mkdir {out_dictdir}"
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
 
