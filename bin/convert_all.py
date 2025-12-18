@@ -168,7 +168,6 @@ def gen_mdict_target(filepath, filebase, output_folder, dataName, dataDescriptio
     )
     
     return execute_shell(cmd_line=cmd_line, message=f"generating MDict MDX")
-
 import re
 
 def split_long_text_file(
@@ -177,18 +176,46 @@ def split_long_text_file(
     max_len=800
 ):
     item_pattern = re.compile(r'(?=\b\d+\. )')
+    ascii_word = re.compile(r'[A-Za-z0-9_]')
+    zh_punct = '。；，'
     output_lines = []
 
     def split_by_length(text):
         chunks = []
+
         while len(text) > max_len:
+            cut = -1
+
+            # 1. Try space (English)
             cut = text.rfind(' ', 0, max_len)
+
+            # 2. Try Chinese punctuation
             if cut == -1:
-                cut = max_len  # fallback: hard cut
+                for p in zh_punct:
+                    pos = text.rfind(p, 0, max_len)
+                    if pos > cut:
+                        cut = pos + 1  # include punctuation
+
+            # 3. Smart fallback
+            if cut == -1:
+                cut = max_len
+
+                # Avoid breaking ASCII words / tags
+                if (
+                    cut < len(text)
+                    and ascii_word.match(text[cut - 1])
+                    and ascii_word.match(text[cut])
+                ):
+                    forward = re.search(r'\s', text[cut:cut + 100])
+                    if forward:
+                        cut += forward.start()
+
             chunks.append(text[:cut].rstrip())
             text = text[cut:].lstrip()
+
         if text:
             chunks.append(text)
+
         return chunks
 
     with open(input_path, 'r', encoding='utf-8') as f:
