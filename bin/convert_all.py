@@ -169,41 +169,27 @@ def gen_mdict_target(filepath, filebase, output_folder, dataName, dataDescriptio
     
     return execute_shell(cmd_line=cmd_line, message=f"generating MDict MDX")
 
-def split_lines_by_item_number(input_path, output_path=None):
-    """
-    Split lines in a text file based on numbered items (e.g., "1. ", "2. ", etc.).
+import re
 
-    This function reads a text file and splits each line at numbered item markers,
-    creating separate entries for each numbered item found in the text. The function
-    uses a regex pattern to identify numbered items and split the content accordingly.
+def split_long_text_file(
+    input_path,
+    output_path=None,
+    max_len=800
+):
+    item_pattern = re.compile(r'(?=\b\d+\. )')
+    output_lines = []
 
-    Parameters:
-        input_path (str): Path to the input text file to be processed.
-        output_path (str, optional): Path to the output file where split results will be written.
-                                   If None, results are not written to a file. Defaults to None.
-
-    Returns:
-        int: The number of resulting lines after splitting.
-
-    Behavior:
-        • Reads the input file line by line
-        • Skips empty lines
-        • Splits each line at numbered item patterns (e.g., "1. ", "2. ", "10. ")
-        • Collects all split parts as separate result lines
-        • If output_path is provided, writes all result lines to the output file
-        • Returns the total count of result lines
-
-    Example:
-        Input file content:
-        "1. First item 2. Second item on same line"
-        "3. Third item"
-
-        Result:
-        ["1. First item", "2. Second item on same line", "3. Third item"]
-    """
-    pattern = re.compile(r'(?=\b\d+\. )')  # lookahead to keep the number
-
-    result_lines = []
+    def split_by_length(text):
+        chunks = []
+        while len(text) > max_len:
+            cut = text.rfind(' ', 0, max_len)
+            if cut == -1:
+                cut = max_len  # fallback: hard cut
+            chunks.append(text[:cut].rstrip())
+            text = text[cut:].lstrip()
+        if text:
+            chunks.append(text)
+        return chunks
 
     with open(input_path, 'r', encoding='utf-8') as f:
         for line in f:
@@ -211,17 +197,19 @@ def split_lines_by_item_number(input_path, output_path=None):
             if not line:
                 continue
 
-            parts = pattern.split(line)
-            for part in parts:
-                part = part.strip()
-                if part:
-                    result_lines.append(part)
+            items = item_pattern.split(line)
+            for item in items:
+                item = item.strip()
+                if not item:
+                    continue
+
+                output_lines.extend(split_by_length(item))
 
     if output_path:
         with open(output_path, 'w', encoding='utf-8') as f:
-            f.write('\n'.join(result_lines))
+            f.write('\n'.join(output_lines))
 
-    return len(result_lines)
+    return output_lines
 
 def main() -> None:
     """Main entry point for converting dictionary files into multiple formats.
@@ -654,7 +642,7 @@ def build_dict_pocketbook(output_folder, filebase):
     subprocess.run(shlex.split(cmd_line))
 
     # Split the lines by item number, to overcome a limitation of `converter`
-    split_lines_by_item_number(new_xdxf_file, new_xdxf_file)
+    split_long_text_file(new_xdxf_file, new_xdxf_file)
 
     cmd_line = f"{converter} {new_xdxf_file} {lang_data}"
     print(cmd_line)

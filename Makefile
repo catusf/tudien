@@ -9,7 +9,7 @@ sample:
 	mkdir -p output
 	ls -l | wc -l
 
-	uv run python ./bin/convert_all.py --input_folder=dict --output_folder=output --extension=tab --filter=Viet-Trung
+	uv run python ./bin/convert_all.py --input_folder=dict --output_folder=output --extension=tab --filter=SPDict-Anh-Viet,TrungViet-big,TrungViet-mid,Tu-dien-Phat-Quang,Tu-dien-Phat-hoc-Anh-Han-Viet,Tu-dien-Phat-hoc-Tinh-tuyen,Tu-dien-Phat-hoc-Viet-Anh-Thien-Phuc,Tu-dien-Tong-hop-Phat-hoc,Wikipedia,star_hanviet,star_hanviethan,star_phapviet,star_phapvietphap,star_yviet
 	uv run python ./bin/dict_summary.py --dict_dir=dict --output_dir=output --read_only=no
 	echo "Released sample dictionaries"
 
