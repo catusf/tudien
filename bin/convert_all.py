@@ -44,7 +44,7 @@ DIR_FORMATS = [
     ("pleco", "*.pleco.zip"),
     ("aard", "*.slob"),
     ("dic", "*.dic"),
-    ("xdxf", "*.xdxf.zip"),
+    # ("xdxf", "*.xdxf.zip"),
 ]
 
 def execute_shell(cmd_line, message="", printout=True):
@@ -592,16 +592,19 @@ def build_dict_pocketbook(output_folder, filebase):
     lang_data = "./LanguageFilesPocketbookConverter/en/"
 
     old_xdxf_file = f"{out_dictdir}/{filebase}/dict.xdxf"
-    new_xdxf_file = f"{out_xdxfdir}/{filebase}.xdxf"
+    new_xdxf_file = f"{out_dictdir}/{filebase}.xdxf"
 
-    old_dic_file = f"{out_xdxfdir}/{filebase}.dic"
-    new_dic_file = f"{out_dictdir}/"
+    old_dic_file = f"{out_dictdir}/{filebase}.dic"
 
     cmd_line = f"mv {old_xdxf_file} {new_xdxf_file}"
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
 
     cmd_line = f"{converter} {new_xdxf_file} {lang_data}"
+    print(cmd_line)
+    subprocess.run(shlex.split(cmd_line))
+
+    cmd_line = f"rm {new_xdxf_file}"
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
 
@@ -613,8 +616,8 @@ def build_dict_pocketbook(output_folder, filebase):
     # print(cmd_line)
     # subprocess.run(shlex.split(cmd_line))
 
-    cmd_line = f"zip -j -m -9 {output_folder}/{filebase}.xdxf.zip {out_xdxfdir}/{filebase}.xdxf"
-    execute_shell(cmd_line=cmd_line, message=f"Making Pleco dict file for {filebase}")
+    # cmd_line = f"zip -j -m -9 {output_folder}/{filebase}.xdxf.zip {out_xdxfdir}/{filebase}.xdxf"
+    # execute_shell(cmd_line=cmd_line, message=f"Making Pleco dict file for {filebase}")
 
     # cmd_line = f"rm {output_folder}/mdict/{filebase}*"
     # execute_shell(cmd_line=cmd_line, message=f"Removes temp mdict files in {output_folder}/mdict")

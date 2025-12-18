@@ -5,6 +5,9 @@ sudo apt-get install -y cmake build-essential libexpat1-dev zlib1g-dev
 # 2. Clone the specific tag
 git clone --depth 1 --branch rev33 https://github.com/soshial/xdxf_makedict.git
 
+# Adds a .gitignore to ignore build/ directory
+echo "build/" > xdxf_makedict/.gitignore
+
 git clone --depth 1 https://github.com/Markismus/LanguageFilesPocketbookConverter.git
 
 # 3. Enter the directory
