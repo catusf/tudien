@@ -675,9 +675,9 @@ def build_dict_pocketbook(output_folder, filebase):
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
 
-    # cmd_line = f"rm {new_xdxf_file}"
-    # print(cmd_line)
-    # subprocess.run(shlex.split(cmd_line))
+    cmd_line = f"rm {new_xdxf_file}"
+    print(cmd_line)
+    subprocess.run(shlex.split(cmd_line))
 
     cmd_line = f"mv {old_dic_file} {output_folder}/"
     print(cmd_line)
