@@ -14,6 +14,7 @@ sample:
 	echo "Released sample dictionaries"
 	du -h --max-depth=1 . | sort -hr
 	find . -type f -size +500M -exec ls -lh {} +
+	df -h .
 
 all:
 # 	mv dict/*.* dict/
@@ -26,6 +27,7 @@ all:
 	echo "Released all dictionaries"
 	du -h --max-depth=1 . | sort -hr
 	find . -type f -size +500M -exec ls -lh {} +
+	df -h .
 
 test:
 	echo "Run test the venv"
