@@ -118,7 +118,7 @@ def get_downloadable_files(filebase, tag_download, output_dir):
     return download_links
 
 
-def generate_summary(dict_dir, output_dir):
+def generate_summary(dict_dir, output_dir, showfull):
     """Generate a list of dictionaries containing metadata for each .toml file."""
     print(f"Generating summary data for {dict_dir}")
 
@@ -140,7 +140,7 @@ def generate_summary(dict_dir, output_dir):
             continue
         filebase, _ = os.path.splitext(filename)
         toml_path = os.path.join(dict_dir, filename)
-        tab_path = os.path.join(dict_dir, filebase + ".tab")
+        # tab_path = os.path.join(dict_dir, filebase + ".tab")
 
         # Parse the .toml file
         metadata = parse_toml_file(toml_path)
@@ -236,8 +236,10 @@ def generate_summary(dict_dir, output_dir):
         for item in missing_files:
             files_status_details += f"\t{item}\n"
 
-    print(files_status_details)
-    print(files_status)
+    if showfull:
+        print(f"showfull {showfull}")
+        # print(f"{files_status_details}")
+        # print(files_status)
 
     return data, files_status, files_status_details
 
@@ -332,6 +334,7 @@ def main():
     parser.add_argument("-e", "--extensions", default=None, help="The extensions that need included in the report. None means all.")
     parser.add_argument("-c", "--columns", default=None, help="The columns that will be kept (Other than the download links).")
     parser.add_argument("-r", "--read_only", choices=["yes", "no"], default="no", required=False, help="Read data or create it.")
+    parser.add_argument("-s", "--showfull", default=True, help="Shows full details of report in the console.")
 
     args = parser.parse_args()
 
@@ -344,6 +347,7 @@ def main():
     dict_dir = args.dict_dir
     outfile = args.outfile
     output_dir = args.output_dir
+    showfull = args.showfull
 
     extensions = list(SUPPORTED_EXTENSIONS.keys()) if not ext_str else [item.strip() for item in ext_str.split(",")]
     columns = list(COLUMNS.keys()) if not col_str else [item.strip() for item in col_str.split(",")]
@@ -351,7 +355,7 @@ def main():
     files_status = ""
     files_status_details = ""
     if read_only == "no":
-        data, files_status, files_status_details = generate_summary(dict_dir, output_dir)
+        data, files_status, files_status_details = generate_summary(dict_dir, output_dir, showfull=showfull)
     else:
         json_path = os.path.join(dict_dir, "dict_summary.json")
         with open(json_path, "r", encoding="utf-8") as json_file:
@@ -364,7 +368,9 @@ def main():
     markdown_file = os.path.join(dict_dir, outfile)
     with open(markdown_file, "w", encoding="utf-8") as file:
         file.write(markdown_table)
-        print(f"Data file written to: {markdown_file}")
+
+        if showfull:
+            print(f"{showfull} Data file written to: {markdown_file}")
 
     print(f"Summary markdown file '{outfile}' has been generated.")
 

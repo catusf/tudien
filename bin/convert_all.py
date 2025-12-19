@@ -651,10 +651,16 @@ def build_dict_pocketbook(output_folder, filebase):
     # print(cmd_line)
     # subprocess.run(shlex.split(cmd_line))
 
+    dictd_base = f"{output_folder}/dictd/{filebase}"
+
     # Generare xdxf intermediate dictionary format
-    cmd_line = f"makedict -i dictd -o xdxf {output_folder}/dictd/{filebase}.index --work-dir {out_dictdir}"
+    cmd_line = f"makedict -i dictd -o xdxf {dictd_base}.index --work-dir {out_dictdir}"
     print(cmd_line)
     subprocess.run(shlex.split(cmd_line))
+
+    cmd_line = f"rm {dictd_base}.index {dictd_base}.dict"
+    print(cmd_line)
+    subprocess.run(shlex.split(cmd_line))    
 
     converter = "wine LanguageFilesPocketbookConverter/converter.exe"
     lang_data = "./LanguageFilesPocketbookConverter/en/"
