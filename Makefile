@@ -13,7 +13,7 @@ sample:
 	uv run python ./bin/dict_summary.py --dict_dir=dict --output_dir=output --read_only=no
 	echo "Released sample dictionaries"
 	du -h --max-depth=1 . | sort -hr
-	find . -type f -size +500M -exec ls -lh {} +
+	find . -type f -size +50M -exec ls -lh {} +
 	df -h .
 
 all:
@@ -26,7 +26,7 @@ all:
 	uv run python ./bin/dict_summary.py --dict_dir=dict --output_dir=output --read_only=no
 	echo "Released all dictionaries"
 	du -h --max-depth=1 . | sort -hr
-	find . -type f -size +500M -exec ls -lh {} +
+	find . -type f -size +50M -exec ls -lh {} +
 	df -h .
 
 test:
